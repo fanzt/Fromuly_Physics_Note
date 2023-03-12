@@ -421,7 +421,8 @@ $$
     \begin{aligned}
         E&=\langle H(p,q) \rangle\overset{\mathrm{d}V=0}{\longrightarrow}\dbar{Q}
         \\H&=E+PV\overset{\mathrm{d}P=0}{\longrightarrow}\dbar{Q}
-        
+        \\F&=E-TS
+        \\G&=W-TS
     \end{aligned}
     $$
 
