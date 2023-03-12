@@ -1,6 +1,6 @@
-# Chapter 2 热力学量
+# Chapter 2.1 热力学量的定义
 
-![节点](./Images/8.jpg)
+![节点](./Images/2.png)
 >封面图源网络，侵删
 >弥央好可爱好可爱好可爱好可爱啊啊啊awsl
 >注：本文为笔者学习朗道《统计物理学I》过程中的笔记与相关内容的补充。笔者是初学者，文章内容如有错误，欢迎指正。
@@ -9,7 +9,7 @@ $$
     \newcommand{dbar}{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}}
 $$
 
-## 一、常见热力学量与相关过程
+## 常见热力学量与相关过程
 
 &emsp;&emsp;接下来我们将一步步定义出除了能量、熵与体积之外，大家所熟悉的其他广延量与强度量。
 &emsp;&emsp;注：构造新的强度量的想法是利用熵增定理，通过令熵对守恒的广延量求导来找到热平衡下处处均等的一个物理量，并将其定义为新的强度量。
@@ -430,8 +430,49 @@ $$
         \\&E=\langle H(p,q) \rangle\overset{\mathrm{d}V=0}{\longrightarrow}\dbar{Q}\qquad\mathrm{d}E=T\mathrm{d}S-P\mathrm{d}V
         \\&H=E+PV\overset{\mathrm{d}P=0}{\longrightarrow}\dbar{Q}\qquad\mathrm{d}H=T\mathrm{d}S+V\mathrm{d}P
         \\&F=E-TS\qquad\qquad\qquad\mathrm{d}F=-S\mathrm{d}T-P\mathrm{d}V
-        \\&G=W-TS\qquad\qquad\qquad\mathrm{d}G=-S\mathrm{d}T+V\mathrm{d}P
+        \\&G=H-TS\qquad\qquad\qquad\mathrm{d}G=-S\mathrm{d}T+V\mathrm{d}P
     \end{aligned}
     $$
 
-$E$ 与 $H$ 之间依靠 Legendre 变换联系，$P$ 与 $V$ 相互共轭，$T$ 与 $S$ 相互共轭；类比于力学体系，$P$ 是“广义坐标”为 $V$ 时的“广义力”，$T$ 是“广义坐标”为 $S$ 时的“广义力”，$E$ 在等容过程的地位与 $H$ 在等压过程的地位相等；$F$ 在等容过程的地位与 $G$ 在等压过程的地位相等；
+$E$ 与 $H$ 之间依靠 Legendre 变换联系；$P$ 与 $V$ 相互共轭，$T$ 与 $S$ 相互共轭；类比于力学体系，$P$ 是“广义坐标”为 $V$ 时的“广义力”，$T$ 是“广义坐标”为 $S$ 时的“广义力”；$E$ 在等容过程的地位与 $H$ 在等压过程的地位相等；$F$ 在等容过程的地位与 $G$ 在等压过程的地位相等。
+
+----
+
+如果除了体积之外，还需要其他参量 $\lambda_i$ 来确定系统的状态，则热力学基本微分方程中就必须附加上与微分 $\mathrm{d}\lambda_i$ 成正比的项：
+    $$
+        \mathrm{d}E=T\mathrm{d}S-P\mathrm{d}V+\sum_i\Lambda_i\mathrm{d}\lambda_i
+    $$
+
+由于变换到其他的热力学势并不涉及 $\lambda_i$，所以其他的热力学势微分表达式中也仅需要附加上相同的项即可。
+因此我们可以写出一个关系式：
+    $$
+        \left\langle\frac{\partial{H(p,q;\lambda)}}{\partial{\lambda}}\right\rangle=\left(\frac{\partial{F}}{\partial{\lambda}}\right)_{T,V}
+    $$
+
+显然如果热力学势中的每一个都是在对应的特征项不变的情况下发生变化，则有：
+    $$
+        (\delta{E})_{S,V}=(\delta{F})_{T,V}=(\delta{H})_{S,P}=(\delta{G})_{T,P}
+    $$
+
+该等式称为小增量定理。
+利用热力学第二定律与热力学第一定律（变形后的热力学基本微分方程），我们可以得到：
+    $$
+    \begin{aligned}
+        &\frac{\mathrm{d}Q}{\mathrm{d}t}<T\frac{\mathrm{d}S}{\mathrm{d}t}
+        \\\Rightarrow&\frac{\mathrm{d}E}{\mathrm{d}t}+P\frac{\mathrm{d}V}{\mathrm{d}t}<T\frac{\mathrm{d}S}{\mathrm{d}t}
+    \end{aligned}
+    $$
+
+考虑物体经历等温等容过程，上式可以变成：
+    $$
+        \frac{\mathrm{d}(E-TS)}{\mathrm{d}t}=\frac{\mathrm{d}F}{\mathrm{d}t}<0
+    $$
+
+**即等温等容不可逆过程下，亥姆霍兹自由能总在减小。**
+类似地，在等温等压过程下，上式可以变成：
+    $$
+        \frac{\mathrm{d}(H-TS)}{\mathrm{d}t}=\frac{\mathrm{d}G}{\mathrm{d}t}<0
+    $$
+
+**即等温等压不可逆过程下，吉布斯自由能总在减小。**
+以上讨论均适用于物体处于非热平衡态。而如果物体处于热平衡态，则显然吉布斯自由能与亥姆霍兹自由能都取极小值。
