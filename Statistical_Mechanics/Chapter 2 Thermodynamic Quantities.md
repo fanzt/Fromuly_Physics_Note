@@ -461,7 +461,7 @@ $E$ 与 $H$ 之间依靠 Legendre 变换联系；$P$ 与 $V$ 相互共轭，$T$ 
         &\frac{\mathrm{d}Q}{\mathrm{d}t}<T\frac{\mathrm{d}S}{\mathrm{d}t}
         \\\Rightarrow&\frac{\mathrm{d}E}{\mathrm{d}t}+P\frac{\mathrm{d}V}{\mathrm{d}t}<T\frac{\mathrm{d}S}{\mathrm{d}t}
     \end{aligned}
-    $$ 
+    $$
 
 考虑物体经历等温等容过程，上式可以变成：
     $$
