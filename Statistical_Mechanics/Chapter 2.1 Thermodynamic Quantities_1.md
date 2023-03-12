@@ -2,11 +2,14 @@
 
 ![节点](./Images/2.png)
 >封面图源网络，侵删
->弥央好可爱好可爱好可爱好可爱啊啊啊awsl
 >注：本文为笔者学习朗道《统计物理学I》过程中的笔记与相关内容的补充。笔者是初学者，文章内容如有错误，欢迎指正。
 
 $$
     \newcommand{dbar}{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}}
+    \newcommand{d}{\mathrm{d}}
+    \newcommand{p}{\partial}
+    \newcommand{(}{\left(}
+    \newcommand{)}{\right)}
 $$
 
 ## 常见热力学量与相关过程
@@ -27,17 +30,17 @@ $$
 
 并且由于 $E_1$ 与 $E_2$ 被方程 $E_1+E_2=E$ 约束，且 $E$ 为一常量，所以系统的总熵 $S$ 实际上是一个单变量函数。于是我们将熵极大条件写成：
     $$
-        \frac{\mathrm{d}S}{\mathrm{d}E_1}=\frac{\mathrm{d}S_1}{\mathrm{d}E_1}+\frac{\mathrm{d}S_2}{\mathrm{d}E_2}\frac{\mathrm{d}E_2}{\mathrm{d}E_1}=\frac{\mathrm{d}S_1}{\mathrm{d}E_1}-\frac{\mathrm{d}S_2}{\mathrm{d}E_2}=0
+        \frac{\d{S}}{\d{E}_1}=\frac{\d{S}_1}{\d{E}_1}+\frac{\d{S}_2}{\d{E}_2}\frac{\d{E}_2}{\d{E}_1}=\frac{\d{S}_1}{\d{E}_1}-\frac{\d{S}_2}{\d{E}_2}=0
     $$
 
 于是我们得到：
     $$
-        \frac{\mathrm{d}S_1}{\mathrm{d}E_1}=\frac{\mathrm{d}S_2}{\mathrm{d}E_2}
+        \frac{\d{S}_1}{\d{E}_1}=\frac{\d{S}_2}{\d{E}_2}
     $$
 
 由此可见，对于一个处于热力学平衡状态的系统，其各个部分的熵对能量的导数都是相同的，即在整个系统内都不变。我们将物体的熵 $S$ 对其能量 $E$ 的导数的倒数称为该物体的绝对温度，简称温度 $T$.
     $$
-        \frac{\mathrm{d}S}{\mathrm{d}E}=\frac{1}{T}
+        \frac{\d{S}}{\d{E}}=\frac{1}{T}
     $$
 
 因此对于一个热平衡系统，其各部分的温度是相等的。
@@ -47,20 +50,20 @@ $$
 
 &emsp;&emsp;接下来，让我们考虑并不处于平衡态的两个物体组成的闭合系统，其温度 $T_1$ 与 $T_2$ 并不相同。随着时间的推移，这两个物体之间将会建立起平衡态，且温度也将趋于相等。而这个过程应当是熵增的。于是我们有：
     $$
-        \frac{\mathrm{d}S}{\mathrm{d}t}=\frac{\mathrm{d}S_1}{\mathrm{d}t}+\frac{\mathrm{d}S_2}{\mathrm{d}t}=\frac{\mathrm{d}S_1}{\mathrm{d}E_1}\frac{\mathrm{d}E_1}{\mathrm{d}t}+\frac{\mathrm{d}S_2}{\mathrm{d}E_2}\frac{\mathrm{d}E_2}{\mathrm{d}t}>0
+        \frac{\d{S}}{\d{T}}=\frac{\d{S}_1}{\d{T}}+\frac{\d{S}_2}{\d{T}}=\frac{\d{S}_1}{\d{E}_1}\frac{\d{E}_1}{\d{T}}+\frac{\d{S}_2}{\d{E}_2}\frac{\d{E}_2}{\d{T}}>0
     $$
 
 由于能量守恒，所以：
     $$
-        \frac{\mathrm{d}E_1}{\mathrm{d}t}+\frac{\mathrm{d}E_2}{\mathrm{d}t}=0
+        \frac{\d{E}_1}{\d{T}}+\frac{\d{E}_2}{\d{T}}=0
     $$
 
 于是有：
     $$
-        \frac{\mathrm{d}S}{\mathrm{d}t}=\left(\frac{\mathrm{d}S_1}{\mathrm{d}E_1}-\frac{\mathrm{d}S_2}{\mathrm{d}E_2}\right)\frac{\mathrm{d}E_1}{\mathrm{d}t}=\left(\frac{1}{T_1}-\frac{1}{T_2}\right)\frac{\mathrm{d}E_1}{\mathrm{d}t}>0
+        \frac{\d{S}}{\d{T}}=\(\frac{\d{S}_1}{\d{E}_1}-\frac{\d{S}_2}{\d{E}_2}\)\frac{\d{E}_1}{\d{T}}=\(\frac{1}{T_1}-\frac{1}{T_2}\)\frac{\d{E}_1}{\d{T}}>0
     $$
 
-假设第二个物体的温度高于第一个物体的温度 $\left(T_2>T_1\right)$. 考虑到温度是正的，那么有 $\displaystyle\frac{\mathrm{d}E_1}{\mathrm{d}t}>0$，亦即 $\displaystyle\frac{\mathrm{d}E_2}{\mathrm{d}t}<0$. 也就是说，随着整个体系向平衡态趋近，低温物体的能量增加，高温物体的能量减少。因而，温度的这一性质可以如此表述：能量自发的从温度较高的物体转移到温度较低的物体。
+假设第二个物体的温度高于第一个物体的温度 $\(T_2>T_1\)$. 考虑到温度是正的，那么有 $\displaystyle\frac{\d{E}_1}{\d{T}}>0$，亦即 $\displaystyle\frac{\d{E}_2}{\d{T}}<0$. 也就是说，随着整个体系向平衡态趋近，低温物体的能量增加，高温物体的能量减少。因而，温度的这一性质可以如此表述：能量自发的从温度较高的物体转移到温度较低的物体。
 
 ----
 
@@ -93,7 +96,7 @@ $$
 &emsp;&emsp;物体的各个宏观部分所谓整体参与的运动称为宏观运动，以区别于分子的微观运动。现在我们来尝试考虑在热力学平衡
 &emsp;&emsp;将物体划分为许多相对于整体很小但仍旧宏观的部分，并假设 $M_a$、$E_a$ 和 $\boldsymbol{P}_a$ 分别表示第 $a$ 个部分的质量、能量与动量。每个部分的熵是其内能的函数(这一点可以从伽利略相对性原理直接得到)，也就是其总能量与宏观动能之间的差的函数。因此物体的总熵可写为：
     $$
-        S=\sum\limits_{a}S_a\left(E_a-\frac{P_a^2}{2M_a}\right)
+        S=\sum\limits_{a}S_a\(E_a-\frac{P_a^2}{2M_a}\)
     $$
 
 假设物体是闭合的，那么除了物体的能量守恒外，物体的总动量和总角动量也应当是守恒的。于是我们又有：
@@ -103,12 +106,12 @@ $$
 
 这里的 $\boldsymbol{r}_a$ 自然是每一部分的位矢。在平衡状态下，能量 $E_a$ 与质量 $M_a$ 均为常量，物体的总熵是动量的函数。利用求解约束最优条件常用的拉格朗日乘子法，我们显然有：
     $$
-        \frac{\partial}{\partial\boldsymbol{P}_a}\sum\limits_{a}\left(S_a+\boldsymbol{\alpha}·\boldsymbol{P}_a+\boldsymbol{\beta}·(\boldsymbol{r}_a\times\boldsymbol{P}_a)\right)=0
+        \frac{\p}{\p\boldsymbol{P}_a}\sum\limits_{a}\(S_a+\boldsymbol{\alpha}·\boldsymbol{P}_a+\boldsymbol{\beta}·(\boldsymbol{r}_a\times\boldsymbol{P}_a)\)=0
     $$
 
 先对 $S_a$ 求导，有：
     $$
-        \frac{\partial}{\partial{\boldsymbol{P_a}}}\left\{S_a\left(E_a-\frac{P_a^2}{2M_a}\right)\right\}=\frac{\partial{S_a}}{\partial{U_a}}\frac{\partial{U_a}}{\partial{\boldsymbol{P}_a}}=-\frac{\boldsymbol{P}_a}{M_aT}=-\frac{\boldsymbol{v}_a}{T}
+        \frac{\p}{\p{\boldsymbol{P_a}}}\left\{S_a\(E_a-\frac{P_a^2}{2M_a}\)\right\}=\frac{\p{S_a}}{\p{U_a}}\frac{\p{U_a}}{\p{\boldsymbol{P}_a}}=-\frac{\boldsymbol{P}_a}{M_aT}=-\frac{\boldsymbol{v}_a}{T}
     $$
 
 其中 $\displaystyle U_a=E_a-\frac{P_a^2}{2M_a}$ 表示每个部分的内能。因此，我们得到：
@@ -143,17 +146,17 @@ $$
 ##### 绝热过程的相关讨论
 
 &emsp;&emsp;接下来我们将证明，在绝热过程中，物体的熵保持不变，即绝热过程是可逆过程。
-&emsp;&emsp;首先，我们可以用一些参量来表征外界条件，这些参量都是时间得给定函数。例如，假设总共只有一个这样的参量，记为字母 $\lambda$，熵对时间的导数 $\displaystyle\frac{\mathrm{d}S}{\mathrm{d}t}$ 会以某种方式依赖于 $\lambda$ 对时间的导数 $\displaystyle\frac{\mathrm{d}\lambda}{\mathrm{d}t}$. 由于外界是缓变的，即 $\displaystyle\frac{\mathrm{d}\lambda}{\mathrm{d}t}$ 很小，所以我们可以把 $\displaystyle\frac{\mathrm{d}S}{\mathrm{d}t}$ 展开为 $\displaystyle\frac{\mathrm{d}\lambda}{\mathrm{d}t}$ 的幂级数。我们认为该展开式的零次项，即不含 $\displaystyle\frac{\mathrm{d}\lambda}{\mathrm{d}t}$ 的项为零。这是由于对于热力学平衡态下的体系，热力学平衡态下的闭合系统在外界条件不发生改变的情况下熵应当保持不变，所以当 $\displaystyle\frac{\mathrm{d}\lambda}{\mathrm{d}t}=0$ 时 $\displaystyle\frac{\mathrm{d}S}{\mathrm{d}t}=0$，由此可见零次项应当为零。由于根据熵增长定律，$\displaystyle\frac{\mathrm{d}S}{\mathrm{d}t}$ 永远都需要大于零，但显然其正负性显著的依赖于幂级数展开的一阶项的正负。由于不能保证 $\displaystyle\frac{\mathrm{d}\lambda}{\mathrm{d}t}$ 永远大于零，我们只能认为幂级数展开的一阶项等于零。因此，$\displaystyle\frac{\mathrm{d}S}{\mathrm{d}t}$ 的展开式仅能从 $\displaystyle\frac{\mathrm{d}\lambda}{\mathrm{d}t}$ 的二阶项开始，即当 $\displaystyle\frac{\mathrm{d}\lambda}{\mathrm{d}t}$ 很小时，我们有：
+&emsp;&emsp;首先，我们可以用一些参量来表征外界条件，这些参量都是时间得给定函数。例如，假设总共只有一个这样的参量，记为字母 $\lambda$，熵对时间的导数 $\displaystyle\frac{\d{S}}{\d{T}}$ 会以某种方式依赖于 $\lambda$ 对时间的导数 $\displaystyle\frac{\d\lambda}{\d{T}}$. 由于外界是缓变的，即 $\displaystyle\frac{\d\lambda}{\d{T}}$ 很小，所以我们可以把 $\displaystyle\frac{\d{S}}{\d{T}}$ 展开为 $\displaystyle\frac{\d\lambda}{\d{T}}$ 的幂级数。我们认为该展开式的零次项，即不含 $\displaystyle\frac{\d\lambda}{\d{T}}$ 的项为零。这是由于对于热力学平衡态下的体系，热力学平衡态下的闭合系统在外界条件不发生改变的情况下熵应当保持不变，所以当 $\displaystyle\frac{\d\lambda}{\d{T}}=0$ 时 $\displaystyle\frac{\d{S}}{\d{T}}=0$，由此可见零次项应当为零。由于根据熵增长定律，$\displaystyle\frac{\d{S}}{\d{T}}$ 永远都需要大于零，但显然其正负性显著的依赖于幂级数展开的一阶项的正负。由于不能保证 $\displaystyle\frac{\d\lambda}{\d{T}}$ 永远大于零，我们只能认为幂级数展开的一阶项等于零。因此，$\displaystyle\frac{\d{S}}{\d{T}}$ 的展开式仅能从 $\displaystyle\frac{\d\lambda}{\d{T}}$ 的二阶项开始，即当 $\displaystyle\frac{\d\lambda}{\d{T}}$ 很小时，我们有：
     $$
-        \frac{\mathrm{d}S}{\mathrm{d}t}=A\left(\frac{\mathrm{d}\lambda}{\mathrm{d}t}\right)^2
+        \frac{\d{S}}{\d{T}}=A\(\frac{\d\lambda}{\d{T}}\)^2
     $$
 
 由此可以得到：
     $$
-        \frac{\mathrm{d}S}{\mathrm{d}\lambda}=A\frac{\mathrm{d}\lambda}{\mathrm{d}t}
+        \frac{\d{S}}{\d\lambda}=A\frac{\d\lambda}{\d{T}}
     $$
 
-因此，当 $\displaystyle\frac{\mathrm{d}\lambda}{\mathrm{d}t}$ 趋于零时，$\displaystyle\frac{\mathrm{d}S}{\mathrm{d}\lambda}$ 也趋近于零。这表明了绝热过程的可逆性。
+因此，当 $\displaystyle\frac{\d\lambda}{\d{T}}$ 趋于零时，$\displaystyle\frac{\d{S}}{\d\lambda}$ 也趋近于零。这表明了绝热过程的可逆性。
 &emsp;&emsp;需要注意的是，虽然绝热过程可逆，但显然并非所有的可逆过程都是绝热过程。可逆过程仅仅要求整个闭合系统的总熵不发生改变，但绝热系统要求给定物体作为闭合系统的一部分，其熵也不发生改变。这是比可逆过程更加严格的条件。
 &emsp;&emsp;绝热过程需要我们认为外界的变化是足够缓慢的，以至于可以将系统的每个时刻都看作是平衡态。这意味着绝热过程必须比在该系统中建立平衡状态的过程缓慢。
 
@@ -161,33 +164,33 @@ $$
 
 ##### 绝热过程的应用
 
-&emsp;&emsp;接下来我们将推导一个公式，使得我们能够通过单纯的热力学途径计算各种平均值而无需总去使用统计分布函数。假定物体正在经历一个绝热过程，我们要确定物体的能量对时间的导数 $\displaystyle\frac{\mathrm{d}E}{\mathrm{d}t}$. 根据定义，一个热力学体系的能量被定义为 $E=\langle E(p,q;\lambda)\rangle$，其中 $E(p,q;\lambda)=H(p,q;\lambda)$ 是体系的 Hamiltonian，它以 $\lambda$ 作为参变量。熟知的 Hamilton's Canonical Equations 告诉我们对于 Hamiltonian，我们有：
+&emsp;&emsp;接下来我们将推导一个公式，使得我们能够通过单纯的热力学途径计算各种平均值而无需总去使用统计分布函数。假定物体正在经历一个绝热过程，我们要确定物体的能量对时间的导数 $\displaystyle\frac{\d{E}}{\d{T}}$. 根据定义，一个热力学体系的能量被定义为 $E=\langle E(p,q;\lambda)\rangle$，其中 $E(p,q;\lambda)=H(p,q;\lambda)$ 是体系的 Hamiltonian，它以 $\lambda$ 作为参变量。熟知的 Hamilton's Canonical Equations 告诉我们对于 Hamiltonian，我们有：
     $$
-        \frac{\mathrm{d}H(p,q;\lambda)}{\mathrm{d}t}=\frac{\partial{H(p,q;\lambda)}}{\partial{t}}
+        \frac{\d{H}(p,q;\lambda)}{\d{T}}=\frac{\p{H(p,q;\lambda)}}{\p{t}}
     $$
 
 在给定情况下，系统的 Hamiltonian 通过参变量 $\lambda$ 明显地与事件有关，因而上式可以写成：
     $$
-        \frac{\mathrm{d}H(p,q;\lambda)}{\mathrm{d}t}=\frac{\partial{H(p,q;\lambda)}}{\partial{\lambda}}\frac{\mathrm{d}\lambda}{\mathrm{d}t}
+        \frac{\d{H}(p,q;\lambda)}{\d{T}}=\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\frac{\d\lambda}{\d{T}}
     $$
 
 显然求平均过程与对时间的求导过程可以换序，于是我们有：
     $$
-        \frac{\mathrm{d}E}{\mathrm{d}t}=\left\langle\frac{\mathrm{d}H(p,q;\lambda)}{\mathrm{d}t}\right\rangle=\left\langle\frac{\partial{H(p,q;\lambda)}}{\partial{\lambda}}\right\rangle\frac{\mathrm{d}\lambda}{\mathrm{d}t}
+        \frac{\d{E}}{\d{T}}=\left\langle\frac{\d{H}(p,q;\lambda)}{\d{T}}\right\rangle=\left\langle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\right\rangle\frac{\d\lambda}{\d{T}}
     $$
 
 （由于对于求平均过程中系统每一个可能的状态，参变量 $\lambda$ 都是相同的给定的时间的函数，所以可以从平均号下提出来。）
-&emsp;&emsp;把热力学量 $E$ 看作是物体的熵 $S$ 和外参量 $\lambda$ 的函数，并考虑到绝热过程的熵不发生变化，就可以把导数 $\displaystyle\frac{\mathrm{d}E}{\mathrm{d}t}$ 写成另外的形式：
+&emsp;&emsp;把热力学量 $E$ 看作是物体的熵 $S$ 和外参量 $\lambda$ 的函数，并考虑到绝热过程的熵不发生变化，就可以把导数 $\displaystyle\frac{\d{E}}{\d{T}}$ 写成另外的形式：
     $$
-        \frac{\mathrm{d}E}{\mathrm{d}t}=\left(\frac{\partial{E}}{\partial{\lambda}}\right)_S\frac{\mathrm{d}\lambda}{\mathrm{d}t}
+        \frac{\d{E}}{\d{T}}=\(\frac{\p{E}}{\p{\lambda}}\)_S\frac{\d\lambda}{\d{T}}
     $$
 
 于是我们可以得到：
     $$
-        \left\langle\frac{\partial{H(p,q;\lambda)}}{\partial{\lambda}}\right\rangle=\left(\frac{\partial{E}}{\partial{\lambda}}\right)_S
+        \left\langle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\right\rangle=\(\frac{\p{E}}{\p{\lambda}}\)_S
     $$
 
-&emsp;&emsp;考虑到我们所研究的物体在其与外界环境构成的闭合系统中作为子系统存在，其经历的绝热过程又要求其时刻处于平衡状态，因而上式中的平均值显然可以看作是对于某一给定 $\lambda$ 的平衡态的统计分布的平均值，因而我们就得到了通过热力学途径来计算形为 $\displaystyle\frac{\partial{H(p,q;\lambda)}}{\partial{\lambda}}$ 的物理量按照给定平衡态的统计分布的平均值的热力学求法。这种类型的量在研究宏观物体的性质的时候常常会遇到，因此上式在统计物理中起到非常重要的作用。计算作用于物体上的各种力（此时 $\lambda$ 是物体的某一部分的坐标）或是计算物体的磁矩、电矩（此时 $\lambda$ 是磁场强度或电场强度）等，都属于这类量。
+&emsp;&emsp;考虑到我们所研究的物体在其与外界环境构成的闭合系统中作为子系统存在，其经历的绝热过程又要求其时刻处于平衡状态，因而上式中的平均值显然可以看作是对于某一给定 $\lambda$ 的平衡态的统计分布的平均值，因而我们就得到了通过热力学途径来计算形为 $\displaystyle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}$ 的物理量按照给定平衡态的统计分布的平均值的热力学求法。这种类型的量在研究宏观物体的性质的时候常常会遇到，因此上式在统计物理中起到非常重要的作用。计算作用于物体上的各种力（此时 $\lambda$ 是物体的某一部分的坐标）或是计算物体的磁矩、电矩（此时 $\lambda$ 是磁场强度或电场强度）等，都属于这类量。
 &emsp;&emsp;我们在此对经典力学的所有讨论都可以完全适用于量子力学，只需要用 Hamilton 算符替代 Hamiltonian，并将统计平均的求法视为利用密度矩阵平均即可。
 
 ----
@@ -200,34 +203,34 @@ $$
 &emsp;&emsp;由此，我们可以看到，一个处于平衡态的静止物体的宏观状态总共仅需要两个物理量（体积与能量或体积与熵）即可描述，所有其他的热力学量都可以表示为这两个量的函数。当然因为各个热力学量之间存在一定的依赖关系，所以其它任何一对热力学量也都可以用来作为自变量。于是我们得到：一个处于平衡态的静止物体的宏观状态总共只需要两个热力学量就可以描述。
 &emsp;&emsp;接下来我们尝试求一个物体作用于自身体积的边界上的力。根据力学公式，对于作用在某个面元上的力，我们有：
     $$
-        \boldsymbol{F}=-\frac{\partial{H(p,q;\boldsymbol{r})}}{\partial\boldsymbol{r}}
+        \boldsymbol{F}=-\frac{\p{H(p,q;\boldsymbol{r})}}{\p\boldsymbol{r}}
     $$
 
 式中 $H(p,q;\boldsymbol{r})$ 是物体的 Hamiltonian（也就是没有取平均值的能量），作为物体中粒子坐标与动量的函数，也作为该表面元的位矢的函数。在这种情况下，面元的位矢作为外参量存在（外参量指由系统的外环境决定的参量）。
 &emsp;&emsp;对上式求平均，可以得到：
     $$
-        \langle\boldsymbol{F}\rangle=\left\langle-\frac{\partial{H(p,q;\boldsymbol{r})}}{\partial\boldsymbol{r}}\right\rangle=-\left(\frac{\partial{E}}{\partial{\boldsymbol{r}}}\right)_S=-\left(\frac{\partial{E}}{\partial{V}}\right)_S\frac{\partial{V}}{\partial{\boldsymbol{r}}}
+        \langle\boldsymbol{F}\rangle=\left\langle-\frac{\p{H(p,q;\boldsymbol{r})}}{\p\boldsymbol{r}}\right\rangle=-\(\frac{\p{E}}{\p{\boldsymbol{r}}}\)_S=-\(\frac{\p{E}}{\p{V}}\)_S\frac{\p{V}}{\p{\boldsymbol{r}}}
     $$
 
-式中第二个等号来源于上一节中推导出的对“能量关于外参量倒数的表达式”求平均的计算方法；$V$ 为体积。由于 $\mathrm{d}V=A\cdot\mathrm{d}\boldsymbol{r}$，所以我们可以得到 $\displaystyle\frac{\partial{V}}{\partial{\boldsymbol{r}}}=A$，于是我们就可以得到：
+式中第二个等号来源于上一节中推导出的对“能量关于外参量倒数的表达式”求平均的计算方法；$V$ 为体积。由于 $\d{V}=A\cdot\d\boldsymbol{r}$，所以我们可以得到 $\displaystyle\frac{\p{V}}{\p{\boldsymbol{r}}}=A$，于是我们就可以得到：
     $$
-        \langle{F}\rangle=-\left(\frac{\partial{E}}{\partial{V}}\right)_S{A}
+        \langle{F}\rangle=-\(\frac{\p{E}}{\p{V}}\)_S{A}
     $$
 
 于是我们可以看到作用在面元上的平均力，指向该面元的法线方向且与该面元的面积成正比。我们记：
     $$
-        P=-\left(\frac{\partial{E}}{\partial{V}}\right)_S
+        P=-\(\frac{\p{E}}{\p{V}}\)_S
     $$
 
 称为压强。
 &emsp;&emsp;我们之前的温度定义实质上只适用于不直接与任何其他物体相接触的物体而言的。在这种情况下，我们不需要确定物体所经历的过程的具体特征，就可以讨论物体的能量和熵的变化。而在物体与其他物体有接触的情况下，我们必须考虑具体过程的特征。如果物体经历的给定过程使物体的体积发生了变化，就会使我们不得不考虑与其接触的其他物体的状态的变化。因而在这种情况下，我们就需要将物体以及与物体相接触的其他物体一同考虑才能定义温度。因此如果我们想要仅仅考虑对一个单独的物体定义温度，就必须保证物体的体积不发生变化。于是我们修改温度的定义为：
     $$
-        T=\left(\frac{\partial{E}}{\partial{S}}\right)_V
+        T=\(\frac{\p{E}}{\p{S}}\)_V
     $$
 
 结合上面压强的定义，我们就可以得到热力学基本微分方程：
     $$
-        \mathrm{d}E=T\mathrm{d}S-P\mathrm{d}V
+        \d{E}=T\d{S}-P\d{V}
     $$
 
 ----
@@ -237,15 +240,15 @@ $$
 &emsp;&emsp;对于彼此处于平衡态的物体，其压强彼此需要相等。这可以从热平衡的基本要求得出：热平衡首先要求力学平衡存在，而力学平衡的存在显然要求作用在物体间单位接触面的力大小相等方向相反，即要求物体的压强彼此相等。
 &emsp;&emsp;此外，该要求也可以从熵极大条件推导出来。考虑处于平衡状态的两个闭合系统相互接触的部分，熵极大条件显然要求对于这两个部分的体积的任何微小变化，如果系统其他部分的状态保持不变，熵应当不发生变化，即：
     $$
-        \frac{\partial{S}}{\partial{V}_1}=\frac{\partial{S}_1}{\partial{V}_1}+\frac{\partial{S}_2}{\partial{V}_2}\frac{\partial{V}_2}{\partial{V}_1}=\frac{\partial{S}_1}{\partial{V}_1}-\frac{\partial{S}_2}{\partial{V}_2}=0
+        \frac{\p{S}}{\p{V}_1}=\frac{\p{S}_1}{\p{V}_1}+\frac{\p{S}_2}{\p{V}_2}\frac{\p{V}_2}{\p{V}_1}=\frac{\p{S}_1}{\p{V}_1}-\frac{\p{S}_2}{\p{V}_2}=0
     $$
 
 而由热力学基本微分关系，有：
     $$
-        \mathrm{d}S=\frac{1}{T}\mathrm{d}E+\frac{P}{T}\mathrm{d}V
+        \d{S}=\frac{1}{T}\d{E}+\frac{P}{T}\d{V}
     $$
 
-可以显然的看出，$\displaystyle\frac{\partial{S}}{\partial{V}}=\frac{P}{T}$，因此我们有 $\frac{P_1}{T_1}=\frac{P_2}{T_2}$，而又由于平衡态下 $T_1=T_2$，所以我们即可有：$P_1=P_2$.
+可以显然的看出，$\displaystyle\frac{\p{S}}{\p{V}}=\frac{P}{T}$，因此我们有 $\frac{P_1}{T_1}=\frac{P_2}{T_2}$，而又由于平衡态下 $T_1=T_2$，所以我们即可有：$P_1=P_2$.
 
 ----
 
@@ -258,7 +261,7 @@ $$
 ----
 
 <!-- &emsp;&emsp;接下来考虑压强定义式所导出的一些结论：直观上来说，物体体积的增大必然导致坐标范围的增大，即 $\Delta{q}$ 的增大。而为了保证熵不变，就意味着 $\Delta{p}\Delta{q}$ 不变，这意味着 $\Delta{p}$ 需要减小，也就是能量需要变小。所以我们可以看到压强总将是一个正的值。 -->
-&emsp;&emsp;关于压强的正负性，我们可以做如下的推理来说明：当 $P>0$ 时，有 $\displaystyle\left(\frac{\partial{S}}{\partial{V}}\right)_E>0$，因而物体的熵只可能在物体膨胀时增加，但这种膨胀又会受到周围物体的阻碍。反之，当 $P<0$ 时就会有 $\displaystyle\left(\frac{\partial{S}}{\partial{V}}\right)_E<0$，物体就会自发的收缩以保证熵增大，而这显然不是很符合常理。
+&emsp;&emsp;关于压强的正负性，我们可以做如下的推理来说明：当 $P>0$ 时，有 $\displaystyle\(\frac{\p{S}}{\p{V}}\)_E>0$，因而物体的熵只可能在物体膨胀时增加，但这种膨胀又会受到周围物体的阻碍。反之，当 $P<0$ 时就会有 $\displaystyle\(\frac{\p{S}}{\p{V}}\)_E<0$，物体就会自发的收缩以保证熵增大，而这显然不是很符合常理。
 &emsp;&emsp;但是，要求压强为正和要求温度为正之间有本质的区别。具有负温度的物体将完全不稳定因而不可能存在，但具有负压强的物体仅仅是处于不平衡的状态，这在自然界中是可以实现的，虽然只有有限的稳定度。
 
 ----
@@ -271,29 +274,29 @@ $$
 &emsp;&emsp;在接下来的讨论中，我们约定外力对已知物体做功 $W$ 总认为是正的，负功 $W<0$ 相应地表示已知物体本身（例如物体膨胀时）对某些外界物体做功，其大小为 $|W|$.
 &emsp;&emsp;作用在物体表面的单位面积上的力是压强，而面元乘以它的位移就是面元运动所扫过的体积。由此我们显然可以看到，单位时间内物体体积改变时对物体做的功就是：
     $$
-        \frac{\mathrm{d}W}{\mathrm{d}t}=-P\frac{\mathrm{d}V}{\mathrm{d}t}
+        \frac{\dbar{W}}{\d{T}}=-P\frac{\d{V}}{\d{T}}
     $$
 
-其中在压缩物体时 $\displaystyle\frac{\mathrm{d}V}{\mathrm{d}t}<0$，则 $\displaystyle\frac{\mathrm{d}W}{\mathrm{d}t}>0$. 这个公式既可以用于可逆过程，也可以用于不可逆过程，其唯一需要的前提条件就是我们所研究的整个过程必须处于力学平衡状态，即每一个时刻，整个物体的压强必须是个常数。
+其中在压缩物体时 $\displaystyle\frac{\d{V}}{\d{T}}<0$，则 $\displaystyle\frac{\dbar{W}}{\d{T}}>0$. 这个公式既可以用于可逆过程，也可以用于不可逆过程，其唯一需要的前提条件就是我们所研究的整个过程必须处于力学平衡状态，即每一个时刻，整个物体的压强必须是个常数。
 &emsp;&emsp;如果我们研究的物体是热绝缘的，则其能量的所有变化均由对物体做功而引起。在非热绝缘物体的普遍情况下，物体显然还可以通过别的直接途径从其他相互接触的物体中获得/给予能量。这部分变化的能量称为物体所获得（或者所给出）的热量 $Q$. 因此，物体的能量变换可以写为：
     $$
-        \frac{\mathrm{d}E}{\mathrm{d}t}=\frac{\dbar{W}}{\mathrm{d}t}+\frac{\dbar{Q}}{\mathrm{d}t}
+        \frac{\d{E}}{\d{T}}=\frac{\dbar{W}}{\d{T}}+\frac{\dbar{Q}}{\d{T}}
     $$
 
 类似于关于功的约定，我们认为从外源获得的热量总是正的。
 &emsp;&emsp;一般来说，上式中的能量 $E$ 应当被理解为物体的总能量（包括内能和宏观运动的动能）。然而，显然我们不关注宏观动能，所以我们只研究与改变物体体积有关的功；在这种情况下，我们所讨论的能量自然就只剩下了物体的内能。接下来带入单位时间内做功的公式，我们就有：
     $$
-        \frac{\dbar{Q}}{\mathrm{d}t}=\frac{\mathrm{d}E}{\mathrm{d}t}+P\frac{\mathrm{d}V}{\mathrm{d}t}
+        \frac{\dbar{Q}}{\d{T}}=\frac{\d{E}}{\d{T}}+P\frac{\d{V}}{\d{T}}
     $$
 
 &emsp;&emsp;假设我们所研究的物体自身时刻处于热平衡状态，于是考虑到上文导出的热力学基本微分方程：
     $$
-        \frac{\mathrm{d}E}{\mathrm{d}t}=T\frac{\mathrm{d}S}{\mathrm{d}t}-P\frac{\mathrm{d}V}{\mathrm{d}t}
+        \frac{\d{E}}{\d{T}}=T\frac{\d{S}}{\d{T}}-P\frac{\d{V}}{\d{T}}
     $$
 
 我们就可以自然的得到：
     $$
-        \frac{\dbar{Q}}{\mathrm{d}t}=T\frac{\mathrm{d}S}{\mathrm{d}t}
+        \frac{\dbar{Q}}{\d{T}}=T\frac{\d{S}}{\d{T}}
     $$
 
 即熟悉的克劳修斯熵表述。
@@ -305,8 +308,8 @@ $$
 
 &emsp;&emsp;考虑物体升高单位温度所需要吸收的热量，并将该量称为热容。利用克劳修斯熵表述，我们可以得到在体积不变与压强不变条件下的热容：
     $$
-        C_v=T\left(\frac{\partial{S}}{\partial{T}}\right)_V
-        \\C_p=T\left(\frac{\partial{S}}{\partial{T}}\right)_P
+        C_v=T\(\frac{\p{S}}{\p{T}}\)_V
+        \\C_p=T\(\frac{\p{S}}{\p{T}}\)_P
     $$
 
 即定压热容与定容热容。
@@ -317,7 +320,7 @@ $$
 
 &emsp;&emsp;对于不能满足时刻处于平衡态的物体，我们无法应用热力学基本微分方程来得到克劳修斯熵表述。但是，基于熵增原理我们仍旧可以给出一个由不等号连接的公式：
     $$
-        \dbar{Q}<T\mathrm{d}S
+        \dbar{Q}<T\d{S}
     $$
 
 ----
@@ -328,35 +331,35 @@ $$
 
 &emsp;&emsp;接下来我们利用等压过程引导构造出的一个新的系统状态量。考虑压强不变的过程，则热量将可以能够使用某一个量的全微分来确定：
     $$
-        \dbar{Q}=\mathrm{d}(E+PV)=\mathrm{d}H
+        \dbar{Q}=\d(E+PV)=\d{H}
     $$
 
 其中 $H=E+PV$ 称为物体的焓（或热函数）。
 &emsp;&emsp;我们接下来可以考虑非等压过程下，焓的全微分：
     $$
-        \mathrm{d}H=\mathrm{d}E+P\mathrm{d}V+V\mathrm{d}P
+        \d{H}=\d{E}+P\d{V}+V\d{P}
     $$
 
 再代入热力学基本微分方程，就有：
     $$
-        \mathrm{d}H=T\mathrm{d}S+V\mathrm{d}P
+        \d{H}=T\d{S}+V\d{P}
     $$
 
 由此我们可以有：
     $$
-        T=\left(\frac{\partial{H}}{\partial{S}}\right)_P
-        V=\left(\frac{\partial{H}}{\partial{P}}\right)_S
+        T=\(\frac{\p{H}}{\p{S}}\)_P
+        V=\(\frac{\p{H}}{\p{P}}\)_S
     $$
 
 如果物体是热绝缘的，那么我们可以清晰地看到其经历等压过程时焓是守恒的。
 &emsp;&emsp;利用热力学基本微分方程，我们有：
     $$
-        C_v=T\left(\frac{\partial{S}}{\partial{T}}\right)_V=\left(\frac{\partial{E}}{\partial{S}}\right)_V\left(\frac{\partial{S}}{\partial{T}}\right)_V=\left(\frac{\partial{E}}{\partial{T}}\right)_V
+        C_v=T\(\frac{\p{S}}{\p{T}}\)_V=\(\frac{\p{E}}{\p{S}}\)_V\(\frac{\p{S}}{\p{T}}\)_V=\(\frac{\p{E}}{\p{T}}\)_V
     $$
 
 类似地，我们也有：
     $$
-        C_p=T\left(\frac{\partial{S}}{\partial{T}}\right)_P=\left(\frac{\partial{H}}{\partial{S}}\right)_P\left(\frac{\partial{S}}{\partial{T}}\right)_P=\left(\frac{\partial{H}}{\partial{T}}\right)_P
+        C_p=T\(\frac{\p{S}}{\p{T}}\)_P=\(\frac{\p{H}}{\p{S}}\)_P\(\frac{\p{S}}{\p{T}}\)_P=\(\frac{\p{H}}{\p{T}}\)_P
     $$
 
 由此可见，在等压过程中焓的性质类似于在等容过程中能量的性质。
@@ -367,50 +370,50 @@ $$
 
 &emsp;&emsp;接下来考虑等温变化。对于一个无穷小可逆等温变化，对物体做的功也可以写成某个量的全微分：
     $$
-        \dbar{W}=\mathrm{d}E-\dbar{Q}=\mathrm{d}E-T\mathrm{d}S=\mathrm{d}(E-TS)=\mathrm{d}F
+        \dbar{W}=\d{E}-\dbar{Q}=\d{E}-T\d{S}=\d(E-TS)=\d{F}
     $$
 
 其中 $F=E-TS$ 称为物体的亥姆霍兹自由能。于是在物体的等温过程中，对物体做的功等于物体自由能的变化。
 &emsp;&emsp;接下来我们考虑非等温过程下亥姆霍兹自由能的全微分。与焓类似，我们有：
     $$
-        \mathrm{d}F=\mathrm{d}E-T\mathrm{d}S-S\mathrm{d}T
+        \d{F}=\d{E}-T\d{S}-S\d{T}
     $$
 
 带入热力学基本微分方程，我们有：
     $$
-        \mathrm{d}F=-P\mathrm{d}V-S\mathrm{d}T
+        \d{F}=-P\d{V}-S\d{T}
     $$
 
 进而得到：
     $$
-        P=\left(\frac{\partial{F}}{\partial{V}}\right)_T
-        \\S=\left(\frac{\partial{F}}{\partial{T}}\right)_V
+        P=\(\frac{\p{F}}{\p{V}}\)_T
+        \\S=\(\frac{\p{F}}{\p{T}}\)_V
     $$
 
 &emsp;&emsp;我们可以用亥姆霍兹自由能来表示能量：
     $$
-        E=F-T\left(\frac{\partial{F}}{\partial{T}}\right)_V=-T^2\left(\frac{\partial}{\partial{T}}\frac{F}{T}\right)_V
+        E=F-T\(\frac{\p{F}}{\p{T}}\)_V=-T^2\(\frac{\p}{\p{T}}\frac{F}{T}\)_V
     $$
 
 &emsp;&emsp;由此我们发现，当我们知道了 $E、H、F$ 的表达式作为其相应自变量的函数之后，只需要求微分就可以得到其余的热力学量。考虑到它们都具有能量的量纲，我们将 $E、H、F$ 这些量称为热力学势或热力学特征函数。于是我们可以看到，$E$ 是 $S$ 与 $V$ 的特征函数，$H$ 是 $S$ 与 $P$ 的特征函数，$F$ 是 $T$ 与 $V$ 的特征函数。显然我们似乎还缺少一个关于 $T$ 与 $P$ 的特征函数。于是我们进行如下构造：
     $$
     \begin{aligned}
-        &\mathrm{d}F=V\mathrm{d}P-\mathrm{d}(PV)-S\mathrm{d}T
-        \\\Rightarrow&\mathrm{d}F+\mathrm{d}(PV)=V\mathrm{d}P-S\mathrm{d}T
-        \\\Rightarrow&\mathrm{d}G=V\mathrm{d}P-S\mathrm{d}T
+        &\d{F}=V\d{P}-\d(PV)-S\d{T}
+        \\\Rightarrow&\d{F}+\d(PV)=V\d{P}-S\d{T}
+        \\\Rightarrow&\d{G}=V\d{P}-S\d{T}
     \end{aligned}
     $$
 
 其中 $G=F+PV=W-TS$ 称为物体的吉布斯自由能。
 &emsp;&emsp;利用类似的方法我们可以得到另外两个热力学量的表达式：
     $$
-        S=-\left(\frac{\partial{G}}{\partial{T}}\right)_P
-        \\V=-\left(\frac{\partial{G}}{\partial{P}}\right)_T
+        S=-\(\frac{\p{G}}{\p{T}}\)_P
+        \\V=-\(\frac{\p{G}}{\p{P}}\)_T
     $$
 
 类似于用 $F$ 表示 $E$，我们也可以用吉布斯自由能表示焓：
     $$
-        G-T\left(\frac{\partial{G}}{\partial{T}}\right)_P=-T^2\left(\frac{\partial}{\partial{T}}\frac{G}{T}\right)_P
+        G-T\(\frac{\p{G}}{\p{T}}\)_P=-T^2\(\frac{\p}{\p{T}}\frac{G}{T}\)_P
     $$
 
 ----
@@ -427,10 +430,10 @@ $$
         \\&强度量：T、P
         \\&T利用熵增原理通过E诱导出
         \\&P利用熵增原理通过V诱导出
-        \\&E=\langle H(p,q) \rangle\overset{\mathrm{d}V=0}{\longrightarrow}\dbar{Q}\qquad\mathrm{d}E=T\mathrm{d}S-P\mathrm{d}V
-        \\&H=E+PV\overset{\mathrm{d}P=0}{\longrightarrow}\dbar{Q}\qquad\mathrm{d}H=T\mathrm{d}S+V\mathrm{d}P
-        \\&F=E-TS\qquad\qquad\qquad\mathrm{d}F=-S\mathrm{d}T-P\mathrm{d}V
-        \\&G=H-TS\qquad\qquad\qquad\mathrm{d}G=-S\mathrm{d}T+V\mathrm{d}P
+        \\&E=\langle H(p,q) \rangle\overset{\d{V}=0}{\longrightarrow}\dbar{Q}\qquad\d{E}=T\d{S}-P\d{V}
+        \\&H=E+PV\overset{\d{P}=0}{\longrightarrow}\dbar{Q}\qquad\d{H}=T\d{S}+V\d{P}
+        \\&F=E-TS\qquad\qquad\qquad\d{F}=-S\d{T}-P\d{V}
+        \\&G=H-TS\qquad\qquad\qquad\d{G}=-S\d{T}+V\d{P}
     \end{aligned}
     $$
 
@@ -438,15 +441,15 @@ $E$ 与 $H$ 之间依靠 Legendre 变换联系；$P$ 与 $V$ 相互共轭，$T$ 
 
 ----
 
-如果除了体积之外，还需要其他参量 $\lambda_i$ 来确定系统的状态，则热力学基本微分方程中就必须附加上与微分 $\mathrm{d}\lambda_i$ 成正比的项：
+如果除了体积之外，还需要其他参量 $\lambda_i$ 来确定系统的状态，则热力学基本微分方程中就必须附加上与微分 $\d\lambda_i$ 成正比的项：
     $$
-        \mathrm{d}E=T\mathrm{d}S-P\mathrm{d}V+\sum_i\Lambda_i\mathrm{d}\lambda_i
+        \d{E}=T\d{S}-P\d{V}+\sum_i\Lambda_i\d\lambda_i
     $$
 
 由于变换到其他的热力学势并不涉及 $\lambda_i$，所以其他的热力学势微分表达式中也仅需要附加上相同的项即可。
 因此我们可以写出一个关系式：
     $$
-        \left\langle\frac{\partial{H(p,q;\lambda)}}{\partial{\lambda}}\right\rangle=\left(\frac{\partial{F}}{\partial{\lambda}}\right)_{T,V}
+        \left\langle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\right\rangle=\(\frac{\p{F}}{\p{\lambda}}\)_{T,V}
     $$
 
 显然如果热力学势中的每一个都是在对应的特征项不变的情况下发生变化，则有：
@@ -458,22 +461,21 @@ $E$ 与 $H$ 之间依靠 Legendre 变换联系；$P$ 与 $V$ 相互共轭，$T$ 
 利用热力学第二定律与热力学第一定律（变形后的热力学基本微分方程），我们可以得到：
     $$
     \begin{aligned}
-        &\frac{\mathrm{d}Q}{\mathrm{d}t}<T\frac{\mathrm{d}S}{\mathrm{d}t}
-        \\\Rightarrow&\frac{\mathrm{d}E}{\mathrm{d}t}+P\frac{\mathrm{d}V}{\mathrm{d}t}<T\frac{\mathrm{d}S}{\mathrm{d}t}
+        &\frac{\dbar{Q}}{\d{T}}<T\frac{\d{S}}{\d{T}}
+        \\\Rightarrow&\frac{\d{E}}{\d{T}}+P\frac{\d{V}}{\d{T}}<T\frac{\d{S}}{\d{T}}
     \end{aligned}
     $$
 
 考虑物体经历等温等容过程，上式可以变成：
     $$
-        \frac{\mathrm{d}(E-TS)}{\mathrm{d}t}=\frac{\mathrm{d}F}{\mathrm{d}t}<0
+        \frac{\d(E-TS)}{\d{T}}=\frac{\d{F}}{\d{T}}<0
     $$
 
 **即等温等容不可逆过程下，亥姆霍兹自由能总在减小。**
 类似地，在等温等压过程下，上式可以变成：
     $$
-        \frac{\mathrm{d}(H-TS)}{\mathrm{d}t}=\frac{\mathrm{d}G}{\mathrm{d}t}<0
+        \frac{\d(H-TS)}{\d{T}}=\frac{\d{G}}{\d{T}}<0
     $$
 
 **即等温等压不可逆过程下，吉布斯自由能总在减小。**
 以上讨论均适用于物体处于非热平衡态。而如果物体处于热平衡态，则显然吉布斯自由能与亥姆霍兹自由能都取极小值。
-fuck
