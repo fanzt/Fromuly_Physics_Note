@@ -60,16 +60,18 @@ $$
     \begin{aligned}
         \l(\frac{\p{E}}{\p{S}}\r)_V&=T\qquad\l(\frac{\p{E}}{\p{V}}\r)_S=-P
         \\\l(\frac{\p{H}}{\p{S}}\r)_P&=T\qquad\l(\frac{\p{H}}{\p{P}}\r)_S=V
-        \\\l(\frac{\p{F}}{\p{T}}\r)_V&=-S\quad\:\:\l(\frac{\p{F}}{\p{V}}\r)_T=-P
-        \\\l(\frac{\p{G}}{\p{T}}\r)_P&=-S\quad\:\:\l(\frac{\p{G}}{\p{P}}\r)_T=V
+        \\\l(\frac{\p{F}}{\p{T}}\r)_V&=-S\qquad\l(\frac{\p{F}}{\p{V}}\r)_T=-P
+        \\\l(\frac{\p{G}}{\p{T}}\r)_P&=-S\qquad\l(\frac{\p{G}}{\p{P}}\r)_T=V
     \end{aligned}
     $$
 
 考虑到求导可以换序，我们有：
     $$
+    \begin{aligned}
         \l(\frac{\p{T}}{\p{V}}\r)_S=-\l(\frac{\p{P}}{\p{S}}\r)_V
         \\\l(\frac{\p{T}}{\p{P}}\r)_S=\l(\frac{\p{V}}{\p{S}}\r)_P
         \\\l(\frac{\p{S}}{\p{V}}\r)_T=\l(\frac{\p{P}}{\p{T}}\r)_V
         \\\l(\frac{\p{S}}{\p{P}}\r)_T=-\l(\frac{\p{V}}{\p{T}}\r)_P
+    \end{aligned}
     $$
 
