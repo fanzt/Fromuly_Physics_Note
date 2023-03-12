@@ -225,7 +225,7 @@ $$
         T=\left(\frac{\partial{E}}{\partial{S}}\right)_V
     $$
 
-结合上面压强的定义，我们就可以得到热力学基本微分关系：
+结合上面压强的定义，我们就可以得到热力学基本微分方程：
     $$
         \mathrm{d}E=T\mathrm{d}S-P\mathrm{d}V
     $$
@@ -392,7 +392,7 @@ $$
         E=F-T\left(\frac{\partial{F}}{\partial{T}}\right)_V=-T^2\left(\frac{\partial}{\partial{T}}\frac{F}{T}\right)_V
     $$
 
-&emsp;&emsp;由此我们发现，当我们知道了 $E、H、F$ 的表达式作为其相应自变量的函数之后，只需要求微分就可以得到其余的热力学量。因此我们将 $E、H、F$ 这些量称为（广义）热力学势或热力学特征函数。于是我们可以看到，$E$ 是 $S$ 与 $V$ 的特征函数，$H$ 是 $S$ 与 $P$ 的特征函数，$F$ 是 $T$ 与 $V$ 的特征函数。显然我们似乎还缺少一个关于 $T$ 与 $P$ 的特征函数。于是我们进行如下构造：
+&emsp;&emsp;由此我们发现，当我们知道了 $E、H、F$ 的表达式作为其相应自变量的函数之后，只需要求微分就可以得到其余的热力学量。考虑到它们都具有能量的量纲，我们将 $E、H、F$ 这些量称为热力学势或热力学特征函数。于是我们可以看到，$E$ 是 $S$ 与 $V$ 的特征函数，$H$ 是 $S$ 与 $P$ 的特征函数，$F$ 是 $T$ 与 $V$ 的特征函数。显然我们似乎还缺少一个关于 $T$ 与 $P$ 的特征函数。于是我们进行如下构造：
     $$
     \begin{aligned}
         &\mathrm{d}F=V\mathrm{d}P-\mathrm{d}(PV)-S\mathrm{d}T
@@ -401,7 +401,7 @@ $$
     \end{aligned}
     $$
 
-其中 $G=F+PV=W-TS$ 称为物体的吉布斯自由能或（狭义）热力学势。
+其中 $G=F+PV=W-TS$ 称为物体的吉布斯自由能。
 &emsp;&emsp;利用类似的方法我们可以得到另外两个热力学量的表达式：
     $$
         S=-\left(\frac{\partial{G}}{\partial{T}}\right)_P
@@ -419,10 +419,19 @@ $$
     （$H(p,q)$ 是 Hamiltonian，不是焓）
     $$
     \begin{aligned}
-        E&=\langle H(p,q) \rangle\overset{\mathrm{d}V=0}{\longrightarrow}\dbar{Q}
-        \\H&=E+PV\overset{\mathrm{d}P=0}{\longrightarrow}\dbar{Q}
-        \\F&=E-TS
-        \\G&=W-TS
+        &\begin{matrix}
+            &E：能量\quad &S：熵 &V：体积\quad &F：亥姆霍兹自由能
+            \\&T：温度\quad &H：焓 &P：压强\quad &G：吉布斯自由能
+        \end{matrix}
+        \\&广延量：E、S、V、H、F、G
+        \\&强度量：T、P
+        \\&T利用熵增原理通过E诱导出
+        \\&P利用熵增原理通过V诱导出
+        \\&E=\langle H(p,q) \rangle\overset{\mathrm{d}V=0}{\longrightarrow}\dbar{Q}\qquad\mathrm{d}E=T\mathrm{d}S-P\mathrm{d}V
+        \\&H=E+PV\overset{\mathrm{d}P=0}{\longrightarrow}\dbar{Q}\qquad\mathrm{d}H=T\mathrm{d}S+V\mathrm{d}P
+        \\&F=E-TS\qquad\qquad\qquad\mathrm{d}F=-S\mathrm{d}T-P\mathrm{d}V
+        \\&G=W-TS\qquad\qquad\qquad\mathrm{d}G=-S\mathrm{d}T+V\mathrm{d}P
     \end{aligned}
     $$
 
+$E$ 与 $H$ 之间依靠 Legendre 变换联系，$P$ 与 $V$ 相互共轭，$T$ 与 $S$ 相互共轭；类比于力学体系，$P$ 是“广义坐标”为 $V$ 时的“广义力”，$T$ 是“广义坐标”为 $S$ 时的“广义力”，$E$ 在等容过程的地位与 $H$ 在等压过程的地位相等；$F$ 在等容过程的地位与 $G$ 在等压过程的地位相等；
