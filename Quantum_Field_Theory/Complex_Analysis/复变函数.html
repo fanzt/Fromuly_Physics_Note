@@ -1,0 +1,484 @@
+<!DOCTYPE html><html><head>
+      <title>&#x590D;&#x53D8;&#x51FD;&#x6570;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({"extensions":["tex2jax.js"],"jax":["input/TeX","output/HTML-CSS"],"messageStyle":"none","tex2jax":{"processEnvironments":false,"processEscapes":true,"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"TeX":{"extensions":["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]},"HTML-CSS":{"availableFonts":["TeX"]}});
+        </script>
+        <script type="text/javascript" async src="file:///c:\Users\fanzt\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\mathjax\MathJax.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86">&#x590D;&#x53D8;&#x51FD;&#x6570;&#x57FA;&#x7840;&#x77E5;&#x8BC6;</h1>
+
+<p><img src="./../Images/3.jpg" alt="&#x8282;&#x70B9;"></p>
+<h2 class="mume-header" id="%E5%8C%BA%E5%9F%9F">&#x533A;&#x57DF;</h2>
+
+<p>&#x533A;&#x57DF;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;<br>
+&#x590D;&#x5E73;&#x9762;&#x4E0A;&#x7684;&#x70B9;&#x96C6;&#xFF0C;&#x82E5;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x6761;&#x4EF6;&#xFF0C;&#x5219;&#x79F0;&#x4E3A;&#x533A;&#x57DF;&#xFF1A;<br>
+1.&#x70B9;&#x96C6;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x70B9;&#x603B;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x90BB;&#x57DF;&#xFF0C;&#x4F7F;&#x5F97;&#x8BE5;&#x90BB;&#x57DF;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x70B9;&#x90FD;&#x5C5E;&#x4E8E;&#x8BE5;&#x70B9;&#x96C6;&#x3002;<br>
+2.&#x70B9;&#x96C6;&#x662F;&#x8FDE;&#x901A;&#x7684;&#xFF0C;&#x5373;&#x5BF9;&#x4E8E;&#x70B9;&#x96C6;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x4E24;&#x70B9;&#x603B;&#x53EF;&#x7528;&#x67D0;&#x6BB5;&#x66F2;&#x7EBF;&#x6BB5;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x4E14;&#x8BE5;&#x7EBF;&#x6BB5;&#x4E0A;&#x7684;&#x70B9;&#x90FD;&#x5C5E;&#x4E8E;&#x8BE5;&#x70B9;&#x96C6;&#x3002;<br>
+&#x5305;&#x62EC;&#x5883;&#x754C;&#x7EBF;&#x7684;&#x533A;&#x57DF;&#x79F0;&#x4E3A;&#x95ED;&#x533A;&#x57DF;&#xFF1B;&#x4E0D;&#x5305;&#x62EC;&#x5883;&#x754C;&#x7EBF;&#x7684;&#x533A;&#x57DF;&#x79F0;&#x4E3A;&#x5F00;&#x533A;&#x57DF;&#xFF0C;&#x7B80;&#x79F0;&#x533A;&#x57DF;&#x3002;&#x533A;&#x57DF;&#x5883;&#x754C;&#x7EBF;&#x7684;&#x6B63;&#x65B9;&#x5411;&#x4E3A;&#x4F7F;&#x533A;&#x57DF;&#x5728;&#x5883;&#x754C;&#x7EBF;&#x5DE6;&#x4FA7;&#x7684;&#x65B9;&#x5411;&#x3002;</p>
+<h2 class="mume-header" id="%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0">&#x89E3;&#x6790;&#x51FD;&#x6570;</h2>
+
+<p>&#x5BF9;&#x4E8E;&#x533A;&#x57DF;&#x4E0A;&#x7684;&#x8FDE;&#x7EED;&#x51FD;&#x6570; <span class="mathjax-exps">$f(z)$</span> &#xFF0C;&#x5176;&#x4E3A;&#x89E3;&#x6790;&#x7684;&#x5145;&#x8981;&#x6761;&#x4EF6;&#x4E3A;Cauchy-Riemann&#x6761;&#x4EF6;&#xFF0C;&#x5373;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}\frac{\partial u(x,y)}{\partial x}&amp;=\frac{\partial v(x,y)}{\partial y}\\\frac{\partial v(x,y)}{\partial x}&amp;=-\frac{\partial u(x,y)}{\partial y}\end{aligned}$$</div><p></p>
+<h2 class="mume-header" id="%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E5%87%A0%E4%BD%95%E6%80%A7%E8%B4%A8%E4%B8%8E%E4%BF%9D%E8%A7%92%E5%8F%98%E6%8D%A2">&#x89E3;&#x6790;&#x51FD;&#x6570;&#x7684;&#x51E0;&#x4F55;&#x6027;&#x8D28;&#x4E0E;&#x4FDD;&#x89D2;&#x53D8;&#x6362;&#xFF1A;</h2>
+
+<p>&#x8003;&#x8651;&#x4E00;&#x4E2A;&#x5728;&#x533A;&#x57DF;D&#x5185;&#x89E3;&#x6790;&#x7684;&#x5BFC;&#x6570;&#x4E0D;&#x4E3A;0&#x7684;&#x51FD;&#x6570;&#x3002;<br>
+&#x8BE5;&#x51FD;&#x6570;&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x4FDD;&#x89D2;&#x53D8;&#x6362;&#x3002;&#x5176;&#x67D0;&#x70B9;&#x66F2;&#x7EBF;&#x5FAE;&#x5143;&#x7684;&#x653E;&#x5927;&#x7387;&#x4E3A;&#x5BFC;&#x51FD;&#x6570;&#x5728;&#x67D0;&#x70B9;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#xFF1B;&#x8F6C;&#x8FC7;&#x7684;&#x89D2;&#x5EA6;&#x4E3A;&#x8BE5;&#x70B9;&#x5BFC;&#x51FD;&#x6570;&#x7684;&#x5E45;&#x89D2;&#x3002;&#x539F;&#x672C;&#x67D0;&#x4E00;&#x70B9;&#x7684;&#x4E24;&#x66F2;&#x7EBF;&#x5FAE;&#x5143;&#x5728;&#x7ECF;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x53D8;&#x6362;&#x540E;&#x5939;&#x89D2;&#x4E0D;&#x53D8;&#xFF0C;&#x6545;&#x79F0;&#x4E3A;&#x4FDD;&#x89D2;&#x53D8;&#x6362;&#x3002;</p>
+<h2 class="mume-header" id="%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0%E7%9A%84%E7%89%A9%E7%90%86%E8%A7%A3%E9%87%8A">&#x89E3;&#x6790;&#x51FD;&#x6570;&#x7684;&#x7269;&#x7406;&#x89E3;&#x91CA;</h2>
+
+<p>&#x7531;Cauchy-Riemann&#x6761;&#x4EF6;&#x53EF;&#x77E5;&#xFF0C;&#x4EFB;&#x610F;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x90E8;&#x548C;&#x865A;&#x90E8;&#x90FD;&#x662F;&#xFF08;&#x4E8C;&#x7EF4;&#xFF09;&#x8C03;&#x548C;&#x51FD;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x79F0;&#x540C;&#x4E00;&#x4E2A;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x90E8;&#x548C;&#x865A;&#x90E8;&#x4E3A;&#x5171;&#x8F6D;&#x8C03;&#x548C;&#x51FD;&#x6570;&#x3002;&#x6CE8;&#x610F;&#x5230;&#x5E73;&#x9762;&#x9759;&#x7535;&#x573A;&#x7684;&#x7535;&#x52BF;&#x51FD;&#x6570;&#x4E5F;&#x662F;&#x4E8C;&#x7EF4;&#x8C03;&#x548C;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x90E8;&#xFF08;&#x6216;&#x865A;&#x90E8;&#xFF09;&#x89E3;&#x91CA;&#x4E3A;&#x5E73;&#x9762;&#x9759;&#x7535;&#x573A;&#x7684;&#x52BF;&#x3002;</p>
+<h2 class="mume-header" id="%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86">&#x590D;&#x53D8;&#x51FD;&#x6570;&#x79EF;&#x5206;</h2>
+
+<p>&#x5BF9;&#x590D;&#x5E73;&#x9762;&#x4E0A;&#x7684;&#x4E00;&#x6761;&#x8D77;&#x70B9;A&#x7EC8;&#x70B9;B&#x7684;&#x6709;&#x5411;&#x66F2;&#x7EBF;&#x6BB5;&#xFF0C;&#x5C06;&#x5176;&#x5206;&#x4E3A;n&#x4E2A;&#x5C0F;&#x6BB5;&#xFF0C;&#x6BCF;&#x5C0F;&#x6BB5;&#x4E3A; <span class="mathjax-exps">$\Delta z_k$</span> &#x3002;&#x5728;&#x6BCF;&#x5C0F;&#x6BB5;&#x4E0A;&#x53D6;&#x4E00;&#x70B9; <span class="mathjax-exps">$\zeta_k$</span> &#xFF0C;&#x5BF9;&#x4E8E;&#x51FD;&#x6570; <span class="mathjax-exps">$f(z)$</span> &#xFF0C;&#x5176;&#x5728;&#x8BE5;&#x66F2;&#x7EBF;&#x6BB5;&#x4E0A;&#x7684;&#x79EF;&#x5206;&#x5B9A;&#x4E49;&#x4E3A;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int_l f(z)\:\mathrm{d}z\equiv\lim_{max|\Delta z_k|\:\rightarrow\:0}\sum_{k\:=\:1}^nf(\zeta_k)\Delta z_k$$</div><p></p>
+<p>&#x5C06; <span class="mathjax-exps">$z$</span> &#x4E0E; <span class="mathjax-exps">$f(z)$</span> &#x7684;&#x4EE3;&#x6570;&#x5F0F;&#x5199;&#x51FA;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x4E00;&#x4E2A;&#x590D;&#x53D8;&#x51FD;&#x6570;&#x7684;&#x79EF;&#x5206;&#x76F8;&#x5F53;&#x4E8E;&#x4E24;&#x4E2A;&#x4E8C;&#x5143;&#x5B9E;&#x53D8;&#x51FD;&#x6570;&#x7684;&#x66F2;&#x7EBF;&#x79EF;&#x5206;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int_l f(z)\:\mathrm{d}z=\int_l(u\:\mathrm{d}x-v\:\mathrm{d}y)+i\int_l(v\:\mathrm{d}x+u\:\mathrm{d}y)$$</div><p></p>
+<h2 class="mume-header" id="cauchy%E5%AE%9A%E7%90%86">Cauchy&#x5B9A;&#x7406;</h2>
+
+<h5 class="mume-header" id="%E5%8D%95%E9%80%9A%E5%8C%BA%E5%9F%9F%E4%B8%8E%E5%A4%8D%E9%80%9A%E5%8C%BA%E5%9F%9F">&#x5355;&#x901A;&#x533A;&#x57DF;&#x4E0E;&#x590D;&#x901A;&#x533A;&#x57DF;</h5>
+
+<p>&#x5883;&#x754C;&#x7EBF;&#x662F;&#x4E00;&#x6761;&#x7B80;&#x5355;&#x95ED;&#x66F2;&#x7EBF;&#x7684;&#x662F;&#x5355;&#x901A;&#x533A;&#x57DF;&#xFF0C;&#x5883;&#x754C;&#x7EBF;&#x591A;&#x4E8E;&#x4E00;&#x6761;&#x95ED;&#x66F2;&#x7EBF;&#x7684;&#x662F;&#x590D;&#x901A;&#x533A;&#x57DF;&#x3002;</p>
+<h3 class="mume-header" id="cauchy%E5%AE%9A%E7%90%86%E4%B8%80">Cauchy&#x5B9A;&#x7406;&#x4E00;</h3>
+
+<p>&#x8BBE; <span class="mathjax-exps">$f(z)$</span> &#x662F;&#x7531;&#x5883;&#x754C;&#x7EBF;l&#x6240;&#x56F4;&#x7684;&#x95ED;&#x5355;&#x901A;&#x533A;&#x57DF; <span class="mathjax-exps">$\bar{D}$</span> &#x4E0A;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\oint_lf(z)\:\mathrm{d}z=0$$</div><p></p>
+<p>&#x7531;&#x8BE5;&#x5B9A;&#x7406;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x63A8;&#x8BBA;&#xFF1A;<br>
+&#x5728;&#x5355;&#x901A;&#x533A;&#x57DF;&#x5185;&#xFF0C;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x79EF;&#x5206;&#x7684;&#x503C;&#x4EC5;&#x4E0E;&#x79EF;&#x5206;&#x66F2;&#x7EBF;&#x4E24;&#x7AEF;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x6709;&#x5173;&#xFF0C;&#x800C;&#x4E0E;&#x79EF;&#x5206;&#x8DEF;&#x5F84;&#x65E0;&#x5173;&#x3002;</p>
+<h3 class="mume-header" id="cauchy%E5%AE%9A%E7%90%86%E4%BA%8C">Cauchy&#x5B9A;&#x7406;&#x4E8C;</h3>
+
+<p>&#x8BBE; <span class="mathjax-exps">$l_k$</span> &#x662F;&#x590D;&#x901A;&#x533A;&#x57DF; <span class="mathjax-exps">$D$</span> &#x7684;&#x5168;&#x90E8;&#x5883;&#x754C;&#x7EBF;&#xFF0C; <span class="mathjax-exps">$f(z)$</span> &#x662F; <span class="mathjax-exps">$\bar D$</span> &#x4E0A;&#x7684;&#x5355;&#x503C;&#x89E3;&#x6790;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\sum_{k\:=\:1}^n\oint f(z)\:\mathrm{d}z=0$$</div><p></p>
+<p>&#x63A8;&#x8BBA;&#xFF1A;<br>
+1.&#x590D;&#x901A;&#x533A;&#x57DF;&#x5185;&#x5355;&#x503C;&#x51FD;&#x6570;&#x6CBF;&#x5916;&#x5883;&#x754C;&#x7EBF;&#x9006;&#x65F6;&#x9488;&#x65B9;&#x5411;&#x7684;&#x79EF;&#x5206;&#x7B49;&#x4E8E;&#x6CBF;&#x5404;&#x5185;&#x5883;&#x754C;&#x7EBF;&#x9006;&#x65F6;&#x9488;&#x65B9;&#x5411;&#x79EF;&#x5206;&#x4E4B;&#x548C;&#x3002;<br>
+2.&#x5BF9;&#x4E8E;&#x95ED;&#x533A;&#x57DF;&#x4E0A;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;&#xFF0C;&#x4E00;&#x6761;&#x95ED;&#x66F2;&#x7EBF;&#x53EF;&#x5728;&#x533A;&#x57DF;&#x5185;&#x8FDE;&#x7EED;&#x53D8;&#x5F62;&#x4E8C;&#x4FDD;&#x8BC1;&#x5728;&#x5176;&#x4E0A;&#x7684;&#x79EF;&#x5206;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x3002;</p>
+<h2 class="mume-header" id="%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86">&#x4E0D;&#x5B9A;&#x79EF;&#x5206;</h2>
+
+<p>&#x8BBE; <span class="mathjax-exps">$f(z)$</span> &#x662F;&#x5355;&#x901A;&#x533A;&#x57DF; <span class="mathjax-exps">$D$</span> &#x5185;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;&#xFF0C;<span class="mathjax-exps">$z_0$</span> &#x662F; <span class="mathjax-exps">$D$</span> &#x5185;&#x7684;&#x4E00;&#x4E2A;&#x5B9A;&#x70B9;&#xFF0C;&#x5728; <span class="mathjax-exps">$D$</span> &#x5185;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$F(z)\equiv\int^z_{z_0}f(\zeta)\:\mathrm{d}\zeta$$</div><p></p>
+<p>&#x5219; <span class="mathjax-exps">$F(z)$</span> &#x4E5F;&#x662F; <span class="mathjax-exps">$D$</span> &#x5185;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;&#xFF0C;&#x4E14;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$F&apos;(z)=f(z)$$</div><p></p>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x5BF9; <span class="mathjax-exps">$D$</span> &#x5185;&#x4EFB;&#x610F;&#x7684;&#x4E24;&#x70B9; <span class="mathjax-exps">$z_1$</span> &#x548C; <span class="mathjax-exps">$z_2$</span> &#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{z_2}_{z_1}=F(z_2)-F(z_1)$$</div><p></p>
+<p>&#x5373; <span class="mathjax-exps">$F(z)$</span> &#x662F; <span class="mathjax-exps">$f(z)$</span> &#x7684;&#x539F;&#x51FD;&#x6570;&#x3002;<br>
+&#x4E8E;&#x662F;&#xFF0C;<span class="mathjax-exps">$f(z)$</span> &#x7684;&#x539F;&#x51FD;&#x6570;&#x7684;&#x96C6;&#x5408; <span class="mathjax-exps">$\{\:F(z)+C\:\}$</span> &#x79F0;&#x4E3A; <span class="mathjax-exps">$f(z)$</span> &#x7684;&#x4E0D;&#x5B9A;&#x79EF;&#x5206;&#x3002;</p>
+<h2 class="mume-header" id="cauchy%E5%85%AC%E5%BC%8F">Cauchy&#x516C;&#x5F0F;</h2>
+
+<p>&#x8003;&#x8651;</p>
+<p></p><div class="mathjax-exps">$$I=\oint(z-\alpha)^{-1}\:\mathrm{d}z$$</div><p></p>
+<p>&#x6709;Cauchy&#x5B9A;&#x7406;&#x7684;&#x63A8;&#x8BBA;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x79EF;&#x5206;&#x8DEF;&#x7EBF;&#x6539;&#x4E3A;&#x5706;&#x5468; <span class="mathjax-exps">$|z-\alpha|=\varepsilon$</span> &#xFF0C;&#x5E76;&#x4EE4; <span class="mathjax-exps">$z=\alpha+\varepsilon e^{i\varphi}$</span> &#xFF0C;&#x4E8E;&#x662F;&#x6709; <span class="mathjax-exps">$\mathrm{d}z=i\varepsilon e^{i\varphi}\mathrm{d}\varphi$</span> &#xFF0C;&#x4E8E;&#x662F;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$I=\int_0^{2\pi}\frac{i\varepsilon e^{i\varphi}\mathrm{d}\varphi}{\varepsilon e^{i\varphi}}=2\pi i$$</div><p></p>
+<p>&#x8BBE; <span class="mathjax-exps">$f(z)$</span> &#x662F;&#x95ED;&#x5355;&#x8FDE;&#x901A;&#x533A;&#x57DF;&#x4E0A;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;&#xFF0C; <span class="mathjax-exps">$l$</span> &#x4E3A;&#x533A;&#x57DF;&#x7684;&#x5883;&#x754C;&#x7EBF;&#xFF0C;&#x5BF9;&#x533A;&#x57DF;&#x5185;&#x7684;&#x4EFB;&#x4E00;&#x70B9; <span class="mathjax-exps">$z$</span>&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x77E5;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$f(z)=\frac{1}{2\pi{i}}\oint\frac{f(z)}{\zeta-z}\:\mathrm{d}\zeta$$</div><p></p>
+<p>&#x7136;&#x540E;&#x5229;&#x7528;Cauchy&#x5B9A;&#x7406;&#x7684;&#x63A8;&#x8BBA;&#x7ECF;&#x8FC7;&#x4E00;&#x756A;fancy&#x7684;&#x7F29;&#x5C0F;&#x56F4;&#x9053;&#x5230;&#x65E0;&#x7A77;&#x5C0F;&#x534A;&#x5F84;&#x7684;&#x5706;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BC1;&#x660E;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$f(z)=\frac{1}{2\pi{i}}\oint_l\frac{f(\zeta)}{\zeta-z}\:\mathrm{d}\zeta$$</div><p></p>
+<p>&#x8BE5;&#x5F0F;&#x5373;&#x4E3A;Cauchy&#x516C;&#x5F0F;&#x3002;<br>
+Cauchy&#x516C;&#x5F0F;&#x6709;&#x4EE5;&#x4E0B;&#x63A8;&#x8BBA;&#xFF1A;<br>
+1.&#x89E3;&#x6790;&#x51FD;&#x6570;&#x7684;&#x9AD8;&#x9636;&#x5BFC;&#x6570;&#xFF1A;<br>
+</p><div class="mathjax-exps">$$f^{(n)}(z)=\frac{n!}{2\pi{i}}\oint\frac{f(\zeta)}{(\zeta-z)^{n+1}}\:\mathrm{d}\zeta$$</div><br>
+2.&#x65E0;&#x754C;&#x533A;&#x57DF;&#x4E0A;&#x7684;Cauchy&#x516C;&#x5F0F;&#xFF1A;<br>
+&#x8003;&#x8651; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x95ED;&#x66F2;&#x7EBF; <span class="mathjax-exps">$l$</span> &#x4E0A;&#x53CA;&#x5176;&#x5916;&#x90E8;&#x7684;&#x65E0;&#x754C;&#x533A;&#x57DF;&#x4E0A;&#x662F;&#x89E3;&#x6790;&#x7684;&#xFF0C;&#x4E14;&#x6709;&#xFF1A;<br>
+<div class="mathjax-exps">$$\lim_{z\:\rightarrow\:\infty}f(z)=0$$</div><br>
+&#x5219;Cauchy&#x516C;&#x5F0F;&#x4ECD;&#x7136;&#x6210;&#x7ACB;&#x3002;<p></p>
+<h2 class="mume-header" id="%E7%95%99%E6%95%B0%E5%AE%9A%E7%90%86%E4%B8%8E%E5%AE%9A%E7%A7%AF%E5%88%86%E8%AE%A1%E7%AE%97">&#x7559;&#x6570;&#x5B9A;&#x7406;&#x4E0E;&#x5B9A;&#x79EF;&#x5206;&#x8BA1;&#x7B97;</h2>
+
+<h3 class="mume-header" id="laurent%E7%BA%A7%E6%95%B0">Laurent&#x7EA7;&#x6570;</h3>
+
+<p>Laurent&#x5B9A;&#x7406;&#xFF1A;&#x8BBE; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x73AF;&#x5F62;&#x533A;&#x57DF; <span class="mathjax-exps">$R_2&lt;|z-b|&lt;R_1$</span> &#x5185;&#x662F;&#x5355;&#x503C;&#x89E3;&#x6790;&#x7684;&#xFF0C;&#x5219; <span class="mathjax-exps">$f(z)$</span> &#x53EF;&#x5728;&#x6B64;&#x73AF;&#x57DF;&#x5185;&#x5C55;&#x5F00;&#x4E3A;&#x7EDD;&#x5BF9;&#x6536;&#x655B;&#x4E14;&#x4E00;&#x81F4;&#x6536;&#x655B;&#x7684;&#x7EA7;&#x6570;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$f(z)=\sum^\infty_{k\:=\:-\infty}a_k(z-b)^k$$</div><p></p>
+<p>&#x5176;&#x4E2D;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$a_k=\frac{1}{2\pi{i}}\oint_l\frac{f(\zeta)}{(\zeta-b)^{k+1}}\:\mathrm{d}\zeta$$</div><p></p>
+<p>&#x8BE5;&#x7EA7;&#x6570;&#x79F0;&#x4E3A;Laurent&#x7EA7;&#x6570;&#x3002;</p>
+<h3 class="mume-header" id="%E5%AD%A4%E7%AB%8B%E5%A5%87%E7%82%B9">&#x5B64;&#x7ACB;&#x5947;&#x70B9;</h3>
+
+<p>&#x5047;&#x5B9A; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x70B9; <span class="mathjax-exps">$z=b$</span> &#x662F;&#x5B64;&#x7ACB;&#x7684;&#xFF0C;&#x5373;&#x5728;&#x8BE5;&#x70B9;&#x7684;&#x4EFB;&#x610F;&#x5C0F;&#x90BB;&#x57DF;&#x5185;&#x9664;&#x8BE5;&#x70B9;&#x5916;&#x65E0;&#x5176;&#x4ED6;&#x5947;&#x70B9;&#xFF0C;&#x5E76;&#x5C06;&#x8BE5;&#x51FD;&#x6570;&#x4EE5; <span class="mathjax-exps">$b$</span> &#x70B9;&#x4E3A;&#x4E2D;&#x5FC3;&#x5728;&#x5176;&#x90BB;&#x57DF;&#x5185;&#x5C55;&#x5F00;&#x4E3A;Laurent&#x7EA7;&#x6570;&#x3002;&#x5BF9;&#x4E8E;&#x8BE5;&#x5C55;&#x5F00;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5B83;&#x7684;&#x6B63;&#x5E42;&#x90E8;&#x5206;&#x79F0;&#x4E3A;&#x5B83;&#x7684;&#x89E3;&#x6790;&#x90E8;&#x5206;&#xFF0C;&#x800C;&#x8D1F;&#x5E42;&#x90E8;&#x5206;&#x79F0;&#x4E3A;&#x4E3B;&#x8981;&#x90E8;&#x5206;&#x3002;<br>
+&#x5B64;&#x7ACB;&#x5947;&#x70B9;&#x7684;&#x5206;&#x7C7B;&#xFF1A;<br>
+1.&#x53EF;&#x53BB;&#x5947;&#x70B9;&#xFF1A;<br>
+&#x82E5;Laurent&#x7EA7;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x90E8;&#x5206;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x79F0; <span class="mathjax-exps">$z=b$</span> &#x4E3A; <span class="mathjax-exps">$f(z)$</span> &#x7684;&#x53EF;&#x53BB;&#x5947;&#x70B9;&#xFF0C;&#x6B64;&#x65F6; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x8BE5;&#x70B9;&#x7684;&#x6781;&#x9650;&#x4E3A;&#x4E00;&#x6709;&#x9650;&#x590D;&#x6570;&#x3002;<br>
+2.&#x6781;&#x70B9;<br>
+&#x82E5;Laurent&#x7EA7;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x90E8;&#x5206;&#x4EC5;&#x6709;&#x6709;&#x9650;&#x9879;&#xFF0C;&#x5373;&#xFF1A;<br>
+</p><div class="mathjax-exps">$$f(z)=\sum^\infty_{k\:=\:-m}a_k(z-b)^k\qquad(0&lt;|z-b|&lt;R_1)$$</div><br>
+&#x5176;&#x4E2D; <span class="mathjax-exps">$m\geq1$</span> &#x4E14; <span class="mathjax-exps">$a_{-m}\neq0$</span> &#xFF0C;&#x5219;&#x79F0; <span class="mathjax-exps">$z=b$</span> &#x4E3A; <span class="mathjax-exps">$f(z)$</span> &#x7684;<span class="mathjax-exps">$m$</span>&#x9636;&#x6781;&#x70B9;&#x3002;&#x7279;&#x522B;&#x7684;&#xFF0C;<span class="mathjax-exps">$m=1$</span>&#x65F6;&#x7684;&#x6781;&#x70B9;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x5355;&#x6781;&#x70B9;&#x3002;&#x6B64;&#x65F6; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x8BE5;&#x70B9;&#x7684;&#x6781;&#x9650;&#x4E3A;&#x65E0;&#x7A77;&#x3002;<br>
+&#x5173;&#x4E8E;&#x6781;&#x70B9;&#x9636;&#x6570;&#x7684;&#x5224;&#x65AD;&#xFF1A;<br>
+&#x4F7F; <span class="mathjax-exps">$\lim_{z\:\rightarrow\:b}[(z-b)^nf(z)]$</span> &#x53D6;&#x975E;&#x96F6;&#x6709;&#x9650;&#x503C;&#x7684;&#x81EA;&#x7136;&#x6570; <span class="mathjax-exps">$n$</span> &#x5373;&#x4E3A;&#x8BE5;&#x6781;&#x70B9;&#x5F97;&#x9636;&#x6570;&#x3002;<br>
+3.&#x672C;&#x6027;&#x5947;&#x70B9;<br>
+&#x82E5;Laurent&#x7EA7;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x90E8;&#x5206;&#x6709;&#x65E0;&#x7A77;&#x9879;&#xFF0C;&#x5219;&#x79F0;&#x79F0; <span class="mathjax-exps">$z=b$</span> &#x4E3A; <span class="mathjax-exps">$f(z)$</span> &#x7684;&#x672C;&#x6027;&#x5947;&#x70B9;&#x3002;&#x6B64;&#x65F6; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x8BE5;&#x70B9;&#x7684;&#x6781;&#x9650;&#x4E0D;&#x5B58;&#x5728;&#x3002;<br>
+&#x5BF9;&#x4E8E;&#x65E0;&#x7A77;&#x8FDC;&#x70B9;&#x7684;&#x5947;&#x70B9;&#xFF0C;&#x5C06;Laurent&#x7684;&#x89E3;&#x6790;&#x90E8;&#x5206;&#x4E0E;&#x4E3B;&#x8981;&#x90E8;&#x5206;&#x7684;&#x5B9A;&#x4E49;&#x4E92;&#x6362;&#x540E;&#x518D;&#x6839;&#x636E;&#x4EE5;&#x4E0A;&#x5206;&#x7C7B;&#x5373;&#x53EF;&#x5224;&#x65AD;&#x5947;&#x70B9;&#x7684;&#x7C7B;&#x578B;&#x3002;<p></p>
+<h3 class="mume-header" id="%E7%95%99%E6%95%B0%E5%AE%9A%E7%90%86%E5%92%8C%E7%95%99%E6%95%B0%E7%9A%84%E6%B1%82%E6%B3%95">&#x7559;&#x6570;&#x5B9A;&#x7406;&#x548C;&#x7559;&#x6570;&#x7684;&#x6C42;&#x6CD5;</h3>
+
+<p>&#x7559;&#x6570;&#x5B9A;&#x7406;&#xFF1A;&#x8BBE; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x7531;&#x95ED;&#x66F2;&#x7EBF; <span class="mathjax-exps">$l$</span> &#x6240;&#x56F4;&#x7684;&#x533A;&#x57DF;&#x5185;&#x9664;&#x5177;&#x6709;&#x6709;&#x9650;&#x4E2A;&#x5947;&#x70B9; <span class="mathjax-exps">$z=b_k\:(k=1,2,&#xB7;&#xB7;&#xB7;,m)$</span> &#x5916;&#x662F;&#x5355;&#x503C;&#x89E3;&#x6790;&#x7684;&#xFF08;&#x6216;&#x662F;&#x591A;&#x503C;&#x51FD;&#x6570;&#x7684;&#x4E00;&#x4E2A;&#x5355;&#x503C;&#x5206;&#x652F;&#xFF09;&#xFF0C;&#x5728; <span class="mathjax-exps">$l$</span> &#x4E0A;&#x4E5F;&#x662F;&#x89E3;&#x6790;&#x7684;&#xFF0C;&#x5219;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\oint_lf(z)\:\mathrm{d}z=2\pi{i}\sum^m_{k\:=\:1}a_{-1}^{(k)}\equiv2\pi{i}\sum^m_{k\:=\:1}Res\:f(b_k)$$</div><p></p>
+<p>&#x5176;&#x4E2D; <span class="mathjax-exps">$a_{-1}^{(k)}$</span> &#x662F; <span class="mathjax-exps">$f(z)$</span> &#x5728; <span class="mathjax-exps">$z=b_k$</span> &#x7684;&#x90BB;&#x57DF;&#x5185;Laurent&#x7EA7;&#x6570;&#x5C55;&#x5F00;&#x7684; <span class="mathjax-exps">$-1$</span> &#x6B21;&#x5E42;&#x9879;&#x7684;&#x7CFB;&#x6570;&#xFF0C;&#x7279;&#x79F0;&#x4E3A; <span class="mathjax-exps">$f(z)$</span> &#x5728; <span class="mathjax-exps">$z=b_k$</span> &#x7684;&#x7559;&#x6570;&#xFF0C;&#x8BB0;&#x4E3A; <span class="mathjax-exps">$Res\:f(z)|_{z=b_k}$</span> &#x6216; <span class="mathjax-exps">$Res\:f(b_k)$</span> .<br>
+&#x7559;&#x6570;&#x7684;&#x6C42;&#x6CD5;&#xFF1A;<br>
+1.&#x53EF;&#x53BB;&#x5947;&#x70B9;&#x7684;&#x7559;&#x6570;&#x4E3A;0.<br>
+2.&#x6781;&#x70B9;&#x7684;&#x7559;&#x6570;&#xFF1A;<br>
+(1).&#x8BBE; <span class="mathjax-exps">$z=b$</span> &#x662F; <span class="mathjax-exps">$f(z)$</span> &#x7684;&#x5355;&#x6781;&#x70B9;&#xFF0C;&#x6709;&#xFF1A;</p><div class="mathjax-exps">$$Res\:f(b)=\lim_{z\:\rightarrow\:b}[(z-b)f(z)]$$</div>&#x82E5; <span class="mathjax-exps">$f(z)$</span> &#x53EF;&#x8868;&#x793A;&#x4E3A;&#x4E24;&#x4E2A;&#x89E3;&#x6790;&#x51FD;&#x6570; <span class="mathjax-exps">$P(z)$</span> &#x4E0E; <span class="mathjax-exps">$Q(z)$</span> &#x4E4B;&#x5546;&#xFF0C;&#x5219;&#xFF1A;<br>
+<div class="mathjax-exps">$$Res\:f(b)=\frac{P(b)}{Q&apos;(b)}$$</div><br>
+(2).&#x8BBE; <span class="mathjax-exps">$z=b$</span> &#x662F; <span class="mathjax-exps">$f(z)$</span> &#x7684; <span class="mathjax-exps">$m\:(m\geq2)$</span> &#x9636;&#x6781;&#x70B9;&#xFF0C;&#x6709;&#xFF1A;<br>
+<div class="mathjax-exps">$$Res\:f(b)=\lim_{z\:\rightarrow\:b}\frac{1}{(m-1)!}\frac{\mathrm{d}^{m-1}}{\mathrm{d}z^{m-1}}[(z-b)^mf(z)]$$</div><br>
+(3).&#x82E5; <span class="mathjax-exps">$z=b$</span> &#x662F; <span class="mathjax-exps">$f(z)$</span> &#x7684;&#x672C;&#x6027;&#x5947;&#x70B9;&#xFF0C;&#x5219;&#x53EA;&#x80FD;&#x7531;Laurent&#x7EA7;&#x6570;&#x5C55;&#x5F00;&#x7684;&#x7CFB;&#x6570;&#x6C42;&#x7559;&#x6570;&#x3002;<p></p>
+<p>&#x7559;&#x6570;&#x5B9A;&#x7406;&#x5C06;&#x95ED;&#x66F2;&#x7EBF;&#x79EF;&#x5206;&#x7684;&#x8BA1;&#x7B97;&#x53D8;&#x4E3A;&#xFF08;&#x81F3;&#x591A;&#xFF09;&#x6C42;&#x51E0;&#x4E2A;&#x6781;&#x70B9;&#x5904;&#x7684;&#x5BFC;&#x6570;&#xFF0C;&#x8FD9;&#x4E3A;&#x6211;&#x4EEC;&#x6C42;&#x89E3;&#x8BB8;&#x591A;&#x6CA1;&#x6709;&#x521D;&#x7B49;&#x539F;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x53D8;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x79EF;&#x5206;&#x63D0;&#x4F9B;&#x4E86;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 class="mume-header" id="%E5%8D%95%E5%91%A8%E6%9C%9F%E5%86%85%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%9C%89%E7%90%86%E5%88%86%E5%BC%8F%E7%9A%84%E5%AE%9A%E7%A7%AF%E5%88%86%E8%AE%A1%E7%AE%97">&#x5355;&#x5468;&#x671F;&#x5185;&#x4E09;&#x89D2;&#x51FD;&#x6570;&#x6709;&#x7406;&#x5206;&#x5F0F;&#x7684;&#x5B9A;&#x79EF;&#x5206;&#x8BA1;&#x7B97;</h3>
+
+<p>&#x611F;&#x89C9;&#x7528;&#x4E0D;&#x5230;&#xFF0C;&#x4E0D;&#x5199;&#x4E86;&#x55B5;~</p>
+<h3 class="mume-header" id="displaystyleintinfty_-infty-fxmathrmdx-%E4%B8%8E-displaystyleintinfty_-infty-fxeimxmathrmdx-%E7%9A%84%E8%AE%A1%E7%AE%97%E4%B8%8Ejordan%E5%BC%95%E7%90%86"><span class="mathjax-exps">$\displaystyle\int^\infty_{-\infty} f(x)\mathrm{d}x$</span> &#x4E0E; <span class="mathjax-exps">$\displaystyle\int^\infty_{-\infty} f(x)e^{imx}\mathrm{d}x$</span> &#x7684;&#x8BA1;&#x7B97;&#x4E0E;Jordan&#x5F15;&#x7406;</h3>
+
+<p>&#x5229;&#x7528;&#x7559;&#x6570;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x5B9A;&#x79EF;&#x5206;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x53D8;&#x4E3A;&#x5B9E;&#x6570;&#x8F74;&#x4E0A;&#x7684;&#x4E00;&#x4E2A;&#x7EBF;&#x6BB5;&#x4E0E;&#x590D;&#x5E73;&#x9762;&#x5185;&#x4E00;&#x4E2A;&#x9002;&#x5F53;&#x8F85;&#x52A9;&#x66F2;&#x7EBF;&#x6BB5; <span class="mathjax-exps">$l_1$</span> &#x7684;&#x56F4;&#x9053;&#x79EF;&#x5206;&#x3002;&#x6309;&#x7167;&#x7559;&#x6570;&#x5B9A;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{a}_{b}f(x)\:\mathrm{d}x+\int_{l_1}f(z)\:\mathrm{d}z =\oint_lf(z)\:\mathrm{d}z =2 \pi i \sum_{k\:=\:1}^m Res\:f(b_k)$$</div><p></p>
+<p>&#x8FD9;&#x4F4D;&#x6211;&#x4EEC;&#x8BA1;&#x7B97;&#x5B9A;&#x79EF;&#x5206;&#x63D0;&#x4F9B;&#x4E86;&#x9014;&#x5F84;&#x3002;<br>
+1.&#x8003;&#x8651;&#x5982;&#x4E0B;&#x79EF;&#x5206;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{-\infty}f(x)\:\mathrm{d}x$$</div><p></p>
+<p>&#x8BBE;&#x7531; <span class="mathjax-exps">$f(x)$</span> &#x6240;&#x552F;&#x4E00;&#x786E;&#x5B9A;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x4E0A;&#x534A;&#x5E73;&#x9762;&#x4EC5;&#x6709;&#x6709;&#x9650;&#x4E2A;&#x5947;&#x70B9;&#xFF0C;&#x800C;&#x4E14;&#x5F53; <span class="mathjax-exps">$z\rightarrow\infty$</span> &#x65F6;&#xFF0C;<span class="mathjax-exps">$zf(z)$</span> &#x4E00;&#x81F4;&#x5730;&#x8D8B;&#x4E8E;&#x96F6;&#xFF08;&#x7B80;&#x8BB0;&#x4E3A; <span class="mathjax-exps">$zf(z)\Rightarrow0$</span> &#xFF09;&#xFF1B;&#x6682;&#x4E14;&#x5047;&#x8BBE; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x5B9E;&#x8F74;&#x4E0A;&#x6CA1;&#x6709;&#x5947;&#x70B9;&#xFF0C;&#x6784;&#x5EFA;&#x4E00;&#x4EE5;&#x539F;&#x70B9;&#x4E3A;&#x5706;&#x5FC3;&#x3001;&#x5145;&#x5206;&#x5927;&#x7684; <span class="mathjax-exps">$R$</span> &#x4E3A;&#x534A;&#x5F84;&#x7684;&#x4E0A;&#x534A;&#x5706; <span class="mathjax-exps">$C_R$</span>&#xFF0C;&#x5B83;&#x4E0E;&#x5B9E;&#x8F74;&#x4E0A;&#x4E00;&#x6BB5; <span class="mathjax-exps">$[-R,R]$</span> &#x6784;&#x6210;&#x4E00;&#x95ED;&#x66F2;&#x7EBF; <span class="mathjax-exps">$l$</span>&#xFF0C;&#x4E14;&#x5C06; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x4E0A;&#x534A;&#x5E73;&#x9762;&#x7684;&#x5947;&#x70B9;&#x5168;&#x90E8;&#x5305;&#x62EC;&#x5728;&#x5185;&#x3002;&#x4E8E;&#x662F;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^R_{-R}f(x)\:\mathrm{d}x+\int_{C_R}f(z)\:\mathrm{d}z=\oint_lf(z)\:\mathrm{d}z=2\pi{i}\sum_{&#x4E0A;&#x534A;&#x5706;&#x5185;} Res\:f(z)$$</div><p></p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x53D6;&#x6781;&#x9650; <span class="mathjax-exps">$R\rightarrow0$</span> &#x65F6;&#xFF0C;&#x4E0A;&#x5F0F;&#x5DE6;&#x7AEF;&#x7684;&#x7B2C;&#x4E00;&#x9879;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x6C42;&#x7684;&#x79EF;&#x5206;&#x3002;<br>
+&#x7531;&#x4E0A;&#x8FF0;&#x7684; <span class="mathjax-exps">$zf(z)\Rightarrow0$</span> &#x7684;&#x6761;&#x4EF6;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BC1;&#x660E;&#xFF0C;&#x4E0A;&#x5F0F;&#x7684;&#x7B2C;&#x4E8C;&#x9879;&#x5728; <span class="mathjax-exps">$R\rightarrow0$</span> &#x65F6;&#x7B49;&#x4E8E; <span class="mathjax-exps">$0$</span>.<br>
+&#x4E8E;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{-\infty}f(x)\:\mathrm{d}x=2\pi{i}\sum_{&#x4E0A;&#x534A;&#x5706;&#x5185;}Res\:f(z)$$</div><p></p>
+<p>e.g.&#x8BA1;&#x7B97;&#x5982;&#x4E0B;&#x79EF;&#x5206;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$I=\int^{\infty}_{0}\frac{\mathrm{d}x}{(x^2+1)^3}=\frac{1}{2}\int^{\infty}_{-\infty}\frac{\mathrm{d}x}{(x^2+1)^3}$$</div><p></p>
+<p>&#x89E3;&#xFF1A;&#x88AB;&#x79EF;&#x51FD;&#x6570;&#x4E0A;&#x534A;&#x5E73;&#x9762;&#x5185;&#x4EC5;&#x6709; <span class="mathjax-exps">$z=i$</span> &#x4E00;&#x4E2A;&#x4E09;&#x9636;&#x6781;&#x70B9;&#x3002;&#x7531;&#x4E8E;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$Res\:f(i)=\frac{3}{16i}$$</div><p></p>
+<p>&#x6709;:</p>
+<p></p><div class="mathjax-exps">$$I=\frac{1}{2}2\pi{i}\frac{3}{16i}=\frac{3\pi}{16}$$</div><p></p>
+<p>2.&#x8003;&#x8651;&#x5982;&#x4E0B;&#x79EF;&#x5206;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{-\infty}f(x)e^{imx}\:\mathrm{d}x$$</div><p></p>
+<p>&#x5176;&#x4E2D; <span class="mathjax-exps">$m$</span> &#x662F;&#x4E00;&#x4E2A;&#x975E;&#x96F6;&#x5B9E;&#x6570;&#x3002;<br>
+&#x8BE5;&#x79EF;&#x5206;&#x7684;&#x5B9E;&#x90E8;&#x662F;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{-\infty}cos(mx)\:\mathrm{d}x$$</div><p></p>
+<p>&#x865A;&#x90E8;&#x662F;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{-\infty}sin(mx)\:\mathrm{d}x$$</div><p></p>
+<p>&#x4E0D;&#x59A8;&#x8BBE; <span class="mathjax-exps">$m&gt;0$</span> &#xFF0C;&#x4E14;&#x7531; <span class="mathjax-exps">$f(x)$</span> &#x6240;&#x552F;&#x4E00;&#x786E;&#x5B9A;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x4E0A;&#x534A;&#x5E73;&#x9762;&#x5185;&#x4EC5;&#x6709;&#x6709;&#x9650;&#x4E2A;&#x5947;&#x70B9;&#xFF0C;&#x800C;&#x4E14;&#x5F53; <span class="mathjax-exps">$z\rightarrow0$</span> &#x65F6;&#xFF0C;<span class="mathjax-exps">$f(z)\Rightarrow0$</span> &#xFF08;&#x8FD9;&#x6BD4;&#x4E0A;&#x6587;&#x4E2D;&#x7684; <span class="mathjax-exps">$zf(z)\Rightarrow0$</span> &#x5F31;&#xFF09;&#xFF0C;&#x540C;&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x53D6;&#x95ED;&#x66F2;&#x7EBF; <span class="mathjax-exps">$l$</span> &#x4E3A;&#x56F4;&#x9053;&#xFF0C;&#x4E8E;&#x662F;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned} \int^{R}_{-R}&amp;f(x)e^{imx}\:\mathrm{d}x+\int_{C_R}f(z)e^{imz}\:\mathrm{d}z\\ &amp;=\oint_lf(z)e^{imz}\:\mathrm{d}z=2\pi{i}\sum_{&#x4E0A;&#x534A;&#x5706;&#x5185;}Res[f(z)e^{imz}] \end{aligned}$$</div><p></p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x8BC1;&#x660E; <span class="mathjax-exps">$R\rightarrow0$</span> &#x65F6;&#x7B2C;&#x4E8C;&#x9879;&#x79EF;&#x5206;&#x8D8B;&#x8FD1;&#x4E8E;0&#xFF1A;</p>
+<p><strong>Jordan&#x5F15;&#x7406;</strong>&#xFF1A;&#x8BBE; <span class="mathjax-exps">$m&gt;0$</span>&#xFF0C;&#x4E14;&#x5F53; <span class="mathjax-exps">$z\rightarrow\infty$</span> &#x65F6; <span class="mathjax-exps">$f(z)\Rightarrow0(0\leq arg\:z\leq\pi)$</span>&#xFF0C;&#x5219;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\lim_{R\:\rightarrow\:\infty}\int_{C_R}f(z)e^{imz}\:\mathrm{d}z=0$$</div><p></p>
+<p>&#x8BC1;&#x660E;&#xFF1A;&#x5927;&#x6982;&#x770B;&#x61C2;&#x4E86;&#xFF0C;&#x61D2;&#x5F97;&#x6284;&#x4E86;&#xFF0C;&#x7565;&#x3002;</p>
+<p>&#x63A8;&#x8BBA;&#xFF1A;&#x82E5;&#x4E0A;&#x8FF0;&#x6761;&#x4EF6;&#x4E2D;&#x7684; <span class="mathjax-exps">$m&lt;0$</span>&#xFF0C;&#x5219; <span class="mathjax-exps">$C_R$</span> &#x5E94;&#x6539;&#x6210;&#x4E0B;&#x73ED;&#x5E73;&#x9762;&#x7684;&#x5927;&#x534A;&#x5706;&#xFF0C;&#x5373; <span class="mathjax-exps">$\pi\leq arg\:z\leq2\pi$</span>&#xFF0C;&#x6B64;&#x65F6;&#x4E0A;&#x8FF0;&#x5F15;&#x7406;&#x4ECD;&#x65E7;&#x6210;&#x7ACB;&#x3002;<br>
+&#x5229;&#x7528;Jordan&#x5F15;&#x7406;&#x5E76;&#x53D6; <span class="mathjax-exps">$R\rightarrow\infty$</span>&#xFF0C;&#x5373;&#x53EF;&#x5F97;&#x5230;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{-\infty}f(x)e^{imx}\:\mathrm{d}x=2\pi{i}\sum_{&#x4E0A;&#x534A;&#x5E73;&#x9762;}Res[f(z)e^{imz}]\quad(m&gt;0)$$</div><p></p>
+<p>e.g.&#x8003;&#x8651;&#x5982;&#x4E0B;&#x79EF;&#x5206;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$I=\int^{\infty}_{0}\frac{xsin\:mx}{x^2+a^2}\mathrm{d}x=\frac{1}{2}\int^{\infty}_{-\infty}\frac{xsin\:mx}{x^2+a^2}\mathrm{d}x$$</div><p></p>
+<p>&#xFF08;<span class="mathjax-exps">$m$</span>&#x662F;&#x5B9E;&#x5E38;&#x6570;&#xFF0C;<span class="mathjax-exps">$a&gt;0$</span>&#xFF09;</p>
+<p>&#x89E3;&#xFF1A;&#x8BBE; <span class="mathjax-exps">$m&gt;0$</span>&#xFF0C;&#x4E14;&#x8003;&#x8651;&#x5982;&#x4E0B;&#x79EF;&#x5206;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{-\infty}\frac{x}{x^2+a^2}e^{imx}\:\mathrm{d}x$$</div><p></p>
+<p>&#x7531;&#x4E8E;&#x88AB;&#x79EF;&#x51FD;&#x6570;&#x5728;&#x4E0A;&#x534A;&#x5E73;&#x9762;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x5355;&#x6781;&#x70B9; <span class="mathjax-exps">$z=ai$</span>&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{-\infty}\frac{x}{x^2+a^2}e^{imx}\:\mathrm{d}x=2\pi{i}Res\left.\left[\frac{z}{z^2+a^2}e^{imz}\right]\right|_{z=ai}=\pi{i}e^{-ma}$$</div><p></p>
+<p>&#x53D6;&#x5176;&#x865A;&#x90E8;&#x5E76;&#x9664;&#x4EE5;&#x4E8C;&#xFF0C;&#x5373;&#x5F97;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$I=\frac{\pi}{2}e^{-ma}$$</div><p></p>
+<h3 class="mume-header" id="%E7%A7%AF%E5%88%86%E4%B8%BB%E5%80%BC%E4%B8%8Ehilbert%E5%8F%98%E6%8D%A2">&#x79EF;&#x5206;&#x4E3B;&#x503C;&#x4E0E;Hilbert&#x53D8;&#x6362;</h3>
+
+<h5 class="mume-header" id="%E7%A7%AF%E5%88%86%E4%B8%BB%E5%80%BC">&#x79EF;&#x5206;&#x4E3B;&#x503C;</h5>
+
+<p>&#x5728;&#x4E0A;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8003;&#x8651;&#x7684;&#x90FD;&#x662F;&#x88AB;&#x79EF;&#x51FD;&#x6570;&#x5728;&#x79EF;&#x5206;&#x533A;&#x95F4;&#x5185;&#x6709;&#x754C;&#x7684;&#x60C5;&#x51B5;&#x3002;<br>
+&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x8003;&#x8651;&#x88AB;&#x79EF;&#x51FD;&#x6570;&#x5728;&#x79EF;&#x5206;&#x533A;&#x95F4;&#x5185;&#x65E0;&#x754C;&#x7684;&#x60C5;&#x51B5;&#x3002;<br>
+&#x8BBE; <span class="mathjax-exps">$z=c(a&lt;c&lt;b)$</span> &#x662F; <span class="mathjax-exps">$f(z)$</span> &#x7684;&#x5355;&#x6781;&#x70B9;&#xFF0C;&#x5E7F;&#x4E49;&#x79EF;&#x5206; <span class="mathjax-exps">$\displaystyle\int_{a}^{b}f(x)\:\mathrm{d}x$</span>&#x7684;&#x4E00;&#x822C;&#x503C;&#x5B9A;&#x4E49;&#x4E3A;&#xFF08;<span class="mathjax-exps">$\varepsilon_1&gt;0,\varepsilon_2&gt;0$</span>&#xFF09;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int_{a}^{b}f(x)\:\mathrm{d}x\equiv\lim_{\varepsilon_1\:\rightarrow\:0}\int^{c-\varepsilon_1}_{a}f(x)\:\mathrm{d}x+\lim_{\varepsilon_2\:\rightarrow\:0}\int^{b}_{c+\varepsilon_2}f(x)\:\mathrm{d}x$$</div><p></p>
+<p>&#x800C;&#x79EF;&#x5206;&#x4E3B;&#x503C;&#x8BB0;&#x4E3A; <span class="mathjax-exps">$P\int^b_af(x)\:\mathrm{d}x$</span> &#x5E76;&#x5B9A;&#x4E49;&#x4E3A;&#xFF08;<span class="mathjax-exps">$\varepsilon&gt;0$</span>&#xFF09;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$P\int^b_af(x)\:\mathrm{d}x\equiv\lim_{\varepsilon\:\rightarrow\:0}\left[\int^{c-\varepsilon}_af(x)\:\mathrm{d}x+\int^b_{c+\varepsilon}f(x)\:\mathrm{d}x\right]$$</div><p></p>
+<p>&#x7ECF;&#x8FC7;&#x4E00;&#x756A;fancy&#x7684;&#x63A8;&#x5BFC;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$P\int_{-\infty}^{\infty}f(x)\:\mathrm{d}x=2\pi{i}\sum_{&#x4E0A;&#x534A;&#x5E73;&#x9762;}Res\:f(z)+\pi{i}\sum_{&#x5B9E;&#x8F74;&#x4E0A;}Res\:f(z)$$</div><p></p>
+<h5 class="mume-header" id="hilbert%E5%8F%98%E6%8D%A2">Hilbert&#x53D8;&#x6362;</h5>
+
+<p>&#x8003;&#x8651;&#x5982;&#x4E0B;&#x79EF;&#x5206;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$I=\int^{\infty}_{-\infty}\frac{f(x)}{x-\alpha}\:\mathrm{d}x$$</div><p></p>
+<p>&#x5176;&#x4E2D; <span class="mathjax-exps">$f(z)$</span> &#x5728;&#x4E0A;&#x534A;&#x5E73;&#x9762;&#x5185;&#x5904;&#x5904;&#x89E3;&#x6790;&#xFF0C;&#x4E14;&#x5F53; <span class="mathjax-exps">$z\rightarrow\infty$</span> &#x65F6; <span class="mathjax-exps">$f(z)\Rightarrow0(0\leq arg\:z\leq\pi)$</span>&#xFF0C; <span class="mathjax-exps">$\alpha$</span> &#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x6570;&#x3002;&#x5219;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$P\int^{\infty}_{-\infty}\frac{f(x)}{x-\alpha}\:\mathrm{d}x=\pi{i}f(\alpha)$$</div><p></p>
+<p>&#x5206;&#x79BB;&#x51FA;&#x5B9E;&#x90E8;&#x548C;&#x865A;&#x90E8;&#xFF0C;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\left\{ 	\begin{aligned} 		Ref(\alpha)&amp;=\frac{1}{\pi}P\int^{\infty}_{-\infty}\frac{Imf(x)}{x-\alpha}\:\mathrm{d}x\\ 		Imf(\alpha)&amp;=-\frac{1}{\pi}P\int^{\infty}_{-\infty}\frac{Ref(x)}{x-\alpha}\:\mathrm{d}x 	\end{aligned} \right.$$</div><p></p>
+<p>&#x8BE5;&#x5173;&#x7CFB;&#x5F0F;&#x79F0;&#x4E3A;Hilbert&#x53D8;&#x6362;&#x3002;</p>
+<h3 class="mume-header" id="%E7%89%B9%E6%AE%8A%E7%A7%AF%E5%88%86">&#x7279;&#x6B8A;&#x79EF;&#x5206;</h3>
+
+<p>Fresnel&#x79EF;&#x5206;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$I_1=\int^{\infty}_0sin\:x^2\:\mathrm{d}x \quad I_2=\int^{\infty}_0cos\:x^2\:\mathrm{d}x$$</div><p></p>
+<p>&#x8003;&#x8651;&#x51FD;&#x6570; <span class="mathjax-exps">$f(z)=e^{iz^2}$</span> &#x6CBF;&#x4E00;&#x6761;&#x95ED;&#x66F2;&#x7EBF;&#x7684;&#x79EF;&#x5206;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x8003;&#x8651;&#x95ED;&#x66F2;&#x7EBF;&#x7684;&#x9009;&#x53D6;&#x95EE;&#x9898;&#x3002;&#x53D6; <span class="mathjax-exps">$z=Re^{i\theta}$</span> &#x82E5;&#x6211;&#x4EEC;&#x4ECD;&#x65E7;&#x50CF;&#x524D;&#x6587;&#x4E00;&#x6837;&#x9009;&#x53D6;&#x4E0A;&#x534A;&#x5706;&#x4F5C;&#x4E3A;&#x56F4;&#x9053;&#xFF0C;&#x5C31;&#x4F1A;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$e^{iz^2}=e^{-R^2sin\:2\theta}e^{iR^2cos\:2\theta}$$</div><p></p>
+<p>&#x6B64;&#x65F6;&#x53D6; <span class="mathjax-exps">$R\rightarrow\infty$</span>&#xFF0C;&#x5219;&#x5BF9;&#x4E8E; <span class="mathjax-exps">$\displaystyle\theta\in(\frac{\pi}{2},\pi)$</span> &#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5C31;&#x4F1A;&#x6709;&#x4E0A;&#x5F0F;&#x8D8B;&#x8FD1;&#x4E8E;&#x65E0;&#x7A77;&#x5927;&#xFF0C;&#x56E0;&#x800C;&#x4E0A;&#x534A;&#x5706;&#x56F4;&#x9053;&#x4E0D;&#x6EE1;&#x8DB3;&#x6211;&#x4EEC;&#x7684;&#x9700;&#x6C42;&#x3002;<br>
+&#x4E8E;&#x662F;&#x8003;&#x8651;&#x53F3;&#x4E0A;&#x56DB;&#x5206;&#x4E4B;&#x4E00;&#x5706;&#x56F4;&#x9053;&#xFF08;&#x5982;&#x56FE;&#xFF09;&#x3002;</p>
+<p><img src="./../Pic1.png" alt="&#x8282;&#x70B9;"></p>
+<p>&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x5C31;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int_{C&apos;_R}f(z)\:\mathrm{d}z\rightarrow0\quad(R\:\rightarrow\:\infty)$$</div><p></p>
+<p>&#x5229;&#x7528;Cauchy&#x5B9A;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^R_0e^{ix^2}\mathrm{d}x+\int_{C&apos;_R}f(z)\mathrm{d}z+\int^0_Re^{-iy^2}dy=0$$</div><p></p>
+<p>&#x53D6; <span class="mathjax-exps">$R\rightarrow\infty$</span> &#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$(I_2+iI_1)-i(I_2-iI_1)=0$$</div><p></p>
+<p>&#x4E8E;&#x662F;&#x6709; <span class="mathjax-exps">$I_1=I_2$</span>.<br>
+&#x4F46;&#x8FD9;&#x5E76;&#x6CA1;&#x6709;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4ECD;&#x4E0D;&#x77E5;&#x9053; <span class="mathjax-exps">$I_1$</span> &#x4E0E; <span class="mathjax-exps">$I_2$</span>&#x7684;&#x503C;&#x3002;<br>
+&#x4E8E;&#x662F;&#x518D;&#x8003;&#x8651;&#x53D6; <span class="mathjax-exps">$\displaystyle\frac{1}{8}$</span> &#x5706;&#x4E3A;&#x56F4;&#x9053;&#x505A;&#x79EF;&#x5206;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x597D;&#x5904;&#x5728;&#x4E8E; <span class="mathjax-exps">$f(z)$</span> &#x6CBF; <span class="mathjax-exps">$\displaystyle z=re^{\frac{i\pi}{4}}$</span> &#x7684;&#x79EF;&#x5206;&#x662F;&#x6211;&#x4EEC;&#x5DF2;&#x77E5;&#x7684;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{0}e^{iz^2}\:\mathrm{d}z=e^{\frac{i\pi}{4}}\int^{\infty}_{0}e^{-r^2}\:\mathrm{d}r=\frac{\sqrt{\pi}}{2}\left(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2}\right)$$</div><p></p>
+<p>&#x5C06;&#x8BE5;&#x9879;&#x66FF;&#x6362;&#x6389;&#x4E0A;&#x5F0F;&#x4E2D;&#x5BF9; <span class="mathjax-exps">$y$</span> &#x7684;&#x79EF;&#x5206;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$\int^{\infty}_{0}e^{ix^2}\:\mathrm{d}x-\frac{\sqrt{\pi}}{2}\left(\frac{\sqrt{2}}{2}+i\frac{\sqrt{2}}{2}\right)=0$$</div><p></p>
+<p>&#x4E8E;&#x662F;&#x6709;&#xFF1A;</p>
+<p></p><div class="mathjax-exps">$$I_1=I_2=\frac{\sqrt{2\pi}}{4}$$</div><p></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
