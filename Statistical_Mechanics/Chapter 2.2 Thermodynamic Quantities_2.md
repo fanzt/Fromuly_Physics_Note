@@ -75,3 +75,16 @@ $$
     \end{aligned}
     $$
 
+在此引入 Jacobi 行列式：
+    $$
+        \frac{\p(u,v)}{\p(x,y)}=
+            \l|\begin{matrix}
+                \displaystyle\frac{\p{u}}{\p{x}} & \displaystyle\frac{\p{u}}{\p{y}}
+                \\\displaystyle\frac{\p{v}}{\p{x}} & \displaystyle\frac{\p{v}}{\p{y}}
+            \end{matrix}\r|
+    $$
+
+显然其具有性质：
+    $$
+        \frac{\p(u,y)}{\p(x,y)}=\l(\frac{\p{u}}{\p{x}}\r)_y
+    $$
