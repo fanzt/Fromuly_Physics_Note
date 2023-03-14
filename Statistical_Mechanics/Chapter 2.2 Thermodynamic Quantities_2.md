@@ -37,7 +37,7 @@ $$
         \l(\frac{\p{C_p}}{\p{P}}\r)_T=-T\l(\frac{\p^2{V}}{\p{T}^2}\r)_P
     $$
 
-*朗道本节后面的内容都在讨论如何计算热容，我看不懂所以不想写了，这里直接讨论 Maxwell 关系*
+*朗道本节后面的内容都在讨论如何计算热容，我看得不是很懂所以不想写了，这里直接讨论 Maxwell 关系*
 &emsp;&emsp;接下来我们讨论各个热力学量的导数之间的关系。首先给出热力学基本微分方程及其变形：
     $$
         \d{E}=T\d{S}-P\d{V}
@@ -86,5 +86,151 @@ $$
 
 显然其具有性质：
     $$
-        \frac{\p(u,y)}{\p(x,y)}=\l(\frac{\p{u}}{\p{x}}\r)_y
+    \begin{aligned}
+        \frac{\p(u,y)}{\p(x,y)}&=
+            \l|\begin{matrix}
+                \displaystyle\frac{\p{u}}{\p{x}} & \displaystyle\frac{\p{u}}{\p{y}}
+                \\\displaystyle\frac{\p{y}}{\p{x}} & \displaystyle\frac{\p{y}}{\p{y}}
+            \end{matrix}\r|
+            \\&=
+            \l|\begin{matrix}
+                \displaystyle\frac{\p{u}}{\p{x}} & \displaystyle\frac{\p{u}}{\p{y}}
+                \\0 & 1
+            \end{matrix}\r|
+            \\&=\l(\frac{\p{u}}{\p{x}}\r)_y
+    \end{aligned}
     $$
+
+----
+
+*还是写点吧……*
+
+接下来我们利用以上知识证明一个事实：不论何种情况何种状态，对于所有的物体，我们总有：
+    $$
+        C_p-C_v>0
+    $$
+
+证：
+首先写出 $C_v$ 的表达式：
+    $$
+        C_v=T\l(\frac{\p{S}}{\p{T}}\r)_V
+    $$
+
+利用 Jacobi 行列式，并经过一系列化简，我们有：
+    $$
+    \begin{aligned}
+        C_v&=T\frac{\p(S,V)}{\p(T,V)}
+        \\&=T\frac{\frac{\p(S,V)}{\p(T,P)}}{\frac{\p(T,V)}{\p(T,P)}}
+        \\&=T
+            \frac{
+            \l(
+                \frac{\p{S}}{\p{T}}
+            \r)_P
+            \l(
+                \frac{\p{V}}{\p{P}}
+            \r)_T
+            -\l(
+                \frac{\p{S}}{\p{P}}
+            \r)_T
+            \l(
+                \frac{\p{V}}{\p{T}}
+            \r)_P}{
+                \l(
+                    \frac{\p{V}}{\p{P}}
+                \r)_T
+            }
+        \\&=C_p-T\frac{
+            \l(
+                \frac{\p{S}}{\p{P}}
+            \r)_T
+            \l(
+                \frac{\p{V}}{\p{T}}
+            \r)_P}{
+                \l(
+                    \frac{\p{V}}{\p{P}}
+                \r)_T
+            }
+    \end{aligned}
+    $$
+
+带入 Maxwell 关系中的一个，我们有：
+    $$
+    \begin{aligned}
+        C_v&=C_p+T\frac{
+            \l(
+                \frac{\p{V}}{\p{T}}
+            \r)^2_P}{
+                \l(
+                    \frac{\p{V}}{\p{P}}
+                \r)_T
+            }
+    \end{aligned}
+    $$
+
+于是我们就有：
+    $$
+        C_p-C_v=-T\frac{
+            \l(
+                \frac{\p{V}}{\p{T}}
+            \r)^2_P}{
+                \l(
+                    \frac{\p{V}}{\p{P}}
+                \r)_T
+            }
+    $$
+
+用类似的方法，我们有：
+    $$
+    \begin{aligned}
+        C_p&=T\l(\frac{\p{S}}{\p{T}}\r)_P
+        \\&=T\frac{\p(S,P)}{\p(T,P)}
+        \\&=T\frac{\frac{\p(S,P)}{\p(T,V)}}{\frac{\p(T,P)}{\p(T,V)}}
+        \\&=T
+            \frac{
+            \l(
+                \frac{\p{S}}{\p{T}}
+            \r)_V
+            \l(
+                \frac{\p{P}}{\p{V}}
+            \r)_T
+            -\l(
+                \frac{\p{S}}{\p{V}}
+            \r)_T
+            \l(
+                \frac{\p{P}}{\p{T}}
+            \r)_V}{
+                \l(
+                    \frac{\p{P}}{\p{V}}
+                \r)_T
+            }
+        \\&=C_v-T\frac{
+            \l(
+                \frac{\p{P}}{\p{T}}
+            \r)^2_V}{
+                \l(
+                    \frac{\p{P}}{\p{V}}
+                \r)_T
+            }
+    \end{aligned}
+    $$
+
+于是我们有：
+    $$
+        C_p-C_v=-T\frac{
+            \l(
+                \frac{\p{P}}{\p{T}}
+            \r)^2_V}{
+                \l(
+                    \frac{\p{P}}{\p{V}}
+                \r)_T
+            }
+    $$
+
+这里我们需要注意到一个显然的事实：对于一个等温过程，物体如果体积增大则压强必然减小，如果体积减小则压强必然增大。因而我们有：
+    $$
+        C_p>C_v
+    $$
+
+----
+
+再
