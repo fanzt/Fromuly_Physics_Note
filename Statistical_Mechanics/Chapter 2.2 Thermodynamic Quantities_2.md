@@ -233,4 +233,33 @@ $$
 
 ----
 
-再
+再考虑绝热压缩率与等温压缩率之间的关系。
+首先写出绝热压缩率：
+    $$
+    \begin{aligned}
+        \l(\frac{\p{V}}{\p{P}}\r)_S&=\frac{\p(V,S)}{\p(P,S)}
+        \\&=\frac{\frac{\p(V,S)}{\p(V,T)}}{\frac{\p(P,S)}{\p(P,T)}}\frac{\p(V,T)}{\p(P,T)}
+        \\&=\frac{\l(\frac{\p{S}}{\p{T}}\r)_V}{\l(\frac{\p{S}}{\p{T}}\r)_P}\l(\frac{\p{V}}{\p{P}}\r)_T
+    \end{aligned}
+    $$
+
+再考虑到 $C_p$ 与 $C_v$ 的定义：
+    $$
+        C_p=T\l(\frac{\p{S}}{\p{T}}\r)_P
+        \\C_v=T\l(\frac{\p{S}}{\p{T}}\r)_V
+    $$
+
+于是我们有：
+    $$
+        \l(\frac{\p{V}}{\p{P}}\r)_S=\frac{C_v}{C_p}\l(\frac{\p{V}}{\p{P}}\r)_T
+    $$
+
+又因为我们有：
+    $$
+        C_p>C_v
+    $$
+
+所以我们有：
+    $$
+         \l(\frac{\p{V}}{\p{P}}\r)_S<\l(\frac{\p{V}}{\p{P}}\r)_T
+    $$
