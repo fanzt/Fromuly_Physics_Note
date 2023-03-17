@@ -50,20 +50,20 @@ $$
 
 &emsp;&emsp;接下来，让我们考虑并不处于平衡态的两个物体组成的闭合系统，其温度 $T_1$ 与 $T_2$ 并不相同。随着时间的推移，这两个物体之间将会建立起平衡态，且温度也将趋于相等。而这个过程应当是熵增的。于是我们有：
     $$
-        \frac{\d{S}}{\d{T}}=\frac{\d{S}_1}{\d{T}}+\frac{\d{S}_2}{\d{T}}=\frac{\d{S}_1}{\d{E}_1}\frac{\d{E}_1}{\d{T}}+\frac{\d{S}_2}{\d{E}_2}\frac{\d{E}_2}{\d{T}}>0
+        \frac{\d{S}}{\d{t}}=\frac{\d{S}_1}{\d{t}}+\frac{\d{S}_2}{\d{t}}=\frac{\d{S}_1}{\d{E}_1}\frac{\d{E}_1}{\d{t}}+\frac{\d{S}_2}{\d{E}_2}\frac{\d{E}_2}{\d{t}}>0
     $$
 
 由于能量守恒，所以：
     $$
-        \frac{\d{E}_1}{\d{T}}+\frac{\d{E}_2}{\d{T}}=0
+        \frac{\d{E}_1}{\d{t}}+\frac{\d{E}_2}{\d{t}}=0
     $$
 
 于是有：
     $$
-        \frac{\d{S}}{\d{T}}=\l(\frac{\d{S}_1}{\d{E}_1}-\frac{\d{S}_2}{\d{E}_2}\r)\frac{\d{E}_1}{\d{T}}=\l(\frac{1}{T_1}-\frac{1}{T_2}\r)\frac{\d{E}_1}{\d{T}}>0
+        \frac{\d{S}}{\d{t}}=\l(\frac{\d{S}_1}{\d{E}_1}-\frac{\d{S}_2}{\d{E}_2}\r)\frac{\d{E}_1}{\d{t}}=\l(\frac{1}{T_1}-\frac{1}{T_2}\r)\frac{\d{E}_1}{\d{t}}>0
     $$
 
-假设第二个物体的温度高于第一个物体的温度 $\l(T_2>T_1\r)$. 考虑到温度是正的，那么有 $\displaystyle\frac{\d{E}_1}{\d{T}}>0$，亦即 $\displaystyle\frac{\d{E}_2}{\d{T}}<0$. 也就是说，随着整个体系向平衡态趋近，低温物体的能量增加，高温物体的能量减少。因而，温度的这一性质可以如此表述：能量自发的从温度较高的物体转移到温度较低的物体。
+假设第二个物体的温度高于第一个物体的温度 $\l(T_2>T_1\r)$. 考虑到温度是正的，那么有 $\displaystyle\frac{\d{E}_1}{\d{t}}>0$，亦即 $\displaystyle\frac{\d{E}_2}{\d{t}}<0$. 也就是说，随着整个体系向平衡态趋近，低温物体的能量增加，高温物体的能量减少。因而，温度的这一性质可以如此表述：能量自发的从温度较高的物体转移到温度较低的物体。
 
 ----
 
@@ -146,17 +146,17 @@ $$
 ##### 绝热过程的相关讨论
 
 &emsp;&emsp;接下来我们将证明，在绝热过程中，物体的熵保持不变，即绝热过程是可逆过程。
-&emsp;&emsp;首先，我们可以用一些参量来表征外界条件，这些参量都是时间得给定函数。例如，假设总共只有一个这样的参量，记为字母 $\lambda$，熵对时间的导数 $\displaystyle\frac{\d{S}}{\d{T}}$ 会以某种方式依赖于 $\lambda$ 对时间的导数 $\displaystyle\frac{\d\lambda}{\d{T}}$. 由于外界是缓变的，即 $\displaystyle\frac{\d\lambda}{\d{T}}$ 很小，所以我们可以把 $\displaystyle\frac{\d{S}}{\d{T}}$ 展开为 $\displaystyle\frac{\d\lambda}{\d{T}}$ 的幂级数。我们认为该展开式的零次项，即不含 $\displaystyle\frac{\d\lambda}{\d{T}}$ 的项为零。这是由于对于热力学平衡态下的体系，热力学平衡态下的闭合系统在外界条件不发生改变的情况下熵应当保持不变，所以当 $\displaystyle\frac{\d\lambda}{\d{T}}=0$ 时 $\displaystyle\frac{\d{S}}{\d{T}}=0$，由此可见零次项应当为零。由于根据熵增长定律，$\displaystyle\frac{\d{S}}{\d{T}}$ 永远都需要大于零，但显然其正负性显著的依赖于幂级数展开的一阶项的正负。由于不能保证 $\displaystyle\frac{\d\lambda}{\d{T}}$ 永远大于零，我们只能认为幂级数展开的一阶项等于零。因此，$\displaystyle\frac{\d{S}}{\d{T}}$ 的展开式仅能从 $\displaystyle\frac{\d\lambda}{\d{T}}$ 的二阶项开始，即当 $\displaystyle\frac{\d\lambda}{\d{T}}$ 很小时，我们有：
+&emsp;&emsp;首先，我们可以用一些参量来表征外界条件，这些参量都是时间得给定函数。例如，假设总共只有一个这样的参量，记为字母 $\lambda$，熵对时间的导数 $\displaystyle\frac{\d{S}}{\d{t}}$ 会以某种方式依赖于 $\lambda$ 对时间的导数 $\displaystyle\frac{\d\lambda}{\d{t}}$. 由于外界是缓变的，即 $\displaystyle\frac{\d\lambda}{\d{t}}$ 很小，所以我们可以把 $\displaystyle\frac{\d{S}}{\d{t}}$ 展开为 $\displaystyle\frac{\d\lambda}{\d{t}}$ 的幂级数。我们认为该展开式的零次项，即不含 $\displaystyle\frac{\d\lambda}{\d{t}}$ 的项为零。这是由于对于热力学平衡态下的体系，热力学平衡态下的闭合系统在外界条件不发生改变的情况下熵应当保持不变，所以当 $\displaystyle\frac{\d\lambda}{\d{t}}=0$ 时 $\displaystyle\frac{\d{S}}{\d{t}}=0$，由此可见零次项应当为零。由于根据熵增长定律，$\displaystyle\frac{\d{S}}{\d{t}}$ 永远都需要大于零，但显然其正负性显著的依赖于幂级数展开的一阶项的正负。由于不能保证 $\displaystyle\frac{\d\lambda}{\d{t}}$ 永远大于零，我们只能认为幂级数展开的一阶项等于零。因此，$\displaystyle\frac{\d{S}}{\d{t}}$ 的展开式仅能从 $\displaystyle\frac{\d\lambda}{\d{t}}$ 的二阶项开始，即当 $\displaystyle\frac{\d\lambda}{\d{t}}$ 很小时，我们有：
     $$
-        \frac{\d{S}}{\d{T}}=A\l(\frac{\d\lambda}{\d{T}}\r)^2
+        \frac{\d{S}}{\d{t}}=A\l(\frac{\d\lambda}{\d{t}}\r)^2
     $$
 
 由此可以得到：
     $$
-        \frac{\d{S}}{\d\lambda}=A\frac{\d\lambda}{\d{T}}
+        \frac{\d{S}}{\d\lambda}=A\frac{\d\lambda}{\d{t}}
     $$
 
-因此，当 $\displaystyle\frac{\d\lambda}{\d{T}}$ 趋于零时，$\displaystyle\frac{\d{S}}{\d\lambda}$ 也趋近于零。这表明了绝热过程的可逆性。
+因此，当 $\displaystyle\frac{\d\lambda}{\d{t}}$ 趋于零时，$\displaystyle\frac{\d{S}}{\d\lambda}$ 也趋近于零。这表明了绝热过程的可逆性。
 &emsp;&emsp;需要注意的是，虽然绝热过程可逆，但显然并非所有的可逆过程都是绝热过程。可逆过程仅仅要求整个闭合系统的总熵不发生改变，但绝热系统要求给定物体作为闭合系统的一部分，其熵也不发生改变。这是比可逆过程更加严格的条件。
 &emsp;&emsp;绝热过程需要我们认为外界的变化是足够缓慢的，以至于可以将系统的每个时刻都看作是平衡态。这意味着绝热过程必须比在该系统中建立平衡状态的过程缓慢。
 
@@ -164,25 +164,25 @@ $$
 
 ##### 绝热过程的应用
 
-&emsp;&emsp;接下来我们将推导一个公式，使得我们能够通过单纯的热力学途径计算各种平均值而无需总去使用统计分布函数。假定物体正在经历一个绝热过程，我们要确定物体的能量对时间的导数 $\displaystyle\frac{\d{E}}{\d{T}}$. 根据定义，一个热力学体系的能量被定义为 $E=\langle E(p,q;\lambda)\rangle$，其中 $E(p,q;\lambda)=H(p,q;\lambda)$ 是体系的 Hamiltonian，它以 $\lambda$ 作为参变量。熟知的 Hamilton's Canonical Equations 告诉我们对于 Hamiltonian，我们有：
+&emsp;&emsp;接下来我们将推导一个公式，使得我们能够通过单纯的热力学途径计算各种平均值而无需总去使用统计分布函数。假定物体正在经历一个绝热过程，我们要确定物体的能量对时间的导数 $\displaystyle\frac{\d{E}}{\d{t}}$. 根据定义，一个热力学体系的能量被定义为 $E=\langle E(p,q;\lambda)\rangle$，其中 $E(p,q;\lambda)=H(p,q;\lambda)$ 是体系的 Hamiltonian，它以 $\lambda$ 作为参变量。熟知的 Hamilton's Canonical Equations 告诉我们对于 Hamiltonian，我们有：
     $$
-        \frac{\d{H}(p,q;\lambda)}{\d{T}}=\frac{\p{H(p,q;\lambda)}}{\p{t}}
+        \frac{\d{H}(p,q;\lambda)}{\d{t}}=\frac{\p{H(p,q;\lambda)}}{\p{t}}
     $$
 
 在给定情况下，系统的 Hamiltonian 通过参变量 $\lambda$ 明显地与事件有关，因而上式可以写成：
     $$
-        \frac{\d{H}(p,q;\lambda)}{\d{T}}=\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\frac{\d\lambda}{\d{T}}
+        \frac{\d{H}(p,q;\lambda)}{\d{t}}=\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\frac{\d\lambda}{\d{t}}
     $$
 
 显然求平均过程与对时间的求导过程可以换序，于是我们有：
     $$
-        \frac{\d{E}}{\d{T}}=\left\langle\frac{\d{H}(p,q;\lambda)}{\d{T}}\right\rangle=\left\langle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\right\rangle\frac{\d\lambda}{\d{T}}
+        \frac{\d{E}}{\d{t}}=\left\langle\frac{\d{H}(p,q;\lambda)}{\d{t}}\right\rangle=\left\langle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\right\rangle\frac{\d\lambda}{\d{t}}
     $$
 
 （由于对于求平均过程中系统每一个可能的状态，参变量 $\lambda$ 都是相同的给定的时间的函数，所以可以从平均号下提出来。）
-&emsp;&emsp;把热力学量 $E$ 看作是物体的熵 $S$ 和外参量 $\lambda$ 的函数，并考虑到绝热过程的熵不发生变化，就可以把导数 $\displaystyle\frac{\d{E}}{\d{T}}$ 写成另外的形式：
+&emsp;&emsp;把热力学量 $E$ 看作是物体的熵 $S$ 和外参量 $\lambda$ 的函数，并考虑到绝热过程的熵不发生变化，就可以把导数 $\displaystyle\frac{\d{E}}{\d{t}}$ 写成另外的形式：
     $$
-        \frac{\d{E}}{\d{T}}=\l(\frac{\p{E}}{\p{\lambda}}\r)_S\frac{\d\lambda}{\d{T}}
+        \frac{\d{E}}{\d{t}}=\l(\frac{\p{E}}{\p{\lambda}}\r)_S\frac{\d\lambda}{\d{t}}
     $$
 
 于是我们可以得到：
@@ -274,29 +274,29 @@ $$
 &emsp;&emsp;在接下来的讨论中，我们约定外力对已知物体做功 $W$ 总认为是正的，负功 $W<0$ 相应地表示已知物体本身（例如物体膨胀时）对某些外界物体做功，其大小为 $|W|$.
 &emsp;&emsp;作用在物体表面的单位面积上的力是压强，而面元乘以它的位移就是面元运动所扫过的体积。由此我们显然可以看到，单位时间内物体体积改变时对物体做的功就是：
     $$
-        \frac{\dbar{W}}{\d{T}}=-P\frac{\d{V}}{\d{T}}
+        \frac{\dbar{W}}{\d{t}}=-P\frac{\d{V}}{\d{t}}
     $$
 
-其中在压缩物体时 $\displaystyle\frac{\d{V}}{\d{T}}<0$，则 $\displaystyle\frac{\dbar{W}}{\d{T}}>0$. 这个公式既可以用于可逆过程，也可以用于不可逆过程，其唯一需要的前提条件就是我们所研究的整个过程必须处于力学平衡状态，即每一个时刻，整个物体的压强必须是个常数。
+其中在压缩物体时 $\displaystyle\frac{\d{V}}{\d{t}}<0$，则 $\displaystyle\frac{\dbar{W}}{\d{t}}>0$. 这个公式既可以用于可逆过程，也可以用于不可逆过程，其唯一需要的前提条件就是我们所研究的整个过程必须处于力学平衡状态，即每一个时刻，整个物体的压强必须是个常数。
 &emsp;&emsp;如果我们研究的物体是热绝缘的，则其能量的所有变化均由对物体做功而引起。在非热绝缘物体的普遍情况下，物体显然还可以通过别的直接途径从其他相互接触的物体中获得/给予能量。这部分变化的能量称为物体所获得（或者所给出）的热量 $Q$. 因此，物体的能量变换可以写为：
     $$
-        \frac{\d{E}}{\d{T}}=\frac{\dbar{W}}{\d{T}}+\frac{\dbar{Q}}{\d{T}}
+        \frac{\d{E}}{\d{t}}=\frac{\dbar{W}}{\d{t}}+\frac{\dbar{Q}}{\d{t}}
     $$
 
 类似于关于功的约定，我们认为从外源获得的热量总是正的。
 &emsp;&emsp;一般来说，上式中的能量 $E$ 应当被理解为物体的总能量（包括内能和宏观运动的动能）。然而，显然我们不关注宏观动能，所以我们只研究与改变物体体积有关的功；在这种情况下，我们所讨论的能量自然就只剩下了物体的内能。接下来带入单位时间内做功的公式，我们就有：
     $$
-        \frac{\dbar{Q}}{\d{T}}=\frac{\d{E}}{\d{T}}+P\frac{\d{V}}{\d{T}}
+        \frac{\dbar{Q}}{\d{t}}=\frac{\d{E}}{\d{t}}+P\frac{\d{V}}{\d{t}}
     $$
 
 &emsp;&emsp;假设我们所研究的物体自身时刻处于热平衡状态，于是考虑到上文导出的热力学基本微分方程：
     $$
-        \frac{\d{E}}{\d{T}}=T\frac{\d{S}}{\d{T}}-P\frac{\d{V}}{\d{T}}
+        \frac{\d{E}}{\d{t}}=T\frac{\d{S}}{\d{t}}-P\frac{\d{V}}{\d{t}}
     $$
 
 我们就可以自然的得到：
     $$
-        \frac{\dbar{Q}}{\d{T}}=T\frac{\d{S}}{\d{T}}
+        \frac{\dbar{Q}}{\d{t}}=T\frac{\d{S}}{\d{t}}
     $$
 
 即熟悉的克劳修斯熵表述。
@@ -461,20 +461,20 @@ $E$ 与 $H$ 之间依靠 Legendre 变换联系；$P$ 与 $V$ 相互共轭，$T$ 
 利用热力学第二定律与热力学第一定律（变形后的热力学基本微分方程），我们可以得到：
     $$
     \begin{aligned}
-        &\frac{\dbar{Q}}{\d{T}}<T\frac{\d{S}}{\d{T}}
-        \\\rightarrow&\frac{\d{E}}{\d{T}}+P\frac{\d{V}}{\d{T}}<T\frac{\d{S}}{\d{T}}
+        &\frac{\dbar{Q}}{\d{t}}<T\frac{\d{S}}{\d{t}}
+        \\\rightarrow&\frac{\d{E}}{\d{t}}+P\frac{\d{V}}{\d{t}}<T\frac{\d{S}}{\d{t}}
     \end{aligned}
     $$
 
 考虑物体经历等温等容过程，上式可以变成：
     $$
-        \frac{\d(E-TS)}{\d{T}}=\frac{\d{F}}{\d{T}}<0
+        \frac{\d(E-TS)}{\d{t}}=\frac{\d{F}}{\d{t}}<0
     $$
 
 **即等温等容不可逆过程下，亥姆霍兹自由能总在减小。**
 类似地，在等温等压过程下，上式可以变成：
     $$
-        \frac{\d(H-TS)}{\d{T}}=\frac{\d{G}}{\d{T}}<0
+        \frac{\d(H-TS)}{\d{t}}=\frac{\d{G}}{\d{t}}<0
     $$
 
 **即等温等压不可逆过程下，吉布斯自由能总在减小。**
