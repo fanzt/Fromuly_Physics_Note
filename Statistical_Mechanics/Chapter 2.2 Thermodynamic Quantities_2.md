@@ -316,3 +316,23 @@ $$
 *懒得写了，也懒得看了。*
 
 ----
+
+#### (3).勒夏特列原理
+
+&emsp;&emsp;考虑一个由介质和被介质包围的物体组成的闭合系统。设 $S$ 为系统的总熵，并分别记 $x$ 与 $y$ 为以下两个量：当 $\displaystyle\frac{\p{S}}{\p{y}}=0$ 时说明物体本身处于平衡态；而当 $\displaystyle\frac{\p{S}}{\p{y}}=0$ 且 $\displaystyle\frac{\p{S}}{\p{x}}=0$ 时说明物体本身以及物体与介质都处于平衡态。
+&emsp;&emsp;考虑熵极大条件与熵增，我们有：
+    $$
+        \frac{\p{S}}{\p{x}}=\frac{\p{S}}{\p{y}}=0
+        \\\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}>0
+    $$
+
+记 $\displaystyle X=-\frac{\p{S}}{\p{x}}$，$\displaystyle Y=-\frac{\p{S}}{\p{y}}$
+即有：
+    $$
+        X=0\qquad Y=0
+    $$
+
+以及：
+    $$
+
+    $$
