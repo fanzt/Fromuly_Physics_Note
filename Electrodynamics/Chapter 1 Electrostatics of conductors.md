@@ -229,9 +229,9 @@ $[x]$ 为向下取整；
 
 ----
 
-### 练习
+### 例题1
 
-接下来我们考虑一道经典例题：匀强电场 $E_0$ 中的不带电导体球，求电势分布与面电荷。
+接下来我们考虑一道经典例题：匀强电场 $E_0$ 中的接地导体球，求电势分布与面电荷。
 
 ### Solution
 
@@ -243,7 +243,7 @@ $[x]$ 为向下取整；
 以及边界条件：
     $$
         \varphi(\infty)=-E_0z=-E_0r\cos{\theta}
-        \\\frac{\p{\varphi}}{\p{r}}=-\frac{\sigma}{\varepsilon_0}
+        \\\l.\frac{\p{\varphi}}{\p{r}}\r|_{R}=-\frac{\sigma}{\varepsilon_0}
         \\\varphi(R)=\varphi_0
     $$
 
@@ -259,7 +259,7 @@ $[x]$ 为向下取整；
 
 这说明对于所有的 $l>1$，都需要有 $A_{l}=0$ 以保证无穷远处不出现高阶发散，于是我们就有：
     $$
-        \varphi=A_0P_0(\cos{\theta})+A_1rP_1(\cos{\theta})+\sum_{l=2}^{\infty}\frac{B_l}{r^{l+1}}P_l(\cos{\theta})
+        \varphi=A_0P_0(\cos{\theta})+A_1rP_1(\cos{\theta})+\sum_{l=0}^{\infty}\frac{B_l}{r^{l+1}}P_l(\cos{\theta})
     $$
 
 以及：
@@ -280,5 +280,66 @@ $[x]$ 为向下取整；
 
 于是就有：
     $$
-        -E_0r\cos{\theta}+\sum_{l=2}^{\infty}\frac{B_l}{r^{l+1}}P_l(\cos{\theta})
+        -E_0rP_1(\cos{\theta})+\sum_{l=0}^{\infty}\frac{B_l}{r^{l+1}}P_l(\cos{\theta})
     $$
+
+再带入 $r=R$ 时 $\varphi(R)=0$，我们有：
+    $$
+        -E_0RP_1(\cos{\theta})+\sum_{l=0}^{\infty}\frac{B_l}{R^{l+1}}P_l(\cos{\theta})=0
+    $$
+
+勒让德多项式的正交性告诉我们勒让德多项式的每一项都相互线性无关，因此右式等于零意味着多项式的每一项前面的系数都为零。于是我们显然有：
+    $$
+        -E_0R+\frac{B_1}{R^2}=0
+        \\B_l=0\quad(l>1)
+    $$
+
+于是我们就有：
+    $$
+        B_1=E_0R^3
+    $$
+
+因而我们就求出了 $\varphi$ 的表达式：
+    $$
+        \varphi=-E_0r\cos{\theta}+\frac{E_0R^3}{r^2}\cos{\theta}
+    $$
+
+再使用第二个边界条件，我们有：
+    $$
+        \l.E_0\cos{\theta}+2E_0\frac{R^3}{r^3}\cos{\theta}\r|_{r=R}=\frac{\sigma}{\varepsilon_0}
+    $$
+
+即：
+    $$
+        \sigma=3\varepsilon_0E_0\cos{\theta}
+    $$
+
+于是我们也求出了面电荷分布。
+
+----
+
+### 例题2
+
+匀强电场中的介质球
+*待补充*
+
+----
+
+### 例题3
+
+导电椭球
+*待补充*
+
+----
+
+### 静电场问题的其他解法
+
+#### (1).镜像法
+
+----
+
+#### (2).反演法
+
+----
+
+#### (3).保角变换法
