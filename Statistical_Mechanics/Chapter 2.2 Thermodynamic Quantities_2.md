@@ -339,5 +339,9 @@ $$
 
 以及：
     $$
-
+    $$
+    $$
+    \begin{aligned}
+        \\\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}>0
+    \end{aligned}
     $$
