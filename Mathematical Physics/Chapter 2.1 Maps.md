@@ -1,4 +1,4 @@
-# Chapter 2.1 Maps 映射
+# Chapter 2 Maps, Equivalence relation and Linear Space 映射，等价关系与线性空间
 
 ![节点](./Images/1.jpg)
 
@@ -17,3 +17,5 @@
         f:x\:\mapsto\:f(x)
         \tag{2.2}
     $$
+
+显然可能会有不止一个 $X$ 中的元素被映射到同一个 $y\in{Y}$，因此我们定义由映射到 $y\in{Y}$ 的所有 $x$ 构成的 $X$ 的子集为 $y$ 在映射 $f$ 下的原像，记作 $f^{-1}(y)=\{x\in{X}|f(x)=y\}$. 集合 $X$ 称为映射 $f$ 的定义域，而集合 $Y$ 称为该映射的值域。
