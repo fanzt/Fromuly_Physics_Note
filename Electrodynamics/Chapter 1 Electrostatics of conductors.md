@@ -199,7 +199,7 @@ $$**
 于是，理论上来说所有导体的静电学问题都可以利用 Laplace Equation 与相应的边界条件
 这里直接给出球坐标系下 Laplace Equation 的形式：
     $$
-        \frac{\p}{\p{r}}\l(r^2\frac{\p{f}}{\p{r}}\r)+\frac{1}{\sin{\theta}}\l(\sin{\theta}\frac{\p{f}}{\p{\theta}}\r)+\frac{1}{\sin^2{\theta}}\frac{\p^2{f}}{\p{\varphi^2}}
+        \frac{1}{r^2}\frac{\p}{\p{r}}\l(r^2\frac{\p{f}}{\p{r}}\r)+\frac{1}{r^2\sin{\theta}}\l(\sin{\theta}\frac{\p{f}}{\p{\theta}}\r)+\frac{1}{r^2\sin^2{\theta}}\frac{\p^2{f}}{\p{\varphi^2}}=0
     $$
 
 其通解为：
@@ -336,7 +336,63 @@ $[x]$ 为向下取整；
 
 ----
 
+相关应用
+
+&emsp;&emsp;作为一个例子，考虑接地球形导体附近的点电荷 $e$ 所产生的电场。首先我们可以写出实电荷 $e$ 和镜像电荷 $-e'$ 共同产生的电势为：
+    $$
+        \varphi=\frac{e}{r}+\frac{-e'}{r'}
+    $$
+
+假设求外的实电荷与球心的距离为 $l$，将镜像电荷 $-e'$ 放置于距离球心 $l'$ 处，则我们不加证明地给出：
+    $$
+        l'=\frac{R^2}{l},\quad e'=\frac{eR}{l}
+    $$
+
+如图，实电荷与镜像电荷与导体球构成阿氏圆。
+
+![节点](./Images/Chapter1-1.png)
+
+于是该种情况下电荷与导体球的相互作用能即为：
+    $$
+        \mathscr{U}=\frac{-ee'}{2(l-l')}
+    $$
+
+如果导体不接地且保持电荷不变，则需要在球心处引入大小为 $e'$ 的第三个镜像电荷以保证球面上感生总电荷为零。
+&emsp;&emsp;镜像法的应用远比该例子广泛，但在此不多赘述。
+
+----
+
 #### (2).反演法
+
+&emsp;&emsp;反演法为我们提供了一种在已知某个静电学问题的解答的情况下求出另一个问题的解答。该种方法基于 Laplace Equation 对确定的变量变换下的不变性。
+&emsp;&emsp;首先再次给出我们熟知的球坐标系下的 Laplace Equation 形式：
+    $$
+        \frac{1}{r^2}\frac{\p}{\p{r}}\l(r^2\frac{\p{\varphi}}{\p{r}}\r)+\frac{1}{r^2}\nabla^2_{\Omega}\varphi=0
+    $$
+
+其中 $\nabla^2_{\Omega}$ 表示 Laplace 算符的角度部分。
+&emsp;&emsp;不难验证，如果按照下式关系：
+    $$
+        r=\frac{R^2}{r'}
+    $$
+
+用新变量 $r'$ 替代原变量 $r$（该变换称为反演变换），并同时用下式关系：
+    $$
+        \varphi=\frac{r'}{R}\varphi'
+    $$
+
+中的 $\varphi'$ 代换未知函数 $\varphi$，并代回到原方程，则原方程形式不发生变化。因此，如果 $\varphi(\boldsymbol{r})$ 是原方程的解，则：
+    $$
+        \varphi'(\boldsymbol{r'})=\frac{R}{r'}\varphi(\frac{R^2}{r'^2}\boldsymbol{r'})
+    $$
+
+也是原方程的解。
+
+----
+
+相关应用
+
+&emsp;&emsp;假如我们已知由一具有相同电势 $\varphi_0$ 的导体系统与一个点电荷系统所产生的 去
 
 ----
 
