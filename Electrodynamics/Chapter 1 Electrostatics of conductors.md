@@ -1,5 +1,9 @@
 # Chapter 1 导体的静电学
 
+> ~~参考书目：Landau 《连续介质电动力学》~~
+> 参考书目：Jackson 《Classical Electrodynamics》
+> > 去他妈的朗道，连续介质电动力学怎么看都是个热统+凝聚态的电磁辅助书籍——2023/4/1
+
 ## 前期准备
 
 $$
@@ -13,28 +17,28 @@ $$
 **首先给出高斯单位制下真空中的电磁学基本公式以便查阅：
 $$
     \begin{aligned}
-    \nabla·\boldsymbol{E}&=4\pi\rho
-    \\\nabla\times\boldsymbol{E}&=-\frac{1}{c}\frac{\partial\boldsymbol{B}}{\partial{t}}\
-    \\\nabla·\boldsymbol{B}&=0
-    \\\nabla\times\boldsymbol{B}&=\frac{4\pi}{c}\boldsymbol{J}+\frac{1}{c}\frac{\partial{\boldsymbol{D}}}{\partial{t}}
+    \nabla·\mathbf{E}&=4\pi\rho
+    \\\nabla\times\mathbf{E}&=-\frac{1}{c}\frac{\partial\mathbf{B}}{\partial{t}}\
+    \\\nabla·\mathbf{B}&=0
+    \\\nabla\times\mathbf{B}&=\frac{4\pi}{c}\mathbf{J}+\frac{1}{c}\frac{\partial{\mathbf{D}}}{\partial{t}}
     \end{aligned}
 $$**
 
 **$$
     \begin{aligned}
-    \\\boldsymbol{F}&=\frac{q_1q_2}{r^3}\boldsymbol{r}\qquad(库仑定律)
-    \\\boldsymbol{F}&=q\boldsymbol{E}+\frac{q}{c}\boldsymbol{v}\times\boldsymbol{B}\qquad(广义洛伦兹力)
-    \\\boldsymbol{B}&=\nabla\times\boldsymbol{A}\qquad(矢势)
-    \\\boldsymbol{E}&=-\nabla\varphi-\frac{1}{c}\frac{\partial{\boldsymbol{A}}}{\partial{t}}\qquad(标势)
+    \\\mathbf{F}&=\frac{q_1q_2}{r^3}\mathbf{r}\qquad(库仑定律)
+    \\\mathbf{F}&=q\mathbf{E}+\frac{q}{c}\mathbf{v}\times\mathbf{B}\qquad(广义洛伦兹力)
+    \\\mathbf{B}&=\nabla\times\mathbf{A}\qquad(磁感应强度)
+    \\\mathbf{E}&=-\nabla\varphi-\frac{1}{c}\frac{\partial{\mathbf{A}}}{\partial{t}}\qquad(电场强度)
     \end{aligned}
 $$**
 
 **并附上高斯单位制中常见电磁学常量与物理量的关系：
 $$
 \begin{aligned}
-    \\(\boldsymbol{E}_{SI},\varphi_{SI})&=\frac{1}{\sqrt{4\pi\varepsilon_0}}(\boldsymbol{E}_{Gauss},\varphi_{Gauss})
-    \\(\boldsymbol{B}_{SI},{\Phi_m}_{SI},\boldsymbol{A}_{SI})&=\sqrt{\frac{\mu_0}{4\pi}}(\boldsymbol{B}_{Gauss},{\Phi_m}_{Gauss},\boldsymbol{A}_{Gauss})
-    \\(q_{SI},\rho_{SI},I_{SI},\boldsymbol{J}_{SI},\boldsymbol{p}_{SI})&=\sqrt{4\pi\varepsilon_0}(q_{Gauss},\rho_{Gauss},I_{Gauss},\boldsymbol{J}_{Gauss},\boldsymbol{p}_{Gauss})
+    \\(\mathbf{E}_{SI},\varphi_{SI})&=\frac{1}{\sqrt{4\pi\varepsilon_0}}(\mathbf{E}_{Gauss},\varphi_{Gauss})
+    \\(\mathbf{B}_{SI},{\Phi_m}_{SI},\mathbf{A}_{SI})&=\sqrt{\frac{\mu_0}{4\pi}}(\mathbf{B}_{Gauss},{\Phi_m}_{Gauss},\mathbf{A}_{Gauss})
+    \\(q_{SI},\rho_{SI},I_{SI},\mathbf{J}_{SI},\mathbf{p}_{SI})&=\sqrt{4\pi\varepsilon_0}(q_{Gauss},\rho_{Gauss},I_{Gauss},\mathbf{J}_{Gauss},\mathbf{p}_{Gauss})
     \\c&=\frac{1}{\sqrt{\mu_0\varepsilon_0}}
 \end{aligned}
 $$**
@@ -43,42 +47,101 @@ $$**
 
 ## 1.导体的静电场
 
-### (1).Laplace Equation
+### 1.1 Poisson Equation
 
 &emsp;&emsp;考虑到本笔记并不要求统计物理的知识，我们将跳过朗道原书中关于“宏观电场强度”与“微观电场强度”从统计物理角度的平均关系，直接讨论宏观电场所适用的规律。
-&emsp;&emsp;由于我们接下来所讨论的是静电场，故我们假定此时真空中不存在磁场，所以根据 Maxwell Equations，对于真空中的恒定电场，我们始终有：
+&emsp;&emsp;由于我们接下来所讨论的是静电场，故我们假定此时真空中仅有静止分布的电荷，不存在磁场，所以根据 Maxwell Equations，对于真空中的恒定电场，我们始终有：
     $$
-        \nabla·\boldsymbol{E}=0\qquad\nabla\times\boldsymbol{E}=0
+        \nabla·\mathbf{E}=4\pi\rho\qquad\nabla\times\mathbf{E}=0
     $$
 
 因此，静电场是电势 $\varphi$ 的有势场，电场强度与电势的关系为：
     $$
-        \boldsymbol{E}=-\nabla\varphi
+        \mathbf{E}=-\nabla\varphi
     $$
 
-将其带入上式左侧，即可得到著名的 Laplace Equation：
+将其带入上式左侧，即可得到著名的 Poisson Equation：
     $$
-        \nabla^2\varphi=0
+        \nabla^2\varphi=4\pi\rho
     $$
 
-### (2).边界条件
+### 1.2 Poisson Equation 解的唯一性与格林函数法
 
-&emsp;&emsp;电场 $\boldsymbol{E}$ 所符合的边界条件可以由 $\nabla\times\boldsymbol{E}=0$ 求出。选取导体某一表面元的法线方向为坐标系的 $z$ 轴正方向，假定研究的导体表面是均匀连续的（即不具有电荷分布的突变），则显然我们可以知道电场的 $z$ 分量在 $x$ 与 $y$ 方向的导数应当是有限值。而又由 $\nabla\times\boldsymbol{E}=0$ 有：
+&emsp;&emsp;如果静电学问题总是涉及定域的分立或连续的电荷分布，而没有边界面，那么电势的定义式，即：
     $$
-        (\nabla\times\boldsymbol{E})_x=\frac{\partial{\boldsymbol{E}}_z}{\partial{y}}-\frac{\partial{\boldsymbol{E}_y}}{\partial{z}}=0
+        \varphi=\int\frac{\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\d{V}
+    $$
+
+将就是这类问题最方便的解。
+&emsp;&emsp;但显然我们遇到的并不总是这类问题，所以我们才需要讨论边界条件下 Poisson Equation 的解及其唯一性的问题。因而接下来我们讨论边界条件下如何求解 Poisson 方程。
+
+#### 1.2.1 格林定理与电势的积分方程
+
+&emsp;&emsp;首先写出熟悉的高斯定理：
+    $$
+        \int\limits_{V}\nabla\cdot\mathbf{A}\d{V}=\oint\limits_{S}\mathbf{A}\cdot\d{\mathbf{S}}
+    $$
+
+考虑如下矢量场：
+    $$
+        \nabla\cdot(\phi\nabla\psi)=\phi\nabla^2\psi+\nabla\phi\cdot\nabla\psi
+        \\\nabla\cdot(\psi\nabla\phi)=\psi\nabla^2\phi+\nabla\psi\cdot\nabla\phi
+    $$
+
+将其带入高斯定理，有：
+    $$
+        \int\limits_{V}(\phi\nabla^2\psi+\nabla\phi\cdot\nabla\psi)\d{V}=\oint\limits_{S}\phi\nabla\psi\cdot\d{\mathbf{S}}
+        \\\int\limits_{V}(\psi\nabla^2\phi+\nabla\psi\cdot\nabla\phi)\d{V}=\oint\limits_{S}\psi\nabla\phi\cdot\d{\mathbf{S}}
+    $$
+
+两式相减，有：
+    $$
+        \int\limits_{V}(\phi\nabla^2\psi-\psi\nabla^2\phi)\d{V}=\oint\limits_{S}(\phi\nabla\psi-\psi\nabla\phi)\cdot\d{\mathbf{S}}
+    $$
+
+亦即：
+    $$
+        \int\limits_{V}(\phi\nabla^2\psi-\psi\nabla^2\phi)\d{V}=\oint\limits_{S}\l(\phi\frac{\p{\psi}}{\p{n}}-\psi\frac{\p{\phi}}{\p{n}}\r)\d{S}
+    $$
+
+若我们合适地选取 $\phi$ 与 $\psi$，就可以将电势的 Poisson Equation 变化为一个积分方程。
+&emsp;&emsp;考虑选取：
+    $$
+        \displaystyle\psi=\frac{1}{|\mathbf{x}-\mathbf{x'}|}
+        \\\phi=\varphi(\mathbf{x'})
+    $$
+
+我们有：
+    $$
+        \int\limits_{V}\l(-4\pi\varphi(\mathbf{x'})\delta(\mathbf{x}-\mathbf{x'})+\frac{4\pi\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\r)\d{V'}=\oint\limits_{S}\l(\varphi\frac{\p}{\p{n}}\l(\frac{1}{|\mathbf{x}-\mathbf{x'}|}\r)-\frac{1}{|\mathbf{x}-\mathbf{x'}|}\frac{\p{\varphi}}{\p{n}}\r)\d{S'}
+    $$
+
+如果 $\mathbf{x'}$ 在积分范围 $V$ 里面，则我们有：
+    $$
+        \varphi(\mathbf{x})=\int\limits_{V}\l(\frac{\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\r)\d{V'}+\frac{1}{4\pi}\oint\limits_{S}\l(\frac{1}{|\mathbf{x}-\mathbf{x'}|}\frac{\p{\varphi}}{\p{n}}-\varphi\frac{\p}{\p{n}}\l(\frac{1}{|\mathbf{x}-\mathbf{x'}|}\r)\r)\d{S'}
+    $$
+
+而如果 $\mathbf{x'}$ 在积分范围 $V$ 外面，则上式右侧直接等于零。
+&emsp;&emsp;接下来我们分析上述结果：首先，如果上式中的面积分范围 $S$ 趋于无穷大，且场强的下降速度大于 $r^{-1}$，则上式的面积分项直接为零，电势的表达式就退化为熟知的原始定义；其次，如果积分范围内不存在电荷（即 $\rho=0$），则我们可以看到，上式的结果，也是电势的 Laplace Equation 的解，都是由积分范围表面上的势及其法向导数的值一起表示的。需要注意的是，这并非边值问题的解，而仅仅是一个积分方程，因为对于 Laplace Equation 的边值问题，同时给出势及其法向导数的边值（亦即柯西边界条件）所给予的信息将是过饱和的。
+
+### 1.3 导体静电学的常见边界条件
+
+&emsp;&emsp;电场 $\mathbf{E}$ 所符合的边界条件可以由 $\nabla\times\mathbf{E}=0$ 求出。选取导体某一表面元的法线方向为坐标系的 $z$ 轴正方向，假定研究的导体表面是均匀连续的（即不具有电荷分布的突变），则显然我们可以知道电场的 $z$ 分量在 $x$ 与 $y$ 方向的导数应当是有限值。而又由 $\nabla\times\mathbf{E}=0$ 有：
+    $$
+        (\nabla\times\mathbf{E})_x=\frac{\partial{\mathbf{E}}_z}{\partial{y}}-\frac{\partial{\mathbf{E}_y}}{\partial{z}}=0
     $$
 
 于是我们就有：
     $$
-        \frac{\partial{\boldsymbol{E}_y}}{\partial{z}}=\frac{\partial{\boldsymbol{E}}_z}{\partial{y}}
+        \frac{\partial{\mathbf{E}_y}}{\partial{z}}=\frac{\partial{\mathbf{E}}_z}{\partial{y}}
     $$
 
-为一有限值。同理我们也可以得到 $\displaystyle\frac{\partial{\boldsymbol{E}_x}}{\partial{z}}$ 也为一有限值。这意味着 $E_x$ 与 $E_y$ 在导体分界面上连续。而又由于导体内部 $\boldsymbol{E}=0$，所以我们就可以得到第一个边界条件：
+为一有限值。同理我们也可以得到 $\displaystyle\frac{\partial{\mathbf{E}_x}}{\partial{z}}$ 也为一有限值。这意味着 $E_x$ 与 $E_y$ 在导体分界面上连续。而又由于导体内部 $\mathbf{E}=0$，所以我们就可以得到第一个边界条件：
     $$
-        \boldsymbol{E}_t=0
+        \mathbf{E}_t=0
     $$
 
-即电场的切向分量连续，且对于导体情况为零。
+即电场的切向分量连续，且对于导体情况为零，亦即导体等势。
 而关于垂直于导体表面的电场分量（即电场的 $z$ 分量），我们可以通过高斯定理的积分形式显然地将其与导体的面电荷分布联系在一起：
     $$
         \sigma=\frac{1}{4\pi}E_n=-\frac{1}{4\pi}\frac{\partial{\varphi}}{\partial{n}}
@@ -97,17 +160,17 @@ $$**
 
 &emsp;&emsp;首先使用我们熟知的电场能量密度公式：
     $$
-        \mathscr{U}=\int\frac{1}{8\pi}\boldsymbol{E}^2\mathrm{d}V
+        \mathscr{U}=\int\frac{1}{8\pi}\mathbf{E}^2\mathrm{d}V
     $$
 
 对上式进行一些变换：
     $$
-        \mathscr{U}=-\int\frac{1}{8\pi}\boldsymbol{E}·\nabla\varphi\mathrm{d}V=\int\frac{1}{8\pi}\nabla·(\varphi\boldsymbol{E})\mathrm{d}V+\int\frac{1}{8\pi}\varphi\nabla·\boldsymbol{E}\mathrm{d}V
+        \mathscr{U}=-\int\frac{1}{8\pi}\mathbf{E}·\nabla\varphi\mathrm{d}V=\int\frac{1}{8\pi}\nabla·(\varphi\mathbf{E})\mathrm{d}V+\int\frac{1}{8\pi}\varphi\nabla·\mathbf{E}\mathrm{d}V
     $$
 
 带入 Maxwell Equations，应用熟知的斯托克斯定理并注意无穷远处场收敛以及导体处处等势，我们有：
     $$
-        \mathscr{U}=\frac{1}{8\pi}\sum\limits_n\oint\varphi E_n\mathrm{d}\boldsymbol{S}=\frac{1}{8\pi}\sum\limits_n\varphi_n\oint E_n\mathrm{d}\boldsymbol{S}=\frac{1}{2}\sum\limits_n q_n\varphi_n
+        \mathscr{U}=\frac{1}{8\pi}\sum\limits_n\oint\varphi E_n\mathrm{d}\mathbf{S}=\frac{1}{8\pi}\sum\limits_n\varphi_n\oint E_n\mathrm{d}\mathbf{S}=\frac{1}{2}\sum\limits_n q_n\varphi_n
     $$
 
 &emsp;&emsp;导体的电荷和电势不可能同时以任意方式给定，他们之间存在确定的关系。由于场方程的线性与齐次性质，我们可以想到这种关系也应当是线性的。因此我们有：
@@ -118,23 +181,23 @@ $$**
 其中 ${C^a}_b$ 称为静电感应系数，其缩并后的结果 ${C^a}_a$ 称为电容系数。特别的，如果系统只有一个导体，则有 $q=C\varphi$，其中 $C$ 直接被称为电容。
 &emsp;&emsp;对能量的表达式求变分，我们有：
     $$
-        \delta\mathscr{U}=\frac{1}{4\pi}\int\boldsymbol{E}·\delta\boldsymbol{E}\mathrm{d}V
+        \delta\mathscr{U}=\frac{1}{4\pi}\int\mathbf{E}·\delta\mathbf{E}\mathrm{d}V
     $$
 
-带入 $\boldsymbol{E}=-\nabla\phi$，我们有：
+带入 $\mathbf{E}=-\nabla\phi$，我们有：
     $$
     \begin{aligned}
-        \delta\mathscr{U}&=-\frac{1}{4\pi}\int\nabla\varphi·\delta\boldsymbol{E}\mathrm{d}V
-        \\&=-\frac{1}{4\pi}\int\nabla(\varphi\delta\boldsymbol{E})\mathrm{d}V+\frac{1}{4\pi}\int\varphi\nabla·\delta\boldsymbol{E}\mathrm{d}V
+        \delta\mathscr{U}&=-\frac{1}{4\pi}\int\nabla\varphi·\delta\mathbf{E}\mathrm{d}V
+        \\&=-\frac{1}{4\pi}\int\nabla(\varphi\delta\mathbf{E})\mathrm{d}V+\frac{1}{4\pi}\int\varphi\nabla·\delta\mathbf{E}\mathrm{d}V
     \end{aligned}
     $$
 
 注意到变分后的电场仍旧满足 Maxwell Equations，因而第二项直接为零，于是我们有：
     $$
     \begin{aligned}
-        \delta\mathscr{U}&=-\frac{1}{4\pi}\int\nabla(\varphi\delta\boldsymbol{E})\mathrm{d}V
-        \\&=-\frac{1}{4\pi}\oint\varphi\delta\boldsymbol{E}·\mathrm{d}\boldsymbol{S}
-        \\&=-\frac{1}{4\pi}\sum\limits_n\varphi_n\oint\delta\boldsymbol{E}·\mathrm{d}\boldsymbol{S}
+        \delta\mathscr{U}&=-\frac{1}{4\pi}\int\nabla(\varphi\delta\mathbf{E})\mathrm{d}V
+        \\&=-\frac{1}{4\pi}\oint\varphi\delta\mathbf{E}·\mathrm{d}\mathbf{S}
+        \\&=-\frac{1}{4\pi}\sum\limits_n\varphi_n\oint\delta\mathbf{E}·\mathrm{d}\mathbf{S}
     \end{aligned}
     $$
 
@@ -144,12 +207,12 @@ $$**
     $$
 
 其实这个结果是显而易见的，因为这正是将无穷小电荷 $\delta{q}_n$ 从无穷远处移动到导体上所做的功。
-&emsp;&emsp;从另一个角度考虑，带入 $\delta\boldsymbol{E}=-\nabla\delta\varphi$，我们又有：
+&emsp;&emsp;从另一个角度考虑，带入 $\delta\mathbf{E}=-\nabla\delta\varphi$，我们又有：
     $$
     \begin{aligned}
-        \delta\mathscr{U}&=-\frac{1}{4\pi}\int\boldsymbol{E}·\nabla\delta\varphi\mathrm{d}V
-        \\&=-\frac{1}{4\pi}\int\nabla{(\boldsymbol{E}\cdot\delta{\varphi})}\d{V}
-        \\&=\frac{1}{4\pi}\sum_n\delta{\varphi_n}\oint{\boldsymbol{E}}\cdot\d{\boldsymbol{S}}
+        \delta\mathscr{U}&=-\frac{1}{4\pi}\int\mathbf{E}·\nabla\delta\varphi\mathrm{d}V
+        \\&=-\frac{1}{4\pi}\int\nabla{(\mathbf{E}\cdot\delta{\varphi})}\d{V}
+        \\&=\frac{1}{4\pi}\sum_n\delta{\varphi_n}\oint{\mathbf{E}}\cdot\d{\mathbf{S}}
     \end{aligned}
     $$
 
@@ -229,7 +292,9 @@ $[x]$ 为向下取整；
 
 ----
 
-### 例题1
+### 3.1 例题
+
+#### 3.1.1 例题1
 
 接下来我们考虑一道经典例题：匀强电场 $E_0$ 中的接地导体球，求电势分布与面电荷。
 *以下解答取国际单位制*
@@ -319,18 +384,18 @@ $[x]$ 为向下取整；
 
 ----
 
-### 例题2
+#### 3.1.2 例题2
 
 导电椭球
 *待补充*
 
 ----
 
-### 静电场问题的其他解法
+### 3.2 静电场问题的其他解法
 
 首先我们需要说明，以下的所有方法都是基于 Poisson Equation / Laplace Equation 本身的性质所能够导出的。
 
-#### (1).镜像法
+#### 3.2.1 镜像法
 
 &emsp;&emsp;镜像法本身依赖于静电唯一性定理，亦即给定了边界条件（不论是 Dirichlet 边界条件/ Neumann 边界条件/混合边界条件）之后的 Laplace Equation 有唯一解。这也意味着 Laplace Equation 的解的具体形式仅仅取决于其边界条件，而不取决于形成这样边界条件的场源。因此，对于一个实际问题的边界条件，如果我们可以通过一系列点电荷（称为镜像电荷）来构造出相同的边界条件，就有可能能够简化问题，使我们能够更加方便地处理、解决问题。该思想即为镜像法。
 
@@ -362,7 +427,7 @@ $[x]$ 为向下取整；
 
 ----
 
-#### (2).反演法
+#### 3.2.2 反演法
 
 &emsp;&emsp;反演法为我们提供了一种在已知某个静电学问题的解答的情况下求出另一个问题的解答。该种方法基于 Laplace Equation 对确定的变量变换下的不变性。
 &emsp;&emsp;首先再次给出我们熟知的球坐标系下的 Laplace Equation 形式：
@@ -381,9 +446,9 @@ $[x]$ 为向下取整；
         \varphi=\frac{r'}{R}\varphi'
     $$
 
-中的 $\varphi'$ 代换未知函数 $\varphi$，并代回到原方程，则原方程形式不发生变化。因此，如果 $\varphi(\boldsymbol{r})$ 是原方程的解，则：
+中的 $\varphi'$ 代换未知函数 $\varphi$，并代回到原方程，则原方程形式不发生变化。因此，如果 $\varphi(\mathbf{r})$ 是原方程的解，则：
     $$
-        \varphi'(\boldsymbol{r'})=\frac{R}{r'}\varphi(\frac{R^2}{r'^2}\boldsymbol{r'})
+        \varphi'(\mathbf{r'})=\frac{R}{r'}\varphi(\frac{R^2}{r'^2}\mathbf{r'})
     $$
 
 也是原方程的解。
@@ -395,26 +460,26 @@ $[x]$ 为向下取整；
 
 ----
 
-#### (3).保角映射法与复势
+#### 3.2.3 保角映射法与复势
 
 &emsp;&emsp;如果我们处理的问题是平面问题，即电势 $\varphi=\varphi(x,y)$，则我们可以利用复变函数理论作为工具来解决问题。
 &emsp;&emsp;考虑到真空中的静电场满足如下两个方程：
     $$
-        \nabla\cdot{\boldsymbol{E}}=0
-        \\\nabla\times{\boldsymbol{E}}=0
+        \nabla\cdot{\mathbf{E}}=0
+        \\\nabla\times{\mathbf{E}}=0
     $$
 
 于是我们可以进行如下定义：
     $$
-        \boldsymbol{E}=-\nabla{\varphi}
+        \mathbf{E}=-\nabla{\varphi}
     $$
 
 以及：
     $$
-        \boldsymbol{E}=\nabla\times{\boldsymbol{A}}
+        \mathbf{E}=\nabla\times{\mathbf{A}}
     $$
 
-其中 $\varphi$ 是我们熟知的电势，而 $\boldsymbol{A}$ 则被称为“矢量势”（大概不是那个矢势=-=）。我们总可以选择合适的 $\boldsymbol{A}$ 使得其方向沿垂直于平面的 $z$ 轴。于是我们就会有：
+其中 $\varphi$ 是我们熟知的电势，而 $\mathbf{A}$ 则被称为“矢量势”（大概不是那个矢势=-=）。我们总可以选择合适的 $\mathbf{A}$ 使得其方向沿垂直于平面的 $z$ 轴。于是我们就会有：
     $$
         E_x=-\frac{\p{\varphi}}{\p{x}}=\frac{\p{A}}{\p{y}}
         \\E_y=-\frac{\p{\varphi}}{\p{y}}=-\frac{\p{A}}{\p{x}}
