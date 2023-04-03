@@ -75,12 +75,14 @@ $$**
 将就是这类问题最方便的解。
 &emsp;&emsp;但显然我们遇到的并不总是这类问题，所以我们才需要讨论边界条件下 Poisson Equation 的解及其唯一性的问题。因而接下来我们讨论边界条件下如何求解 Poisson 方程。
 
-#### 1.2.1 格林定理与电势的积分方程
+#### 1.2.1 Green 定理与电势的积分方程
 
 &emsp;&emsp;首先写出熟悉的高斯定理：
     $$
-        \int\limits_{V}\nabla\cdot\mathbf{A}\d{V}=\oint\limits_{S}\mathbf{A}\cdot\d{\mathbf{S}}
+        \int\limits_{\Omega}\nabla\cdot\mathbf{A}\d{V}=\oint\limits_{\p{\Omega}}\mathbf{A}\cdot\d{\mathbf{S}}
     $$
+
+其中 $\p{\Omega}$ 表示积分范围 $\Omega$ 的边界。
 
 考虑如下矢量场：
     $$
@@ -90,18 +92,18 @@ $$**
 
 将其带入高斯定理，有：
     $$
-        \int\limits_{V}(\phi\nabla^2\psi+\nabla\phi\cdot\nabla\psi)\d{V}=\oint\limits_{S}\phi\nabla\psi\cdot\d{\mathbf{S}}
-        \\\int\limits_{V}(\psi\nabla^2\phi+\nabla\psi\cdot\nabla\phi)\d{V}=\oint\limits_{S}\psi\nabla\phi\cdot\d{\mathbf{S}}
+        \int\limits_{\Omega}(\phi\nabla^2\psi+\nabla\phi\cdot\nabla\psi)\d{V}=\oint\limits_{\p{\Omega}}\phi\nabla\psi\cdot\d{\mathbf{S}}
+        \\\int\limits_{\Omega}(\psi\nabla^2\phi+\nabla\psi\cdot\nabla\phi)\d{V}=\oint\limits_{\p{\Omega}}\psi\nabla\phi\cdot\d{\mathbf{S}}
     $$
 
 两式相减，有：
     $$
-        \int\limits_{V}(\phi\nabla^2\psi-\psi\nabla^2\phi)\d{V}=\oint\limits_{S}(\phi\nabla\psi-\psi\nabla\phi)\cdot\d{\mathbf{S}}
+        \int\limits_{\Omega}(\phi\nabla^2\psi-\psi\nabla^2\phi)\d{V}=\oint\limits_{\p{\Omega}}(\phi\nabla\psi-\psi\nabla\phi)\cdot\d{\mathbf{S}}
     $$
 
 亦即：
     $$
-        \int\limits_{V}(\phi\nabla^2\psi-\psi\nabla^2\phi)\d{V}=\oint\limits_{S}\l(\phi\frac{\p{\psi}}{\p{n}}-\psi\frac{\p{\phi}}{\p{n}}\r)\d{S}
+        \int\limits_{\Omega}(\phi\nabla^2\psi-\psi\nabla^2\phi)\d{V}=\oint\limits_{\p{\Omega}}\l(\phi\frac{\p{\psi}}{\p{n}}-\psi\frac{\p{\phi}}{\p{n}}\r)\d{S}
     $$
 
 若我们合适地选取 $\phi$ 与 $\psi$，就可以将电势的 Poisson Equation 变化为一个积分方程。
@@ -113,16 +115,41 @@ $$**
 
 我们有：
     $$
-        \int\limits_{V}\l(-4\pi\varphi(\mathbf{x'})\delta(\mathbf{x}-\mathbf{x'})+\frac{4\pi\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\r)\d{V'}=\oint\limits_{S}\l(\varphi\frac{\p}{\p{n}}\l(\frac{1}{|\mathbf{x}-\mathbf{x'}|}\r)-\frac{1}{|\mathbf{x}-\mathbf{x'}|}\frac{\p{\varphi}}{\p{n}}\r)\d{S'}
+        \int\limits_{\Omega}\l(-4\pi\varphi(\mathbf{x'})\delta(\mathbf{x}-\mathbf{x'})+\frac{4\pi\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\r)\d{V'}=\oint\limits_{\p{\Omega}}\l(\varphi\frac{\p}{\p{n}}\l(\frac{1}{|\mathbf{x}-\mathbf{x'}|}\r)-\frac{1}{|\mathbf{x}-\mathbf{x'}|}\frac{\p{\varphi}}{\p{n}}\r)\d{S'}
     $$
 
-如果 $\mathbf{x'}$ 在积分范围 $V$ 里面，则我们有：
+如果 $\mathbf{x'}$ 在积分范围 $\Omega$ 里面，则我们有：
     $$
-        \varphi(\mathbf{x})=\int\limits_{V}\l(\frac{\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\r)\d{V'}+\frac{1}{4\pi}\oint\limits_{S}\l(\frac{1}{|\mathbf{x}-\mathbf{x'}|}\frac{\p{\varphi}}{\p{n}}-\varphi\frac{\p}{\p{n}}\l(\frac{1}{|\mathbf{x}-\mathbf{x'}|}\r)\r)\d{S'}
+        \varphi(\mathbf{x})=\int\limits_{\Omega}\l(\frac{\rho(\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}\r)\d{V'}+\frac{1}{4\pi}\oint\limits_{\p{\Omega}}\l(\frac{1}{|\mathbf{x}-\mathbf{x'}|}\frac{\p{\varphi}}{\p{n}}-\varphi\frac{\p}{\p{n}}\l(\frac{1}{|\mathbf{x}-\mathbf{x'}|}\r)\r)\d{S'}
     $$
 
-而如果 $\mathbf{x'}$ 在积分范围 $V$ 外面，则上式右侧直接等于零。
-&emsp;&emsp;接下来我们分析上述结果：首先，如果上式中的面积分范围 $S$ 趋于无穷大，且场强的下降速度大于 $r^{-1}$，则上式的面积分项直接为零，电势的表达式就退化为熟知的原始定义；其次，如果积分范围内不存在电荷（即 $\rho=0$），则我们可以看到，上式的结果，也是电势的 Laplace Equation 的解，都是由积分范围表面上的势及其法向导数的值一起表示的。需要注意的是，这并非边值问题的解，而仅仅是一个积分方程，因为对于 Laplace Equation 的边值问题，同时给出势及其法向导数的边值（亦即柯西边界条件）所给予的信息将是过饱和的。
+而如果 $\mathbf{x'}$ 在积分范围 $\Omega$ 外面，则上式右侧直接等于零。
+&emsp;&emsp;接下来我们分析上述结果：首先，如果上式中的面积分范围 $\p{\Omega}$ 趋于无穷大，且场强的下降速度大于 $r^{-1}$，则上式的面积分项直接为零，电势的表达式就退化为熟知的原始定义；其次，如果积分范围内不存在电荷（即 $\rho=0$），则我们可以看到，上式的结果，也是电势的 Laplace Equation 的解，都是由积分范围表面上的势及其法向导数的值一起表示的。需要注意的是，这并非边值问题的解，而仅仅是一个积分方程，因为对于 Laplace Equation 的边值问题，同时给出势及其法向导数的边值（亦即 Cauchy 边界条件）所给予的信息将是过饱和的。
+
+#### 1.2.2 Dirichlet 边界条件与 Neumann 边界条件及其解的唯一性
+
+&emsp;&emsp;首先介绍什么是 Dirichlet 边界条件与 Neumann 边界条件。
+&emsp;&emsp;Dirichlet 边界条件是给定边界上待求函数 $\varphi$ 的取值，即：
+    $$
+        \varphi_{\p{\Omega}}=\varphi_0
+    $$
+
+&emsp;&emsp;而 Neumann 边界条件则给处边界上待求函数 $\varphi$ 的法向导数的取值，即：
+    $$
+        \frac{\p{\varphi}}{\p{n}}=\varphi_{n_{0}}
+    $$
+
+&emsp;&emsp;我们可以利用 Green 定理并运用反证法证明解的唯一性，但在这里不再给出，详见 Jackson, *Classical Electrodynamics*.
+&emsp;&emsp;总而言之，结论是任意闭合边界面上的 Dirichlet 边界条件与 Neumann 边界条件或是混合边界条件都可以给出唯一的解，但 Cauchy 边界条件不行。
+
+#### 1.2.3 Green 函数法求边值问题的形式解
+
+> 待补充
+
+#### 1.2.4 Green 函数法具体应用与正交函数展开
+
+> 待补充
+> > 例题：双介质球的极化与正交曲线坐标系
 
 ### 1.3 导体静电学的常见边界条件
 
