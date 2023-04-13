@@ -339,9 +339,30 @@ $$
 
 以及：
     $$
+        \l(\frac{\p^2{S}}{\p{x^2}}\r)_{y}>0
+        \\\l(\frac{\p^2{S}}{\p{y^2}}\r)_{x}>0
     $$
     $$
     \begin{aligned}
-        \\\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}>0
+        \\&\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}>0
+    \end{aligned}
+    $$
+
+考虑到：
+    $$
+        \frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2\geq2\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}\d{x}\d{y}
+    $$
+
+我们有：
+    $$
+    \begin{aligned}
+        \\&\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}+\frac{\p^2{S}}{\p{x}\p{y}}>0
+    \end{aligned}
+    $$
+
+即：
+    $$
+    \begin{aligned}
+        \\&\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}-\l(\frac{\p^2{S}}{\p{x}\p{y}}\r)^2>0
     \end{aligned}
     $$
