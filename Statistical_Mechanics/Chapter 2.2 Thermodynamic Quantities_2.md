@@ -325,13 +325,18 @@ $$
 #### (3).勒夏特列原理
 
 &emsp;&emsp;考虑一个由介质和被介质包围的物体组成的闭合系统。设 $S$ 为系统的总熵，并分别记 $x$ 与 $y$ 为以下两个量：当 $\displaystyle\frac{\p{S}}{\p{y}}=0$ 时说明物体本身处于平衡态；而当 $\displaystyle\frac{\p{S}}{\p{y}}=0$ 且 $\displaystyle\frac{\p{S}}{\p{x}}=0$ 时说明物体本身以及物体与介质都处于平衡态。
-&emsp;&emsp;考虑熵极大条件与熵增，我们有：
+&emsp;&emsp;考虑熵极大条件与熵增，在平衡状态下我们有：
     $$
         \frac{\p{S}}{\p{x}}=\frac{\p{S}}{\p{y}}=0
         \\\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}>0
     $$
 
-记 $\displaystyle X=-\frac{\p{S}}{\p{x}}$，$\displaystyle Y=-\frac{\p{S}}{\p{y}}$
+&emsp;&emsp;记：
+    $$
+        X=-\frac{\p{S}}{\p{x}}
+        \\Y=-\frac{\p{S}}{\p{y}}
+    $$
+
 即有：
     $$
         X=0\qquad Y=0
@@ -339,9 +344,80 @@ $$
 
 以及：
     $$
-    $$
-    $$
+        \l(\frac{\p^2{S}}{\p{x^2}}\r)_{y}<0
+        \\\l(\frac{\p^2{S}}{\p{y^2}}\r)_{x}<0
+        \\
     \begin{aligned}
-        \\\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}>0
+        \\&\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}<0
     \end{aligned}
     $$
+
+考虑到：
+    $$
+        \frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2\leq2\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}\d{x}\d{y}
+    $$
+
+我们有：
+    $$
+    \begin{aligned}
+        \\&\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}+\frac{\p^2{S}}{\p{x}\p{y}}<0
+    \end{aligned}
+    $$
+
+即：
+    $$
+    \begin{aligned}
+        \\&\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}-\l(\frac{\p^2{S}}{\p{x}\p{y}}\r)^2<0
+    \end{aligned}
+    $$
+
+&emsp;&emsp;接下来我们假定，体系经过了某种不太大的外部作用，导致物体与介质的平衡被破坏，因此体系的熵不再处于极大值，$X=0$ 的条件也因此被破坏。至于量 $y$，则假定它并不受到该作用的直接影响。假设在该影响下 $x$ 变化了 $\Delta{x}$，则在受到作用的那一瞬间，$X$ 的变化量为：
+    $$
+        (\Delta{X})_y=\l(\frac{\p{X}}{\p{x}}\r)_y\Delta{x}
+    $$
+
+&emsp;&emsp;而在 $y$ 不变的情况下，$x$ 的变化仍旧会导致 $Y=0$ 的条件被破坏，也就是物体内部的平衡会被破坏。而在物体内部重新达成新的平衡后，量 $X\equiv\Delta{X}$ 将会取数值：
+    $$
+        (\Delta{X})_{Y=0}=\l(\frac{\p{X}}{\p{x}}\r)_{Y=0}\Delta{x}
+    $$
+
+其中的导数是在 $Y$ 恒定为零的情况下取值的。
+&emsp;&emsp;我们比较 $\Delta{X}$ 的这两个数值，并考虑 Jacobi 行列式的性质，我们有：
+    $$
+        \l(\frac{\p{X}}{\p{x}}\r)_{Y=0}
+        =\frac{\p(X,Y)}{\p(x,Y)}
+        =\frac{\frac{\p(X,Y)}{\p(x,y)}}{\frac{\p(x,Y)}{\p(x,y)}}
+        =\l(\frac{\p{X}}{\p{x}}\r)_y-\frac{\l(\frac{\p{X}}{\p{y}}\r)_x\l(\frac{\p{Y}}{\p{x}}\r)_x}{\l(\frac{\p{Y}}{\p{y}}\r)_x}
+    $$
+
+考虑到：
+    $$
+        \l(\frac{\p{X}}{\p{y}}\r)_x=\l(-\frac{\p^2{S}}{\p{x}\p{y}}\r)_x=\l(\frac{\p{Y}}{\p{x}}\r)_x
+    $$
+
+我们有：
+    $$
+        \l(\frac{\p{X}}{\p{x}}\r)_{Y=0}
+        =\frac{\p(X,Y)}{\p(x,Y)}
+        =\frac{\frac{\p(X,Y)}{\p(x,y)}}{\frac{\p(x,Y)}{\p(x,y)}}
+        =\l(\frac{\p{X}}{\p{x}}\r)_y-\frac{\l(\frac{\p{X}}{\p{y}}\r)^2_x}{\l(\frac{\p{Y}}{\p{y}}\r)_x}
+    $$
+
+由于：
+    $$
+        \l(\frac{\p^2{S}}{\p{y^2}}\r)_{x}<0
+        \\\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}-\l(\frac{\p^2{S}}{\p{x}\p{y}}\r)^2<0
+    $$
+
+因此我们有：
+    $$
+        \l(\frac{\p{X}}{\p{x}}\r)_y>\l(\frac{\p{X}}{\p{x}}\r)_{Y=0}>0
+    $$
+
+亦即：
+    $$
+        |(\Delta{X})_y|>|(\Delta{X}_{Y=0})|
+    $$
+
+上式称为勒夏特列原理。
+&emsp;&emsp;我们将 $x$ 的变化量 $\Delta{x}$ 看作外界对物体作用的量度，而将 $\Delta{X}$ 看作这种作用影响下物体性质变化的量度。上述不等式表明，相比于物体刚刚受到外部作用的时刻其性质的变化，物体回归平衡态后其性质的变化要更小。这说明：使物体离开平衡状态的外部作用，会在物体中引发一些能够减弱该作用的影响的过程。
