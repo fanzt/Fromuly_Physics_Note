@@ -145,6 +145,22 @@ $$**
 #### 1.2.3 Green 函数法求边值问题的形式解
 
 &emsp;&emsp;对于给定边界 $S$ 上的 Dirichlet 边界条件与 Neumann 边界条件，我们可以利用 Green 函数法求得其解。
+&emsp;&emsp;考虑 Green 函数的定义：
+    $$
+        \nabla'^2G(\mathbf{x},\mathbf{x'})=-4\pi\delta(\mathbf{x-x'})
+    $$
+
+则显然我们有：
+    $$
+        G(\mathbf{x},\mathbf{x'})=\frac{1}{|\mathbf{x}-\mathbf{x'}|}+F(\mathbf{x},\mathbf{x'})
+    $$
+
+其中 $F$ 在 $S$ 所包围的体积 $V$ 中满足：
+    $$
+        \nabla'^2F(\mathbf{x},\mathbf{x'})=0
+    $$
+
+> 未完待续（想直接听lehuolh老师讲电动，不想自己学了
 
 #### 1.2.4 Green 函数法具体应用与正交函数展开
 
