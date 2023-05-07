@@ -10,6 +10,8 @@ $$
     \newcommand{p}{\partial}
     \newcommand{l}{\left}
     \newcommand{r}{\right}
+    \newcommand{<}{\langle}
+    \newcommand{>}{\rangle}
 $$
 
 ## 热力学量之间的关系

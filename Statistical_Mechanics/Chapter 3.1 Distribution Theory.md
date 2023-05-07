@@ -10,6 +10,8 @@ $$
     \newcommand{p}{\partial}
     \newcommand{l}{\left}
     \newcommand{r}{\right}
+    \newcommand{<}{\langle}
+    \newcommand{>}{\rangle}
 $$
 
 ## 分布理论
@@ -51,12 +53,18 @@ $$
         S'(E_0-E_n)=S'(E_0)-E_n\l.\frac{\d{S'(E)}}{\d{E}}\r|_{E=E_0}
     $$
 
-这里出现了熵对能量的导数，而显然根据定义，熵对能量的导数正是温度的倒数。于是我们就可以得到 $w$ 的答案了：
+这里出现了熵对能量的导数，而显然根据定义，熵对能量的导数正是温度。于是我们就可以得到 $w$ 的表达式：
     $$
-    \begin{aligned}
-        w_n&=C\cdot\frac{\exp\l[S'(E_0)-\displaystyle\frac{E_n}{T}\r]}{\Delta{E'}(E_0)}
-        \\&=A\exp\l(-\frac{E_n}{T}\r)
-    \end{aligned}
+        w_n=A\exp\l(-\frac{E_n}{T}\r)
     $$
 
-其中 $A$ 是与 $E_n$ 无关的归一化常量。
+其中 $A$ 是一个与 $E_n$ 无关的归一化常量。该公式确定了任何作为一个大闭合体系的小部分的宏观物体的统计分布规律。上式的分布被称为吉布斯分布或正则分布。
+&emsp;&emsp;归一化常数 $A$ 由概率密度的归一化 $\displaystyle\sum{w_n}=1$ 确定，因此我们有：
+    $$
+        \frac{1}{A}=\sum_{n}\exp\l(-\frac{E_n}{T}\r)
+    $$
+
+&emsp;&emsp;在得到了分布函数之后，我们首先可以计算的便是任何物理量的平均值：
+    $$
+        \<f\>
+    $$
