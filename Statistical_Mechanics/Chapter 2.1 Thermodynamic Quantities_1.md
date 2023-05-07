@@ -10,6 +10,8 @@ $$
     \newcommand{p}{\partial}
     \newcommand{l}{\left}
     \newcommand{r}{\right}
+    \newcommand{<}{\langle}
+    \newcommand{>}{\rangle}
 $$
 
 ## 常见热力学量与相关过程
