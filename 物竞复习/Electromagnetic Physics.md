@@ -1,4 +1,4 @@
-# 电磁学 物竞复习
+# 电磁学&近代物理 物竞复习
 
 $$
     \newcommand{dbar}{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}}
@@ -204,4 +204,43 @@ $$
         \chi=\frac{4\pi{R^3}n}{1-\frac{4\pi{R^3}n}{3}}
     $$
 
-## 6.等离子体震荡与等离子体波
+## 6.电磁场的洛伦兹变换
+
+$$
+\begin{aligned}
+    E_x'&=E_x
+    \\E_y'&=\gamma(E_y-\beta{B_z})
+    \\E_z'&=\gamma(E_z+\beta{B_y})
+    \\B_x'&=B_x
+    \\B_y'&=\gamma\l(B_y+\beta{\frac{E_z}{c}}\r)
+    \\B_z'&=\gamma\l(B_z-\beta{\frac{E_y}{c}}\r)
+\end{aligned}
+$$
+
+## 7.等离子体震荡与等离子体波
+
+## 8.康普顿散射
+
+结论公式：
+    $$
+        \lambda'-\lambda=\frac{h}{m_0c}(1-\cos{\varphi})
+    $$
+
+## 9.氢原子能级
+
+### (1).里德伯常量、玻尔半径
+
+$$
+\begin{aligned}
+    R_H=\frac{m_ee^4}{8\varepsilon_0^2ch^3}=1.097373157\times10^7(m^{-1})
+    a_0=\frac{\hbar}{m_ec\alpha}
+\end{aligned}
+$$
+
+其中 $\alpha$ 为精细结构常数，有 $\alpha=\frac{e^2}{4\pi\varepsilon_0c\hbar}$.
+
+### (2).氢原子能级
+
+$$
+    \frac{1}{\lambda}=R_H\l(\frac{1}{n^2}-\frac{1}{m^2}\r)
+$$
