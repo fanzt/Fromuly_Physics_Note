@@ -1,6 +1,6 @@
 # Note 1.1 克劳修斯-克拉珀龙方程
 
-![节点](./Images/Seele2.jpg)
+![节点](./Images/Seele3.png)
 
 $$
     \newcommand{dbar}{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}}
