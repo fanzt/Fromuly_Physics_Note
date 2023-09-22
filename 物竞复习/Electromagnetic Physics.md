@@ -8,7 +8,9 @@ $$
     \newcommand{r}{\right}
 $$
 
-## 1.基本微分方程组
+## 一、电学
+
+### 1.基本微分方程组
 
 $$
 \begin{aligned}
@@ -19,9 +21,9 @@ $$
 \end{aligned}
 $$
 
-## 2.静电场极化
+### 2.静电场极化
 
-### (1).介质球柱的极化
+#### (1).介质球柱的极化
 
 首先给出静电场的拉普拉斯方程：
     $$
@@ -96,9 +98,9 @@ $$
     $$
 
 **以上过程演示了简单情况下拉普拉斯方程的求解。
-接下来我们不加证明的给出几个结论方便记忆。**
+接下来我们不加证明的给出其余结论方便记忆。**
 
-### (2).介质柱在匀强场的极化
+#### (2).介质柱在匀强场的极化
 
 球坐标系下轴对称体系拉普拉斯方程的通解为：
     $$
@@ -113,12 +115,11 @@ $$
     \end{aligned}
     $$
 
-## 2.导体椭球的电容
+#### (3).导体椭球的电容
 
-不加证明地给出结论，以便记忆。
-    $$
-        C=\frac{4\pi\varepsilon_0\sqrt{a^2-c^2}}{F\l(\arcsin{\sqrt{\frac{a^2-c^2}{a^2}}},\sqrt{\frac{a^2-b^2}{a^2-c^2}}\r)}
-    $$
+$$
+    C=\frac{4\pi\varepsilon_0\sqrt{a^2-c^2}}{F\l(\arcsin{\sqrt{\frac{a^2-c^2}{a^2}}},\sqrt{\frac{a^2-b^2}{a^2-c^2}}\r)}
+$$
 
 其中 $F(\phi,k)$ 为第一类椭圆积分。
 *特殊情况*：
@@ -133,7 +134,7 @@ $$
         \r.
     $$
 
-## 3.轴对称磁场的相关性质
+### 2.轴对称磁场的相关性质
 
 考虑与 $\theta$ 无关的轴对称磁场，根据磁场散度为零，我们有：
     $$
@@ -147,7 +148,7 @@ $$
 
 该关系在磁镜等情况下十分常用。
 
-## 4.偶极子相关
+### 3.偶极子相关
 
 偶极子产生的势与场：
     $$
@@ -166,7 +167,7 @@ $$
     \end{aligned}
     $$
 
-## 5.介质的微观解释
+### 4.介质气体极化率的微观解释
 
 &emsp;&emsp;考虑一个充满分子小球的气体，对该气体施加一个外场，则其中的每个小球都会受到一个场的作用而产生极化，于是整个气体宏观上便会产生极化，考虑研究宏观的极化性质与微观的粒子极化之间的关系。
 &emsp;&emsp;假设分子数密度为 $n$，每个分子小球在感受到外电场后会产生偶极矩，满足：
@@ -204,7 +205,19 @@ $$
         \chi=\frac{4\pi{R^3}n}{1-\frac{4\pi{R^3}n}{3}}
     $$
 
-## 6.电磁场的洛伦兹变换
+### 5.磁电类比
+
+以上所有公式中，进行如下替换，即可适用于静磁场。 
+    $$
+    \begin{aligned}
+        \boldsymbol{E}&\rightarrow\boldsymbol{H}=\frac{\boldsymbol{B}}{\mu}
+        \\\varepsilon&\rightarrow\mu
+        \\\boldsymbol{p}&\rightarrow\boldsymbol{p_m}=\mu_0\boldsymbol{m}
+        \\\boldsymbol{P}&\rightarrow\boldsymbol{P_m}=\mu_0\boldsymbol{M}
+    \end{aligned}
+    $$
+
+### 6.电磁场的洛伦兹变换
 
 $$
 \begin{aligned}
@@ -217,18 +230,71 @@ $$
 \end{aligned}
 $$
 
-## 7.等离子体震荡与等离子体波
+### 7.等离子相关
 
-## 8.康普顿散射
+#### (1).屏蔽库伦势
+
+&emsp;&emsp;考虑热平衡下的等离子体中放置一个静止点电荷，其位置为 $\boldsymbol{x}=0$，电荷密度 $\rho=q\delta(\boldsymbol{x})$，记等离子体中正离子数密度为 $n_p(\boldsymbol{x})$，电子数密度 $n_e(\boldsymbol{x})$，设正离子带电量 $Ze$，满足 $n_pZe=n_{e0}$.
+&emsp;&emsp;依据泊松方程，有：
+    $$
+        \varepsilon_0\nabla^2\varphi=-n_pZe+n_ee-q\delta(\boldsymbol{x})
+    $$
+
+一般情况下忽略正离子运动，并认为电子密度满足玻尔兹曼分布，有: 
+    $$
+        n_e=n_{e0}\exp\l(\frac{e\varphi}{kT}\r)\sim n_{e0}\l(1+\frac{e\varphi}{kT}\r)
+    $$
+
+带回方程，得到：
+    $$
+        \l(\nabla^2-\frac{1}{\lambda^2}\r)\varphi=-\frac{q}{\varepsilon_0}\delta(\boldsymbol{x})
+    $$
+
+其中有 $\displaystyle\lambda^2=\frac{kT\varepsilon_0}{n_{e0}e^2}$.
+上式为标准的亥姆霍兹方程，考虑到方程右侧是Delta函数，其解显然为亥姆霍兹方程的格林函数，即：
+    $$
+        G(\boldsymbol{x})=\frac{q}{4\pi\varepsilon_0r}\exp\l(-\frac{r}{\lambda}\r)
+    $$
+
+称为屏蔽库伦势。
+于是，依据格林函数法，我们可以得到等离子体内任意额外电荷分布 $\rho_e$ 产生的电势：
+    $$
+        \varphi=\int\frac{\rho_e(\boldsymbol{x'})}{4\pi\varepsilon_0|\boldsymbol{x'}-\boldsymbol{x}|}\exp\l(-\frac{|\boldsymbol{x'}-\boldsymbol{x}|}{\lambda}\r)d^3x'
+    $$
+
+#### (2).等离子体振荡
+
+忽略正离子运动，设电子平均运动速度为 $\boldsymbol{v}$，有：
+    $$
+    \begin{aligned}
+        \frac{\d{n}}{\d{t}}+\nabla\cdot(n\boldsymbol{v})&=0
+        \\m\frac{\p{\boldsymbol{v}}}{\p{t}}+m(\boldsymbol{v}\cdot\nabla)\boldsymbol{v}&=-e\boldsymbol{E}
+        \\\nabla\cdot\boldsymbol{E}=-(n-&n_{e0})\frac{e}{\varepsilon_0}
+    \end{aligned}
+    $$
+
+认为 $n'=(n-n_0)$ 与 $\boldsymbol{v}$ 是小量，线性化并消元后有：
+    $$
+        \frac{\d^2n'}{\d{t}^2}+\frac{e^2n_{e0}}{m\varepsilon_0}n'=0
+    $$
+
+于是有：
+    $$
+        \omega=\sqrt{\frac{e^2n_{e0}}{m\varepsilon_0}}
+    $$
+
+## 二、近代物理
+
+### 1.康普顿散射
 
 结论公式：
     $$
         \lambda'-\lambda=\frac{h}{m_0c}(1-\cos{\varphi})
     $$
 
-## 9.氢原子能级
+### 2.氢原子能级
 
-### (1).里德伯常量、玻尔半径
+#### (1).里德伯常量、玻尔半径
 
 $$
 \begin{aligned}
@@ -239,8 +305,17 @@ $$
 
 其中 $\alpha$ 为精细结构常数，有 $\alpha=\frac{e^2}{4\pi\varepsilon_0c\hbar}$.
 
-### (2).氢原子能级
+#### (2).氢原子能级
 
 $$
     \frac{1}{\lambda}=R_H\l(\frac{1}{n^2}-\frac{1}{m^2}\r)
 $$
+
+### 3.微分散射界面与卢瑟福公式
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;![scattering cross section](./image/differential_scattering_cross_section.png)
+$$
+    \frac{\d\sigma}{\d\Omega}=\frac{1}{16}\l(\frac{2Ze^2}{4\pi\varepsilon_0E}\r)^2\frac{1}{\sin^4(\frac{\theta}{2})}
+$$
+
+其中 $E=\frac{1}{2}mv_0^2$ 为入射粒子动量。
