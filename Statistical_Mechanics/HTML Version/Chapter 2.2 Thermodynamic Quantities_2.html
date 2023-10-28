@@ -1,0 +1,287 @@
+<!DOCTYPE html><html><head>
+      <title>Chapter 2.2 Thermodynamic Quantities_2</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em!important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em!important;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em!important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([for=preview]) .code-chunk .btn-group{display:none}.markdown-preview:not([for=preview]) .code-chunk .status{display:none}.markdown-preview:not([for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      <h1 class="crossnote-header" id="chapter-22-%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%87%8F%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%BA%94%E7%94%A8">Chapter 2.2 热力学量的关系与应用</h1>
+
+<p><img src="./Images/3.png" alt="节点"></p>
+<blockquote>
+<p>封面图源网络，侵删<br>
+注：本文为笔者学习朗道《统计物理学I》过程中的笔记与相关内容的补充。笔者是初学者，文章内容如有错误，欢迎指正。</p>
+</blockquote>
+<p></p><div class="mathjax-exps">$$\newcommand{dbar}{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}}     \newcommand{d}{\mathrm{d}}     \newcommand{p}{\partial}     \newcommand{l}{\left}     \newcommand{r}{\right}     \newcommand{&lt;}{\langle}     \newcommand{&gt;}{\rangle}$$</div><p></p>
+<h2 class="crossnote-header" id="%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%87%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB">热力学量之间的关系</h2>
+
+<h3 class="crossnote-header" id="1%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%87%8F%E7%9A%84%E5%AF%BC%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB">1.热力学量的导数之间的关系</h3>
+
+<h4 class="crossnote-header" id="1maxwell-%E5%85%B3%E7%B3%BB">(1).Maxwell 关系</h4>
+
+<p>  考虑到我们常常需要将热力学量彼此之间的各种导数变换成由别的热力学量组成的量，接下来我们考虑热力学量的导数之间的关系。<br>
+<em>朗道本节后面的内容都在讨论如何计算热容，我看得不是很懂所以不想写了，这里直接讨论 Maxwell 关系</em><br>
+  接下来我们讨论各个热力学量的导数之间的关系。首先给出热力学基本微分方程及其变形：<br>
+</p><div class="mathjax-exps">$$\d{E}=T\d{S}-P\d{V}         \\\d{H}=T\d{S}+V\d{P}         \\\d{F}=-S\d{T}-P\d{V}         \\\d{G}=-S\d{T}+V\d{P}$$</div><br>
+再给出相应热力学量的全微分表达式：<br>
+<div class="mathjax-exps">$$\begin{aligned}         \d{E}&amp;=\l(\frac{\p{E}}{\p{S}}\r)_V\d{S}+\l(\frac{\p{E}}{\p{V}}\r)_S\d{V}         \\\d{H}&amp;=\l(\frac{\p{H}}{\p{S}}\r)_P\d{S}+\l(\frac{\p{H}}{\p{P}}\r)_S\d{P}         \\\d{F}&amp;=\l(\frac{\p{F}}{\p{T}}\r)_V\d{T}+\l(\frac{\p{F}}{\p{V}}\r)_T\d{V}         \\\d{G}&amp;=\l(\frac{\p{G}}{\p{T}}\r)_P\d{T}+\l(\frac{\p{G}}{\p{P}}\r)_T\d{P}     \end{aligned}$$</div><p></p>
+<p>对比系数，我们可以立刻得到：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \l(\frac{\p{E}}{\p{S}}\r)_V&amp;=T\qquad\l(\frac{\p{E}}{\p{V}}\r)_S=-P         \\\l(\frac{\p{H}}{\p{S}}\r)_P&amp;=T\qquad\l(\frac{\p{H}}{\p{P}}\r)_S=V         \\\l(\frac{\p{F}}{\p{T}}\r)_V&amp;=-S\qquad\l(\frac{\p{F}}{\p{V}}\r)_T=-P         \\\l(\frac{\p{G}}{\p{T}}\r)_P&amp;=-S\qquad\l(\frac{\p{G}}{\p{P}}\r)_T=V     \end{aligned}$$</div><p></p>
+<p>考虑到求导可以换序，我们有：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \l(\frac{\p{T}}{\p{V}}\r)_S=-\l(\frac{\p{P}}{\p{S}}\r)_V         \\\l(\frac{\p{T}}{\p{P}}\r)_S=\l(\frac{\p{V}}{\p{S}}\r)_P         \\\l(\frac{\p{S}}{\p{V}}\r)_T=\l(\frac{\p{P}}{\p{T}}\r)_V         \\\l(\frac{\p{S}}{\p{P}}\r)_T=-\l(\frac{\p{V}}{\p{T}}\r)_P     \end{aligned}$$</div><p></p>
+<p>在此引入 Jacobi 行列式：<br>
+</p><div class="mathjax-exps">$$\frac{\p(u,v)}{\p(x,y)}=             \l|\begin{matrix}                 \displaystyle\frac{\p{u}}{\p{x}} &amp; \displaystyle\frac{\p{u}}{\p{y}}                 \\\displaystyle\frac{\p{v}}{\p{x}} &amp; \displaystyle\frac{\p{v}}{\p{y}}             \end{matrix}\r|$$</div><p></p>
+<p>显然其具有性质：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \frac{\p(u,y)}{\p(x,y)}&amp;=             \l|\begin{matrix}                 \displaystyle\frac{\p{u}}{\p{x}} &amp; \displaystyle\frac{\p{u}}{\p{y}}                 \\\displaystyle\frac{\p{y}}{\p{x}} &amp; \displaystyle\frac{\p{y}}{\p{y}}             \end{matrix}\r|             \\&amp;=             \l|\begin{matrix}                 \displaystyle\frac{\p{u}}{\p{x}} &amp; \displaystyle\frac{\p{u}}{\p{y}}                 \\0 &amp; 1             \end{matrix}\r|             \\&amp;=\l(\frac{\p{u}}{\p{x}}\r)_y     \end{aligned}$$</div><p></p>
+<hr>
+<h4 class="crossnote-header" id="2%E7%94%B1%E7%8A%B6%E6%80%81%E6%96%B9%E7%A8%8B%E4%B8%8E%E7%AD%89%E5%AE%B9%E7%83%AD%E5%AE%B9%E5%AF%BC%E5%87%BA%E5%86%85%E8%83%BD%E4%B8%8E%E7%86%B5%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F">(2).由状态方程与等容热容导出内能与熵的表达式</h4>
+
+<hr>
+<h4 class="crossnote-header" id="3%E7%AD%89%E5%8E%8B%E7%83%AD%E5%AE%B9%E4%B8%8E%E7%AD%89%E5%AE%B9%E7%83%AD%E5%AE%B9%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%80%E4%BA%9B%E5%85%B3%E7%B3%BB">(3).等压热容与等容热容之间的一些关系</h4>
+
+<p><em>还是写点吧……</em><br>
+  首先考虑使用 <span class="mathjax-exps">$V$</span> 和 <span class="mathjax-exps">$T$</span> 作为自变量，变换的结果应当可以通过 <span class="mathjax-exps">$P$</span> 与 <span class="mathjax-exps">$C_v$</span> （作为 <span class="mathjax-exps">$V$</span> 和 <span class="mathjax-exps">$T$</span> 的函数）表达出来。类似地，在选取 <span class="mathjax-exps">$P$</span> 和 <span class="mathjax-exps">$T$</span> 作为自变量时，变换的结果应当可以通过 <span class="mathjax-exps">$V$</span> 与 <span class="mathjax-exps">$C_p$</span> 表示出来。我们将联系 <span class="mathjax-exps">$P$</span>、<span class="mathjax-exps">$V$</span>、<span class="mathjax-exps">$T$</span> 的方程称为物态方程。实际上，物态方程本身就可以用来确定 <span class="mathjax-exps">$C_v$</span> 对 <span class="mathjax-exps">$V$</span> 的依赖关系以及 <span class="mathjax-exps">$C_p$</span> 对 <span class="mathjax-exps">$P$</span> 的依赖关系。利用 <span class="mathjax-exps">$\displaystyle S=-\l(\frac{\p{F}}{\p{T}}\r)_V$</span>，我们有：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \l(\frac{\p{C_v}}{\p{V}}\r)_T&amp;=\l(\frac{\p}{\p{V}}\l( T\frac{\p{S}}{\p{T}}\r)_V\r)_T         \\&amp;=\l(\frac{\p}{\p{V}}\l( T\frac{\p}{\p{T}}\l(-\frac{\p{F}}{\p{T}}\r)_V\r)_V\r)_T         \\&amp;=-T\frac{\p^3{F}}{\p{V}\p{T}^2}         \\&amp;=-T\frac{\p^2}{\p{T}^2}\l(\frac{\p{F}}{\p{V}}\r)_T     \end{aligned}$$</div><p></p>
+<p>又因为 <span class="mathjax-exps">$\displaystyle\l(\frac{\p{F}}{\p{V}}\r)_T=-P$</span>，于是我们得到：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p{C_v}}{\p{V}}\r)_T=T\l(\frac{\p^2{P}}{\p{T}^2}\r)_V$$</div><p></p>
+<p>类似地，我们有：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p{C_p}}{\p{P}}\r)_T=-T\l(\frac{\p^2{V}}{\p{T}^2}\r)_P$$</div><p></p>
+<p>接下来我们利用以上知识证明一个事实：不论何种情况何种状态，对于所有的物体，我们总有：<br>
+</p><div class="mathjax-exps">$$C_p-C_v&gt;0$$</div><p></p>
+<p>证：<br>
+首先写出 <span class="mathjax-exps">$C_v$</span> 的表达式：<br>
+</p><div class="mathjax-exps">$$C_v=T\l(\frac{\p{S}}{\p{T}}\r)_V$$</div><p></p>
+<p>利用 Jacobi 行列式，并经过一系列化简，我们有：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         C_v&amp;=T\frac{\p(S,V)}{\p(T,V)}         \\&amp;=T\frac{\frac{\p(S,V)}{\p(T,P)}}{\frac{\p(T,V)}{\p(T,P)}}         \\&amp;=T             \frac{             \l(                 \frac{\p{S}}{\p{T}}             \r)_P             \l(                 \frac{\p{V}}{\p{P}}             \r)_T             -\l(                 \frac{\p{S}}{\p{P}}             \r)_T             \l(                 \frac{\p{V}}{\p{T}}             \r)_P}{                 \l(                     \frac{\p{V}}{\p{P}}                 \r)_T             }         \\&amp;=C_p-T\frac{             \l(                 \frac{\p{S}}{\p{P}}             \r)_T             \l(                 \frac{\p{V}}{\p{T}}             \r)_P}{                 \l(                     \frac{\p{V}}{\p{P}}                 \r)_T             }     \end{aligned}$$</div><p></p>
+<p>带入 Maxwell 关系中的一个，我们有：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         C_v&amp;=C_p+T\frac{             \l(                 \frac{\p{V}}{\p{T}}             \r)^2_P}{                 \l(                     \frac{\p{V}}{\p{P}}                 \r)_T             }     \end{aligned}$$</div><p></p>
+<p>于是我们就有：<br>
+</p><div class="mathjax-exps">$$C_p-C_v=-T\frac{             \l(                 \frac{\p{V}}{\p{T}}             \r)^2_P}{                 \l(                     \frac{\p{V}}{\p{P}}                 \r)_T             }$$</div><p></p>
+<p>用类似的方法，我们有：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         C_p&amp;=T\l(\frac{\p{S}}{\p{T}}\r)_P         \\&amp;=T\frac{\p(S,P)}{\p(T,P)}         \\&amp;=T\frac{\frac{\p(S,P)}{\p(T,V)}}{\frac{\p(T,P)}{\p(T,V)}}         \\&amp;=T             \frac{             \l(                 \frac{\p{S}}{\p{T}}             \r)_V             \l(                 \frac{\p{P}}{\p{V}}             \r)_T             -\l(                 \frac{\p{S}}{\p{V}}             \r)_T             \l(                 \frac{\p{P}}{\p{T}}             \r)_V}{                 \l(                     \frac{\p{P}}{\p{V}}                 \r)_T             }         \\&amp;=C_v-T\frac{             \l(                 \frac{\p{P}}{\p{T}}             \r)^2_V}{                 \l(                     \frac{\p{P}}{\p{V}}                 \r)_T             }     \end{aligned}$$</div><p></p>
+<p>于是我们有：<br>
+</p><div class="mathjax-exps">$$C_p-C_v=-T\frac{             \l(                 \frac{\p{P}}{\p{T}}             \r)^2_V}{                 \l(                     \frac{\p{P}}{\p{V}}                 \r)_T             }$$</div><p></p>
+<p>这里我们需要注意到一个显然的事实：对于一个等温过程，物体如果体积增大则压强必然减小，如果体积减小则压强必然增大。因而我们有：<br>
+</p><div class="mathjax-exps">$$C_p&gt;C_v$$</div><p></p>
+<hr>
+<h4 class="crossnote-header" id="4%E7%BB%9D%E7%83%AD%E5%8E%8B%E7%BC%A9%E7%8E%87%E4%B8%8E%E7%AD%89%E6%B8%A9%E5%8E%8B%E7%BC%A9%E7%8E%87">(4).绝热压缩率与等温压缩率</h4>
+
+<p>再考虑绝热压缩率与等温压缩率之间的关系。<br>
+首先写出绝热压缩率：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \l(\frac{\p{V}}{\p{P}}\r)_S&amp;=\frac{\p(V,S)}{\p(P,S)}         \\&amp;=\frac{\frac{\p(V,S)}{\p(V,T)}}{\frac{\p(P,S)}{\p(P,T)}}\frac{\p(V,T)}{\p(P,T)}         \\&amp;=\frac{\l(\frac{\p{S}}{\p{T}}\r)_V}{\l(\frac{\p{S}}{\p{T}}\r)_P}\l(\frac{\p{V}}{\p{P}}\r)_T     \end{aligned}$$</div><p></p>
+<p>再考虑到 <span class="mathjax-exps">$C_p$</span> 与 <span class="mathjax-exps">$C_v$</span> 的定义：<br>
+</p><div class="mathjax-exps">$$C_p=T\l(\frac{\p{S}}{\p{T}}\r)_P         \\C_v=T\l(\frac{\p{S}}{\p{T}}\r)_V$$</div><p></p>
+<p>于是我们有：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p{V}}{\p{P}}\r)_S=\frac{C_v}{C_p}\l(\frac{\p{V}}{\p{P}}\r)_T$$</div><p></p>
+<p>又因为我们有：<br>
+</p><div class="mathjax-exps">$$C_p&gt;C_v$$</div><p></p>
+<p>所以我们有：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p{V}}{\p{P}}\r)_S&lt;\l(\frac{\p{V}}{\p{P}}\r)_T$$</div><p></p>
+<p>即绝热压缩率的绝对值小于等温压缩率的绝对值。</p>
+<hr>
+<h3 class="crossnote-header" id="2%E7%9B%B8%E5%85%B3%E5%BA%94%E7%94%A8">2.相关应用</h3>
+
+<h4 class="crossnote-header" id="1%E6%9C%80%E5%A4%A7%E5%8A%9F%E4%B8%8E%E5%8D%A1%E8%AF%BA%E5%AE%9A%E7%90%86">(1).最大功与卡诺定理</h4>
+
+<p>  考虑由几个互相不处于热平衡态的物体组成的绝热体系。在其过渡到平衡态的过程中，体系会向外界做功。作为过程量，做功的大小显然和过程的种类有关。因此，我们接下来将讨论如何才能让该过程向外输出的功率最大。<br>
+  考虑到我们感兴趣的是系统从不平衡过渡到平衡这个过程所做的功，而非处于平衡态的一般情况下气体膨胀所做的功，所以我们假设气体初末态的体积不变。<br>
+  设系统的初始能量为 <span class="mathjax-exps">$E_0$</span>，在平衡态的情况下能量视为熵的函数，记为 <span class="mathjax-exps">$E(S)$</span>. 考虑到系统是热绝缘的，由能量守恒有：<br>
+</p><div class="mathjax-exps">$$|W|=E_0-E(S)$$</div><p></p>
+<p>将 <span class="mathjax-exps">$|W|$</span> 对末态的熵求导，有：<br>
+</p><div class="mathjax-exps">$$\frac{\p{|W|}}{\p{S}}=-\l(\frac{\p{E}}{\p{S}}\r)_V=-T$$</div><p></p>
+<p>可以看到结果是负的系统末态温度。考虑到温度必须是正数，这说明该导数本身是负的。也就是说，随着末态的熵的增大，系统对外做的功会越来越小。因此，想要让熵最大的方法就是令系统的熵不变，也就是可逆过程。<br>
+  因此，我们可以得到结论：系统在按照可逆方式向平衡态过度时所做的功最大。<br>
+  接下来我们考虑如何构造一个实际的过程来输出最大功，也就是众所周知的卡诺循环。<br>
+  设有两个具有不同温度 <span class="mathjax-exps">$T_1$</span> 与 <span class="mathjax-exps">$T_2$</span> 的物体，且 <span class="mathjax-exps">$T_2&gt;T_1$</span>. 首先考虑最简单的过程：直接将两个物体贴在一起。显然该过程不会产生任何的功；且该过程不可逆，因为其会造成 <span class="mathjax-exps">$\displaystyle\delta{S}=\l(\frac{1}{T_1}-\frac{1}{T_2}\r)\delta{E}$</span> 的熵增。<br>
+  因此，为了实现最大功，我们需要一个可以实现某种可你循环过程的“工作物体”引入系统。该物体所要实现的循环过程便是卡诺循环，即：</p>
+<p>  <strong>“将该物体等温地从 <span class="mathjax-exps">$T_2$</span> 处获得部分能量，再绝热地冷却到 <span class="mathjax-exps">$T_1$</span>，再等温地将能量给予 <span class="mathjax-exps">$T_1$</span> 的物体，再绝热地返回初态”</strong></p>
+<p>  接下来我们可以计算该过程所做的功：首先考虑到整个过程的可逆性，这保证了总熵不变，即 <span class="mathjax-exps">$\delta{S_1}=-\delta{S_2}$</span>；始终取物体获得能量为正，于是有：<br>
+</p><div class="mathjax-exps">$$|\delta{W}|=-\delta{E_2}-\delta{E_1}=-T_1\delta{S_1}-T_2\delta{S_2}=(T_1-T_2)\delta{S_2}$$</div><p></p>
+<p>亦即：<br>
+</p><div class="mathjax-exps">$$|\delta{W}|=\frac{T_2-T_1}{T_2}|\delta{E_2}|$$</div><p></p>
+<p>显然 <span class="mathjax-exps">$|\delta{E_2}|$</span> 是工作物体从高温热源吸收的热量，于是我们定义 <span class="mathjax-exps">$\displaystyle\eta=\l|\frac{\delta{R}}{\delta{E_2}}\r|$</span>，即有：<br>
+</p><div class="mathjax-exps">$$\eta_{max}=1-\frac{T_1}{T_2}$$</div><p></p>
+<p>即卡诺定理。</p>
+<hr>
+<h4 class="crossnote-header" id="2%E4%BB%8B%E8%B4%A8%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8A%9F%E4%B8%8E%E7%83%AD%E5%8A%9B%E5%AD%A6%E4%B8%8D%E7%AD%89%E5%BC%8F">(2).介质中的最大功与热力学不等式</h4>
+
+<p><em>懒得写了，也懒得看了。</em></p>
+<hr>
+<h4 class="crossnote-header" id="3%E5%8B%92%E5%A4%8F%E7%89%B9%E5%88%97%E5%8E%9F%E7%90%86">(3).勒夏特列原理</h4>
+
+<p>  考虑一个由介质和被介质包围的物体组成的闭合系统。设 <span class="mathjax-exps">$S$</span> 为系统的总熵，并分别记 <span class="mathjax-exps">$x$</span> 与 <span class="mathjax-exps">$y$</span> 为以下两个量：当 <span class="mathjax-exps">$\displaystyle\frac{\p{S}}{\p{y}}=0$</span> 时说明物体本身处于平衡态；而当 <span class="mathjax-exps">$\displaystyle\frac{\p{S}}{\p{y}}=0$</span> 且 <span class="mathjax-exps">$\displaystyle\frac{\p{S}}{\p{x}}=0$</span> 时说明物体本身以及物体与介质都处于平衡态。<br>
+  考虑熵极大条件与熵增，在平衡状态下我们有：<br>
+</p><div class="mathjax-exps">$$\frac{\p{S}}{\p{x}}=\frac{\p{S}}{\p{y}}=0         \\\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}&gt;0$$</div><p></p>
+<p>  记：<br>
+</p><div class="mathjax-exps">$$X=-\frac{\p{S}}{\p{x}}         \\Y=-\frac{\p{S}}{\p{y}}$$</div><p></p>
+<p>即有：<br>
+</p><div class="mathjax-exps">$$X=0\qquad Y=0$$</div><p></p>
+<p>以及：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p^2{S}}{\p{x^2}}\r)_{y}&lt;0         \\\l(\frac{\p^2{S}}{\p{y^2}}\r)_{x}&lt;0         \\     \begin{aligned}         \\&amp;\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}&lt;0     \end{aligned}$$</div><p></p>
+<p>考虑到：<br>
+</p><div class="mathjax-exps">$$\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2\leq2\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}\d{x}\d{y}$$</div><p></p>
+<p>我们有：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \\&amp;\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}+\frac{\p^2{S}}{\p{x}\p{y}}&lt;0     \end{aligned}$$</div><p></p>
+<p>即：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \\&amp;\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}-\l(\frac{\p^2{S}}{\p{x}\p{y}}\r)^2&lt;0     \end{aligned}$$</div><p></p>
+<p>  接下来我们假定，体系经过了某种不太大的外部作用，导致物体与介质的平衡被破坏，因此体系的熵不再处于极大值，<span class="mathjax-exps">$X=0$</span> 的条件也因此被破坏。至于量 <span class="mathjax-exps">$y$</span>，则假定它并不受到该作用的直接影响。假设在该影响下 <span class="mathjax-exps">$x$</span> 变化了 <span class="mathjax-exps">$\Delta{x}$</span>，则在受到作用的那一瞬间，<span class="mathjax-exps">$X$</span> 的变化量为：<br>
+</p><div class="mathjax-exps">$$(\Delta{X})_y=\l(\frac{\p{X}}{\p{x}}\r)_y\Delta{x}$$</div><p></p>
+<p>  而在 <span class="mathjax-exps">$y$</span> 不变的情况下，<span class="mathjax-exps">$x$</span> 的变化仍旧会导致 <span class="mathjax-exps">$Y=0$</span> 的条件被破坏，也就是物体内部的平衡会被破坏。而在物体内部重新达成新的平衡后，量 <span class="mathjax-exps">$X\equiv\Delta{X}$</span> 将会取数值：<br>
+</p><div class="mathjax-exps">$$(\Delta{X})_{Y=0}=\l(\frac{\p{X}}{\p{x}}\r)_{Y=0}\Delta{x}$$</div><p></p>
+<p>其中的导数是在 <span class="mathjax-exps">$Y$</span> 恒定为零的情况下取值的。<br>
+  我们比较 <span class="mathjax-exps">$\Delta{X}$</span> 的这两个数值，并考虑 Jacobi 行列式的性质，我们有：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p{X}}{\p{x}}\r)_{Y=0}         =\frac{\p(X,Y)}{\p(x,Y)}         =\frac{\frac{\p(X,Y)}{\p(x,y)}}{\frac{\p(x,Y)}{\p(x,y)}}         =\l(\frac{\p{X}}{\p{x}}\r)_y-\frac{\l(\frac{\p{X}}{\p{y}}\r)_x\l(\frac{\p{Y}}{\p{x}}\r)_x}{\l(\frac{\p{Y}}{\p{y}}\r)_x}$$</div><p></p>
+<p>考虑到：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p{X}}{\p{y}}\r)_x=\l(-\frac{\p^2{S}}{\p{x}\p{y}}\r)_x=\l(\frac{\p{Y}}{\p{x}}\r)_x$$</div><p></p>
+<p>我们有：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p{X}}{\p{x}}\r)_{Y=0}         =\frac{\p(X,Y)}{\p(x,Y)}         =\frac{\frac{\p(X,Y)}{\p(x,y)}}{\frac{\p(x,Y)}{\p(x,y)}}         =\l(\frac{\p{X}}{\p{x}}\r)_y-\frac{\l(\frac{\p{X}}{\p{y}}\r)^2_x}{\l(\frac{\p{Y}}{\p{y}}\r)_x}$$</div><p></p>
+<p>由于：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p^2{S}}{\p{y^2}}\r)_{x}&lt;0         \\\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}-\l(\frac{\p^2{S}}{\p{x}\p{y}}\r)^2&lt;0$$</div><p></p>
+<p>因此我们有：<br>
+</p><div class="mathjax-exps">$$\l(\frac{\p{X}}{\p{x}}\r)_y&gt;\l(\frac{\p{X}}{\p{x}}\r)_{Y=0}&gt;0$$</div><p></p>
+<p>亦即：<br>
+</p><div class="mathjax-exps">$$|(\Delta{X})_y|&gt;|(\Delta{X}_{Y=0})|$$</div><p></p>
+<p>上式称为勒夏特列原理。<br>
+  我们将 <span class="mathjax-exps">$x$</span> 的变化量 <span class="mathjax-exps">$\Delta{x}$</span> 看作外界对物体作用的量度，而将 <span class="mathjax-exps">$\Delta{X}$</span> 看作这种作用影响下物体性质变化的量度。上述不等式表明，相比于物体刚刚受到外部作用的时刻其性质的变化，物体回归平衡态后其性质的变化要更小。这说明：使物体离开平衡状态的外部作用，会在物体中引发一些能够减弱该作用的影响的过程。</p>
+<hr>
+<h4 class="crossnote-header" id="4%E8%83%BD%E6%96%AF%E7%89%B9%E5%AE%9A%E7%90%86">(4).能斯特定理</h4>
+
+<p>  由于物体的热容 <span class="mathjax-exps">$C_v$</span> 总是大于零的，我们可以知道物体的能量是温度的单调增函数。这意味着，当物体处于最低可能的温度（即绝对零度）时，其本身应当处于具有最小可能能量的状态。假想地将物体划分为许多部分，将其总能量视为所有部分能量的和，由于热平衡我们知道这些所有小的部分也都需要处于绝对零度，即处于最低能量状态。<br>
+  从量子统计角度来说，最低能量的状态显然是一个确定的量子态——基态。量子态的确定性意味着意味着该状态下体系的统计权重仅能等于一，这也意味着该状态下物体的熵必须为零，而该结论被称为能斯特定理。</p>
+<h4 class="crossnote-header" id="5%E5%8C%96%E5%AD%A6%E5%8A%BF%E4%B8%8E%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%87%8F%E5%AF%B9%E7%B2%92%E5%AD%90%E6%95%B0%E7%9A%84%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB">(5).化学势与热力学量对粒子数的依赖关系</h4>
+
+<p>  考虑到所有目前已知的热力学势都有可加性，而这种可加性使得我们能够讨论这些量对物体粒子数的依赖关系。接下来的讨论我们仅考虑由相同粒子构成的物体。<br>
+  热力学量的可加性意味着物质的量（对应于粒子数 <span class="mathjax-exps">$N$</span>）变化的倍数应当等于该变化导致的可加物理量变化的倍数。也就是说，可加性的热力学量本身应当是其他任意可加性变量的一次齐次函数。<br>
+  考虑将物体的能量表达成其熵、体积与粒子数的函数。由于熵与体积也具有可加性，我们需要能量函数取如下形式：<br>
+</p><div class="mathjax-exps">$$E=Nf\l(\frac{S}{N},\frac{V}{N}\r)$$</div><p></p>
+<p>继而考虑焓、亥姆霍兹自由能与吉布斯自由能，其分别为熵与压强、体积与温度以及压强与温度的函数。考虑到体积与熵具有可加性，压强与温度不具有可加性，我们有：<br>
+</p><div class="mathjax-exps">$$H=Nf\l(\frac{S}{N},P\r)         \\F=Nf\l(\frac{V}{N},T\r)         \\G=Nf\l(P,T\r)$$</div><p></p>
+<p>在以往的计算中，我们总是把粒子数 <span class="mathjax-exps">$N$</span> 视为一个不变的参量。接下来，我们考虑 <span class="mathjax-exps">$N$</span> 作为一个自变量的情况，并写出热力学势的全微分：<br>
+</p><div class="mathjax-exps">$$\d{E}=T\d{S}-P\d{V}+\mu\d{N}         \\\d{H}=T\d{S}+V\d{P}+\mu\d{N}         \\\d{F}=-S\d{T}-P\d{V}+\mu\d{N}         \\\d{G}=-S\d{T}+V\d{P}+\mu\d{N}$$</div><p></p>
+<p>其中：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \mu=\l(\frac{\p{E}}{\p{N}}\r)_{S,V}         =\l(\frac{\p{H}}{\p{N}}\r)_{S,P}         =\l(\frac{\p{F}}{\p{N}}\r)_{T,V}         =\l(\frac{\p{G}}{\p{N}}\r)_{T,P}     \end{aligned}$$</div><p></p>
+<p>称为物体的化学势。<br>
+  考虑上式对吉布斯自由能的写法，我们有：<br>
+</p><div class="mathjax-exps">$$\mu=\frac{\p{G}}{\p{N}}=f(P,T)$$</div><p></p>
+<p>因而我们直接有：<br>
+</p><div class="mathjax-exps">$$G=N\mu$$</div><p></p>
+<p>即化学势是单个分子的吉布斯自由能。</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#chapter-22-热力学量的关系与应用" class="md-toc-link"><p>Chapter 2.2 热力学量的关系与应用</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#热力学量之间的关系" class="md-toc-link"><p>热力学量之间的关系</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#1热力学量的导数之间的关系" class="md-toc-link"><p>1.热力学量的导数之间的关系</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1maxwell-关系" class="md-toc-link">
+            <p>(1).Maxwell 关系</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2由状态方程与等容热容导出内能与熵的表达式" class="md-toc-link">
+            <p>(2).由状态方程与等容热容导出内能与熵的表达式</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3等压热容与等容热容之间的一些关系" class="md-toc-link">
+            <p>(3).等压热容与等容热容之间的一些关系</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#4绝热压缩率与等温压缩率" class="md-toc-link">
+            <p>(4).绝热压缩率与等温压缩率</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#2相关应用" class="md-toc-link"><p>2.相关应用</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1最大功与卡诺定理" class="md-toc-link">
+            <p>(1).最大功与卡诺定理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2介质中的最大功与热力学不等式" class="md-toc-link">
+            <p>(2).介质中的最大功与热力学不等式</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3勒夏特列原理" class="md-toc-link">
+            <p>(3).勒夏特列原理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#4能斯特定理" class="md-toc-link">
+            <p>(4).能斯特定理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#5化学势与热力学量对粒子数的依赖关系" class="md-toc-link">
+            <p>(5).化学势与热力学量对粒子数的依赖关系</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

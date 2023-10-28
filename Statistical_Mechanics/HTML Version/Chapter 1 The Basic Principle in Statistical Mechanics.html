@@ -1,0 +1,502 @@
+<!DOCTYPE html><html><head>
+      <title>Chapter 1 The Basic Principle in Statistical Mechanics</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em!important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em!important;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em!important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([for=preview]) .code-chunk .btn-group{display:none}.markdown-preview:not([for=preview]) .code-chunk .status{display:none}.markdown-preview:not([for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      <h1 class="crossnote-header" id="chapter-1-%E7%BB%9F%E8%AE%A1%E7%89%A9%E7%90%86%E5%AD%A6%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86">Chapter 1 统计物理学的基本原理</h1>
+
+<p><img src="./Images/1.png" alt="节点"></p>
+<blockquote>
+<p>注：本文为笔者学习朗道《统计物理学I》过程中的笔记与相关内容的补充。笔者是初学者，文章内容如有错误，欢迎指正。</p>
+</blockquote>
+<h2 class="crossnote-header" id="%E4%B8%80-%E7%BB%8F%E5%85%B8%E7%BB%9F%E8%AE%A1">一、经典统计</h2>
+
+<h3 class="crossnote-header" id="1%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83%E7%9B%B8%E7%A9%BA%E9%97%B4-%E5%AD%90%E7%B3%BB%E7%BB%9F-%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E4%B8%8E%E7%BB%9F%E8%AE%A1%E5%B9%B3%E8%A1%A1">1.统计分布——相空间、子系统、分布函数与统计平衡</h3>
+
+<h4 class="crossnote-header" id="1%E7%9B%B8%E7%A9%BA%E9%97%B4">(1).相空间</h4>
+
+<p>  假设我们所考虑的宏观力学系统有 <span class="mathjax-exps">$s$</span> 个自由度，那么这个系统的各点空间位置由 <span class="mathjax-exps">$s$</span> 个坐标表征。我们将这些坐标记为 <span class="mathjax-exps">$q_i$</span>，角标 <span class="mathjax-exps">$i$</span> 取 <span class="mathjax-exps">$1,2,...,s$</span>.<br>
+  与 Hamilton 力学类似，我们使用 <span class="mathjax-exps">$s$</span> 个坐标 <span class="mathjax-exps">$q_i$</span> 与 <span class="mathjax-exps">$s$</span> 个动量 <span class="mathjax-exps">$p_i$</span> 来刻画一个系统的状态。系统的不同状态在数学上可以用相空间中不同的点来表示。该空间的坐标轴上标出的是该系统的坐标与动量。因此，每一个系统都有自己独特的相空间，该相空间的维数等于系统自由度的两倍，即 <span class="mathjax-exps">$2s$</span>. 相空间中的每一点，对应于系统一组确定的坐标值 <span class="mathjax-exps">$q_i$</span> 与动量值 <span class="mathjax-exps">$p_i$</span>，因而代表这个系统的一个确定的状态。系统的状态随时间演化，表征状态的点就将在相空间中描画出一条曲线，称为相轨道。</p>
+<h4 class="crossnote-header" id="2%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%B8%8E%E5%90%84%E6%80%81%E5%8E%86%E7%BB%8F%E5%81%87%E8%AF%B4">(2).子系统与各态历经假说</h4>
+
+<p>  考虑任意的宏观物体或物体系统。假设系统是闭合的，即该系统与任何其他物体都不产生相互作用。从该系统中划分出某一部分，该部分与整个系统相比非常小，但仍旧是一个宏观系统。这种相对非常小但仍旧宏观的部分称为子系统。子系统并不闭合，它受到来自整个系统其余各部分的复杂而紊乱的相互作用，因而其状态也随着时间以十分复杂紊乱的方式变化。<br>
+  精确求解子系统是不现实的。但可以利用子系统的复杂与紊乱性来进行子系统行为的求解。引入各态历经假说的基本思想：由于被我们划分出来的子系统与系统其他部分的相互作用极其复杂且紊乱，以至于在足够长的时间间隔内，子系统会在自身所有可能的状态中经历足够多的次数。<br>
+  用 <span class="mathjax-exps">$\Delta p\Delta q$</span> 表示当子系统的坐标 <span class="mathjax-exps">$q_i$</span> 与动量 <span class="mathjax-exps">$p_i$</span> 的值位于小间隔 <span class="mathjax-exps">$\Delta q_i$</span> 与 <span class="mathjax-exps">$\Delta p_i$</span> 内时，其在相空间某个小区域的“体积”。在足够长的时间 <span class="mathjax-exps">$T$</span> 内，子系统的十分复杂紊乱的相轨道会多次穿过其相空间中每一个这样的区域。<br>
+  设在总时间 <span class="mathjax-exps">$T$</span> 内，子系统处于相空间中给定区域 <span class="mathjax-exps">$\Delta p\Delta q$</span> 内的那一段时间为 <span class="mathjax-exps">$\Delta t$</span>. 当总时间 <span class="mathjax-exps">$T$</span> 无限增大时，比值 <span class="mathjax-exps">$\displaystyle\frac{\Delta t}{T}$</span> 将趋于某个极限值：<br>
+</p><div class="mathjax-exps">$$\omega=\lim_{T\:\rightarrow\:\infty}\frac{\Delta t}{T}$$</div><br>
+显然可以将该数值看作当我们在某任意时刻观测子系统时发现它处于相空间中给定区域 <span class="mathjax-exps">$\Delta p\Delta q$</span> 内的概率。<p></p>
+<h4 class="crossnote-header" id="3%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0">(3).分布函数</h4>
+
+<p>  当相空间中的体积元变为无限小时，记：<br>
+</p><div class="mathjax-exps">$$\mathrm{d}q\mathrm{d}p=\prod \limits_{i=1}^s\mathrm{d}q_i\mathrm{d}p_i$$</div><br>
+引入 <span class="mathjax-exps">$\mathrm{d}\omega$</span> 来表示该体积元中的相点所代表的状态的概率，即系统位于给定 <span class="mathjax-exps">$q_i$</span>，<span class="mathjax-exps">$p_i$</span> 与 <span class="mathjax-exps">$q_i+\mathrm{d}q_i$</span>，<span class="mathjax-exps">$p_i+\mathrm{d}p_i$</span> 之间的无限小间隔内的概率。可以将其写为：<br>
+<div class="mathjax-exps">$$\mathrm{d}\omega=\rho(p_1,\dotsb,p_s,q_1,\dotsb,q_s)\mathrm{d}p\mathrm{d}q$$</div><br>
+函数 <span class="mathjax-exps">$\rho$</span> 表征相空间中概率分布“密度”的作用，称为该系统的统计分布函数，简称分布函数。显然，分布函数应当满足“归一化条件”：<br>
+<div class="mathjax-exps">$$\int{\rho}\mathrm{d}p\mathrm{d}q=1$$</div><br>
+积分遍布整个相空间。<br>
+  由于子系统经历了足够长的时间，遍历了足够多的状态，其初始状态的影响已然被系统中其余更大部分的影响所完全消除。因而，某一子系统的统计分布与整个系统的任意部分（包括子系统自己）的初始条件无关。<br>
+  若已经求得了子系统的统计分布，则我们便可以把任何依赖于子系统状态的物理量的不同取值的概率计算出来。获得概率后，我们便可计算该物理量的平均值：只要把所有可能值乘以相应概率，遍历全状态积分即可：<br>
+<div class="mathjax-exps">$${\langle}f{\rangle}=\int{f(p,q)\rho(p,q)}\mathrm{d}p\mathrm{d}q$$</div><br>
+显然，利用概率求统计平均完全等价于无限长时间内的时间平均。<p></p>
+<h4 class="crossnote-header" id="4%E7%BB%9F%E8%AE%A1%E5%B9%B3%E8%A1%A1">(4).统计平衡</h4>
+
+<p>  由上文可知，统计学给出的宏观物体行为的结论与预言具有概率性。然而在现实应用中，其概率性往往难以显现出来。这是由于如果我们在足够长的时间间隔内观测任何一个宏观物体，就会发现：所有表征这个物体的物理量实际上都是常量（等于其平均值）。由此可见，统计学的预言从应用上来说实际上是确定的，而非概率的。<br>
+  如果一个闭合宏观系统在其所处的状态下，其任何宏观子系统的宏观物理量都充分精确地等于相应量的平均值，就说系统处于统计平衡态（亦即热力学平衡，或热平衡状态）。若一个闭合体系暂时不处在统计平衡状态，则其需要一段时间过渡到统计平衡状态。该段时间被称为弛豫时间。而上述“足够长的时间间隔”指的就是远长于弛豫时间的时间间隔。<br>
+  与过渡到平衡态有关的过程理论，称为动理学，我们不在此讨论。</p>
+<h3 class="crossnote-header" id="2%E7%BB%9F%E8%AE%A1%E7%8B%AC%E7%AB%8B">2.统计独立</h3>
+
+<h4 class="crossnote-header" id="1%E7%BB%9F%E8%AE%A1%E7%8B%AC%E7%AB%8B%E6%80%A7">(1).统计独立性</h4>
+
+<p>  在第一节中讨论的子系统并不是闭合的。但由于它们本身仍旧是宏观物体，所以我们总可以在一个不太长的时间间隔内，认为其行为近似于闭合系统。当子系统足够大时，它与周围部分相互作用的能量比子系统的内能要小得多。因此，我们可以说子系统在不太长的时间间隔内是“准闭合”的。各个子系统之间的相互作用是如此的微弱以至于我们可以认为其在统计意义上是独立的。<br>
+  统计独立性意味着：一个子系统所处的状态不影响其它子系统处于不同状态的概率。</p>
+<h4 class="crossnote-header" id="2%E6%B6%A8%E8%90%BD">(2).涨落</h4>
+
+<p>  考虑任意两个子系统，并设 <span class="mathjax-exps">$\mathrm{d}p^{(1)}\mathrm{d}q^{(1)}$</span> 和 <span class="mathjax-exps">$\mathrm{d}p^{(2)}\mathrm{d}q^{(2)}$</span> 表示他们的相空间体积元。若将两个子系统的集合看成一个组合的子系统，则从数学上来讲，统计独立性就意味着组合子系统处于其相体积元 <span class="mathjax-exps">$\mathrm{d}p^{(12)}\mathrm{d}q^{(12)}=\mathrm{d}p^{(1)}\mathrm{d}q^{(1)}·\mathrm{d}p^{(2)}\mathrm{d}q^{(2)}$</span> 的概率，可以分解为每个子系统分别处于 <span class="mathjax-exps">$\mathrm{d}p^{(1)}\mathrm{d}q^{(1)}$</span> 和 <span class="mathjax-exps">$\mathrm{d}p^{(2)}\mathrm{d}q^{(2)}$</span> 中的概率的乘积，即：<br>
+</p><div class="mathjax-exps">$$\rho_{12}\mathrm{d}p^{(12)}\mathrm{d}q^{(12)}=\rho_{1}\mathrm{d}p^{(1)}\mathrm{d}q^{(1)}·\rho_{2}\mathrm{d}p^{(2)}\mathrm{d}q^{(2)}$$</div><br>
+或：<br>
+<div class="mathjax-exps">$$\rho_{12}=\rho_{1}\rho_{2}$$</div><br>
+对于多个子系统的集合也可以写出类似的关系式。<br>
+  显然该定理的逆定理也成立：若一个复合系统的概率分布可以分解成几个因子的乘积，且每个因子仅与复合系统的其中一部分相关，则说明该系统的各个部分之间有统计独立性关系，且每个因子正比于相应部分的状态概率。<br>
+  若 <span class="mathjax-exps">$f_1$</span> 和 <span class="mathjax-exps">$f_2$</span> 是两个属于不同子系统的物理量，那么由统计独立性与平均值定义可以直接得到：<br>
+<div class="mathjax-exps">$$\begin{aligned}         {\langle}f_{1}{\rangle}·{\langle}f_{2}{\rangle}&amp;=\int{f_{1}\rho_{1}}\mathrm{d}p^{(1)}\mathrm{d}q^{(1)}·\int{f_{2}\rho_{2}}\mathrm{d}p^{(2)}\mathrm{d}q^{(2)}         \\&amp;=\int{f_{1}f_{2}\rho_{12}}\mathrm{d}p^{(12)}\mathrm{d}q^{(12)}         \\&amp;={\langle}f_{1}f_{2}{\rangle}     \end{aligned}$$</div><br>
+  考察某一宏观物体或其某一部分的任意一个物理量 <span class="mathjax-exps">$f$</span>，该物理量随时间变化，在其平均值附近摆动。我们希望引入一个量来衡量其偏离均值的平均幅度。<br>
+  首先想到差值 <span class="mathjax-exps">$\Delta{f}=f-{\langle}f{\rangle}$</span> 的平均值，但它显然并不适用。因为差值的双向性，导致其平均值总会为零。<br>
+  进一步考虑差值的平方的平均值。考虑平方的好处在于 <span class="mathjax-exps">$(\Delta{f})^2$</span> 总是正的，因而只有在其本身趋于零时，该值的均值才会趋于零。因此，我们将 <span class="mathjax-exps">$\sqrt{{\langle}(\Delta{f})^2{\rangle}}$</span> 称为物理量 <span class="mathjax-exps">$f$</span> 的方均根涨落。将平方值展开，我们有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         {\langle}(\Delta{f})^2{\rangle}&amp;={\langle}(f-{\langle}f{\rangle})^2{\rangle}         \\&amp;={\langle}(f^2-2f{\langle}f{\rangle}+({\langle}f{\rangle})^2){\rangle}         \\&amp;={\langle}f^2{\rangle}-({\langle}f{\rangle})^2     \end{aligned}$$</div><br>
+即一个物理量的方均根涨落取决于其平方平均值与平均值的平方的差。<br>
+  定义<br>
+<div class="mathjax-exps">$$\frac{\sqrt{{\langle}(\Delta{f})^2{\rangle}}}{{\langle}f{\rangle}}$$</div><br>
+为 <span class="mathjax-exps">$f$</span> 这个量的相对涨落。相对涨落越小，则 <span class="mathjax-exps">$f$</span> 极大偏离平均值的时间就越少。<p></p>
+<h4 class="crossnote-header" id="ps%E5%AE%8F%E8%A7%82%E4%BD%93%E7%B3%BB%E7%9A%84%E7%89%A9%E7%90%86%E9%87%8F%E8%B6%B3%E5%A4%9F%E7%B2%BE%E7%A1%AE%E5%9C%B0%E7%AD%89%E4%BA%8E%E5%85%B6%E7%BB%9F%E8%AE%A1%E5%B9%B3%E5%9D%87%E7%9A%84%E8%AF%81%E6%98%8E">p.s.宏观体系的物理量足够精确地等于其统计平均的证明</h4>
+
+<p>  接下来我们将证明：物理量的相对涨落随着他们所从属的体系的粒子数的增加而迅速减小，且在足够大的粒子数情况下趋于零。我们在此考虑的物理量均为可加量，即：整个物体的该物理量值等于该物体各部分的该物理量值之和。这一性质是子系统准闭合性的结果。<br>
+  设 <span class="mathjax-exps">$f$</span> 为我们考虑的该种可加物理量。将我们所考虑的系统分为数目很大的 <span class="mathjax-exps">$N$</span> 个相同的小部分，于是有：<br>
+</p><div class="mathjax-exps">$${\langle}f{\rangle}=\sum\limits_{i=1}^{N}{\langle}f_{i}{\rangle}$$</div><br>
+随着物体尺度的增加，对于相同大小的小部分，<span class="mathjax-exps">$N$</span> 会显著的增加，而 <span class="mathjax-exps">${\langle}f{\rangle}$</span> 大致与 <span class="mathjax-exps">$N$</span> 成正比地增长。接下来，我们来确定 <span class="mathjax-exps">$f$</span> 的方均根涨落。<br>
+首先有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         \Delta{f}&amp;=f-{\langle}f{\rangle}         \\&amp;=\sum\limits_{i=1}^{N}{f_i}-\sum\limits_{i=1}^{N}{\langle}f_{i}{\rangle}         \\&amp;=\sum\limits_{i=1}^{N}(f_i-{\langle}f_{i}{\rangle})         \\&amp;=\sum\limits_{i=1}^{N}{\langle}\Delta{f_{i}}{\rangle}     \end{aligned}$$</div><br>
+于是有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         {\langle}(\Delta{f})^2{\rangle}&amp;=\left\langle\left(\sum\limits_{i=1}^{N}\Delta{f_{i}}\right)^2\right\rangle         \\&amp;=\left\langle\sum\limits_{i=1}^{N}\left(\Delta{f_{i}}\right)^2+\sum\limits_{i\ne j}\Delta{f_i}\Delta{f_j}\right\rangle         \\&amp;=\sum\limits_{i=1}^{N}\left\langle\left(\Delta{f_{i}}\right)^2\right\rangle+\sum\limits_{i\ne j}\left\langle\Delta{f_i}\Delta{f_j}\right\rangle     \end{aligned}$$</div><br>
+由于：<br>
+<div class="mathjax-exps">$${\langle}\Delta{f_i}·\Delta{f_j}{\rangle}={\langle}\Delta{f_i}{\rangle}·{\langle}\Delta{f_j}{\rangle}=0\quad(i\ne j)$$</div><br>
+（每个 <span class="mathjax-exps">${\langle}\Delta{f_i}{\rangle}$</span> 均为零），于是有：<br>
+<div class="mathjax-exps">$${\langle}(\Delta{f})^2{\rangle}=\sum\limits_{i=1}^{N}\left\langle\left(\Delta{f_{i}}\right)^2\right\rangle$$</div><br>
+于是有：当 <span class="mathjax-exps">$N$</span> 增加时，方均根涨落 <span class="mathjax-exps">${\langle}(\Delta{f})^2{\rangle}$</span> 也将与 <span class="mathjax-exps">$N$</span> 成正比地增加。于是有：<br>
+<div class="mathjax-exps">$$\frac{\sqrt{{\langle}(\Delta{f})^2{\rangle}}}{{\langle}f{\rangle}}\propto\frac{\sqrt{N}}{N}=\frac{1}{\sqrt{N}}$$</div><br>
+即相对涨落与 <span class="mathjax-exps">$\sqrt{N}$</span> 成反比。<br>
+  显然，若认为分块的大小都是均匀一致，则 <span class="mathjax-exps">$N$</span> 与粒子数成正比。于是，当粒子数足够大时，我们有理由认为 <span class="mathjax-exps">$f$</span> 本身已经是不随时间变化的常量。<p></p>
+<h3 class="crossnote-header" id="3%E5%88%98%E7%BB%B4%E5%B0%94%E5%AE%9A%E7%90%86">3.刘维尔定理</h3>
+
+<h4 class="crossnote-header" id="1%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%BC">(1).统计系综</h4>
+
+<p>  假定在一段很长的时间内观测某个子系统。将时间划分为极大量同样大小的时间间隔，其分界点为 <span class="mathjax-exps">$t_1,t_2,\dotsb$</span> 时刻。在每一个这样的时刻，我们研究的子系统都位于相空间中的某一点，记为 <span class="mathjax-exps">$A_1,A_2,\dotsb$</span>. 这样的点的集合以一定密度分布在相空间中。在时间趋于正无穷的极限情况下，相空间每一处的密度都与分布函数 <span class="mathjax-exps">$\rho(p,q)$</span> 成正比。考虑到分布函数的意义，这一点是显然的。<br>
+  由于子系统的统计独立性，我们可以用考察大量（极限情况无穷大）、完全等同的子系统于同一时刻分别处于相点 <span class="mathjax-exps">$A_1,A_2,\dotsb$</span> 所代表的状态，来替代考察单个子系统在不同时刻<span class="mathjax-exps">$t_1,t_2,\dotsb$</span> 所处的状态。这样大量的假想全同子系统的集合称为统计系综。</p>
+<h4 class="crossnote-header" id="2%E5%88%98%E7%BB%B4%E5%B0%94%E5%AE%9A%E7%90%86">(2).刘维尔定理</h4>
+
+<p>  接下来追踪这些子系统之后一小段时间间隔的时间演化。取一小段时间间隔是为了保证子系统的准闭合性，这样就只用考虑每个子系统而无需涉及系统间的相互作用。<br>
+  显然，在任何时刻 <span class="mathjax-exps">$t$</span>，所有的相点仍旧按照同一个分布函数 <span class="mathjax-exps">$\rho(p,q)$</span> 分布在相空间中。即使 <span class="mathjax-exps">$t$</span> 发生变化，相点的分布仍然遵循分布函数 <span class="mathjax-exps">$\rho(p,q)$</span>.<br>
+  上述的情况可以看作相空间中稳定的“气流”。因此，我们可以对它应用表示“气体粒子”（在这里是相点）总数不变的连续性方程。<br>
+  我们所熟知的连续性方程为：<br>
+</p><div class="mathjax-exps">$$\frac{\partial{\rho}}{\partial{t}}+\nabla·(\rho\mathbf{v})=0$$</div><br>
+对于稳定的气流，显然分布函数不显含时间，即 <span class="mathjax-exps">$\displaystyle\frac{\partial{\rho}}{\partial{t}}=0$</span>，于是有：<br>
+<div class="mathjax-exps">$$\nabla·(\rho\mathbf{v})=0$$</div><br>
+推广到 <span class="mathjax-exps">$2s$</span> 维空间，有：<br>
+<div class="mathjax-exps">$$\partial_i(\rho v^i)=0$$</div><br>
+（<span class="mathjax-exps">$\partial_i$</span> 默认是对 <span class="mathjax-exps">$x^i$</span> 求导，书写上使用了爱因斯坦求和约定，其中 <span class="mathjax-exps">$i$</span> 取从 <span class="mathjax-exps">$1$</span> 到相应维数。）<br>
+  显然，在相空间中，“坐标” <span class="mathjax-exps">$x^i$</span> 是坐标 <span class="mathjax-exps">$q$</span> 与动量 <span class="mathjax-exps">$p$</span>，而“速度” <span class="mathjax-exps">$v^i=\dot{x}^i$</span> 是相应坐标与动量对时间的导数 <span class="mathjax-exps">$\dot{p}$</span> 和 <span class="mathjax-exps">$\dot{q}$</span>. 于是有：<br>
+<div class="mathjax-exps">$$\partial_{q^i}(\rho\dot{q}^i)+\partial_{p^i}(\rho\dot{p}^i)$$</div><br>
+将上式展开，即有：<br>
+<div class="mathjax-exps">$$\sum\limits_{i=1}^{s}\left(\dot{q}^i\frac{\partial{\rho}}{\partial{q^i}}+\dot{p}^i\frac{\partial{\rho}}{\partial{p^i}}\right)+\rho\sum\limits_{i=1}^{s}\left(\frac{\partial{\dot{q}^i}}{\partial{q^i}}+\frac{\partial{\dot{p}^i}}{\partial{p^i}}\right)=0$$</div><br>
+写出我们熟知的 Hamilton's Canonical Equations：<br>
+<div class="mathjax-exps">$$\dot{q}^i=\frac{\partial{H}}{\partial{p^i}},\dot{p}^i=-\frac{\partial{H}}{\partial{q^i}}$$</div><br>
+有：<br>
+<div class="mathjax-exps">$$\frac{\partial{\dot{q}^i}}{\partial{q^i}}=\frac{\partial^2{H}}{\partial{p^i}\partial{q^i}},\frac{\partial{\dot{p}^i}}{\partial{p^i}}=-\frac{\partial^2{H}}{\partial{q^i}\partial{p^i}}$$</div><br>
+显然有：<br>
+<div class="mathjax-exps">$$\frac{\partial{\dot{q}^i}}{\partial{q^i}}+\frac{\partial{\dot{p}^i}}{\partial{p^i}}=\frac{\partial^2{H}}{\partial{p^i}\partial{q^i}}-\frac{\partial^2{H}}{\partial{q^i}\partial{p^i}}=0$$</div><br>
+于是展开式中的第二项即为零。而展开式中的第一项显然即为分布函数对时间的全导数，因而我们有：<br>
+<div class="mathjax-exps">$$\frac{\mathrm{d}\rho}{\mathrm{d}t}=\sum\limits_{i=1}^{s}\left(\frac{\partial{\rho}}{\partial{q^i}}\dot{q}^i+\frac{\partial{\rho}}{\partial{p^i}}\dot{p}^i\right)=0$$</div><br>
+  因此，我们得到一个重要结论：在一个较短的时间间隔内沿着子系统的相轨道演化，分布函数保持恒定。注意：该结论仅在能保证准闭合性的不太长的时间间隔内成立。<p></p>
+<p>  p.s.即便 <span class="mathjax-exps">$\rho$</span> 显含时间，即系统并不一定要处于平衡态，我们也有相同的结论。因为当 <span class="mathjax-exps">$\rho$</span> 显含时间时，其全导数就变成了：<br>
+</p><div class="mathjax-exps">$$\frac{\mathrm{d}\rho}{\mathrm{d}t}=\frac{\partial{\rho}}{\partial{t}}+\sum\limits_{i=1}^{s}\left(\frac{\partial{\rho}}{\partial{q^i}}\dot{q}^i+\frac{\partial{\rho}}{\partial{p^i}}\dot{p}^i\right)=0$$</div><br>
+只需要把连续性方程中对时间的偏导数项加进来就可以了。<p></p>
+<h3 class="crossnote-header" id="4%E8%83%BD%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8">4.能量的作用</h3>
+
+<p>  从刘维尔定理我们可以直接得到一个结论：分布函数是一些只能表示为变量 <span class="mathjax-exps">$p,q$</span> 的组合，这些组合在子系统作为闭合系统随时间演化时保持不变。显然，这些组合正是我们所说的力学不变量，亦即运动积分。<br>
+  分布函数的统计独立性使我们可以更加明确其所可能依赖的运动积分数目。考虑两个子系统的组合的分布函数 <span class="mathjax-exps">$\rho_{12}$</span>，由统计独立性有 <span class="mathjax-exps">$\rho_{12}=\rho_{1}\rho_{2}$</span>，即有：<br>
+</p><div class="mathjax-exps">$$\ln{\rho_{12}}=\ln{\rho_1}+\ln{\rho_2}$$</div><br>
+这意味着分布函数的对数是可加的量。因而我们得出结论：分布函数的对数不仅应当是运动积分，而且应当是具有可加性的运动积分。<br>
+  已知的力学知识告诉我们：具有独立可加性的运动积分共有七个：能量、动量矢量的三个分量和角动量矢量的三个分量。分别记 <span class="mathjax-exps">$E_a(p,q),\boldsymbol{P}_a(p,q),\boldsymbol{L}_a(p,q)$</span> 为第 <span class="mathjax-exps">$a$</span> 个子系统的能量、动量和角动量。将这些量线性组合，我们有：<br>
+<div class="mathjax-exps">$$\ln{\rho_a}=\alpha_a+\beta{E_a(p,q)}+\boldsymbol{\gamma}·\boldsymbol{P}_a(p,q)+\boldsymbol{\delta}·\boldsymbol{L}_a(p,q)$$</div><br>
+其中 <span class="mathjax-exps">$\alpha_a,\beta,\boldsymbol{\gamma},\boldsymbol{\delta}$</span> 均为常系数，且对于给定闭合系统的所有子系统，<span class="mathjax-exps">$\beta,\boldsymbol{\gamma},\boldsymbol{\delta}$</span> 应当是相同的。<br>
+  在此，我们不加证明地明确一个事实：系数 <span class="mathjax-exps">$\alpha_a$</span> 就是分布函数的归一化常数，由归一化条件直接确定。剩余的七个独立的常系数则由闭合系统的起个可加性运动积分的常数来确定。<br>
+  由以上信息，我们可以知道：子系统可加性运动积分的值完全确定了该系统的统计分布，也就完全确定了系统中任何物理量的平均值。<br>
+  考虑最简单的符合刘维尔定理的分布函数：在相空间中，对应系统的能量、动量、角动量分别取给定常数 <span class="mathjax-exps">$E_0,\boldsymbol{P}_0,\boldsymbol{L}_0$</span> 的点，分布函数 <span class="mathjax-exps">$\rho=$</span> 常数，而对于其他的点，<span class="mathjax-exps">$\rho=0$</span>. 再考虑到分布函数对全相空间积分的有限性与归一化，我们可以得到分布函数的具体形式：<br>
+<div class="mathjax-exps">$$\rho=C·\delta(E-E_0)·\delta^{(3)}(\boldsymbol{P}-\boldsymbol{P}_0)·\delta^{(3)}(\boldsymbol{L}-\boldsymbol{L}_0)$$</div><br>
+其中 <span class="mathjax-exps">$C$</span> 为归一化常量。<br>
+上式形式的分布函数被称作微正则分布。<br>
+  注意：微正则系综平均与时间平均的等价性由各态历经假说保证，但各态历经假说并不在一般情形下成立。相关内容的讨论在本节末尾。<br>
+  显然闭合系统的动量与角动量是与它的整体宏观运动相联系的。因而我们可以说：对于进行着某种给定宏观运动的系统，其统计状态只与体系的能量有关。因此，我们可以得到仅与能量相关的分布函数：<br>
+<div class="mathjax-exps">$$\ln{\rho_a}=\alpha_a+\beta{E_a(p,q)}$$</div><br>
+对应的微正则分布即为：<br>
+<div class="mathjax-exps">$$\rho=C·\delta(E-E_0)$$</div><br>
+其中 <span class="mathjax-exps">$C$</span> 为常量。<p></p>
+<hr>
+<h4 class="crossnote-header" id="%E6%B3%A8">注</h4>
+
+<p>  现代统计物理不使用各态历经假说作为基本假说，而改用等概率原理替代。虽然朗道的原文提到了基本思想来源于各态历经假说，但其原文也提到了各态历经假说在一般情况下并不正确。接下来我们介绍等概率原理。<br>
+  首先明确：我们使用系统的状态函数描述系统的宏观状态，用系统中大量粒子的力学状态的集合描述系统的微观状态。实验上我们所测得的都是宏观状态，而一个宏观状态可以对应多个微观状态。<br>
+  于是，等概率原理即为：<strong>对一个处于平衡态的孤立系统，系统的每个微观态都有相同的可能性达到。</strong> 由该原理我们可以得到一个显然的推论：系统最可能出现的宏观状态一定是对应微观状态数量最多的宏观状态。<br>
+  显然，可测量的宏观量都是不可测量的微观量在取统计平均之后的结果。例如气体压强就是大量气体分子对容器壁的撞击效果的统计平均。计算统计平均最基本的方法自然是对时间取平均，也就是将物理量对一段时间间隔积分再除以该时间间隔。但对时间的积分操作是困难的，并不现实。为了解决这种“时间平均”的困难，我们引入系综。原本统计力学在这里使用各态历经假说证明时间平均与系综平均的等价性，但我们在此使用等概率原理进行替换，并给出对应的微正则系综。<br>
+  众所周知，保守体系的 Hamiltonian，也就是能量，是一个常量。这相当于在 <span class="mathjax-exps">$2s$</span> 维的相空间中给出了一个约束条件，得到了一个 <span class="mathjax-exps">$2s-1$</span> 维的能量曲面。显然保守体系的相点应当在该能量曲面上运动。然而很显然，我们所研究的准闭合系统，并不完全是一个保守系统，其总能量 <span class="mathjax-exps">$E$</span> 往往是不可能完全确定的。因此，我们认为准闭合系统的相点在能量为 <span class="mathjax-exps">$E$</span> 的曲面与能量为 <span class="mathjax-exps">$E+\Delta{E}$</span> 的曲面构成的薄壳内部运动。由刘维尔定理，我们可以知道：<span class="mathjax-exps">$\displaystyle\frac{\mathrm{d}\rho}{\mathrm{d}t}=0$</span>，而如果系统处于平衡态，我们又有 <span class="mathjax-exps">$\displaystyle\frac{\partial\rho}{\partial{t}}=0$</span>. 这两个结论直接告诉我们：在同一条相轨道上，概率密度处处相等。而当受到外界干扰使得体系能量发生改变，也就是从一条相轨道跃迁到另一条相轨道之后，等概率原理认为两条相轨道对应的概率密度是相等的。这意味着在能量为 <span class="mathjax-exps">$E$</span> 的曲面与能量为 <span class="mathjax-exps">$E+\Delta{E}$</span> 的曲面构成的薄壳内，概率密度是一个常数。于是我们有：<br>
+</p><div class="mathjax-exps">$$\rho=     \left\{         \begin{aligned}             &amp;C\qquad H\in[E,E+\Delta{E}]             \\&amp;0\qquad else         \end{aligned}     \right.$$</div><br>
+其中 <span class="mathjax-exps">$\Delta{E}\ll E$</span>. 上式即为等概率原理下的微正则分布，常数 <span class="mathjax-exps">$C$</span> 由归一化条件确定。<p></p>
+<hr>
+<h2 class="crossnote-header" id="%E4%BA%8C-%E9%87%8F%E5%AD%90%E7%BB%9F%E8%AE%A1">二、量子统计</h2>
+
+<h3 class="crossnote-header" id="1%E7%BB%9F%E8%AE%A1%E7%9F%A9%E9%98%B5">1.统计矩阵</h3>
+
+<h4 class="crossnote-header" id="1%E6%97%B6%E9%97%B4-%E8%83%BD%E9%87%8F%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7%E5%85%B3%E7%B3%BB">(1).时间-能量不确定性关系</h4>
+
+<p>  接下来我们考虑量子力学下的统计物理。显然，与经典力学的情况相似，在量子力学背景下，用纯粹的力学方法确定宏观系统的行为也是过于困难的。此外，在宏观体系下，“定态”这一概念也将不复存在。<br>
+  从纯粹量子力学的角度来看，宏观体系与较少数目粒子的体系相比，有如下显著不同：宏观物体的能量本征值谱中能级的分布极其稠密。宏观系统能谱的给定有限间隔内所包含的能级的数目会随着体系粒子数的增加而呈指数增长，整个宏观体系的能级之间的距离会呈现为 <span class="mathjax-exps">$10^{-N}$</span> 级别的数字（该结论的详细证明会在后文给出）。因此，任何对体系的扰动，无论多么微小，都会使系统的能量值处于一个范围内，而非某一能级上。这也就意味着宏观系统并不存在定态。<br>
+  除此之外，我们还有另一个原因使得宏观体系不可能处于定态，即我们熟知的时间-能量不确定关系。该关系描述了一个在微扰下的体系的能量变化 <span class="mathjax-exps">$\Delta{E}$</span> 与受到微扰的时间 <span class="mathjax-exps">$\Delta{t}$</span> 之间的关系：<br>
+</p><div class="mathjax-exps">$$\Delta{E}\Delta{t}\sim\hbar$$</div><br>
+如果一个宏观体系处于一个定态，就意味着该体系的 <span class="mathjax-exps">$\Delta{E}$</span> 趋于0，则相对应的 <span class="mathjax-exps">$\Delta{t}$</span> 就会趋于无限大，这是不可能的。从这个角度来看，宏观体系也无法处于定态。<p></p>
+<h4 class="crossnote-header" id="2%E7%BB%9F%E8%AE%A1%E7%9F%A9%E9%98%B5">(2).统计矩阵</h4>
+
+<p>  显然，用波函数来描述宏观体系是不现实的。因为我们所可能获得的数据远不足以构成体系状态的波函数。而若希望使用不完整的数据来描述一个量子力学系统，就需要使用密度矩阵。<br>
+  考虑某个子系统，如果完全忽略该子系统与周围其他系统的一切相互作用，得到的该子系统的各种状态就可以被称为该子系统的定态。记 <span class="mathjax-exps">$\psi_{a'}(q)=\left\langle{q}|a'\right\rangle$</span> 为这些定态的归一化波函数，其中 <span class="mathjax-exps">$q$</span> 代表子系统全部坐标的集合，<span class="mathjax-exps">$a'$</span> 取不同值代表不同定态。这些定态对应的能量记为 <span class="mathjax-exps">$E_{a'}$</span>.<br>
+  若某一时刻子系统处于一个由态矢量 <span class="mathjax-exps">$|\alpha\rangle$</span> 可以完全描述的状态，那么该波函数显然可以被展开成定态的线性组合：<br>
+</p><div class="mathjax-exps">$$|\alpha\rangle=\sum\limits_{a'}c_{a'}|a\rangle$$</div><br>
+而一个物理量在该状态下的期望值（平均值）的计算方法为：<br>
+<div class="mathjax-exps">$$\begin{aligned}         \langle{f}\rangle&amp;=\langle\alpha|\hat{f}|\alpha\rangle         \\&amp;=\sum\limits_{a'}\sum\limits_{a''}c^*_{a''}c_{a'}\langle{a''}|\hat{f}|a'\rangle     \end{aligned}$$</div><br>
+其中 <span class="mathjax-exps">$\langle{a''}|f|a'\rangle$</span> 是算符 <span class="mathjax-exps">$\hat{f}$</span> 的矩阵元。以上的描述是对于完备的量子力学系统的，其中的 <span class="mathjax-exps">$c^*_{a''}c_{a'}$</span> 用于描述概率。而对于不完备的量子力学系统，统计学意义上我们认为 <span class="mathjax-exps">$f$</span> 的平均值是在对子系统不同的态矢量 <span class="mathjax-exps">$|\alpha\rangle$</span> 取平均，因而其描述概率的项无法简单的写作两个量的乘积形式，而是将其写作一个矩阵元 <span class="mathjax-exps">$w_{a'a''}$</span>，进而可以将其视为一个矩阵或算符，记为 <span class="mathjax-exps">$\hat{w}$</span>. 而后，算符 <span class="mathjax-exps">$\hat{f}$</span> 的期望值就可以写为：<br>
+<div class="mathjax-exps">$$\langle{f}\rangle=\sum\limits_{mn}w_{mn}f_{nm}$$</div><br>
+或：<br>
+<div class="mathjax-exps">$$\langle{f}\rangle=\mathrm{Tr}(\hat{w}\hat{f})$$</div><br>
+因而我们将 <span class="mathjax-exps">$\hat{w}$</span> 称为能量表象下的密度矩阵，在统计物理中称为统计矩阵。一般来说，统计矩阵的分量是时间的函数。由于矩阵的迹与基底的选取无关，这样做的好处就在于利用任意完备的正交归一化态矢量作为基底都可以计算概率。<p></p>
+<h4 class="crossnote-header" id="3%E6%B7%B7%E5%90%88%E6%80%81%E4%B8%8E%E7%BA%AF%E6%80%81%E7%BB%9F%E8%AE%A1%E7%9F%A9%E9%98%B5%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%A8%E8%AE%BA">(3).混合态与纯态，统计矩阵的相关讨论</h4>
+
+<p>  使用密度矩阵后，子系统处于第 <span class="mathjax-exps">$n$</span> 个态的概率就会使用 <span class="mathjax-exps">$w_{nn}$</span> 代替原本的模方表示概率 <span class="mathjax-exps">$c^*_nc_n$</span>. 显然它们恒为正数，且满足归一化条件：<br>
+</p><div class="mathjax-exps">$$\mathrm{Tr}(\hat{w})=\sum\limits_n{w_n}=1$$</div><br>
+我们常常将能够由波函数描述的量子力学系统称为“纯态”，而仅能由密度矩阵描述的称为“混合态”。<br>
+  当我们使用统计矩阵来求平均时，我们应当意识到该种方法同时包含了量子力学中概率意义的平均和统计学意义的平均。在纯态情况下，密度矩阵就是展开系数的乘积，因而纯态情形下仅包含量子力学意义的平均。而混合态意义下的密度矩阵同时包含了两种平均。<br>
+  在量子统计中，密度矩阵代替了经典分布函数。而前文中关于经典统计物理的大部分讨论（除了使用了 Hamilton 方程的刘维尔定理）都适用于量子统计，因为其并未使用专属于经典力学的特点。<br>
+  经典统计物理中的分布函数直接给出了物体中粒子取不同坐标值和动量值的概率，但量子统计中仅给出了发现系统处于哪个量子态的概率，而并未给出任何粒子坐标与动量的直接信息。由于量子力学本身固有的不确定性，我们只能考虑坐标与动量各自单独的概率分布。<br>
+  首先考虑坐标。对于纯态体系，坐标的概率分布显然由波函数的模方给定：<br>
+<div class="mathjax-exps">$$\begin{aligned}         |\psi|^2&amp;=\langle\alpha|q\rangle\langle q|\alpha\rangle         \\&amp;=\sum\limits_{a''}\sum\limits_{a'}c^*_{a''}c_{a'}\langle a''|q\rangle\langle q|{a'}\rangle     \end{aligned}$$</div><br>
+坐标值在某个给定的区间 <span class="mathjax-exps">$\mathrm{d}q$</span> 内的概率为 <span class="mathjax-exps">$\mathrm{d}w_q=|\psi|^2\mathrm{d}q$</span>. 过渡到混合态，我们将 <span class="mathjax-exps">$c^*_{a''}c_{a'}$</span> 替换为 <span class="mathjax-exps">$w_{a'a''}$</span>，于是有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         |\psi|^2&amp;=\sum\limits_{a''}\sum\limits_{a'}\langle a'|w|{a''}\rangle\langle a''|q\rangle\langle q|{a'}\rangle         \\&amp;=\sum\limits_{a'}\langle a'|w|q\rangle\langle q|{a'}\rangle         \\&amp;=\sum\limits_{a'}\hat{w}\psi^*_{a'}\psi^{\quad}_{a'}         \\&amp;=\sum\limits_{a'}\psi^*_{a'}\hat{w}\psi^{\:}_{a'}     \end{aligned}$$</div><br>
+（最后一行取了个复共轭是为了写的美观）<br>
+于是我们就有：<br>
+<div class="mathjax-exps">$$\mathrm{d}w_q=\sum\limits_{a'}\psi^*_{a'}\hat{w}\psi^{\:}_{a'}·\mathrm{d}q$$</div><br>
+其中 <span class="mathjax-exps">$\psi$</span> 仍旧是任何完备正交归一的波函数。<br>
+  显然，对于动量的概率分布，我们只需要取动量波函数 <span class="mathjax-exps">$\psi_p(q)=\langle{q}|p\rangle$</span> 作为基底来确定密度矩阵即可：<br>
+<div class="mathjax-exps">$$\mathrm{d}w_p=w_{pp}\mathrm{d}p=\mathrm{d}p·\int\psi^*_{p}\hat{w}\psi^{\:}_{p}\mathrm{d}q$$</div><br>
+  此时，我们会发现一个有趣的结果：两种分布都可以用同一个函数对不同变量积分得到。取如下形式函数：<br>
+<div class="mathjax-exps">$$I(q,p)=\psi^*_{p}(q)\hat{w}\psi^{\:}_{p}(q)$$</div><br>
+该函数对 <span class="mathjax-exps">$\mathrm{d}q$</span> 积分可以得到动量的分布，对 <span class="mathjax-exps">$\mathrm{d}p$</span> 积分可以得到坐标的分布。但这并不意味着该函数可以同时视为坐标和动量的概率分布。这样的想法是违反量子力学基本原理的。<p></p>
+<h3 class="crossnote-header" id="2%E9%87%8F%E5%AD%90%E7%BB%9F%E8%AE%A1%E4%B8%AD%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E5%B8%83">2.量子统计中的统计分布</h3>
+
+<h4 class="crossnote-header" id="1%E9%87%8F%E5%AD%90%E5%88%98%E7%BB%B4%E5%B0%94%E5%AE%9A%E7%90%86">(1).量子刘维尔定理</h4>
+
+<p>  接下来我们将证明量子力学中刘维尔定理所对应的定理。<br>
+  首先假定系统处于纯态，然后将态矢量展开为定态，并考虑其时间演化，显然系数 <span class="mathjax-exps">$c_{a'}$</span> 将是时间的函数，并且正比于 <span class="mathjax-exps">$\exp(-iE_{a'}t/\hbar)$</span>. 于是有：<br>
+</p><div class="mathjax-exps">$$\frac{\partial}{\partial{t}}c^*_{a''}c_{a'}=\frac{i}{\hbar}(E_{a''}-E_{a'})c^*_{a''}c_{a'}$$</div><br>
+同样使用密度矩阵替换系数乘积以过渡到混合态：<br>
+<div class="mathjax-exps">$$\frac{\partial}{\partial{t}}w_{a'a''}=\frac{i}{\hbar}(E_{a''}-E_{a'})w_{a'a''}$$</div><br>
+考虑到能量表象下：<br>
+<div class="mathjax-exps">$$\langle a'|(\hat{w}\hat{H}-\hat{H}\hat{w})|a''\rangle=\langle a'|(E_{a'}-E_{a''})\hat{w}|a''\rangle$$</div><br>
+于是我们可以将前面的式子算符化：<br>
+<div class="mathjax-exps">$$\frac{\partial}{\partial{t}}\hat{w}=\frac{i}{\hbar}[\hat{w},\hat{H}]$$</div><br>
+有趣的是，该方程的形式与我们所熟知的 Heisenberg 运动方程相差了一个负号。<br>
+  我们可以看到，要使密度矩阵对时间的导数为零，算符 <span class="mathjax-exps">$\hat{w}$</span> 必须与 Hamiltonian 对易。这与经典结果中分布函数稳定的条件是 <span class="mathjax-exps">$\rho$</span> 是运动积分一致。<p></p>
+<h4 class="crossnote-header" id="2%E9%87%8F%E5%AD%90%E5%BE%AE%E6%AD%A3%E5%88%99%E5%88%86%E5%B8%83">(2).量子微正则分布</h4>
+
+<p>  对于准闭合的子系统，我们认为统计分布应当稳定，因而认为密度矩阵在能量表象下应当是对角化的。于是，量子统计中的“分布函数”就变为了：<span class="mathjax-exps">$w_n=w_{nn}$</span>. 考虑到 <span class="mathjax-exps">$w$</span> 必须是量子力学的运动积分,以及子系统的准闭合性，我们可以用类似经典的想法得到分布函数的对数必须具有以下形式：<br>
+</p><div class="mathjax-exps">$$\ln{w^{(a)}_n}=\alpha^{(a)}+\beta{E^{(a)}_n}$$</div><br>
+上角标 <span class="mathjax-exps">$a$</span> 用于区分不同的子系统。于是我们也可以用类似经典的方式导出“量子的微正则分布”。<br>
+  考虑到宏观体系的能谱是准连续谱，类似于经典中的 <span class="mathjax-exps">$\mathrm{d}p\mathrm{d}q$</span>，我们用 <span class="mathjax-exps">$\mathrm{d}\Gamma$</span> 表示闭合系统处于能量值的某个无限小间隔内的量子态数目，并认为其可以表示为各个子系统状态数的乘积：<br>
+<div class="mathjax-exps">$$\mathrm{d}\Gamma=\prod\limits_a\mathrm{d}\Gamma_a$$</div><br>
+于是微正则分布即为：<br>
+<div class="mathjax-exps">$$\mathrm{d}w=C·\delta(E-E_0)\prod\limits_a\mathrm{d}\Gamma_a$$</div><br>
+其中 <span class="mathjax-exps">$C$</span> 为常量。<p></p>
+<h2 class="crossnote-header" id="%E4%B8%89-%E7%86%B5%E4%B8%8E%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B">三、熵与熵增定律</h2>
+
+<h3 class="crossnote-header" id="1%E7%86%B5">1.熵</h3>
+
+<h4 class="crossnote-header" id="1%E7%BB%9F%E8%AE%A1%E6%9D%83%E9%87%8D%E4%B8%8E%E7%86%B5%E7%9A%84%E5%AE%9A%E4%B9%89">(1).统计权重与熵的定义</h4>
+
+<p>  接下来我们将在远长于弛豫时间的时间间隔内考虑闭合系统，也就是系统处于完全的统计平衡态。<br>
+  首先我们在量子统计学的情形下讨论。将我们所研究的系统分成大量的子系统，并考虑其中任意一个子系统。设 <span class="mathjax-exps">$w_n$</span> 是这个子系统的分布函数。显然利用该分布函数，我们可以计算子系统的能量 <span class="mathjax-exps">$E$</span> 取不同数值时的概率分布。我们已知分布函数可以写成仅于能量相关的函数： <span class="mathjax-exps">$w_n=w(E_n)$</span>. 记 <span class="mathjax-exps">$\Gamma(E)$</span> 为子系统能量小于等于 <span class="mathjax-exps">$E$</span> 的量子态的数目，于是能量在 <span class="mathjax-exps">$E$</span> 到 <span class="mathjax-exps">$E+\mathrm{d}E$</span> 之间的状态数目为：<br>
+</p><div class="mathjax-exps">$$\frac{\mathrm{d}\Gamma(E)}{\mathrm{d}E}\mathrm{d}E$$</div><br>
+定义 <span class="mathjax-exps">$W(E)$</span> 为子系统能量的概率密度函数，由<br>
+<div class="mathjax-exps">$$W(E)\mathrm{d}E=w(E)\mathrm{d}\Gamma=w(E)\frac{\mathrm{d}\Gamma(E)}{\mathrm{d}E}\mathrm{d}E$$</div><br>
+有：<br>
+<div class="mathjax-exps">$$W(E)=w(E)\frac{\mathrm{d}\Gamma(E)}{\mathrm{d}E}$$</div><br>
+以及显然的归一化条件：<br>
+<div class="mathjax-exps">$$\int{W(E)}\mathrm{d}E=1$$</div><br>
+类似于在经典统计中的观点，我们认为仅在 <span class="mathjax-exps">$E=\langle{E}\rangle$</span> 及其周围 <span class="mathjax-exps">$\Delta{E}$</span> 的小范围内 <span class="mathjax-exps">$W(E)$</span> 显著的不为零。因此，我们可以认为：<br>
+<div class="mathjax-exps">$$W(\langle E\rangle)\Delta{E}=1$$</div><br>
+亦即：<br>
+<div class="mathjax-exps">$$w(\langle E\rangle)\Delta{\Gamma}=1$$</div><br>
+其中：<br>
+<div class="mathjax-exps">$$\Delta{\Gamma}=\frac{\mathrm{d}\Gamma(E)}{\mathrm{d}E}\Delta{E}$$</div><br>
+是与能量值间隔 <span class="mathjax-exps">$\Delta{E}$</span> 对应的量子态数目。我们认为这样定义的 <span class="mathjax-exps">$\Delta{\Gamma}$</span> 是系统显著有效的宏观状态所对应的微观状态的“展宽”程度。<br>
+  以上结论可以直接应用到经典统计中，只需要将分布函数换为 <span class="mathjax-exps">$\rho$</span> 即可：<br>
+<div class="mathjax-exps">$$\rho(\langle E\rangle)\Delta{p}\Delta{q}=1$$</div><br>
+根据浸渐不变量的几何意义与玻尔-索末菲量子化规则，我们可以得到准经典状态下相空间中一个体积元所包含的量子态数目：<br>
+<div class="mathjax-exps">$$\Delta{\Gamma}=\frac{\Delta{p}\Delta{q}}{(2\pi\hbar)^s}$$</div><br>
+该表达式确定了 <span class="mathjax-exps">$\Delta{\Gamma}$</span> 与 <span class="mathjax-exps">$\Delta{p}\Delta{q}$</span> 之间的关系。<br>
+  <span class="mathjax-exps">$\Delta{\Gamma}$</span> 被称为子系统的宏观状态的统计权重（也就是我们熟知的微观状态数），而它的对数<br>
+<div class="mathjax-exps">$$S=\ln{\Delta{\Gamma}}$$</div><br>
+称为子系统的熵。带入刚刚准经典系统统计权重的表达式，我们有：<br>
+<div class="mathjax-exps">$$S=\ln{\frac{\Delta{p}\Delta{q}}{(2\pi\hbar)^s}}$$</div><br>
+由此定义的熵是一个无量纲量。由于任何情况下状态数 <span class="mathjax-exps">$\Delta{\Gamma}$</span> 都不会小于 <span class="mathjax-exps">$1$</span>，所以熵不会是负值。<br>
+  然而，如果考虑纯粹的经典统计学，我们无法引入微观状态数 <span class="mathjax-exps">$\Delta{\Gamma}$</span> 的概念，因而只能将统计权重定义为 <span class="mathjax-exps">$\Delta{p}\Delta{q}$</span>，但这会导致熵的量纲变为作用量的对数。这意味着一旦作用量的单位发生改变，熵就会改变一个可加性的常数。这使得经典统计中仅有熵变（也就是 <span class="mathjax-exps">$\Delta{S}$</span> ）才不依赖单位制的选取。<br>
+  考虑到分布函数与统计权重的关系，我们也可以将熵写成分布函数的形式：<br>
+<div class="mathjax-exps">$$S=-\ln{w(\langle E\rangle)}=-\langle\ln{w(E_n)}\rangle$$</div><br>
+第二个等号由分布函数的对数的可加性给出。按照平均值的计算方法，我们又有：<br>
+<div class="mathjax-exps">$$S=-\sum\limits_{n}w_n\ln{w_n}=-\mathrm{Tr}(\hat{w}\ln{\hat{w}})$$</div><br>
+相应的，经典统计学中的熵就可以被定义为：<br>
+<div class="mathjax-exps">$$S=-\langle\ln[(2\pi\hbar)^s\rho]\rangle=-\int\rho\ln[(2\pi\hbar)^s\rho]\mathrm{dp}\mathrm{d}q$$</div><br>
+考虑到系统的统计权重可以写成各个子系统统计权重的乘积，我们可以看到系统的熵可以写成各个子系统的熵的和。这意味着熵也是一个可加量。由此，我们可以定义出不完全平衡状态系统的熵，只需要将该系统划分成许多足够小，小到每个子系统的弛豫时间远小于我们所考虑时间后，对每个子系统应用熵的统计权重定义，再加和即可。<br>
+  由上述定义我们可以看到，系统的熵表征的是一个系统在某个不等于零的时间间隔 <span class="mathjax-exps">$\Delta{t}$</span> 内的平均性质的量。这意味着我们无法考虑过短时间间隔内的熵的值，尤其是不能考虑熵的“瞬时值”这一概念。<p></p>
+<h4 class="crossnote-header" id="2%E7%86%B5%E6%9E%81%E5%A4%A7%E6%9D%A1%E4%BB%B6%E4%B8%8E%E8%83%BD%E7%BA%A7%E9%97%B4%E8%B7%9D%E7%A6%BB">(2).熵极大条件与能级间距离</h4>
+
+<p>  接下来我们考虑熵的性质与物理意义。使用微正则分布，我们有：<br>
+</p><div class="mathjax-exps">$$\mathrm{d}w=C·\delta(E-E_0)\prod\limits_a\mathrm{d}\Gamma_a=C·\delta(E-E_0)\prod\limits_a\frac{\mathrm{d}\Gamma_a}{\mathrm{d}E_a}\mathrm{d}E_a$$</div><br>
+将微商替换为差分的比值，有：<br>
+<div class="mathjax-exps">$$\mathrm{d}w=C·\delta(E-E_0)\prod\limits_a\frac{\Delta\Gamma_a}{\Delta E_a}\mathrm{d}E_a=C·\delta(E-E_0)e^S\prod\limits_a\frac{\mathrm{d}E_a}{\Delta E_a}$$</div><br>
+认为表达式中的指数项随着能量急剧变化，因而认为相对该变化，<span class="mathjax-exps">$\displaystyle\prod\limits_a{\Delta E_a}$</span> 近似为一个常量。于是我们就有：<br>
+<div class="mathjax-exps">$$\mathrm{d}w=C'·\delta(E-E_0)e^S\prod\limits_a\mathrm{d}E_a$$</div><br>
+该表达式仍有很高的精确度。<br>
+  回忆起该表达式的意义是所有子系统处于 <span class="mathjax-exps">$E_a$</span> 到 <span class="mathjax-exps">$E_a+\mathrm{d}E_a$</span> 之间的概率，我们会发现该概率被系统的熵（作为子系统能量的函数）所确定。表达式中的 <span class="mathjax-exps">$\delta$</span> 函数保证系统能量总和等于给定的 <span class="mathjax-exps">$E_0$</span>. 显然我们知道能量 <span class="mathjax-exps">$E_a$</span> 的最概然值应当是其统计平均 <span class="mathjax-exps">$\langle E_a\rangle$</span>，这意味着熵需要在能量取统计平均时达到最值。而能量取统计平均正是系统处于完全统计平衡态的条件，这意味着完全统计平衡状态的闭合系统的熵在给定能量的条件下具有可能的最大值。<br>
+  最后介绍熵 <span class="mathjax-exps">$S$</span> 的另一个有趣的统计意义，并顺便对上文中宏观系统能级间平均距离的讨论给出相关说明。显然 <span class="mathjax-exps">$\Delta{\Gamma}$</span> 按照定义是系统在间隔 <span class="mathjax-exps">$\Delta{E}$</span> 内包含的态数量。用 <span class="mathjax-exps">$\Delta{E}$</span> 除以 <span class="mathjax-exps">$\Delta{\Gamma}$</span>，我们就能得到相邻能级之间的平均距离：<br>
+<div class="mathjax-exps">$$D(E)=\frac{\Delta{E}}{\Delta{\Gamma}}=\Delta{E}·e^{-S}$$</div><br>
+由于熵的可加性，这意味着宏观系统的能级间平均距离随着系统的尺度增大而呈指数减小。<p></p>
+<h3 class="crossnote-header" id="2%E7%86%B5%E5%A2%9E%E5%AE%9A%E5%BE%8B%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B">2.熵增定律（热力学第二定律）</h3>
+
+<p>  由上一节的讨论我们可以看到，熵在系统处于完全统计平衡态时取最大值。若考虑一个某时刻处于非平衡态的宏观系统，显然系统会趋向于最概然的能量分布，也就是统计平衡态。这意味着，一个闭合系统若在某一时刻处于非平衡状态，则其最概然的后果就是系统的熵在后续时间内单调增长。这便是热力学第二定律，亦即熵增定律。熵增定律意味着所有存在于自然界的闭合系统中，熵不会减少，只会增长或在极端情况下不变。熵增长的过程被认为是不可逆过程，而熵不变的过程被认为是可逆过程。严格的可逆过程是理想情形的极限，自然界中的所有过程仅在一定精度下才可以被近似认为是可逆的。<br>
+  然而熵增定律仍旧面临一些尚未解决的问题，比如整个宇宙的非统计平衡，经典力学的时间反演对称性与熵增给出的时间单向性的矛盾，量子力学中与经典力学系统相互作用的存在导致两个时间方向的非等价性与熵增定律的联系等。</p>
+<p>          <img src="./Images/MemePic.jpg" alt="节点"></p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#chapter-1-统计物理学的基本原理" class="md-toc-link"><p>Chapter 1 统计物理学的基本原理</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#一-经典统计" class="md-toc-link"><p>一、经典统计</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#1统计分布相空间-子系统-分布函数与统计平衡" class="md-toc-link"><p>1.统计分布——相空间、子系统、分布函数与统计平衡</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1相空间" class="md-toc-link">
+            <p>(1).相空间</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2子系统与各态历经假说" class="md-toc-link">
+            <p>(2).子系统与各态历经假说</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3分布函数" class="md-toc-link">
+            <p>(3).分布函数</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#4统计平衡" class="md-toc-link">
+            <p>(4).统计平衡</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#2统计独立" class="md-toc-link"><p>2.统计独立</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1统计独立性" class="md-toc-link">
+            <p>(1).统计独立性</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2涨落" class="md-toc-link">
+            <p>(2).涨落</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#ps宏观体系的物理量足够精确地等于其统计平均的证明" class="md-toc-link">
+            <p>p.s.宏观体系的物理量足够精确地等于其统计平均的证明</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#3刘维尔定理" class="md-toc-link"><p>3.刘维尔定理</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1统计系综" class="md-toc-link">
+            <p>(1).统计系综</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2刘维尔定理" class="md-toc-link">
+            <p>(2).刘维尔定理</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#4能量的作用" class="md-toc-link"><p>4.能量的作用</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#注" class="md-toc-link">
+            <p>注</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#二-量子统计" class="md-toc-link"><p>二、量子统计</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#1统计矩阵" class="md-toc-link"><p>1.统计矩阵</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1时间-能量不确定性关系" class="md-toc-link">
+            <p>(1).时间-能量不确定性关系</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2统计矩阵" class="md-toc-link">
+            <p>(2).统计矩阵</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3混合态与纯态统计矩阵的相关讨论" class="md-toc-link">
+            <p>(3).混合态与纯态，统计矩阵的相关讨论</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#2量子统计中的统计分布" class="md-toc-link"><p>2.量子统计中的统计分布</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1量子刘维尔定理" class="md-toc-link">
+            <p>(1).量子刘维尔定理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2量子微正则分布" class="md-toc-link">
+            <p>(2).量子微正则分布</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#三-熵与熵增定律" class="md-toc-link"><p>三、熵与熵增定律</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#1熵" class="md-toc-link"><p>1.熵</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1统计权重与熵的定义" class="md-toc-link">
+            <p>(1).统计权重与熵的定义</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2熵极大条件与能级间距离" class="md-toc-link">
+            <p>(2).熵极大条件与能级间距离</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2熵增定律热力学第二定律" class="md-toc-link">
+            <p>2.熵增定律（热力学第二定律）</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html><html><head>
+      <title>3.2 The Dirac Equation</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em!important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em!important;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em!important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([for=preview]) .code-chunk .btn-group{display:none}.markdown-preview:not([for=preview]) .code-chunk .status{display:none}.markdown-preview:not([for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      <h1 class="crossnote-header" id="dirac-%E6%96%B9%E7%A8%8B">Dirac 方程</h1>
+
+<p><img src="./Images/7.jpg" alt="233"></p>
+<h2 class="crossnote-header" id="dirac-%E4%BB%A3%E6%95%B0%E4%B8%8E-lorentz-%E7%BE%A4%E7%9A%84%E6%97%8B%E9%87%8F%E8%A1%A8%E7%A4%BA">Dirac 代数与 Lorentz 群的旋量表示</h2>
+
+<p>在上一节中，我们已经讨论了 Lorentz 群的一种有限维度表示。接下来我们将尝试寻找另一种 Lorentz 群的表示，其对应于我们熟悉的自旋 <span class="mathjax-exps">$\frac{1}{2}$</span> 的事物。<br>
+考虑一个包含了 <span class="mathjax-exps">$p+q$</span> 个 <span class="mathjax-exps">$n\times{n}$</span> 的矩阵 <span class="mathjax-exps">$\gamma^\mu$</span> 的集合，其中的元素满足如下关系：<br>
+</p><div class="mathjax-exps">$$\{\gamma^\mu,\gamma^\nu\}\equiv\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu=2g^{\mu\nu}\times{\boldsymbol{1}_{n\times{n}}}$$</div><p></p>
+<p>上式被称为 Clifford 条件，在该条件下生成的代数结构称为 Clifford 代数，当 <span class="mathjax-exps">$p=1,q=3$</span> 时生成的 Clifford 代数即为 Dirac 代数，满足要求的 <span class="mathjax-exps">$\gamma^\mu$</span> 称为 Dirac 矩阵。<br>
+依靠上述条件，我们可以立刻写出一个 Lorentz 群的李代数的 <span class="mathjax-exps">$n$</span> 维表示：<br>
+</p><div class="mathjax-exps">$$S^{\mu\nu}=\frac{i}{4}[\gamma^\mu,\gamma^\nu]$$</div><p></p>
+<p>我们可以通过 Clifford 条件与上式共同验证 <span class="mathjax-exps">$S^{\mu\nu}$</span> 满足 Lorentz 群的李代数。<br>
+在三维 Euclidean 空间中，我们可以写出：<br>
+</p><div class="mathjax-exps">$$\gamma^j=i\sigma^j$$</div><p></p>
+<p>其中 <span class="mathjax-exps">$\sigma$</span> 是 Pauli 矩阵；<br>
+于是自然就有：<br>
+</p><div class="mathjax-exps">$$\{\gamma^i,\gamma^j\}=-2\delta^{ij}$$</div><p></p>
+<p>我们即可得到：<br>
+</p><div class="mathjax-exps">$$S^{ij}=\frac{1}{2}{\varepsilon^{ij}}_k\sigma^k$$</div><p></p>
+<p>这显然是旋转群的二维表示。<br>
+接下来我们考虑寻找在四维 Minkowski 空间中的 Dirac 矩阵。显然这些矩阵至少要是 <span class="mathjax-exps">$4\times4$</span> 的，因为已经没有其他的 <span class="mathjax-exps">$2\times2$</span> 矩阵和 Pauli 矩阵反对易了。一种可用的表示如下：<br>
+</p><div class="mathjax-exps">$$\gamma^0=             \begin{pmatrix}                 0 &amp; 1 \\                 1 &amp; 0             \end{pmatrix}         \qquad         \gamma^i=             \begin{pmatrix}                 0 &amp; \sigma^i \\                 -\sigma^i &amp; 0             \end{pmatrix}$$</div><p></p>
+<p>这种表示方式称为 Weyl 表示或手性表示。<br>
+在这种表示之下，boost 与 rotation 变换的生成元即为：<br>
+</p><div class="mathjax-exps">$$S^{0i}=\frac{i}{4}[\gamma^0,\gamma^i]=-\frac{i}{2}             \begin{pmatrix}                 \sigma^i &amp; 0 \\                 0 &amp; -\sigma^i             \end{pmatrix}$$</div><p></p>
+<p>以及：<br>
+</p><div class="mathjax-exps">$$S^{ij}=\frac{i}{4}[\gamma^i,\gamma^j]=\frac{1}{2}{\varepsilon^{ij}}_k             \begin{pmatrix}                 \sigma^k &amp; 0 \\                 0 &amp; \sigma^k             \end{pmatrix}$$</div><p></p>
+<p>遵循如上形式变换的具有四个分量的场 <span class="mathjax-exps">$\psi$</span> 被称为 <strong>Dirac 旋量</strong>。<br>
+我们可以看到 boost 变换的生成元 <span class="mathjax-exps">$S^{0i}$</span> 是非厄米的，这意味着我们进行的 boost 操作将不是幺正的。事实上，作为一个非紧致的流形，Lorentz 群不存在一个忠实且幺正的有限维表示。但这暂时并不重要，因为现在 <span class="mathjax-exps">$\psi$</span> 并不是一个波函数，只是一个经典的场。<br>
+在知晓了变换规则后，我们自然的想到去尝试验证一下某个场方程是否适用。最简单的例子显然是 Klein-Gordon 方程：<br>
+</p><div class="mathjax-exps">$$(\partial^2+m^2)\psi=0$$</div><p></p>
+<p>这显然是适用的，因为旋量遵循的 Lorentz 变换直接穿过了微分算子，不与其作用。（这是为什么？）<br>
+但我们希望能够写出一个更强的，给出更多信息的一阶方程。首先考虑如下对易子：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         {[}\gamma^\mu,S^{\rho\sigma}{]}&amp;=\frac{i}{4}(\gamma^\mu[\gamma^\rho,\gamma^\sigma]-[\gamma^\rho,\gamma^\sigma]\gamma^\mu)         \\&amp;=\frac{i}{4}(\gamma^\mu(\gamma^\rho\gamma^\sigma-\gamma^\sigma\gamma^\rho)-(\gamma^\rho\gamma^\sigma-\gamma^\sigma\gamma^\rho)\gamma^\mu)         \\&amp;=\frac{i}{4}(\gamma^\mu\gamma^\rho\gamma^\sigma-\gamma^\mu\gamma^\sigma\gamma^\rho-\gamma^\rho\gamma^\sigma\gamma^\mu+\gamma^\sigma\gamma^\rho\gamma^\mu)     \end{aligned}$$</div><p></p>
+<p>由<br>
+</p><div class="mathjax-exps">$$\{\gamma^\mu,\gamma^\nu\}\equiv\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu=2g^{\mu\nu}$$</div><p></p>
+<p>有：<br>
+</p><div class="mathjax-exps">$$\gamma^\rho\gamma^\sigma=2g^{\rho\sigma}-\gamma^\sigma\gamma^\rho         \\\gamma^\mu\gamma^\sigma=2g^{\mu\sigma}-\gamma^\sigma\gamma^\mu         \\\gamma^\rho\gamma^\mu=2g^{\rho\mu}-\gamma^\mu\gamma^\rho$$</div><p></p>
+<p>代入有：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         {[}\gamma^\mu,S^{\rho\sigma}{]}&amp;=\frac{i}{4}(\gamma^\mu(2g^{\rho\sigma}-2\gamma^\sigma\gamma^\rho)-(2g^{\rho\sigma}-2\gamma^\sigma\gamma^\rho)\gamma^\mu)         \\&amp;=\frac{i}{2}(\gamma^\mu(g^{\rho\sigma}-\gamma^\sigma\gamma^\rho)-(g^{\rho\sigma}-\gamma^\sigma\gamma^\rho)\gamma^\mu)         \\&amp;=\frac{i}{2}(\gamma^\mu g^{\rho\sigma}-\gamma^\mu\gamma^\sigma\gamma^\rho-g^{\rho\sigma}\gamma^\mu+\gamma^\sigma\gamma^\rho\gamma^\mu)         \\&amp;=\frac{i}{2}(\gamma^\mu g^{\rho\sigma}-(2g^{\mu\sigma}-\gamma^\sigma\gamma^\mu)\gamma^\rho-g^{\rho\sigma}\gamma^\mu+\gamma^\sigma(2g^{\rho\mu}-\gamma^\mu\gamma^\rho))         \\&amp;=\frac{i}{2}(\gamma^\mu g^{\rho\sigma}-2g^{\mu\sigma}\gamma^\rho+\gamma^\sigma\gamma^\mu\gamma^\rho-g^{\rho\sigma}\gamma^\mu+\gamma^\sigma2g^{\rho\mu}-\gamma^\sigma\gamma^\mu\gamma^\rho)         \\&amp;=i(\gamma^\sigma g^{\rho\mu}-g^{\mu\sigma}\gamma^\rho)         \\&amp;=i(g^{\rho\mu}\gamma^\sigma-g^{\mu\sigma}\gamma^\rho)         \\&amp;=i(g^{\rho\mu}{\delta^{\sigma}}_\nu-g^{\sigma\mu}{\delta^{\rho}}_\nu)\gamma^\nu         \\&amp;={(\mathcal{M}^{\rho\sigma})^\mu}_\nu\gamma^\nu     \end{aligned}$$</div><p></p>
+<p>于是我们可以写出：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \left(1+\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma}\right)\gamma^\mu\left(1-\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma}\right)&amp;=\gamma^\mu+\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma}\gamma^\mu-\frac{i}{2}\gamma^\mu\omega_{\rho\sigma}S^{\rho\sigma}+\frac{1}{4}(\omega_{\rho\sigma}S^{\rho\sigma})^2\gamma^\mu         \\&amp;=\gamma^\mu+\frac{1}{4}(\omega_{\rho\sigma}S^{\rho\sigma})^2\gamma^\mu-\frac{i}{2}\omega_{\rho\sigma}[\gamma^\mu,S^{\rho\sigma}]     \end{aligned}$$</div><p></p>
+<p>考虑到上式中的 <span class="mathjax-exps">$\omega_{\rho\sigma}$</span> 为一无穷小参量，其二阶项应当被舍去，于是有：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         (1+\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma})\gamma^\mu(1-\frac{i}{2}\omega_{\rho\sigma}S^{\rho\sigma})&amp;=\gamma^\mu+-\frac{i}{2}\omega_{\rho\sigma}[\gamma^\mu,S^{\rho\sigma}]         \\&amp;={\left(1-\frac{i}{2}\omega_{\rho\sigma}\mathcal{M}^{\rho\sigma}\right)^\mu}_\nu\gamma^\nu     \end{aligned}$$</div><p></p>
+<p>该等式显然为下述关系的无穷小形式：<br>
+</p><div class="mathjax-exps">$$\Lambda^{-1}_{\frac{1}{2}}\gamma^\mu\Lambda_{\frac{1}{2}}={\Lambda^\mu}_\nu\gamma^\nu$$</div><p></p>
+<p>其中<br>
+</p><div class="mathjax-exps">$$\Lambda_{\frac{1}{2}}=\exp\left(-\frac{i}{2}\omega_{\mu\nu}S^{\mu\nu}\right)$$</div><p></p>
+<p>是利用指数映射得到的 Lorentz 变换的旋量表示。<br>
+同理易得：<br>
+</p><div class="mathjax-exps">$$\Lambda_{\frac{1}{2}}\gamma^\mu\Lambda^{-1}_{\frac{1}{2}}={(\Lambda^{-1})^\mu}_\nu\gamma^\nu$$</div><p></p>
+<p>上述关系式告诉我们，虽然 Dirac 矩阵是在参考系变换下不发生改变的四个常数矩阵，但其具有如下的数学性质：在其两侧分别作用 Lorentz 旋量变换与旋量逆变换，与对其作用一个 Lorentz 矢量变换的效果是一样的。这暗示我们可以将其指标视为矢量指标，让 <span class="mathjax-exps">$\gamma^\mu$</span> 与 <span class="mathjax-exps">$\partial_\mu$</span> 缩并来构造某种具有 Lorentz 不变性的微分算子。</p>
+<h2 class="crossnote-header" id="dirac-%E6%96%B9%E7%A8%8B%E5%8F%8A%E5%85%B6-lagrangian">Dirac 方程及其 Lagrangian</h2>
+
+<p>接下来，我们便可以写下 Dirac 方程：<br>
+</p><div class="mathjax-exps">$$(i\gamma^\mu\partial_\mu-m)\psi=0$$</div><p></p>
+<p>为了验证上式的 Lorentz 不变性，我们考虑其 Lorentz 变换：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \left[i\gamma^\mu\partial_\mu-m\right]\psi(x)&amp;\rightarrow\left[i\gamma^\mu{(\Lambda^{-1})^\nu}_\mu\partial_\nu-m\right]\Lambda_{\frac{1}{2}}\psi(\Lambda^{-1}x)         \\&amp;=\Lambda_{\frac{1}{2}}\Lambda^{-1}_{\frac{1}{2}}\left[i\gamma^\mu{(\Lambda^{-1})^\nu}_\mu\partial_\nu-m\right]\Lambda_{\frac{1}{2}}\psi(\Lambda^{-1}x)         \\&amp;=\Lambda_{\frac{1}{2}}\left[i\Lambda^{-1}_{\frac{1}{2}}\gamma^\mu\Lambda_{\frac{1}{2}}{(\Lambda^{-1})^\nu}_\mu\partial_\nu-m\right]\psi(\Lambda^{-1}x)         \\&amp;=\Lambda_{\frac{1}{2}}\left[i{\Lambda^\mu}_\sigma\gamma^\sigma{(\Lambda^{-1})^\nu}_\mu\partial_\nu-m\right]\psi(\Lambda^{-1}x)         \\&amp;=\Lambda_{\frac{1}{2}}\left[i\gamma^\nu\partial_\nu-m\right]\psi(\Lambda^{-1}x)         \\&amp;=0     \end{aligned}$$</div><p></p>
+<p>此外，我们也可以从 Dirac 方程反推得到 Klein-Gordon 方程，这显示出二者均符合相对论性色散关系。<br>
+接下来我们考虑能够导出 Dirac 方程的 Lagrangian 的形式。但在这之前我们需要首先知道两个 Dirac 旋量如何做乘法才能变为一个 Lorentz 标量。首先想到的自然是 <span class="mathjax-exps">$\psi^\dagger\psi$</span>，在 Lorentz 变化下这会变为 <span class="mathjax-exps">$\psi^\dagger\Lambda^\dagger_{\frac{1}{2}}\Lambda_{\frac{1}{2}}\psi$</span>，但这并不合适，因为我们知道 Lorentz 变换并不是幺正的，这样做乘法得到的量不能保证在 Lorentz 变化下不变。<br>
+所以我们选择按照如下方式定义：<br>
+</p><div class="mathjax-exps">$$\bar{\psi}\equiv\psi^\dagger\gamma^0$$</div><p></p>
+<p>考虑上式所定义的 <span class="mathjax-exps">$\bar\psi$</span> 的无穷小 Lorentz 变换：<br>
+</p><div class="mathjax-exps">$$\bar{\psi}\rightarrow\psi^\dagger\Lambda^\dagger_{\frac{1}{2}}\gamma^0=\psi^\dagger\left(1+\frac{i}{2}\omega_{\mu\nu}(S^{\mu\nu})^\dagger\right)\gamma^0$$</div><p></p>
+<p>在这种定义下，我们可以看到，对于 rotation 变换，即 <span class="mathjax-exps">$\mu$</span> 和 <span class="mathjax-exps">$\nu$</span> 均不为零的情况，有 <span class="mathjax-exps">$(S^{\mu\nu})^\dagger=S^{\mu\nu}$</span>，且 <span class="mathjax-exps">$S^{\mu\nu}$</span> 与 <span class="mathjax-exps">$\gamma^0$</span> 对易；而对于 boost 变换，即 <span class="mathjax-exps">$\mu$</span> 与 <span class="mathjax-exps">$\nu$</span> 中有一个为零，可以看到 <span class="mathjax-exps">$(S^{\mu\nu})^\dagger=-S^{\mu\nu}$</span>，且 <span class="mathjax-exps">$S^{\mu\nu}$</span> 与 <span class="mathjax-exps">$\gamma^0$</span> 反对易。（上述的讨论也可以通过直接计算出 <span class="mathjax-exps">$\gamma^0(S^{\mu\nu})^\dagger\gamma^0=S^{\mu\nu}$</span> 得到。）<br>
+这使得不论何种情况，上述变换均可变为：<br>
+</p><div class="mathjax-exps">$$\bar{\psi}\rightarrow\psi^\dagger\gamma^0\left(1+\frac{i}{2}\omega_{\mu\nu}S^{\mu\nu}\right)=\bar{\psi}\Lambda^{-1}_{\frac{1}{2}}$$</div><p></p>
+<p>显然这种定义下 <span class="mathjax-exps">$\bar{\psi}\psi$</span> 是一个 Lorentz 标量。类似的，我们可以定义出 <span class="mathjax-exps">$\bar{\psi}\gamma^\mu\psi$</span> 为一个 Lorentz 矢量。<br>
+于是接下来我们便可以给出 Dirac 方程的 Lagrangian：<br>
+</p><div class="mathjax-exps">$$\mathcal{L}_{\mathrm{Dirac}}=\bar{\psi}(i\gamma^\mu\partial_\mu-m)\psi$$</div><p></p>
+<p>将 <span class="mathjax-exps">$\bar{\psi}$</span> 与 <span class="mathjax-exps">$\psi$</span> 视为两个场并分别带入 Euler-Lagrange 方程，我们有：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         i\gamma^\mu\partial_\mu\psi-m\psi&amp;=0         \\-i\partial_\mu\bar{\psi}\gamma^\mu-m\bar{\psi}&amp;=0     \end{aligned}$$</div><p></p>
+<p>即为 Dirac 方程与其厄米共轭形式。</p>
+<h2 class="crossnote-header" id="weyl-%E6%97%8B%E9%87%8F-%E4%B8%8E-weyl-%E6%96%B9%E7%A8%8B%E7%BB%84">Weyl 旋量 与 Weyl 方程组</h2>
+
+<p>从 <span class="mathjax-exps">$S^{\mu\nu}$</span> 具有对角化的矩阵形式来看，显然 Lorentz 群的 Dirac 表示是一种可约表示（事实上 Lorentz 群可以拆分为复化的 <span class="mathjax-exps">$\mathrm{SU}(2)\otimes\mathrm{SU}(2)$</span>)。我们可以将对角化的两个部分单独视为两个二维表示，并由此将旋量拆分开：<br>
+</p><div class="mathjax-exps">$$\psi=         \begin{pmatrix}             \psi_{L}             \\\psi_{R}         \end{pmatrix}$$</div><p></p>
+<p>其中 <span class="mathjax-exps">$\psi_{L}$</span> 与 <span class="mathjax-exps">$\psi_{R}$</span> 分别成为左手与右手 Weyl 旋量。可以验证，Weyl 旋量的无穷小 Lorentz 变换遵循下述规则：<br>
+</p><div class="mathjax-exps">$$\psi_{L}\rightarrow(1-i\theta^i\frac{\sigma_i}{2}-\vartheta^i\frac{\sigma_i}{2})\psi_{L}         \\\psi_{R}\rightarrow(1-i\theta^i\frac{\sigma_i}{2}+\vartheta^i\frac{\sigma_i}{2})\psi_{R}$$</div><p></p>
+<p>这两种旋量由复共轭联系在一起。利用下述恒等式：<br>
+</p><div class="mathjax-exps">$$\sigma_2(\sigma^*)_i=-(\sigma)_i\sigma_2$$</div><p></p>
+<p>我们很容易验证 <span class="mathjax-exps">$\sigma_2\psi^*_{L}$</span> 像一个右手旋量一样变换。<br>
+利用 Weyl 旋量写出 Dirac 方程，有：<br>
+</p><div class="mathjax-exps">$$(i\gamma^\mu\partial_\mu-m)\psi=         \begin{pmatrix}             -m &amp; i(\partial_0+\boldsymbol{\sigma}·\boldsymbol{\nabla})             \\i(\partial_0-\boldsymbol{\sigma}·\boldsymbol{\nabla}) &amp; -m         \end{pmatrix}         \begin{pmatrix}             \psi_{L}             \\\psi_{R}         \end{pmatrix}         =0$$</div><p></p>
+<p>可以看到两个 Weyl 旋量被 Dirac 方程中的质量项耦合在了一起。但如果我们设 <span class="mathjax-exps">$m=0$</span>，则方程就会被解耦合为：<br>
+</p><div class="mathjax-exps">$$i(\partial_0-\boldsymbol{\sigma}·\boldsymbol{\nabla})\psi_{L}=0         \\i(\partial_0+\boldsymbol{\sigma}·\boldsymbol{\nabla})\psi_{R}=0$$</div><p></p>
+<p>上述两行方程被称为 Weyl 方程组。它们在中微子与弱相互作用中十分重要。<br>
+我们也可以把上式进一步写的更好看一些。<br>
+定义：<br>
+</p><div class="mathjax-exps">$$\sigma^\mu\equiv(1,\sigma^i)\qquad\bar{\sigma}^\mu\equiv(1,-\sigma^i)$$</div><p></p>
+<p>则有：<br>
+</p><div class="mathjax-exps">$$\gamma^\mu=         \begin{pmatrix}             0 &amp; \sigma^\mu             \\\bar{\sigma}^\mu &amp;0         \end{pmatrix}$$</div><p></p>
+<p>于是 Dirac 方程就变为：<br>
+</p><div class="mathjax-exps">$$\begin{pmatrix}             -m &amp; i\sigma^\mu\partial_\mu             \\i\bar{\sigma}^\mu\partial_\mu &amp; -m         \end{pmatrix}         \begin{pmatrix}             \psi_{L}             \\\psi_{R}         \end{pmatrix}         =0$$</div><p></p>
+<p>以及 Weyl 方程就变为：<br>
+</p><div class="mathjax-exps">$$i\bar{\sigma}^\mu\partial_\mu\psi_{L}=0         \\i\sigma^\mu\partial_\mu\psi_{R}=0$$</div><p></p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#dirac-方程" class="md-toc-link"><p>Dirac 方程</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#dirac-代数与-lorentz-群的旋量表示" class="md-toc-link">
+            <p>Dirac 代数与 Lorentz 群的旋量表示</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#dirac-方程及其-lagrangian" class="md-toc-link">
+            <p>Dirac 方程及其 Lagrangian</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#weyl-旋量-与-weyl-方程组" class="md-toc-link">
+            <p>Weyl 旋量 与 Weyl 方程组</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

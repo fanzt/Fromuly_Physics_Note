@@ -1,0 +1,401 @@
+<!DOCTYPE html><html><head>
+      <title>Chapter 2.1 Thermodynamic Quantities_1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em!important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em!important;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em!important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([for=preview]) .code-chunk .btn-group{display:none}.markdown-preview:not([for=preview]) .code-chunk .status{display:none}.markdown-preview:not([for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      <h1 class="crossnote-header" id="chapter-21-%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89">Chapter 2.1 热力学量的定义</h1>
+
+<p><img src="./Images/2.png" alt="节点"></p>
+<blockquote>
+<p>封面图源网络，侵删<br>
+注：本文为笔者学习朗道《统计物理学I》过程中的笔记与相关内容的补充。笔者是初学者，文章内容如有错误，欢迎指正。</p>
+</blockquote>
+<p></p><div class="mathjax-exps">$$\newcommand{dbar}{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}}     \newcommand{d}{\mathrm{d}}     \newcommand{p}{\partial}     \newcommand{l}{\left}     \newcommand{r}{\right}     \newcommand{&lt;}{\langle}     \newcommand{&gt;}{\rangle}$$</div><p></p>
+<h2 class="crossnote-header" id="%E5%B8%B8%E8%A7%81%E7%83%AD%E5%8A%9B%E5%AD%A6%E9%87%8F%E4%B8%8E%E7%9B%B8%E5%85%B3%E8%BF%87%E7%A8%8B">常见热力学量与相关过程</h2>
+
+<p>  接下来我们将一步步定义出除了能量、熵与体积之外，大家所熟悉的其他广延量与强度量。<br>
+  注：构造新的强度量的想法是利用熵增定理，通过令熵对守恒的广延量求导来找到热平衡下处处均等的一个物理量，并将其定义为新的强度量。</p>
+<h3 class="crossnote-header" id="1%E6%B8%A9%E5%BA%A6">1.温度</h3>
+
+<h4 class="crossnote-header" id="1%E6%B8%A9%E5%BA%A6-%E6%B8%A9%E6%A0%87-%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E5%B8%B8%E9%87%8F">(1).温度 温标 玻尔兹曼常量</h4>
+
+<p>  我们将表征物体宏观状态的量称为热力学量。在热力学量之中，有一些量在具有热力学意义的同时也具有纯粹的力学意义，例如体积、能量。而另外一些热力学量，则仅作为统计规律性的产物，对于非宏观系统没有意义，例如熵。<br>
+  正如我们在 Chapter 1 中所讨论的，作为统计规律的产物，一个体系的热力学量自然会有涨落。但在通常情况下，我们对这些量的微小涨落并不感兴趣。因此，在接下来的讨论中，我们将完全忽略这些涨落，仅在体系的宏观状态改变的情况下讨论热力学量的变化。<br>
+  考虑两个彼此处于热平衡的物体，并且这两个物体一起组成一个闭合系统。那么该系统的熵将处于它最大的可能值。记系统的总能量为 <span class="mathjax-exps">$E=E_1+E_2$</span>，其中 <span class="mathjax-exps">$E_1$</span> 和 <span class="mathjax-exps">$E_2$</span> 分别是两个物体各自的能量。显然系统的熵也可以写成类似的形式：<br>
+</p><div class="mathjax-exps">$$S=S_1(E_1)+S_2(E_2)$$</div><p></p>
+<p>并且由于 <span class="mathjax-exps">$E_1$</span> 与 <span class="mathjax-exps">$E_2$</span> 被方程 <span class="mathjax-exps">$E_1+E_2=E$</span> 约束，且 <span class="mathjax-exps">$E$</span> 为一常量，所以系统的总熵 <span class="mathjax-exps">$S$</span> 实际上是一个单变量函数。于是我们将熵极大条件写成：<br>
+</p><div class="mathjax-exps">$$\frac{\d{S}}{\d{E}_1}=\frac{\d{S}_1}{\d{E}_1}+\frac{\d{S}_2}{\d{E}_2}\frac{\d{E}_2}{\d{E}_1}=\frac{\d{S}_1}{\d{E}_1}-\frac{\d{S}_2}{\d{E}_2}=0$$</div><p></p>
+<p>于是我们得到：<br>
+</p><div class="mathjax-exps">$$\frac{\d{S}_1}{\d{E}_1}=\frac{\d{S}_2}{\d{E}_2}$$</div><p></p>
+<p>由此可见，对于一个处于热力学平衡状态的系统，其各个部分的熵对能量的导数都是相同的，即在整个系统内都不变。我们将物体的熵 <span class="mathjax-exps">$S$</span> 对其能量 <span class="mathjax-exps">$E$</span> 的导数的倒数称为该物体的绝对温度，简称温度 <span class="mathjax-exps">$T$</span>.<br>
+</p><div class="mathjax-exps">$$\frac{\d{S}}{\d{E}}=\frac{1}{T}$$</div><p></p>
+<p>因此对于一个热平衡系统，其各部分的温度是相等的。<br>
+  和熵一样，温度也是一个纯粹统计性质的量，仅对于一个宏观系统有意义。</p>
+<hr>
+<p>  接下来，让我们考虑并不处于平衡态的两个物体组成的闭合系统，其温度 <span class="mathjax-exps">$T_1$</span> 与 <span class="mathjax-exps">$T_2$</span> 并不相同。随着时间的推移，这两个物体之间将会建立起平衡态，且温度也将趋于相等。而这个过程应当是熵增的。于是我们有：<br>
+</p><div class="mathjax-exps">$$\frac{\d{S}}{\d{t}}=\frac{\d{S}_1}{\d{t}}+\frac{\d{S}_2}{\d{t}}=\frac{\d{S}_1}{\d{E}_1}\frac{\d{E}_1}{\d{t}}+\frac{\d{S}_2}{\d{E}_2}\frac{\d{E}_2}{\d{t}}&gt;0$$</div><p></p>
+<p>由于能量守恒，所以：<br>
+</p><div class="mathjax-exps">$$\frac{\d{E}_1}{\d{t}}+\frac{\d{E}_2}{\d{t}}=0$$</div><p></p>
+<p>于是有：<br>
+</p><div class="mathjax-exps">$$\frac{\d{S}}{\d{t}}=\l(\frac{\d{S}_1}{\d{E}_1}-\frac{\d{S}_2}{\d{E}_2}\r)\frac{\d{E}_1}{\d{t}}=\l(\frac{1}{T_1}-\frac{1}{T_2}\r)\frac{\d{E}_1}{\d{t}}&gt;0$$</div><p></p>
+<p>假设第二个物体的温度高于第一个物体的温度 <span class="mathjax-exps">$\l(T_2&gt;T_1\r)$</span>. 考虑到温度是正的，那么有 <span class="mathjax-exps">$\displaystyle\frac{\d{E}_1}{\d{t}}&gt;0$</span>，亦即 <span class="mathjax-exps">$\displaystyle\frac{\d{E}_2}{\d{t}}&lt;0$</span>. 也就是说，随着整个体系向平衡态趋近，低温物体的能量增加，高温物体的能量减少。因而，温度的这一性质可以如此表述：能量自发的从温度较高的物体转移到温度较低的物体。</p>
+<hr>
+<p>  在第一章中我们定义的熵是一个无量纲量，因此我们刚刚所定义的温度具有能量的量纲。但通常情况下，使用能量衡量温度并不是一个方便的选择。因此，我们常选用一种特殊的单位衡量温度，即：开尔文 <span class="mathjax-exps">$(K)$</span>，简称开。能量量纲与温度量纲开尔文之间的变换系数，即每开尔文的焦耳数，称为玻尔兹曼常量，通常用字母 <span class="mathjax-exps">$k$</span> 表示，其数值上等于：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}             k&amp;=1.38064900\times10^{-23}J/K             \\&amp;=8.61733326\times10^{-5}eV/K             \\&amp;=1.38064900\times10^{-16}erg/K         \end{aligned}$$</div><p></p>
+<p>遵循朗道书中的习惯约定，本笔记中所有温度的量纲均为能量量纲。若在数值计算时需要使用开尔文作为单位，仅需将所有的 <span class="mathjax-exps">$T$</span> 替换为 <span class="mathjax-exps">$kT$</span> 即可。<br>
+  如果一定要在表达式中将温度的单位直接作为开尔文使用，则我们需要在熵的定义中也引入玻尔兹曼常量 <span class="mathjax-exps">$k$</span>，于是以开尔文为单位的温度下，熵的定义就变为：<br>
+</p><div class="mathjax-exps">$$S=k\ln{\Delta\Gamma}$$</div><p></p>
+<p>由此，对于数值计算，想要将相关结果换算为开尔文的规则就变成了：<br>
+</p><div class="mathjax-exps">$$T\rightarrow{kT},\quad S\rightarrow{\frac{S}{k}}$$</div><p></p>
+<hr>
+<h4 class="crossnote-header" id="2%E5%AE%8F%E8%A7%82%E8%BF%90%E5%8A%A8%E4%B8%8E%E7%BB%9D%E7%83%AD%E8%BF%87%E7%A8%8B">(2).宏观运动与绝热过程</h4>
+
+<h5 class="crossnote-header" id="%E5%AE%8F%E8%A7%82%E8%BF%90%E5%8A%A8">宏观运动</h5>
+
+<p>  物体的各个宏观部分所谓整体参与的运动称为宏观运动，以区别于分子的微观运动。现在我们来尝试考虑在热力学平衡<br>
+  将物体划分为许多相对于整体很小但仍旧宏观的部分，并假设 <span class="mathjax-exps">$M_a$</span>、<span class="mathjax-exps">$E_a$</span> 和 <span class="mathjax-exps">$\boldsymbol{P}_a$</span> 分别表示第 <span class="mathjax-exps">$a$</span> 个部分的质量、能量与动量。每个部分的熵是其内能的函数(这一点可以从伽利略相对性原理直接得到)，也就是其总能量与宏观动能之间的差的函数。因此物体的总熵可写为：<br>
+</p><div class="mathjax-exps">$$S=\sum\limits_{a}S_a\l(E_a-\frac{P_a^2}{2M_a}\r)$$</div><p></p>
+<p>假设物体是闭合的，那么除了物体的能量守恒外，物体的总动量和总角动量也应当是守恒的。于是我们又有：<br>
+</p><div class="mathjax-exps">$$\sum\limits_{a}\boldsymbol{P}_a=Const,\quad\sum\limits_{a}\boldsymbol{r}_a\times\boldsymbol{P}_a=Const$$</div><p></p>
+<p>这里的 <span class="mathjax-exps">$\boldsymbol{r}_a$</span> 自然是每一部分的位矢。在平衡状态下，能量 <span class="mathjax-exps">$E_a$</span> 与质量 <span class="mathjax-exps">$M_a$</span> 均为常量，物体的总熵是动量的函数。利用求解约束最优条件常用的拉格朗日乘子法，我们显然有：<br>
+</p><div class="mathjax-exps">$$\frac{\p}{\p\boldsymbol{P}_a}\sum\limits_{a}\l(S_a+\boldsymbol{\alpha}·\boldsymbol{P}_a+\boldsymbol{\beta}·(\boldsymbol{r}_a\times\boldsymbol{P}_a)\r)=0$$</div><p></p>
+<p>先对 <span class="mathjax-exps">$S_a$</span> 求导，有：<br>
+</p><div class="mathjax-exps">$$\frac{\p}{\p{\boldsymbol{P_a}}}\left\{S_a\l( E_a-\frac{P_a^2}{2M_a}\r)\right\}=\frac{\p{S_a}}{\p{U_a}}\frac{\p{U_a}}{\p{\boldsymbol{P}_a}}=-\frac{\boldsymbol{P}_a}{M_aT}=-\frac{\boldsymbol{v}_a}{T}$$</div><p></p>
+<p>其中 <span class="mathjax-exps">$\displaystyle U_a=E_a-\frac{P_a^2}{2M_a}$</span> 表示每个部分的内能。因此，我们得到：<br>
+</p><div class="mathjax-exps">$$-\frac{\boldsymbol{v}_a}{T}+\boldsymbol{\alpha}+\boldsymbol{\beta}\times\boldsymbol{r}_a=0$$</div><p></p>
+<p>即：<br>
+</p><div class="mathjax-exps">$$\boldsymbol{v}_a=\boldsymbol{u}+\boldsymbol{\Omega}\times\boldsymbol{r}_a$$</div><p></p>
+<p>其中 <span class="mathjax-exps">$\boldsymbol{u}=T\boldsymbol{\alpha}$</span>，<span class="mathjax-exps">$\boldsymbol{\Omega}=T\boldsymbol{\beta}$</span> 均为常矢量。<br>
+  这一结果的物理意义是显然的。由于 <span class="mathjax-exps">$\boldsymbol{u}$</span> 与 <span class="mathjax-exps">$\boldsymbol{\Omega}$</span> 对于物体中的任何部分都是相同的，这意味着我们讨论的情形就是物体以不变的速度 <span class="mathjax-exps">$\boldsymbol{u}$</span> 做整体平动和不变的角速度 <span class="mathjax-exps">$\boldsymbol{\Omega}$</span> 做整体转动。因此，我们得到一个重要的结论：一般来说，在统计平衡态下，闭合系统尽可能做匀速的平动和转动（不一般的情况是超流态的液氦这类的）。<br>
+  以后我们通常只研究静止的物体，相应地，能量 <span class="mathjax-exps">$E$</span> 就是系统的内能 <span class="mathjax-exps">$U$</span>.<br>
+  众所周知，熵的一阶导数等于零仅仅是熵取极值的判断标准，而极大极小则需要二阶导数的正负来判断。而二阶导数的判断将会告诉我们一个重要的结论：温度只可能是正的，即 <span class="mathjax-exps">$T&gt;0$</span> (开氏温标下)。下面的讨论将会告诉我们如何得到这个结论。<br>
+  考虑一个整体静止的闭合系统，如果该系统的温度是负的，那么熵就会随着它的宗量的减小而增长。由于熵有增长的趋势，物体就会有自发地瓦解为相互飞散为各个部分的趋势，以使每一个 <span class="mathjax-exps">$S_a$</span> 的宗量尽可能小。因而，显然如果 <span class="mathjax-exps">$T&lt;0$</span>，则根本不可能有平衡态的物体存在。<br>
+  但是，在不完全平衡状态下，负温度是可能的。在这种情况下物体一部分自由度对应的温度可以是负的。</p>
+<hr>
+<h5 class="crossnote-header" id="%E7%BB%9D%E7%83%AD%E8%BF%87%E7%A8%8B">绝热过程</h5>
+
+<p>  在物体所经受的各类外界作用中，有一种特殊类型的作用，其作用可以归结为“改变物体所处的外界条件”。我们把“外界条件”广义地理解为各种不同的外场。实际上，最常遇到的外界条件就是规定物体外形的体积。在某种意义下，这种情形也可以看作一种特殊类型的外场（边界为无限大势垒）。<br>
+  如果除了外界条件的改变以外，物体不再受到任何其他作用，就说物体是“热绝缘”的。虽然热绝缘的物体与任何别的物体并无直接相互作用，但一般来说，它不是闭合的，其能量可以随着时间变化。（e.g.大家熟悉的卡诺热机的绝热压缩/膨胀）<br>
+  从纯力学角度来看，显然热绝缘物体的哈密顿函数（能量）明显地显含时间。如果该物体直接和外界其他物体相互作用，则该物体根本不会有哈密顿函数，因为其势能项会与外界的坐标相关而无法表达。<br>
+  <em>p.s.朗道的书上这里写“熵增长定律不仅对闭合系统正确，而且对热绝缘的物体也是正确的。”但我并没有看懂他是怎么得到这个结论的。所以跳过！</em><br>
+  假设物体是热绝缘的，而且它所处的外界条件变化得足够缓慢，这样的过程称为绝热过程。</p>
+<hr>
+<h5 class="crossnote-header" id="%E7%BB%9D%E7%83%AD%E8%BF%87%E7%A8%8B%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%A8%E8%AE%BA">绝热过程的相关讨论</h5>
+
+<p>  接下来我们将证明，在绝热过程中，物体的熵保持不变，即绝热过程是可逆过程。<br>
+  首先，我们可以用一些参量来表征外界条件，这些参量都是时间得给定函数。例如，假设总共只有一个这样的参量，记为字母 <span class="mathjax-exps">$\lambda$</span>，熵对时间的导数 <span class="mathjax-exps">$\displaystyle\frac{\d{S}}{\d{t}}$</span> 会以某种方式依赖于 <span class="mathjax-exps">$\lambda$</span> 对时间的导数 <span class="mathjax-exps">$\displaystyle\frac{\d\lambda}{\d{t}}$</span>. 由于外界是缓变的，即 <span class="mathjax-exps">$\displaystyle\frac{\d\lambda}{\d{t}}$</span> 很小，所以我们可以把 <span class="mathjax-exps">$\displaystyle\frac{\d{S}}{\d{t}}$</span> 展开为 <span class="mathjax-exps">$\displaystyle\frac{\d\lambda}{\d{t}}$</span> 的幂级数。我们认为该展开式的零次项，即不含 <span class="mathjax-exps">$\displaystyle\frac{\d\lambda}{\d{t}}$</span> 的项为零。这是由于对于热力学平衡态下的体系，热力学平衡态下的闭合系统在外界条件不发生改变的情况下熵应当保持不变，所以当 <span class="mathjax-exps">$\displaystyle\frac{\d\lambda}{\d{t}}=0$</span> 时 <span class="mathjax-exps">$\displaystyle\frac{\d{S}}{\d{t}}=0$</span>，由此可见零次项应当为零。由于根据熵增长定律，<span class="mathjax-exps">$\displaystyle\frac{\d{S}}{\d{t}}$</span> 永远都需要大于零，但显然其正负性显著的依赖于幂级数展开的一阶项的正负。由于不能保证 <span class="mathjax-exps">$\displaystyle\frac{\d\lambda}{\d{t}}$</span> 永远大于零，我们只能认为幂级数展开的一阶项等于零。因此，<span class="mathjax-exps">$\displaystyle\frac{\d{S}}{\d{t}}$</span> 的展开式仅能从 <span class="mathjax-exps">$\displaystyle\frac{\d\lambda}{\d{t}}$</span> 的二阶项开始，即当 <span class="mathjax-exps">$\displaystyle\frac{\d\lambda}{\d{t}}$</span> 很小时，我们有：<br>
+</p><div class="mathjax-exps">$$\frac{\d{S}}{\d{t}}=A\l(\frac{\d\lambda}{\d{t}}\r)^2$$</div><p></p>
+<p>由此可以得到：<br>
+</p><div class="mathjax-exps">$$\frac{\d{S}}{\d\lambda}=A\frac{\d\lambda}{\d{t}}$$</div><p></p>
+<p>因此，当 <span class="mathjax-exps">$\displaystyle\frac{\d\lambda}{\d{t}}$</span> 趋于零时，<span class="mathjax-exps">$\displaystyle\frac{\d{S}}{\d\lambda}$</span> 也趋近于零。这表明了绝热过程的可逆性。<br>
+  需要注意的是，虽然绝热过程可逆，但显然并非所有的可逆过程都是绝热过程。可逆过程仅仅要求整个闭合系统的总熵不发生改变，但绝热系统要求给定物体作为闭合系统的一部分，其熵也不发生改变。这是比可逆过程更加严格的条件。<br>
+  绝热过程需要我们认为外界的变化是足够缓慢的，以至于可以将系统的每个时刻都看作是平衡态。这意味着绝热过程必须比在该系统中建立平衡状态的过程缓慢。</p>
+<hr>
+<h5 class="crossnote-header" id="%E7%BB%9D%E7%83%AD%E8%BF%87%E7%A8%8B%E7%9A%84%E5%BA%94%E7%94%A8">绝热过程的应用</h5>
+
+<p>  接下来我们将推导一个公式，使得我们能够通过单纯的热力学途径计算各种平均值而无需总去使用统计分布函数。假定物体正在经历一个绝热过程，我们要确定物体的能量对时间的导数 <span class="mathjax-exps">$\displaystyle\frac{\d{E}}{\d{t}}$</span>. 根据定义，一个热力学体系的能量被定义为 <span class="mathjax-exps">$E=\langle E(p,q;\lambda)\rangle$</span>，其中 <span class="mathjax-exps">$E(p,q;\lambda)=H(p,q;\lambda)$</span> 是体系的 Hamiltonian，它以 <span class="mathjax-exps">$\lambda$</span> 作为参变量。熟知的 Hamilton's Canonical Equations 告诉我们对于 Hamiltonian，我们有：<br>
+</p><div class="mathjax-exps">$$\frac{\d{H}(p,q;\lambda)}{\d{t}}=\frac{\p{H(p,q;\lambda)}}{\p{t}}$$</div><p></p>
+<p>在给定情况下，系统的 Hamiltonian 通过参变量 <span class="mathjax-exps">$\lambda$</span> 明显地与事件有关，因而上式可以写成：<br>
+</p><div class="mathjax-exps">$$\frac{\d{H}(p,q;\lambda)}{\d{t}}=\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\frac{\d\lambda}{\d{t}}$$</div><p></p>
+<p>显然求平均过程与对时间的求导过程可以换序，于是我们有：<br>
+</p><div class="mathjax-exps">$$\frac{\d{E}}{\d{t}}=\left\langle\frac{\d{H}(p,q;\lambda)}{\d{t}}\right\rangle=\left\langle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\right\rangle\frac{\d\lambda}{\d{t}}$$</div><p></p>
+<p>（由于对于求平均过程中系统每一个可能的状态，参变量 <span class="mathjax-exps">$\lambda$</span> 都是相同的给定的时间的函数，所以可以从平均号下提出来。）<br>
+  把热力学量 <span class="mathjax-exps">$E$</span> 看作是物体的熵 <span class="mathjax-exps">$S$</span> 和外参量 <span class="mathjax-exps">$\lambda$</span> 的函数，并考虑到绝热过程的熵不发生变化，就可以把导数 <span class="mathjax-exps">$\displaystyle\frac{\d{E}}{\d{t}}$</span> 写成另外的形式：<br>
+</p><div class="mathjax-exps">$$\frac{\d{E}}{\d{t}}=\l(\frac{\p{E}}{\p{\lambda}}\r)_S\frac{\d\lambda}{\d{t}}$$</div><p></p>
+<p>于是我们可以得到：<br>
+</p><div class="mathjax-exps">$$\left\langle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\right\rangle=\l(\frac{\p{E}}{\p{\lambda}}\r)_S$$</div><p></p>
+<p>  考虑到我们所研究的物体在其与外界环境构成的闭合系统中作为子系统存在，其经历的绝热过程又要求其时刻处于平衡状态，因而上式中的平均值显然可以看作是对于某一给定 <span class="mathjax-exps">$\lambda$</span> 的平衡态的统计分布的平均值，因而我们就得到了通过热力学途径来计算形为 <span class="mathjax-exps">$\displaystyle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}$</span> 的物理量按照给定平衡态的统计分布的平均值的热力学求法。这种类型的量在研究宏观物体的性质的时候常常会遇到，因此上式在统计物理中起到非常重要的作用。计算作用于物体上的各种力（此时 <span class="mathjax-exps">$\lambda$</span> 是物体的某一部分的坐标）或是计算物体的磁矩、电矩（此时 <span class="mathjax-exps">$\lambda$</span> 是磁场强度或电场强度）等，都属于这类量。<br>
+  我们在此对经典力学的所有讨论都可以完全适用于量子力学，只需要用 Hamilton 算符替代 Hamiltonian，并将统计平均的求法视为利用密度矩阵平均即可。</p>
+<hr>
+<h3 class="crossnote-header" id="2%E5%8E%8B%E5%BC%BA">2.压强</h3>
+
+<h4 class="crossnote-header" id="1%E5%8E%8B%E5%BC%BA%E7%9A%84%E5%AE%9A%E4%B9%89">(1).压强的定义</h4>
+
+<p>  在不考虑表面作用的情况下，一个体系的能量于熵都是可加量，这意味着一般来说物体的熵与能量在其中一者给定的情况下，另一者仅取决于物体的体积，而与物体的具体形状无关。这是因为我们可以将物体的形状变化简单的看作将物体拆分成许多个很小的部分再重新重组。<br>
+  由此，我们可以看到，一个处于平衡态的静止物体的宏观状态总共仅需要两个物理量（体积与能量或体积与熵）即可描述，所有其他的热力学量都可以表示为这两个量的函数。当然因为各个热力学量之间存在一定的依赖关系，所以其它任何一对热力学量也都可以用来作为自变量。于是我们得到：一个处于平衡态的静止物体的宏观状态总共只需要两个热力学量就可以描述。<br>
+  接下来我们尝试求一个物体作用于自身体积的边界上的力。根据力学公式，对于作用在某个面元上的力，我们有：<br>
+</p><div class="mathjax-exps">$$\boldsymbol{F}=-\frac{\p{H(p,q;\boldsymbol{r})}}{\p\boldsymbol{r}}$$</div><p></p>
+<p>式中 <span class="mathjax-exps">$H(p,q;\boldsymbol{r})$</span> 是物体的 Hamiltonian（也就是没有取平均值的能量），作为物体中粒子坐标与动量的函数，也作为该表面元的位矢的函数。在这种情况下，面元的位矢作为外参量存在（外参量指由系统的外环境决定的参量）。<br>
+  对上式求平均，可以得到：<br>
+</p><div class="mathjax-exps">$$\langle\boldsymbol{F}\rangle=\left\langle-\frac{\p{H(p,q;\boldsymbol{r})}}{\p\boldsymbol{r}}\right\rangle=-\l(\frac{\p{E}}{\p{\boldsymbol{r}}}\r)_S=-\l(\frac{\p{E}}{\p{V}}\r)_S\frac{\p{V}}{\p{\boldsymbol{r}}}$$</div><p></p>
+<p>式中第二个等号来源于上一节中推导出的对“能量关于外参量倒数的表达式”求平均的计算方法；<span class="mathjax-exps">$V$</span> 为体积。由于 <span class="mathjax-exps">$\d{V}=A\cdot\d\boldsymbol{r}$</span>，所以我们可以得到 <span class="mathjax-exps">$\displaystyle\frac{\p{V}}{\p{\boldsymbol{r}}}=A$</span>，于是我们就可以得到：<br>
+</p><div class="mathjax-exps">$$\langle{F}\rangle=-\l(\frac{\p{E}}{\p{V}}\r)_S{A}$$</div><p></p>
+<p>于是我们可以看到作用在面元上的平均力，指向该面元的法线方向且与该面元的面积成正比。我们记：<br>
+</p><div class="mathjax-exps">$$P=-\l(\frac{\p{E}}{\p{V}}\r)_S$$</div><p></p>
+<p>称为压强。<br>
+  我们之前的温度定义实质上只适用于不直接与任何其他物体相接触的物体而言的。在这种情况下，我们不需要确定物体所经历的过程的具体特征，就可以讨论物体的能量和熵的变化。而在物体与其他物体有接触的情况下，我们必须考虑具体过程的特征。如果物体经历的给定过程使物体的体积发生了变化，就会使我们不得不考虑与其接触的其他物体的状态的变化。因而在这种情况下，我们就需要将物体以及与物体相接触的其他物体一同考虑才能定义温度。因此如果我们想要仅仅考虑对一个单独的物体定义温度，就必须保证物体的体积不发生变化。于是我们修改温度的定义为：<br>
+</p><div class="mathjax-exps">$$T=\l(\frac{\p{E}}{\p{S}}\r)_V$$</div><p></p>
+<p>结合上面压强的定义，我们就可以得到热力学基本微分方程：<br>
+</p><div class="mathjax-exps">$$\d{E}=T\d{S}-P\d{V}$$</div><p></p>
+<hr>
+<h4 class="crossnote-header" id="2%E5%B9%B3%E8%A1%A1%E6%80%81%E5%AF%B9%E5%8E%8B%E5%BC%BA%E7%9A%84%E8%A6%81%E6%B1%82">(2).平衡态对压强的要求</h4>
+
+<p>  对于彼此处于平衡态的物体，其压强彼此需要相等。这可以从热平衡的基本要求得出：热平衡首先要求力学平衡存在，而力学平衡的存在显然要求作用在物体间单位接触面的力大小相等方向相反，即要求物体的压强彼此相等。<br>
+  此外，该要求也可以从熵极大条件推导出来。考虑处于平衡状态的两个闭合系统相互接触的部分，熵极大条件显然要求对于这两个部分的体积的任何微小变化，如果系统其他部分的状态保持不变，熵应当不发生变化，即：<br>
+</p><div class="mathjax-exps">$$\frac{\p{S}}{\p{V}_1}=\frac{\p{S}_1}{\p{V}_1}+\frac{\p{S}_2}{\p{V}_2}\frac{\p{V}_2}{\p{V}_1}=\frac{\p{S}_1}{\p{V}_1}-\frac{\p{S}_2}{\p{V}_2}=0$$</div><p></p>
+<p>而由热力学基本微分关系，有：<br>
+</p><div class="mathjax-exps">$$\d{S}=\frac{1}{T}\d{E}+\frac{P}{T}\d{V}$$</div><p></p>
+<p>可以显然的看出，<span class="mathjax-exps">$\displaystyle\frac{\p{S}}{\p{V}}=\frac{P}{T}$</span>，因此我们有 <span class="mathjax-exps">$\frac{P_1}{T_1}=\frac{P_2}{T_2}$</span>，而又由于平衡态下 <span class="mathjax-exps">$T_1=T_2$</span>，所以我们即可有：<span class="mathjax-exps">$P_1=P_2$</span>.</p>
+<hr>
+<p>  p.s.利用熵极大条件证明平衡态下热力学量相等：考虑两个互相平衡的系统，取熵对某一个量的导数使得该导数可以表达为待证热力学量或待证热力学量与已知相等热力学量相乘除的形式，再利用待证热力学量总量守恒得出等式，两边约掉已证热力学量即可得到相等关系。</p>
+<hr>
+<p>注意：在建立热平衡的过程中，压强达到相等（即力学平衡）的过程要远快于温度达到相等的过程。这是因为压强的不等意味着存在未抵消的力，力的存在意味着会产生宏观运动，宏观运动促使压强趋于相等的过程要远快于促使温度趋于相等的过程。</p>
+<hr>
+<p>  关于压强的正负性，我们可以做如下的推理来说明：当 <span class="mathjax-exps">$P&gt;0$</span> 时，有 <span class="mathjax-exps">$\displaystyle\l(\frac{\p{S}}{\p{V}}\r)_E&gt;0$</span>，因而物体的熵只可能在物体膨胀时增加，但这种膨胀又会受到周围物体的阻碍。反之，当 <span class="mathjax-exps">$P&lt;0$</span> 时就会有 <span class="mathjax-exps">$\displaystyle\l(\frac{\p{S}}{\p{V}}\r)_E&lt;0$</span>，物体就会自发的收缩以保证熵增大，而这显然不是很符合常理。<br>
+  但是，要求压强为正和要求温度为正之间有本质的区别。具有负温度的物体将完全不稳定因而不可能存在，但具有负压强的物体仅仅是处于不平衡的状态，这在自然界中是可以实现的，虽然只有有限的稳定度。</p>
+<hr>
+<h3 class="crossnote-header" id="3%E5%8A%9F%E5%92%8C%E7%83%AD%E9%87%8F">3.功和热量</h3>
+
+<h4 class="crossnote-header" id="1%E5%8A%9F%E4%B8%8E%E5%85%8B%E5%8A%B3%E4%BF%AE%E6%96%AF%E7%86%B5%E8%A1%A8%E8%BF%B0">(1).功与克劳修斯熵表述</h4>
+
+<p>  我们都知道，作用在物体上的外力可以对物体做功，而力学中的功定义为力与其所引起的位移的乘积。做功可以改变物体的宏观运动状态（增加物体的宏观动能），或是改变物体在外场中的位置（增加物体的宏观势能），抑或是改变物体的体积。而前两种情况显然是我们所熟知的力学所研究的，所以统计物理所关心的是最后一种情况。<br>
+  在接下来的讨论中，我们约定外力对已知物体做功 <span class="mathjax-exps">$W$</span> 总认为是正的，负功 <span class="mathjax-exps">$W&lt;0$</span> 相应地表示已知物体本身（例如物体膨胀时）对某些外界物体做功，其大小为 <span class="mathjax-exps">$|W|$</span>.<br>
+  作用在物体表面的单位面积上的力是压强，而面元乘以它的位移就是面元运动所扫过的体积。由此我们显然可以看到，单位时间内物体体积改变时对物体做的功就是：<br>
+</p><div class="mathjax-exps">$$\frac{\dbar{W}}{\d{t}}=-P\frac{\d{V}}{\d{t}}$$</div><p></p>
+<p>其中在压缩物体时 <span class="mathjax-exps">$\displaystyle\frac{\d{V}}{\d{t}}&lt;0$</span>，则 <span class="mathjax-exps">$\displaystyle\frac{\dbar{W}}{\d{t}}&gt;0$</span>. 这个公式既可以用于可逆过程，也可以用于不可逆过程，其唯一需要的前提条件就是我们所研究的整个过程必须处于力学平衡状态，即每一个时刻，整个物体的压强必须是个常数。<br>
+  如果我们研究的物体是热绝缘的，则其能量的所有变化均由对物体做功而引起。在非热绝缘物体的普遍情况下，物体显然还可以通过别的直接途径从其他相互接触的物体中获得/给予能量。这部分变化的能量称为物体所获得（或者所给出）的热量 <span class="mathjax-exps">$Q$</span>. 因此，物体的能量变换可以写为：<br>
+</p><div class="mathjax-exps">$$\frac{\d{E}}{\d{t}}=\frac{\dbar{W}}{\d{t}}+\frac{\dbar{Q}}{\d{t}}$$</div><p></p>
+<p>类似于关于功的约定，我们认为从外源获得的热量总是正的。<br>
+  一般来说，上式中的能量 <span class="mathjax-exps">$E$</span> 应当被理解为物体的总能量（包括内能和宏观运动的动能）。然而，显然我们不关注宏观动能，所以我们只研究与改变物体体积有关的功；在这种情况下，我们所讨论的能量自然就只剩下了物体的内能。接下来带入单位时间内做功的公式，我们就有：<br>
+</p><div class="mathjax-exps">$$\frac{\dbar{Q}}{\d{t}}=\frac{\d{E}}{\d{t}}+P\frac{\d{V}}{\d{t}}$$</div><p></p>
+<p>  假设我们所研究的物体自身时刻处于热平衡状态，于是考虑到上文导出的热力学基本微分方程：<br>
+</p><div class="mathjax-exps">$$\frac{\d{E}}{\d{t}}=T\frac{\d{S}}{\d{t}}-P\frac{\d{V}}{\d{t}}$$</div><p></p>
+<p>我们就可以自然的得到：<br>
+</p><div class="mathjax-exps">$$\frac{\dbar{Q}}{\d{t}}=T\frac{\d{S}}{\d{t}}$$</div><p></p>
+<p>即熟悉的克劳修斯熵表述。<br>
+注意：上文中所有的 <span class="mathjax-exps">$Q$</span> 与 <span class="mathjax-exps">$W$</span> 的微小变化量全部记为了 <span class="mathjax-exps">$\dbar{Q}$</span> 与 <span class="mathjax-exps">$\dbar{W}$</span>，这是因为 <span class="mathjax-exps">$Q$</span> 与 <span class="mathjax-exps">$W$</span> 二者作为过程量不具有全微分。</p>
+<hr>
+<h4 class="crossnote-header" id="2%E7%83%AD%E5%AE%B9">(2).热容</h4>
+
+<p>  考虑物体升高单位温度所需要吸收的热量，并将该量称为热容。利用克劳修斯熵表述，我们可以得到在体积不变与压强不变条件下的热容：<br>
+</p><div class="mathjax-exps">$$C_v=T\l(\frac{\p{S}}{\p{T}}\r)_V         \\C_p=T\l(\frac{\p{S}}{\p{T}}\r)_P$$</div><p></p>
+<p>即定压热容与定容热容。</p>
+<hr>
+<h4 class="crossnote-header" id="3%E9%9D%9E%E5%B9%B3%E8%A1%A1%E6%80%81%E7%89%A9%E4%BD%93%E7%9A%84%E5%85%8B%E5%8A%B3%E4%BF%AE%E6%96%AF%E7%86%B5%E8%A1%A8%E8%BF%B0%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B%E7%9A%84%E5%85%8B%E5%8A%B3%E4%BF%AE%E6%96%AF%E7%86%B5%E5%BD%A2%E5%BC%8F">(3).非平衡态物体的克劳修斯熵表述（热力学第二定律的克劳修斯熵形式）</h4>
+
+<p>  对于不能满足时刻处于平衡态的物体，我们无法应用热力学基本微分方程来得到克劳修斯熵表述。但是，基于熵增原理我们仍旧可以给出一个由不等号连接的公式：<br>
+</p><div class="mathjax-exps">$$\dbar{Q}&lt;T\d{S}$$</div><p></p>
+<hr>
+<h3 class="crossnote-header" id="4%E7%84%93-%E8%87%AA%E7%94%B1%E8%83%BD%E4%B8%8E%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%8A%BF">4.焓、自由能与热力学势</h3>
+
+<h4 class="crossnote-header" id="1%E7%84%93">(1).焓</h4>
+
+<p>  接下来我们利用等压过程引导构造出的一个新的系统状态量。考虑压强不变的过程，则热量将可以能够使用某一个量的全微分来确定：<br>
+</p><div class="mathjax-exps">$$\dbar{Q}=\d(E+PV)=\d{H}$$</div><p></p>
+<p>其中 <span class="mathjax-exps">$H=E+PV$</span> 称为物体的焓（或热函数）。<br>
+  我们接下来可以考虑非等压过程下，焓的全微分：<br>
+</p><div class="mathjax-exps">$$\d{H}=\d{E}+P\d{V}+V\d{P}$$</div><p></p>
+<p>再代入热力学基本微分方程，就有：<br>
+</p><div class="mathjax-exps">$$\d{H}=T\d{S}+V\d{P}$$</div><p></p>
+<p>由此我们可以有：<br>
+</p><div class="mathjax-exps">$$T=\l(\frac{\p{H}}{\p{S}}\r)_P         V=\l(\frac{\p{H}}{\p{P}}\r)_S$$</div><p></p>
+<p>如果物体是热绝缘的，那么我们可以清晰地看到其经历等压过程时焓是守恒的。<br>
+  利用热力学基本微分方程，我们有：<br>
+</p><div class="mathjax-exps">$$C_v=T\l(\frac{\p{S}}{\p{T}}\r)_V=\l(\frac{\p{E}}{\p{S}}\r)_V\l(\frac{\p{S}}{\p{T}}\r)_V=\l(\frac{\p{E}}{\p{T}}\r)_V$$</div><p></p>
+<p>类似地，我们也有：<br>
+</p><div class="mathjax-exps">$$C_p=T\l(\frac{\p{S}}{\p{T}}\r)_P=\l(\frac{\p{H}}{\p{S}}\r)_P\l(\frac{\p{S}}{\p{T}}\r)_P=\l(\frac{\p{H}}{\p{T}}\r)_P$$</div><p></p>
+<p>由此可见，在等压过程中焓的性质类似于在等容过程中能量的性质。</p>
+<hr>
+<h4 class="crossnote-header" id="2%E4%BA%A5%E5%A7%86%E9%9C%8D%E5%85%B9%E8%87%AA%E7%94%B1%E8%83%BD%E4%B8%8E%E5%90%89%E5%B8%83%E6%96%AF%E8%87%AA%E7%94%B1%E8%83%BD%E7%8B%AD%E4%B9%89%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%8A%BF">(2).亥姆霍兹自由能与吉布斯自由能（狭义热力学势）</h4>
+
+<p>  接下来考虑等温变化。对于一个无穷小可逆等温变化，对物体做的功也可以写成某个量的全微分：<br>
+</p><div class="mathjax-exps">$$\dbar{W}=\d{E}-\dbar{Q}=\d{E}-T\d{S}=\d(E-TS)=\d{F}$$</div><p></p>
+<p>其中 <span class="mathjax-exps">$F=E-TS$</span> 称为物体的亥姆霍兹自由能。于是在物体的等温过程中，对物体做的功等于物体自由能的变化。<br>
+  接下来我们考虑非等温过程下亥姆霍兹自由能的全微分。与焓类似，我们有：<br>
+</p><div class="mathjax-exps">$$\d{F}=\d{E}-T\d{S}-S\d{T}$$</div><p></p>
+<p>带入热力学基本微分方程，我们有：<br>
+</p><div class="mathjax-exps">$$\d{F}=-P\d{V}-S\d{T}$$</div><p></p>
+<p>进而得到：<br>
+</p><div class="mathjax-exps">$$P=\l(\frac{\p{F}}{\p{V}}\r)_T         \\S=\l(\frac{\p{F}}{\p{T}}\r)_V$$</div><p></p>
+<p>  我们可以用亥姆霍兹自由能来表示能量：<br>
+</p><div class="mathjax-exps">$$E=F-T\l(\frac{\p{F}}{\p{T}}\r)_V=-T^2\l(\frac{\p}{\p{T}}\frac{F}{T}\r)_V$$</div><p></p>
+<p>  由此我们发现，当我们知道了 <span class="mathjax-exps">$E、H、F$</span> 的表达式作为其相应自变量的函数之后，只需要求微分就可以得到其余的热力学量。考虑到它们都具有能量的量纲，我们将 <span class="mathjax-exps">$E、H、F$</span> 这些量称为热力学势或热力学特征函数。于是我们可以看到，<span class="mathjax-exps">$E$</span> 是 <span class="mathjax-exps">$S$</span> 与 <span class="mathjax-exps">$V$</span> 的特征函数，<span class="mathjax-exps">$H$</span> 是 <span class="mathjax-exps">$S$</span> 与 <span class="mathjax-exps">$P$</span> 的特征函数，<span class="mathjax-exps">$F$</span> 是 <span class="mathjax-exps">$T$</span> 与 <span class="mathjax-exps">$V$</span> 的特征函数。显然我们似乎还缺少一个关于 <span class="mathjax-exps">$T$</span> 与 <span class="mathjax-exps">$P$</span> 的特征函数。于是我们进行如下构造：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         &amp;\d{F}=V\d{P}-\d(PV)-S\d{T}         \\\rightarrow&amp;\d{F}+\d(PV)=V\d{P}-S\d{T}         \\\rightarrow&amp;\d{G}=V\d{P}-S\d{T}     \end{aligned}$$</div><p></p>
+<p>其中 <span class="mathjax-exps">$G=F+PV=W-TS$</span> 称为物体的吉布斯自由能。<br>
+  利用类似的方法我们可以得到另外两个热力学量的表达式：<br>
+</p><div class="mathjax-exps">$$S=-\l(\frac{\p{G}}{\p{T}}\r)_P         \\V=-\l(\frac{\p{G}}{\p{P}}\r)_T$$</div><p></p>
+<p>类似于用 <span class="mathjax-exps">$F$</span> 表示 <span class="mathjax-exps">$E$</span>，我们也可以用吉布斯自由能表示焓：<br>
+</p><div class="mathjax-exps">$$G-T\l(\frac{\p{G}}{\p{T}}\r)_P=-T^2\l(\frac{\p}{\p{T}}\frac{G}{T}\r)_P$$</div><p></p>
+<hr>
+<p>总结：8个热力学状态量<br>
+（<span class="mathjax-exps">$H(p,q)$</span> 是 Hamiltonian，不是焓）<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         &amp;\begin{matrix}             &amp;E：能量\quad &amp;S：熵 &amp;V：体积\quad &amp;F：亥姆霍兹自由能             \\&amp;T：温度\quad &amp;H：焓 &amp;P：压强\quad &amp;G：吉布斯自由能         \end{matrix}         \\&amp;广延量：E、S、V、H、F、G         \\&amp;强度量：T、P         \\&amp;T利用熵增原理通过E诱导出         \\&amp;P利用熵增原理通过V诱导出         \\&amp;E=\langle H(p,q) \rangle\overset{\d{V}=0}{\longrightarrow}\dbar{Q}\qquad\d{E}=T\d{S}-P\d{V}         \\&amp;H=E+PV\overset{\d{P}=0}{\longrightarrow}\dbar{Q}\qquad\d{H}=T\d{S}+V\d{P}         \\&amp;F=E-TS\qquad\qquad\qquad\d{F}=-S\d{T}-P\d{V}         \\&amp;G=H-TS\qquad\qquad\qquad\d{G}=-S\d{T}+V\d{P}     \end{aligned}$$</div><p></p>
+<p><span class="mathjax-exps">$E$</span> 与 <span class="mathjax-exps">$H$</span> 之间依靠 Legendre 变换联系；<span class="mathjax-exps">$P$</span> 与 <span class="mathjax-exps">$V$</span> 相互共轭，<span class="mathjax-exps">$T$</span> 与 <span class="mathjax-exps">$S$</span> 相互共轭；类比于力学体系，<span class="mathjax-exps">$P$</span> 是“广义坐标”为 <span class="mathjax-exps">$V$</span> 时的“广义力”，<span class="mathjax-exps">$T$</span> 是“广义坐标”为 <span class="mathjax-exps">$S$</span> 时的“广义力”；<span class="mathjax-exps">$E$</span> 在等容过程的地位与 <span class="mathjax-exps">$H$</span> 在等压过程的地位相等；<span class="mathjax-exps">$F$</span> 在等容过程的地位与 <span class="mathjax-exps">$G$</span> 在等压过程的地位相等。</p>
+<hr>
+<p>如果除了体积之外，还需要其他参量 <span class="mathjax-exps">$\lambda_i$</span> 来确定系统的状态，则热力学基本微分方程中就必须附加上与微分 <span class="mathjax-exps">$\d\lambda_i$</span> 成正比的项：<br>
+</p><div class="mathjax-exps">$$\d{E}=T\d{S}-P\d{V}+\sum_i\lambda_i\d\lambda_i$$</div><p></p>
+<p>由于变换到其他的热力学势并不涉及 <span class="mathjax-exps">$\lambda_i$</span>，所以其他的热力学势微分表达式中也仅需要附加上相同的项即可。<br>
+因此我们可以写出一个关系式：<br>
+</p><div class="mathjax-exps">$$\left\langle\frac{\p{H(p,q;\lambda)}}{\p{\lambda}}\right\rangle=\l(\frac{\p{F}}{\p{\lambda}}\r)_{T,V}$$</div><p></p>
+<p>显然如果热力学势中的每一个都是在对应的特征项不变的情况下发生变化，则有：<br>
+</p><div class="mathjax-exps">$$(\delta{E})_{S,V}=(\delta{F})_{T,V}=(\delta{H})_{S,P}=(\delta{G})_{T,P}$$</div><p></p>
+<p>该等式称为小增量定理。<br>
+利用热力学第二定律与热力学第一定律（变形后的热力学基本微分方程），我们可以得到：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         &amp;\frac{\dbar{Q}}{\d{t}}&lt;T\frac{\d{S}}{\d{t}}         \\\rightarrow&amp;\frac{\d{E}}{\d{t}}+P\frac{\d{V}}{\d{t}}&lt;T\frac{\d{S}}{\d{t}}     \end{aligned}$$</div><p></p>
+<p>考虑物体经历等温等容过程，上式可以变成：<br>
+</p><div class="mathjax-exps">$$\frac{\d(E-TS)}{\d{t}}=\frac{\d{F}}{\d{t}}&lt;0$$</div><p></p>
+<p><strong>即等温等容不可逆过程下，亥姆霍兹自由能总在减小。</strong><br>
+类似地，在等温等压过程下，上式可以变成：<br>
+</p><div class="mathjax-exps">$$\frac{\d(H-TS)}{\d{t}}=\frac{\d{G}}{\d{t}}&lt;0$$</div><p></p>
+<p><strong>即等温等压不可逆过程下，吉布斯自由能总在减小。</strong><br>
+以上讨论均适用于物体处于非热平衡态。而如果物体处于热平衡态，则显然吉布斯自由能与亥姆霍兹自由能都取极小值。</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#chapter-21-热力学量的定义" class="md-toc-link"><p>Chapter 2.1 热力学量的定义</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#常见热力学量与相关过程" class="md-toc-link"><p>常见热力学量与相关过程</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#1温度" class="md-toc-link"><p>1.温度</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1温度-温标-玻尔兹曼常量" class="md-toc-link">
+            <p>(1).温度 温标 玻尔兹曼常量</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#2宏观运动与绝热过程" class="md-toc-link"><p>(2).宏观运动与绝热过程</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#宏观运动" class="md-toc-link">
+            <p>宏观运动</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#绝热过程" class="md-toc-link">
+            <p>绝热过程</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#绝热过程的相关讨论" class="md-toc-link">
+            <p>绝热过程的相关讨论</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#绝热过程的应用" class="md-toc-link">
+            <p>绝热过程的应用</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#2压强" class="md-toc-link"><p>2.压强</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1压强的定义" class="md-toc-link">
+            <p>(1).压强的定义</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2平衡态对压强的要求" class="md-toc-link">
+            <p>(2).平衡态对压强的要求</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#3功和热量" class="md-toc-link"><p>3.功和热量</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1功与克劳修斯熵表述" class="md-toc-link">
+            <p>(1).功与克劳修斯熵表述</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2热容" class="md-toc-link">
+            <p>(2).热容</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3非平衡态物体的克劳修斯熵表述热力学第二定律的克劳修斯熵形式" class="md-toc-link">
+            <p>(3).非平衡态物体的克劳修斯熵表述（热力学第二定律的克劳修斯熵形式）</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#4焓-自由能与热力学势" class="md-toc-link"><p>4.焓、自由能与热力学势</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1焓" class="md-toc-link">
+            <p>(1).焓</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2亥姆霍兹自由能与吉布斯自由能狭义热力学势" class="md-toc-link">
+            <p>(2).亥姆霍兹自由能与吉布斯自由能（狭义热力学势）</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

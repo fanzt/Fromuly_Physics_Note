@@ -1,0 +1,209 @@
+<!DOCTYPE html><html><head>
+      <title>2.4.Problems_Chapter2</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em!important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em!important;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em!important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([for=preview]) .code-chunk .btn-group{display:none}.markdown-preview:not([for=preview]) .code-chunk .status{display:none}.markdown-preview:not([for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      <h1 class="crossnote-header" id="problems_chpater2">Problems_Chpater2</h1>
+
+<p><img src="./Images/5.png" alt="节点"><br>
+<em>图源网络，侵删</em><br>
+<em>小苏茜真的好可爱啊啊啊啊啊——</em></p>
+<h2 class="crossnote-header" id="21-%E7%94%B5%E7%A3%81%E5%9C%BA">2.1 电磁场</h2>
+
+<p>已知经典无源电磁场的作用量为：</p>
+<p></p><div class="mathjax-exps">$$S=\int d^4x(-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}),\qquad 其中 F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$$</div><p></p>
+<h3 class="crossnote-header" id="1-%E5%88%A9%E7%94%A8euler-lagrange%E6%96%B9%E7%A8%8B%E6%8E%A8%E5%AF%BC%E5%87%BAmaxwell%E5%9C%BA%E6%96%B9%E7%A8%8B%E5%B9%B6%E5%B0%86%E5%85%B6%E5%86%99%E6%88%90%E6%88%91%E4%BB%AC%E7%86%9F%E6%82%89%E7%9A%84%E5%BD%A2%E5%BC%8F">(1) 利用Euler-Lagrange方程推导出Maxwell场方程，并将其写成我们熟悉的形式</h3>
+
+<p>（提示：将 <span class="mathjax-exps">$A_\mu(x)$</span> 视为一个动力学变量，并利用 <span class="mathjax-exps">$E^i=-F^{0i}$</span> 与 <span class="mathjax-exps">$\epsilon^{ijk}B^k=-F^{ij}$</span></p>
+<p>Solution</p>
+<p>根据Euler-Lagrange方程，有：<br>
+</p><div class="mathjax-exps">$$\partial_\mu\frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\mu)}-\frac{\partial\mathcal{L}}{\partial A_\mu}=0$$</div><br>
+其中：<br>
+<div class="mathjax-exps">$$\begin{aligned}         \mathcal{L}&amp;=-\frac{1}{4}(\partial_\mu A_\nu-\partial_\nu A_\mu)(\partial^\mu A^\nu-\partial^\nu A^\mu)         \\&amp;=-\frac{1}{4}(\partial_\mu A_\nu\partial^\mu A^\nu-\partial_\nu A_\mu\partial^\mu A^\nu-\partial_\mu A_\nu\partial^\nu A^\mu+\partial_\nu A_\mu\partial^\nu A^\mu)         \\&amp;=-\frac{1}{2}\partial_\mu A_\nu\partial^\mu A^\nu+\frac{1}{2}\partial_\mu A_\nu\partial^\nu A^\mu         \\&amp;=-\frac{1}{2}g^{\alpha\mu}g^{\beta\nu}\partial_\mu A_\nu\partial_\alpha A_\beta+\frac{1}{2}g^{\alpha\mu}g^{\beta\nu}\partial_\mu A_\nu\partial_\beta A_\alpha     \end{aligned}$$</div><br>
+显然Lagrangian中不含 <span class="mathjax-exps">$A_\mu$</span> 项，故：<br>
+<div class="mathjax-exps">$$\frac{\partial\mathcal{L}}{\partial A_\mu}=0$$</div><br>
+于是有：<br>
+<div class="mathjax-exps">$$\partial_\mu\frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\mu)}=0$$</div><br>
+其中：<br>
+<div class="mathjax-exps">$$\begin{aligned}         \frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\mu)}&amp;=\frac{\partial\left(-\frac{1}{2}g^{\alpha\mu}g^{\beta\nu}\partial_\mu A_\nu\partial_\alpha A_\beta+\frac{1}{2}g^{\alpha\mu}g^{\beta\nu}\partial_\mu A_\nu\partial_\beta A_\alpha\right)}{\partial(\partial_\gamma A_\rho)}         \\&amp;=-\frac{1}{2}g^{\alpha\mu}g^{\beta\nu}\delta^{\gamma}_{\mu}\delta^{\rho}_{\nu}\partial_\alpha A_\beta-\frac{1}{2}g^{\alpha\mu}g^{\beta\nu}\delta^{\gamma}_{\alpha}\delta^{\rho}_{\beta}\partial_\mu A_\nu\\&amp;+\frac{1}{2}g^{\alpha\mu}g^{\beta\nu}\delta^{\gamma}_{\mu}\delta^{\rho}_{\nu}\partial_\beta A_\alpha+\frac{1}{2}g^{\beta\mu}g^{\alpha\nu}\delta^{\gamma}_{\alpha}\delta^{\rho}_{\beta}\partial_\mu A_\nu         \\&amp;=-\frac{1}{2}\partial^\gamma A^\rho-\frac{1}{2}\partial^\gamma A^\rho+\frac{1}{2}\partial^\rho A^\gamma+\frac{1}{2}\partial^\rho A^\gamma         \\&amp;=-F^{\gamma\rho}         \\&amp;=-F^{ab}     \end{aligned}$$</div><br>
+带入<br>
+<div class="mathjax-exps">$$\partial_\mu\frac{\partial\mathcal{L}}{\partial(\partial_\mu A_\mu)}=0$$</div><br>
+有：<br>
+<div class="mathjax-exps">$$\partial_\mu F^{\mu\nu}=0$$</div><br>
+利用该式即可得到我们熟悉的Maxwell场方程的其中两行：<br>
+<div class="mathjax-exps">$$\partial_\mu F^{\mu0}=0\rightarrow\partial_iF^{i0}=0\rightarrow\nabla·E=0$$</div><br>
+以及：<br>
+<div class="mathjax-exps">$$\begin{aligned}         \partial_0 F^{0i}+\partial_j F^{ji}&amp;=0\rightarrow\partial_0(-E^i)-\partial_jF^{ij}=0         \\\partial_jF^{ij}&amp;=\partial_j(-\epsilon^{ijk}B^k)=-(\nabla\times B)^i         \\\partial_0(-E^i)+(\nabla\times B)^i&amp;=0\rightarrow-\frac{\partial E}{\partial t}+\nabla\times B=0     \end{aligned}$$</div><br>
+剩余的两行无需Euler-Lagrange方程即可导出，推导过程略。<p></p>
+<h3 class="crossnote-header" id="2-%E6%9E%84%E5%BB%BA%E7%94%B5%E7%A3%81%E5%9C%BA%E7%9A%84%E8%83%BD%E5%8A%A8%E5%BC%A0%E9%87%8F%E5%B9%B6%E5%88%A9%E7%94%A8-klambdamunufmulambdaanu-%E5%B0%86%E5%85%B6%E5%86%99%E4%B8%BA%E5%AF%B9%E7%A7%B0%E5%BD%A2%E5%BC%8F">(2) 构建电磁场的能动张量，并利用 <span class="mathjax-exps">$K^{\lambda\mu\nu}=F^{\mu\lambda}A^\nu$</span> 将其写为对称形式</h3>
+
+<p>Solution:<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         T^{\mu\nu}&amp;=\frac{\partial\mathcal L}{\partial(\partial_\mu A_\lambda)}\partial^\nu A_\lambda-\mathcal Lg^{\mu\nu}         \\&amp;=-F^{\mu\lambda}\partial^\nu A_\lambda+\frac{1}{4}g^{\mu\nu}F_{\rho\tau}F^{\rho\tau}     \end{aligned}$$</div><br>
+引入<span class="mathjax-exps">$K^{\lambda\mu\nu}=F^{\mu\lambda}A^\nu$</span>，有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         \widehat{T}^{\mu\nu}&amp;=-F^{\mu\lambda}\partial^\nu A_\lambda+\frac{1}{4}g^{\mu\nu}F_{\rho\tau}F^{\rho\tau}+\partial_\lambda(F^{\mu\lambda}A^\nu)         \\&amp;=-F^{\mu\lambda}\partial^\nu A_\lambda+\frac{1}{4}g^{\mu\nu}F_{\rho\tau}F^{\rho\tau}+\partial_\lambda F^{\mu\lambda}A^\nu+F^{\mu\lambda}\partial_\lambda A^\nu         \\&amp;=-F^{\mu\lambda}\partial^\nu A_\lambda+\frac{1}{4}g^{\mu\nu}F_{\rho\tau}F^{\rho\tau}+F^{\mu\lambda}\partial_\lambda A^\nu         \\&amp;=\frac{1}{4}g^{\mu\nu}F_{\rho\tau}F^{\rho\tau}+F^{\mu\lambda}{F_\lambda}^\nu     \end{aligned}$$</div><br>
+于是有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         T^{00}&amp;=\frac{1}{4}g^{00}F_{\rho\tau}F^{\rho\tau}+F^{0\lambda}{F_\lambda}^0         \\&amp;=\frac{1}{4}F_{\rho\tau}F^{\rho\tau}+F^{0\lambda}{F_\lambda}^0         \\&amp;=\frac{1}{2}(\vec{B}^2-\vec{E}^2)+\vec{E}^2         \\&amp;=\frac{1}{2}(\vec{B}^2+\vec{E}^2)     \end{aligned}$$</div><br>
+以及：<br>
+<div class="mathjax-exps">$$\begin{aligned}         T^{0i}&amp;=\frac{1}{4}g^{0i}F_{\rho\tau}F^{\rho\tau}-g_{\alpha\lambda}F^{0\lambda}F^{i\alpha}         \\&amp;=\sum_\alpha F^{0\alpha}F^{i\alpha}         \\&amp;=\vec{E}\times\vec{B}     \end{aligned}$$</div><p></p>
+<h2 class="crossnote-header" id="22-%E5%A4%8Dklein-gordon%E5%9C%BA">2.2 复Klein-Gordon场</h2>
+
+<p>考虑如下作用量的复Klein-Gordon场：<br>
+</p><div class="mathjax-exps">$$S=\int d^4x(\partial_\mu\phi^*\partial^\mu\phi-m^2\phi^*\phi)$$</div><p></p>
+<h3 class="crossnote-header" id="1-%E6%89%BE%E5%88%B0-phix-%E4%B8%8E-phix-%E5%AF%B9%E5%BA%94%E7%9A%84%E5%85%B1%E8%BD%AD%E5%8A%A8%E9%87%8F%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%BA%94%E7%9A%84%E6%AD%A3%E5%88%99%E5%AF%B9%E6%98%93%E5%85%B3%E7%B3%BB%E8%AE%A1%E7%AE%97hamiltonian%E5%B9%B6%E9%AA%8C%E8%AF%81-phix-%E7%9A%84heisenberg-equation%E6%98%AFklein-gordon%E6%96%B9%E7%A8%8B">(1) 找到 <span class="mathjax-exps">$\phi(x)$</span> 与 <span class="mathjax-exps">$\phi^*(x)$</span> 对应的共轭动量以及相应的正则对易关系，计算Hamiltonian并验证 <span class="mathjax-exps">$\phi(x)$</span> 的Heisenberg Equation是Klein-Gordon方程</h3>
+
+<p>Solution:<br>
+</p><div class="mathjax-exps">$$\mathcal{L}=(\partial_0\phi^*\partial^0\phi-\partial_1\phi^*\partial^1\phi-\partial_2\phi^*\partial^2\phi-\partial_3\phi^*\partial^3\phi)-m^2\phi^*\phi$$</div><br>
+则有：<br>
+<div class="mathjax-exps">$$\pi(x)=\frac{\partial\mathcal{L}}{\partial\dot{\phi}}=\dot{\phi^*}$$</div><br>
+以及：<br>
+<div class="mathjax-exps">$$\pi^*(x)=\frac{\partial\mathcal{L}}{\partial\dot{\phi^*}}=\dot{\phi}$$</div><br>
+定义正则对易关系：<br>
+<div class="mathjax-exps">$$\left[\phi(\mathbf{x}),\pi(\mathbf{y})\right]=\left[\phi^*(\mathbf{x}),\pi^*(\mathbf{y})\right]=i\delta(\mathbf{x}-\mathbf{y})$$</div><br>
+于是有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         H&amp;=\int d^3x(\pi\dot{\phi}+\pi^*\dot{\phi^*}-\mathcal{L})         \\&amp;=\int d^3x(\pi^*\pi+\nabla\phi^*·\nabla\phi+m^2\phi^*\phi)     \end{aligned}$$</div><br>
+根据 Heisenberg 运动方程，有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         i\frac{\partial}{\partial t}\phi=[\phi,H]     \end{aligned}$$</div><br>
+既有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         i\frac{\partial}{\partial t}\phi&amp;=\int d^3y\left\{[\phi,\pi^*\pi]+[\phi,\nabla\phi^*·\nabla\phi]+m^2[\phi,\phi^*\phi]\right\}         \\&amp;=\int d^3y\left\{i\pi^*\delta(\mathbf{x}-\mathbf{y})+[\phi,\pi^*]\pi+\nabla[\phi,\phi^*]·\nabla\phi+\nabla\phi^*·\nabla[\phi,\phi]+m^2([\phi,\phi^*]\phi+\phi^*[\phi,\phi])\right\}         \\&amp;=\int d^3y\:i\pi^*\delta(\mathbf{x}-\mathbf{y})         \\&amp;=i\pi^*(\mathbf{x},t)     \end{aligned}$$</div><br>
+以及：<br>
+<div class="mathjax-exps">$$\begin{aligned}         i\frac{\partial}{\partial t}\pi&amp;=\int d^3y\left\{[\pi,\pi^*\pi]+[\pi,\nabla\phi^*·\nabla\phi]+m^2[\phi,\phi^*\phi]\right\}         \\&amp;=\int d^3y\left\{\nabla[\pi,\phi^*]·\nabla\phi+\nabla\phi^*·\nabla[\pi,\phi]+m^2([\pi,\phi^*]\phi+\phi^*[\pi,\phi])\right\}         \\&amp;=-\int d^3y\left\{\nabla\phi^*·\nabla(i\delta(\mathbf{x}-\mathbf{y}))+im^2\phi^*\delta(\mathbf{x}-\mathbf{y})\right\}         \\&amp;=\int d^3y\:i\delta(\mathbf{x}-\mathbf{y})\nabla^2\phi^*-im^2\phi^*         \\&amp;=i\nabla^2\phi^*-im^2\phi^*     \end{aligned}$$</div><br>
+于是有：<br>
+<div class="mathjax-exps">$$\frac{\partial}{\partial t}\phi=\pi^*\qquad\frac{\partial}{\partial t}\pi=\nabla^2\phi^*-m^2\phi^*$$</div><br>
+即有：<br>
+<div class="mathjax-exps">$$\frac{\partial^2}{{\partial t}^2}\phi=\frac{\partial}{\partial t}\pi^*=\nabla^2\phi-m^2\phi$$</div><br>
+亦即：<br>
+<div class="mathjax-exps">$$(\partial_\mu\partial^\mu+m^2)\phi=0$$</div><br>
+即Klein-Gordon方程。<p></p>
+<h3 class="crossnote-header" id="2-%E5%BC%95%E5%85%A5%E4%BA%A7%E7%94%9F%E6%B9%AE%E7%81%AD%E7%AE%97%E7%AC%A6%E5%B0%86-hamiltonian-%E7%AE%97%E7%AC%A6%E5%AF%B9%E8%A7%92%E5%8C%96%E5%B9%B6%E5%B1%95%E7%A4%BA%E8%AF%A5%E7%90%86%E8%AE%BA%E5%8C%85%E5%90%AB%E4%B8%A4%E7%B1%BB%E8%B4%A8%E9%87%8F%E5%90%8C%E4%B8%BA-m-%E7%9A%84%E7%B2%92%E5%AD%90">(2) 引入产生湮灭算符将 Hamiltonian 算符对角化，并展示该理论包含两类质量同为 m 的粒子</h3>
+
+<p>Solution:<br>
+与实 Klein-Gordon 场的处理方式类似，我们将场函数的每一项展开写成产生湮灭算符的形式：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \phi(\mathbf{x})&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_\mathbf{p}}}\left(a^\dagger_\mathbf{p}e^{-i\mathbf{p}·\mathbf{x}}+b_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}\right)         \\\phi^*(\mathbf{x})&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_\mathbf{p}}}\left(b^\dagger_\mathbf{p}e^{-i\mathbf{p}·\mathbf{x}}+a_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}\right)         \\\pi(\mathbf{x})&amp;=\int\frac{d^3p}{(2\pi)^3}\left(-i\right)\sqrt{\frac{E_\mathbf{p}}{2}}\left(a_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}-b^\dagger_\mathbf{p}e^{-i\mathbf{p}·\mathbf{x}}\right)         \\\pi^*(\mathbf{x})&amp;=\int\frac{d^3p}{(2\pi)^3}\left(i\right)\sqrt{\frac{E_\mathbf{p}}{2}}\left(a^\dagger_\mathbf{p}e^{-i\mathbf{p}·\mathbf{x}}-b_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}\right)     \end{aligned}$$</div><br>
+以及可能用到的求导后结果：<br>
+<div class="mathjax-exps">$$\begin{aligned}         \nabla\phi(\mathbf{x})&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{i}{\sqrt{2E_\mathbf{p}}}\mathbf{p}\left(a^\dagger_\mathbf{-p}+b_\mathbf{p}\right)e^{i\mathbf{p}·\mathbf{x}}         \\\nabla\phi^*(\mathbf{x})&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{i}{\sqrt{2E_\mathbf{p}}}\mathbf{p}\left(b^\dagger_\mathbf{-p}+a_\mathbf{p}\right)e^{i\mathbf{p}·\mathbf{x}}     \end{aligned}$$</div><br>
+由于至少存在两种粒子，所以需要定义两个产生湮灭算符，以保证<span class="mathjax-exps">$\phi^*\not =\phi$</span>，<span class="mathjax-exps">$\pi^*\not = \pi$</span>。<br>
+产生湮灭算符的对易关系为：<br>
+<div class="mathjax-exps">$$\begin{aligned}         \left[a_\mathbf{p},a_\mathbf{q}\right]&amp;=0         \\\left[b_\mathbf{p},b_\mathbf{q}\right]&amp;=0     \end{aligned}$$</div><p></p>
+<p>以及<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \left[a_\mathbf{p},a^\dagger_\mathbf{q}\right]&amp;=(2\pi)^3\delta^{(3)}\left(\mathbf{p}-\mathbf{q}\right)         \\\left[b_\mathbf{p},b^\dagger_\mathbf{q}\right]&amp;=(2\pi)^3\delta^{(3)}\left(\mathbf{p}-\mathbf{q}\right)     \end{aligned}$$</div><p></p>
+<p>同样让我们试着算个对易子看看：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \left[\phi(\mathbf{x}),\pi(\mathbf{x’})\right]&amp;=\int\frac{d^3pd^3q}{(2\pi)^6}\left[\frac{1}{\sqrt{2E_\mathbf{p}}}\left(b_\mathbf{p}+a^\dagger_\mathbf{-p}\right)e^{i\mathbf{p}·\mathbf{x}},\left(-i\right)\sqrt{\frac{E_\mathbf{q}}{2}}\left(a^\dagger_\mathbf{-q}-b_\mathbf{q}\right)e^{i\mathbf{q}·\mathbf{x’}}\right]         \\&amp;=\int\frac{d^3p}{(2\pi)^6}\left\{(-i)\frac{1}{2}e^{i(\mathbf{p}·\mathbf{x}+\mathbf{q}·\mathbf{x’})}\left[\left(b_\mathbf{p}+a^\dagger_\mathbf{-p}\right),\left(a^\dagger_\mathbf{-q}-b_\mathbf{q}\right)\right]\right\}         \\&amp;=\int\frac{d^3p}{(2\pi)^6}i\delta^{(3)}\left(\mathbf{p}+\mathbf{q}\right)e^{i(\mathbf{p}·\mathbf{x}+\mathbf{q}·\mathbf{x’})}         \\&amp;=i\delta(\mathbf{x}-\mathbf{x'})     \end{aligned}$$</div><p></p>
+<p>符合我们之前的定义。</p>
+<p>然后计算 Hamiltonian ：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         H&amp;=\int d^3x(\pi\dot{\phi}+\pi^*\dot{\phi^*}-\mathcal{L})         \\&amp;=\int d^3x(\pi^*\pi+\nabla\phi^*·\nabla\phi+m^2\phi^*\phi)     \end{aligned}$$</div><p></p>
+<p>其中：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         \pi^*\pi&amp;=\int\frac{d^3pd^3q}{(2\pi)^6}\frac{\sqrt{E_\mathbf{p}E_\mathbf{q}}}{2}\left(a_\mathbf{q}-b^\dagger_\mathbf{-q}\right)\left(a^\dagger_\mathbf{-p}-b_\mathbf{p}\right)e^{i(\mathbf{p}+\mathbf{q})·\mathbf{x}}         \\\nabla\phi^*·\nabla\phi&amp;=\int\frac{d^3pd^3q}{(2\pi)^6}\frac{1}{2\sqrt{E_\mathbf{p}E_\mathbf{q}}}(-1)\mathbf{p}·\mathbf{q}\left(b^\dagger_\mathbf{-q}+a_\mathbf{q}\right)\left(b_\mathbf{p}+a^\dagger_\mathbf{-p}\right)e^{i(\mathbf{p}+\mathbf{q})·\mathbf{x}}         \\\phi^*\phi&amp;=\int\frac{d^3pd^3q}{(2\pi)^6}\frac{1}{2\sqrt{E_\mathbf{p}E_\mathbf{q}}}\left(b^\dagger_\mathbf{-q}+a_\mathbf{q}\right)\left(b_\mathbf{p}+a^\dagger_\mathbf{-p}\right)e^{i(\mathbf{p}+\mathbf{q})·\mathbf{x}}     \end{aligned}$$</div><br>
+于是有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         H&amp;=\int d^3x\left\{\int \frac{d^3pd^3q}{(2\pi)^6}\frac{1}{2\sqrt{E_\mathbf{p}E_\mathbf{q}}}\left[E_\mathbf{p}E_\mathbf{q}\left(a^\dagger_\mathbf{-p}-b_\mathbf{p}\right)\left(a_\mathbf{q}-b^\dagger_\mathbf{-q}\right)-\mathbf{p}·\mathbf{q}\left(b^\dagger_\mathbf{-q}+a_\mathbf{q}\right)\left(b_\mathbf{p}+a^\dagger_\mathbf{-p}\right)+m^2\left(b^\dagger_\mathbf{-q}+a_\mathbf{q}\right)\left(b_\mathbf{p}+a^\dagger_\mathbf{-p}\right)\right]e^{i(\mathbf{p}+\mathbf{q})·\mathbf{x}}\right\}         \\&amp;=\int d^3x\left\{\int\frac{d^3pd^3q}{(2\pi)^6}\frac{1}{2\sqrt{E_\mathbf{p}E_\mathbf{q}}}\left[E_\mathbf{p}E_\mathbf{q}\left(b_\mathbf{p}b^\dagger_\mathbf{-q}-b_\mathbf{p}a_\mathbf{q}-a^\dagger_\mathbf{-p}b^\dagger_\mathbf{-q}+a^\dagger_\mathbf{-p}a_\mathbf{q}\right)+\left(-\mathbf{p}·\mathbf{q}+m^2\right)\left(b^\dagger_\mathbf{-q}b_\mathbf{p}+a_\mathbf{q}b_\mathbf{p}+b^\dagger_\mathbf{-q}a^\dagger_\mathbf{-p}+a_\mathbf{q}a^\dagger_\mathbf{-p}\right)\right]e^{i(\mathbf{p}+\mathbf{q})·\mathbf{x}}\right\}         \\&amp;=\int\frac{d^3pd^3q}{(2\pi)^6}\frac{1}{2\sqrt{E_\mathbf{p}E_\mathbf{q}}}\left[E_\mathbf{p}E_\mathbf{q}\left(b_\mathbf{p}b^\dagger_\mathbf{-q}-b_\mathbf{p}a_\mathbf{q}-a^\dagger_\mathbf{-p}b^\dagger_\mathbf{-q}+a^\dagger_\mathbf{-p}a_\mathbf{q}\right)+\left(-\mathbf{p}·\mathbf{q}+m^2\right)\left(b^\dagger_\mathbf{-q}b_\mathbf{p}+a_\mathbf{q}b_\mathbf{p}+b^\dagger_\mathbf{-q}a^\dagger_\mathbf{-p}+a_\mathbf{q}a^\dagger_\mathbf{-p}\right)\right]\delta^{(3)}\left(\mathbf{p}-(\mathbf{-q})\right)         \\&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2\sqrt{E_\mathbf{p}E_\mathbf{-p}}}\left[E_\mathbf{p}E_\mathbf{-p}\left(b^\dagger_\mathbf{p}b_\mathbf{p}-a_\mathbf{-p}b_\mathbf{p}-b^\dagger_\mathbf{p}a^\dagger_\mathbf{-p}+a_\mathbf{-p}a^\dagger_\mathbf{-p}\right)+\left(-\mathbf{p}·\mathbf{-p}+m^2\right)\left(b^\dagger_\mathbf{p}b_\mathbf{p}+a_\mathbf{-p}b_\mathbf{p}+b^\dagger_\mathbf{p}a^\dagger_\mathbf{-p}+a_\mathbf{-p}a^\dagger_\mathbf{-p}\right)\right]         \\&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2\sqrt{E_\mathbf{p}E_\mathbf{-p}}}\left[\left(E_\mathbf{p}E_\mathbf{-p}+\mathbf{p}^2+m^2\right)\left(b^\dagger_\mathbf{p}b_\mathbf{p}+a_\mathbf{-p}a^\dagger_\mathbf{-p}\right)+\left(\mathbf{p^2}+m^2-E_\mathbf{p}E_\mathbf{-p}\right)\left(a_\mathbf{-p}b_\mathbf{p}+b^\dagger_\mathbf{p}a^\dagger_\mathbf{-p}\right)\right]     \end{aligned}$$</div><br>
+注意到由 <span class="mathjax-exps">$E_\mathbf{p}=\sqrt{\mathbf{|p|}^2+m^2}$</span> 有 <span class="mathjax-exps">$E_\mathbf{p}=E_\mathbf{-p}$</span>，有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         H&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2E_\mathbf{p}}\left({E_\mathbf{p}}^2+\mathbf{p}^2+m^2\right)\left(b^\dagger_\mathbf{p}b_\mathbf{p}+a_\mathbf{-p}a^\dagger_\mathbf{-p}\right)         \\&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2E_\mathbf{p}}\left({E_\mathbf{p}}^2+\mathbf{p}^2+m^2\right)\left(b^\dagger_\mathbf{p}b_\mathbf{p}+a_\mathbf{p}a^\dagger_\mathbf{p}\right)         \\&amp;=\int\frac{d^3p}{(2\pi)^3}E_\mathbf{p}\left(b^\dagger_\mathbf{p}b_\mathbf{p}+a_\mathbf{p}a^\dagger_\mathbf{p}\right)         \\&amp;=\int\frac{d^3p}{(2\pi)^3}E_\mathbf{p}\left(a^\dagger_\mathbf{p}a_\mathbf{p}+b^\dagger_\mathbf{p}b_\mathbf{p}+\left[a_\mathbf{p},a^\dagger_\mathbf{p}\right]\right)     \end{aligned}$$</div><br>
+舍去无穷大项后得到：<br>
+<div class="mathjax-exps">$$H=\int\frac{d^3p}{(2\pi)^3}E_\mathbf{p}\left(a^\dagger_\mathbf{p}a_\mathbf{p}+b^\dagger_\mathbf{p}b_\mathbf{p}\right)$$</div><br>
+由此可见，两种粒子的产生湮灭算符对应的能量同为 <span class="mathjax-exps">$E_\mathbf{p}$</span> ，亦即具有相同的质量。<p></p>
+<h3 class="crossnote-header" id="3-%E5%B0%86%E5%AE%88%E6%81%92%E8%8D%B7%E9%87%8D%E5%86%99%E4%B8%BA%E4%BA%A7%E7%94%9F%E6%B9%AE%E7%81%AD%E7%AE%97%E7%AC%A6%E5%BD%A2%E5%BC%8F%E5%B9%B6%E5%AF%BC%E5%87%BA%E6%AF%8F%E7%A7%8D%E7%B2%92%E5%AD%90%E5%AF%B9%E5%BA%94%E7%9A%84%E5%AE%88%E6%81%92%E8%8D%B7%E7%9A%84%E5%85%B7%E4%BD%93%E5%BD%A2%E5%BC%8F">(3) 将守恒荷重写为产生湮灭算符形式，并导出每种粒子对应的守恒荷的具体形式</h3>
+
+<p>Solution:<br>
+首先写出守恒荷 <span class="mathjax-exps">$Q$</span> 的表达式：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}         Q=\int{d^3x\frac{i}{2}\left(\phi^*\pi^*-\pi\phi\right)}     \end{aligned}$$</div><br>
+带入已有的 <span class="mathjax-exps">$\pi$</span>、<span class="mathjax-exps">$\phi$</span>、<span class="mathjax-exps">$\pi^*$</span>、<span class="mathjax-exps">$\phi^*$</span> 的表达式：<br>
+<div class="mathjax-exps">$$\begin{aligned}         Q&amp;=\int{d^3x\frac{i}{2}\left[\int\frac{d^3pd^3q}{(2\pi)^6}\sqrt{\frac{E_\mathbf{p}}{E_\mathbf{q}}}\frac{i}{2}\left(b^\dagger_\mathbf{p}e^{-i\mathbf{p}·\mathbf{x}}+a_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}\right)\left(a^\dagger_\mathbf{q}e^{-i\mathbf{q}·\mathbf{x}}-b_\mathbf{q}e^{i\mathbf{q}·\mathbf{x}}\right)-\int\frac{d^3pd^3q}{(2\pi)^6}\frac{-i}{2}\sqrt{\frac{E_\mathbf{p}}{E_\mathbf{q}}}\left(a_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}-b^\dagger_\mathbf{p}e^{-i\mathbf{p}·\mathbf{x}}\right)\left(a^\dagger_\mathbf{q}e^{-i\mathbf{q}·\mathbf{x}}+b_\mathbf{q}e^{i\mathbf{q}·\mathbf{x}}\right)\right]}         \\&amp;=-\frac{1}{4}\int{d^3x\int\frac{d^3pd^3q}{(2\pi)^6}\sqrt{\frac{E_\mathbf{p}}{E_\mathbf{q}}}\left[\left(b^\dagger_\mathbf{p}e^{-i\mathbf{p}·\mathbf{x}}+a_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}\right)\left(a^\dagger_\mathbf{q}e^{-i\mathbf{q}·\mathbf{x}}-b_\mathbf{q}e^{i\mathbf{q}·\mathbf{x}}\right)+\left(a_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}-b^\dagger_\mathbf{p}e^{-i\mathbf{p}·\mathbf{x}}\right)\left(a^\dagger_\mathbf{q}e^{-i\mathbf{q}·\mathbf{x}}+b_\mathbf{q}e^{i\mathbf{q}·\mathbf{x}}\right)\right]}         \\&amp;=-\frac{1}{4}\int\frac{d^3pd^3q}{(2\pi)^3}\sqrt{\frac{E_\mathbf{p}}{E_\mathbf{q}}}\left[b^\dagger_\mathbf{p}a^\dagger_\mathbf{q}\delta(-(\mathbf{p}+\mathbf{q}))+a_\mathbf{p}a^\dagger_\mathbf{q}\delta(\mathbf{p}-\mathbf{q})-b^\dagger_\mathbf{p}b_\mathbf{q}\delta(\mathbf{q}-\mathbf{p})-a_\mathbf{p}b_\mathbf{q}\delta(\mathbf{p}+\mathbf{q})+a_\mathbf{p}a^\dagger_\mathbf{q}\delta(\mathbf{p}-\mathbf{q})-b^\dagger_\mathbf{p}a^\dagger_\mathbf{q}\delta(-(\mathbf{p}+\mathbf{q}))+a_\mathbf{p}b_\mathbf{q}\delta(\mathbf{p}+\mathbf{q})-b^\dagger_\mathbf{p}b_\mathbf{q}\delta(\mathbf{q}-\mathbf{p})\right]         \\&amp;=-\frac{1}{4}\int\frac{d^3p}{(2\pi)^3}\left[b^\dagger_\mathbf{p}a^\dagger_\mathbf{-p}+a_\mathbf{p}a^\dagger_\mathbf{p}-b^\dagger_\mathbf{p}b_\mathbf{p}-a_\mathbf{p}b_\mathbf{-p}+a_\mathbf{p}a^\dagger_\mathbf{p}-b^\dagger_\mathbf{p}a^\dagger_\mathbf{-p}+a_\mathbf{p}b_\mathbf{-p}-b^\dagger_\mathbf{p}b_\mathbf{p}\right]         \\&amp;=-\frac{1}{2}\int\frac{d^3p}{(2\pi)^3}\left(a_\mathbf{p}a^\dagger_\mathbf{p}-b^\dagger_\mathbf{p}b_\mathbf{p}\right)         \\&amp;=\frac{1}{2}\int\frac{d^3p}{(2\pi)^3}\left(b^\dagger_\mathbf{p}b_\mathbf{p}-a_\mathbf{p}a^\dagger_\mathbf{p}\right)     \end{aligned}$$</div><br>
+将 <span class="mathjax-exps">$Q$</span> 视为一个算符，我们有：<br>
+<div class="mathjax-exps">$$\begin{aligned}         Qa^\dagger|0\rangle&amp;=-\frac{1}{2}a^\dagger|0\rangle         \\Qb^\dagger|0\rangle&amp;=\frac{1}{2}b^\dagger|0\rangle     \end{aligned}$$</div><br>
+可见 <span class="mathjax-exps">$Q$</span> 对不同粒子的单粒子态作用后会相差一个正负号，我们将 <span class="mathjax-exps">$Q$</span> 视为电荷，可见 <span class="mathjax-exps">$a$</span> 粒子与 <span class="mathjax-exps">$b$</span> 粒子所带的电荷大小相同正负相反。<br>
+（别问为什么是 <span class="mathjax-exps">$\displaystyle\frac{1}{2}$</span> ，常数项不重要）<p></p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#problems_chpater2" class="md-toc-link"><p>Problems_Chpater2</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#21-电磁场" class="md-toc-link"><p>2.1 电磁场</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1-利用euler-lagrange方程推导出maxwell场方程并将其写成我们熟悉的形式" class="md-toc-link">
+            <p>(1) 利用Euler-Lagrange方程推导出Maxwell场方程，并将其写成我们熟悉的形式</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2-构建电磁场的能动张量并利用-klambdamunufmulambdaanu-将其写为对称形式" class="md-toc-link">
+            <p>(2) 构建电磁场的能动张量，并利用 <span class="mathjax-exps">$K^{\lambda\mu\nu}=F^{\mu\lambda}A^\nu$</span> 将其写为对称形式</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#22-复klein-gordon场" class="md-toc-link"><p>2.2 复Klein-Gordon场</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1-找到-phix-与-phix-对应的共轭动量以及相应的正则对易关系计算hamiltonian并验证-phix-的heisenberg-equation是klein-gordon方程" class="md-toc-link">
+            <p>(1) 找到 <span class="mathjax-exps">$\phi(x)$</span> 与 <span class="mathjax-exps">$\phi^*(x)$</span> 对应的共轭动量以及相应的正则对易关系，计算Hamiltonian并验证 <span class="mathjax-exps">$\phi(x)$</span> 的Heisenberg Equation是Klein-Gordon方程</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#2-引入产生湮灭算符将-hamiltonian-算符对角化并展示该理论包含两类质量同为-m-的粒子" class="md-toc-link">
+            <p>(2) 引入产生湮灭算符将 Hamiltonian 算符对角化，并展示该理论包含两类质量同为 m 的粒子</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3-将守恒荷重写为产生湮灭算符形式并导出每种粒子对应的守恒荷的具体形式" class="md-toc-link">
+            <p>(3) 将守恒荷重写为产生湮灭算符形式，并导出每种粒子对应的守恒荷的具体形式</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html><html><head>
+      <title>2.3.The Klein-Gordon Field in Space-Time</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em!important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em!important;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em!important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([for=preview]) .code-chunk .btn-group{display:none}.markdown-preview:not([for=preview]) .code-chunk .status{display:none}.markdown-preview:not([for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      <h1 class="crossnote-header" id="%E6%97%B6%E7%A9%BA%E4%B8%AD%E7%9A%84klein-gordon%E5%9C%BA">时空中的Klein-Gordon场</h1>
+
+<p><img src="./Images/4.jpg" alt="节点"></p>
+<h2 class="crossnote-header" id="heisenberg%E7%BB%98%E6%99%AF%E4%B8%8B%E7%9A%84klein-gordon%E5%9C%BA">Heisenberg绘景下的Klein-Gordon场</h2>
+
+<p>在上一节中我们在Schrodinger绘景下将Klein-Gordon场进行了量子化，并根据相对论粒子的理论对解进行了解释。在这一节中，我们将会选取更方便讨论时间变化的Heisenberg绘景，解决因果律的问题并引入Klein-Gordon传播子。<br>
+在Heisenberg绘景下，我们使用时间演化算符将算符 <span class="mathjax-exps">$\phi$</span> 和 <span class="mathjax-exps">$\pi$</span> 转换到Heisenberg绘景下：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \phi(x)&amp;=\phi(\mathbf{x},t)=e^{iHt}\phi(\mathbf{x})e^{-iHt}     \\\pi(x)&amp;=\pi(\mathbf{x},t)=e^{iHt}\pi(\mathbf{x})e^{-iHt} \end{aligned}$$</div><p></p>
+<p>回忆起Heisenberg运动方程：</p>
+<p></p><div class="mathjax-exps">$$i\frac{\partial}{\partial t}\mathcal{O}=[\mathcal{O},H]$$</div><p></p>
+<p>利用此方程计算 <span class="mathjax-exps">$\phi$</span> 和 <span class="mathjax-exps">$\pi$</span> 的时间演化：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     i\frac{\partial}{\partial t}\phi(\mathbf{x})&amp;=\left[\phi(x),\int d^3x'[\frac{1}{2}\pi^2(\boldsymbol{\rm{x'}},t)+\frac{1}{2}(\nabla\phi(\boldsymbol{\rm{x'}},t))^2+\frac{1}{2}m^2\phi^2(\boldsymbol{\rm{x'}},t)]\right]     \\i\frac{\partial}{\partial t}\pi(\mathbf{x})&amp;=\left[\pi(x),\int d^3x'[\frac{1}{2}\pi^2(\boldsymbol{\rm{x'}},t)+\frac{1}{2}(\nabla\phi(\boldsymbol{\rm{x'}},t))^2+\frac{1}{2}m^2\phi^2(\boldsymbol{\rm{x'}},t)]\right] \end{aligned}$$</div><p></p>
+<p>这里利用对易关系：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \left[\phi(\mathbf{x}),F(\pi({\boldsymbol{\rm{x'}})})\right]&amp;=i\frac{\partial F}{\partial \pi}\delta(\mathbf{x}-\boldsymbol{\rm{x'}})     \\\left[\pi(\mathbf{x}),G(\phi(\boldsymbol{\rm{x'}}))\right]&amp;=-i\frac{\partial G}{\partial \phi}\delta(\mathbf{x}-\boldsymbol{\rm{x'}}) \end{aligned}$$</div><p></p>
+<p>于是上式变为：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     i\frac{\partial}{\partial t}\phi(\mathbf{x})&amp;=\int d^3x'\left(i\delta^{(3)}(\mathbf{x}-\boldsymbol{\rm{x'}})\pi(\boldsymbol{\rm{x',t}})\right)     \\&amp;=i\pi(\mathbf{x},t)     \\i\frac{\partial}{\partial t}\pi(\mathbf{x})&amp;=\int d^3x'\left\{\nabla\phi(\boldsymbol{\rm{x'}},t)\left[\pi(\mathbf{x},t),\frac{1}{2}\nabla\phi(\boldsymbol{\rm{x'}},t)\right]+\left[\pi(\mathbf{x},t),\frac{1}{2}\nabla\phi(\boldsymbol{\rm{x'}},t)\right]\nabla\phi(\boldsymbol{\rm{x'}},t)\right.\\&amp;\left.-i\delta^{(3)}(\mathbf{x}-\boldsymbol{\rm{x'}})m^2\phi(\boldsymbol{\rm{x'}},t)\right\}     \\&amp;=\int d^3x'\left\{\nabla\phi(\boldsymbol{\rm{x'}},t)(-i)\nabla\delta^{(3)}(\mathbf{x}-\boldsymbol{\rm{x'}})-i\delta^{(3)}(\mathbf{x}-\boldsymbol{\rm{x'}})m^2\phi(\boldsymbol{\rm{x'}},t)\right\}     \\&amp;=-i(-\nabla^2+m^2)\phi(\mathbf{x},t) \end{aligned}$$</div><p></p>
+<p>其中使用了：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     &amp;\left[\pi,\nabla\phi\right]=\nabla[\pi,\phi]=-i\nabla\delta(\mathbf{x}-\boldsymbol{\rm{x'}})     \\&amp;\int d^3x\:f(\boldsymbol{\rm{x'}})\nabla\delta(\mathbf{x}-\boldsymbol{\rm{x'}})=-\nabla f(\mathbf{x}) \end{aligned}$$</div><p></p>
+<p>将上述两式联立后可以得到：</p>
+<p></p><div class="mathjax-exps">$$\frac{\partial^2}{\partial t^2}\phi=(\nabla^2-m^2)\phi$$</div><p></p>
+<p>这又是我们熟悉的Klein-Gordon方程。<br>
+为了更好地理解 <span class="mathjax-exps">$\phi(\mathbf{x})$</span> 与 <span class="mathjax-exps">$\pi(\mathbf{x})$</span> 随时间的变化，我们可以将它们利用生成湮灭算符写出。首先，我们有：</p>
+<p></p><div class="mathjax-exps">$$[H,a_\mathbf{p}]=-E_\mathbf{p}a_\mathbf{p}\Rightarrow Ha_\mathbf{p}=a_\mathbf{p}(H-E_\mathbf{p})$$</div><p></p>
+<p>因此就有：</p>
+<p></p><div class="mathjax-exps">$$H^na_\mathbf{p}=a_\mathbf{p}(H-E_\mathbf{p})^n$$</div><p></p>
+<p>对任意 <span class="mathjax-exps">$n$</span> 恒成立。<span class="mathjax-exps">$a^\dagger_\mathbf{p}$</span> 也存在类似的关系（用 <span class="mathjax-exps">$+$</span> 替代掉 <span class="mathjax-exps">$-$</span> 即可）<br>
+于是我们有：</p>
+<p></p><div class="mathjax-exps">$$e^{iHt}a_\mathbf{p}e^{-iHt}=a_\mathbf{p}e^{-iE_\mathbf{p}t},\quad e^{iHt}a^\dagger_\mathbf{p}e^{-iHt}=a^\dagger_\mathbf{p}e^{iE_\mathbf{p}t}$$</div><p></p>
+<p>于是，我们可以利用上式得到我们期待的Heisenberg绘景下的 <span class="mathjax-exps">$\phi(\mathbf{x})$</span> 的表达式：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \phi(\mathbf{x},t)&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_\mathbf{p}}}\left.\left(a_\mathbf{p}e^{-ip^\mu x_\mu}+a^\dagger_\mathbf{p}e^{ip^\mu x_\mu}\right)\right|_{p^0=E_\mathbf{p}}     \\\pi(\mathbf{x},t)&amp;=\frac{\partial}{\partial t}\phi(\mathbf{x},t) \end{aligned}$$</div><p></p>
+<p>我们也可以用类似的方法得到 <span class="mathjax-exps">$\boldsymbol{\rm{P}}$</span> 与 <span class="mathjax-exps">$H$</span> 类似的关系，从而找到 <span class="mathjax-exps">$\phi(\mathbf{x})$</span> 与 <span class="mathjax-exps">$\phi(0)$</span>的关系：</p>
+<p></p><div class="mathjax-exps">$$e^{-i\boldsymbol{\rm{P}}·\mathbf{x}}a_\mathbf{p}e^{i\boldsymbol{\rm{P}}·\mathbf{x}}=a_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}\qquad e^{-i\boldsymbol{\rm{P}}·\mathbf{x}}a^\dagger_\mathbf{p}e^{i\boldsymbol{\rm{P}}·\mathbf{x}}=a^\dagger_\mathbf{p}e^{i\mathbf{p}·\mathbf{x}}$$</div><p></p>
+<p>（式中 <span class="mathjax-exps">$\boldsymbol{\rm{P}}$</span> 与 <span class="mathjax-exps">$H$</span> 形式上的符号差别是方便与下面推导中闵氏度规导致的号差一致。）<br>
+于是我们有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \phi(\mathbf{x},t)&amp;=e^{i(Ht-\boldsymbol{\rm{P}}·\mathbf{x})}\phi(0)e^{-i(Ht-\boldsymbol{\rm{P}}·\mathbf{x})}     \\&amp;=e^{iP^\mu x_\mu}\phi(0)e^{-iP^\mu x_\mu} \end{aligned}$$</div><p></p>
+<p>其中 <span class="mathjax-exps">$P^\mu=(H,\boldsymbol{\rm{P}})$</span><br>
+（注意：<span class="mathjax-exps">$\boldsymbol{\rm{P}}$</span> 是动量算符，其本征值是系统的总动量；而 <span class="mathjax-exps">$\mathbf{p}$</span> 是单个Fourier mode的动量，也就是单个粒子的动量。对于一个单粒子系统，<span class="mathjax-exps">$\mathbf{p}$</span> 是 <span class="mathjax-exps">$\boldsymbol{\rm{P}}$</span> 的本征值。）</p>
+<h2 class="crossnote-header" id="%E5%9B%A0%E6%9E%9C%E5%BE%8B">因果律</h2>
+
+<p>回到本章开始时关于因果律的问题。按照现在的形式，在Heisenberg绘景下，一个粒子从 <span class="mathjax-exps">$y$</span> 跃迁到 <span class="mathjax-exps">$x$</span> 的振幅为：<span class="mathjax-exps">$\langle0|\phi(x)\phi(y)|0\rangle$</span> 。我们将这个量称为 <span class="mathjax-exps">$D(x-y)$</span> 。显然，每一个 <span class="mathjax-exps">$\phi$</span> 均为多项 <span class="mathjax-exps">$a$</span> 与 <span class="mathjax-exps">$a^\dagger$</span> 的加和。但在这些加和之中，仅有 <span class="mathjax-exps">$\langle0|a_\mathbf{p}a^\dagger_\boldsymbol{\rm{q}}|0\rangle=(2\pi)^3\delta^{(3)}(\mathbf{p}-\boldsymbol{\rm{q}})$</span> 项有实际的贡献。我们可以进行一个简单的验证：</p>
+<p></p><div class="mathjax-exps">$$D(x-y)=\langle0|\phi(x)\phi(y)|0\rangle=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2E_\mathbf{p}}e^{-ip\:·\:(x-y)}$$</div><p></p>
+<p>在上一节中我们已经说过形如上式的积分是一个Lorentz不变的变换。让我们现在试着对一些特殊的 <span class="mathjax-exps">$x-y$</span> 值进行计算。<br>
+首先考虑 <span class="mathjax-exps">$x-y$</span> 仅在时间上有差距，即 <span class="mathjax-exps">$x^0-y^0=t,\mathbf{x}-\mathbf{y}=0$</span> 的情况：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     D(x-y)&amp;=\frac{4\pi}{(2\pi)^3}\int^\infty_0dp\frac{p^2}{2\sqrt{p^2+m^2}}e^{-i\sqrt{p^2+m^2}t}     \\&amp;=\frac{1}{4\pi^2}\int^\infty_mdE\sqrt{E^2-m^2}e^{-iEt}     \\&amp;=\frac{i m\:BesselK[1,imt]}{t}     \\&amp;\mathop{\sim}\limits_{t\:\rightarrow\:\infty}e^{-imt} \end{aligned}$$</div><p></p>
+<p>（p.s.最后一步的极限没有想明白，有没有巨佬可以在评论区讲一下）</p>
+<p>这里的推导使用了：<br>
+</p><div class="mathjax-exps">$$\begin{aligned}     d^3p&amp;=4\pi p^2dp     \\dE&amp;=\frac{p}{\sqrt{p^2+m^2}}dp     \\p&amp;=\sqrt{E^2-m^2} \end{aligned}$$</div><p></p>
+<p>类似的，考虑纯类空间隔，即 <span class="mathjax-exps">$x^0-y^0=0,\mathbf{x}-\mathbf{y}=\boldsymbol{\rm{r}}$</span>：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     D(x-y)&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2E_\mathbf{p}}e^{i\mathbf{p}·\boldsymbol{\rm{r}}} \end{aligned}$$</div><p></p>
+<p>将其转换至球坐标下，有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     D(x-y)&amp;=\frac{1}{(2\pi)^3}\int_0^{2\pi}\int_0^\pi\int_0^\infty\frac{1}{2\sqrt{p^2+m^2}}exp({ipr·\cos\theta})p^2\sin\theta     \:dpd\theta d\varphi     \\&amp;=\frac{2\pi}{(2\pi)^3}\int^\infty_0\frac{p^2}{2\sqrt{p^2+m^2}}\frac{2\:\sin pr}{pr}dp     \\&amp;=\frac{1}{4\pi^2r}\int^\infty_0\frac{p·\sin pr}{\sqrt{p^2+m^2}}dp     \\&amp;=\frac{-i}{8\pi^2r}\int^\infty_{-\infty}\frac{pe^{ipr}}{\sqrt{p^2+m^2}}dp \end{aligned}$$</div><p></p>
+<p>定义 <span class="mathjax-exps">$\rho=-ip$</span>，将该积分视为对关于复数 <span class="mathjax-exps">$p$</span> 的复变函数的积分。由于有 <span class="mathjax-exps">$\sqrt{p^2+m^2}$</span> 的结构，所以该函数存在两个一阶支点，分别为 <span class="mathjax-exps">$im$</span> 与 <span class="mathjax-exps">$-im$</span>。选择围绕上半分支的围道，我们有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}    \int^\infty_{-\infty}\frac{pe^{ipr}}{\sqrt{p^2+m^2}}dp&amp;=\int^{i\infty+\varepsilon}_{im+\varepsilon}\frac{pe^{ipr}}{\sqrt{p^2+m^2}}dp-\int^{i\infty-\varepsilon}_{im-\varepsilon}\frac{pe^{ipr}}{\sqrt{p^2+m^2}}dp    \\&amp;=\int^{\infty+i\varepsilon}_{m+i\varepsilon}\frac{\rho e^{-\rho r}}{\sqrt{m^2-\rho^2}}d\rho-\int^{\infty-i\varepsilon}_{m-i\varepsilon}\frac{\rho e^{-\rho r}}{\sqrt{m^2-\rho^2}}d\rho    \\&amp;=2i\int^{\infty+i\varepsilon}_{m+i\varepsilon}\frac{\rho e^{-\rho r}}{\sqrt{\rho^2-m^2}}d\rho \end{aligned}$$</div><p></p>
+<p>于是原积分变为：</p>
+<p></p><div class="mathjax-exps">$$\frac{1}{4\pi^2r}\int^{\infty}_{m}d\rho\:\frac{\rho e^{-\rho r}}{\sqrt{\rho^2-m^2}}=m\:BesselK[1,mr]\mathop{\sim}\limits_{r\:\rightarrow\:\infty}e^{-mr}$$</div><p></p>
+<p>于是我们再一次发现在光锥之外的传播子是呈指数衰减但并非为0。</p>
+<p>但要真正讨论因果律，我们需要考虑的实际上是在某一点的测量操作对在与该点为类空间隔的点处的测量操作的影响。若在类空间隔的两点分别作出的测量相互独立，就说明因果律成立。我们很自然地想到使用对易子来鉴定测量操作的独立性。对于两个算符 <span class="mathjax-exps">$\mathcal{O}(x)$</span> 与 <span class="mathjax-exps">$\mathcal{O}(y)$</span>，若二者的对易子 <span class="mathjax-exps">$\left[\mathcal{O}(x),\mathcal{O}(y)\right]$</span> 为 <span class="mathjax-exps">$0$</span>，则说明这两个测量操作相互独立。<br>
+显然，最简单的测量操作是直接对场本身进行测量。于是，考虑如下对易子：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     {[}\phi(x),\phi(y){]}&amp;=\int\:\frac{d^3p}{(2\pi)^3}\:\frac{1}{\sqrt{2E_{\mathbf{p}}}}\int\:\frac{d^3q}{(2\pi)^3}\:\frac{1}{\sqrt{2E_{\boldsymbol{\rm{q}}}}}\\&amp;\times\left[\left(a_{\mathbf{p}}e^{-ip·x}+a_{\mathbf{p}}^\dagger e^{ip·x}\right),\left(a_{\boldsymbol{\rm{q}}}e^{-iq·y}+a_{\boldsymbol{\rm{q}}}^\dagger e^{iq·y}\right)\right]     \\&amp;=\int\:\frac{d^3p}{(2\pi)^3}\:\frac{1}{2E_{\mathbf{p}}}\left(e^{-ip·(x-y)}-e^{ip·(x-y)}\right)     \\&amp;=D(x-y)-D(y-x) \end{aligned}$$</div><p></p>
+<p>对于一个 <span class="mathjax-exps">$(x-y)^2&lt;0$</span> 的类空间隔，我们可以构造一个连续的Lorentz变换使 <span class="mathjax-exps">$(x-y)\rightarrow-(x-y)$</span>，于是上式的两项就会相消变为 <span class="mathjax-exps">$0$</span>. 而对于非类空间隔，我们无法构造这样的Lorentz变换。由此，我们得出结论：在Klein-Gordon理论中，没有任何测量会影响到光锥之外的其他测量。</p>
+<p>事实上，在Klein-Gordon理论中真正维持因果律需要引入复Klein-Gordon场并利用反粒子来解释。在复Klein-Gordon场中， <span class="mathjax-exps">$\phi(x)$</span> 将会创造一个带有正常电荷的正粒子并湮灭一个带有相反电荷的反粒子，而 <span class="mathjax-exps">$\phi^\dagger(x)$</span> 相反。在量子场论中，因果律要求每个粒子都有自己的反粒子。而对于实Klein-Gordon场中的粒子，其反粒子即为它本身。</p>
+<h2 class="crossnote-header" id="klein-gordon%E4%BC%A0%E6%92%AD%E5%AD%90">Klein-Gordon传播子</h2>
+
+<p>接下来让我们更进一步研究 <span class="mathjax-exps">$[\phi(x),\phi(y)]$</span>。由于该对易子是一个 c-number（即可以交换相乘次序的数），我们可以将其写为：</p>
+<p></p><div class="mathjax-exps">$$[\phi(x),\phi(y)]=\langle0|[\phi(x),\phi(y)]|0\rangle$$</div><p></p>
+<p>假设 <span class="mathjax-exps">$x^0&gt;y^0$</span>，我们将上式写为积分：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \langle0|[\phi(x),\phi(y)]|0\rangle&amp;=\int\:\frac{d^3p}{(2\pi)^3}\:\frac{1}{2E_{\mathbf{p}}}\left(e^{-ip·(x-y)}-e^{ip·(x-y)}\right)     \\&amp;=\int\:\frac{d^3p}{(2\pi)^3}\left\{\left.\frac{1}{2E_{\mathbf{p}}}e^{-ip·(x-y)}\right|_{p^0=E_{\mathbf{p}}}+\left.\frac{1}{-2E_{\mathbf{p}}}e^{-ip·(x-y)}\right|_{p^0=-E_{\mathbf{p}}}\right\}     \\&amp;=\int\:\frac{d^3p}{(2\pi)^3}\left\{\lim_{p^0\:\rightarrow\:E_\mathbf{p}}\left(\left(p^0-E_\mathbf{p}\right)\frac{-1}{{p^0}^2-{E_\mathbf{p}}^2}e^{-ip·(x-y)}\right)\right.\\&amp;+\left.\lim_{p^0\:\rightarrow\:-E_\mathbf{p}}\left(\left(p^0+E_\mathbf{p}\right)\frac{-1}{{p^0}^2-{E_\mathbf{p}}^2}e^{-ip·(x-y)}\right)\right\}     \\&amp;=\int\:\frac{d^3p}{(2\pi)^3}\sum\mathrm{Res}\left(\frac{-1}{p^2-m^2}e^{-ip·(x-y)}\right)     \\&amp;\mathop{=}\limits_{x^0&gt;y^0}\int\:\frac{d^3p}{(2\pi)^3}\int\frac{dp^0}{2\pi i}\frac{-1}{p^2-m^2}e^{-ip·(x-y)} \end{aligned}$$</div><p></p>
+<p>这里使用了留数定理与Jordan引理。</p>
+<p>对于 <span class="mathjax-exps">$x^0&gt;y^0$</span> 的情况，取下半圆平面与经过实轴上部绕过两奇点的围道，即可得到上述积分式；对于 <span class="mathjax-exps">$x^0&lt;y^0$</span> 的情况，取上半圆平面与经过实轴上部绕过两奇点的围道，上式直接等于0.<br>
+于是我们定义：</p>
+<p></p><div class="mathjax-exps">$$D_R(x-y)\equiv\theta(x^0-y^0)\langle0|[\phi(x),\phi(y)]|0\rangle$$</div><p></p>
+<p>为了更好的理解这个量的意义，让我们把Klein-Gordon算子作用在其上：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     (\partial^2+m^2)D_R(x-y)&amp;=\partial^2(\theta(x^0-y^0)\langle0|[\phi(x),\phi(y)]|0\rangle)+m^2(\theta(x^0-y^0)\langle0|[\phi(x),\phi(y)]|0\rangle)     \\     \\&amp;=(\partial^2\theta(x^0-y^0))\langle0|[\phi(x),\phi(y)]|0\rangle+2\partial_\mu\theta(x^0-y^0)\partial^\mu\langle0|[\phi(x),\phi(y)]|0\rangle     \\&amp;+\theta(x^0-y^0)\partial^2(\langle0|[\phi(x),\phi(y)]|0\rangle)+m^2(\theta(x^0-y^0)\langle0|[\phi(x),\phi(y)]|0\rangle)     \\     \\&amp;=(\partial^2\theta(x^0-y^0))\langle0|[\phi(x),\phi(y)]|0\rangle+2\partial_\mu\theta(x^0-y^0)\partial^\mu\langle0|[\phi(x),\phi(y)]|0\rangle     \\&amp;+\theta(x^0-y^0)(\partial^2+m^2)(\langle0|[\phi(x),\phi(y)]|0\rangle)     \\     \\&amp;=-\delta(x^0-y^0)\langle0|[\pi(x),\phi(y)]|0\rangle+2\delta(x^0-y^0)\langle0|[\pi(x),\phi(y)]|0\rangle     \\     \\&amp;=-i\delta^{(4)}(x-y) \end{aligned}$$</div><p></p>
+<p>推导过程中利用了：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \\\theta'(x)&amp;=\delta(x)     \\\delta'(x)f(x)&amp;=-\delta(x)f'(x)     \\\partial[\phi(x),\phi(y)]&amp;=[\partial\phi(x),\phi(y)]     \\{[}\pi(x),\phi(y){]}&amp;=-i\delta(x-y) \end{aligned}$$</div><p></p>
+<p>于是我们可以很明显地看出 <span class="mathjax-exps">$D_R(x-y)$</span> 是 Klein-Gordon 算子的 Green 函数。<br>
+当然，我们也可以利用 Fourier Transform 将传播子写出：</p>
+<p></p><div class="mathjax-exps">$$D_R(x-y)=\int\frac{d^4p}{(2\pi)^4}e^{-ip·(x-y)}\widetilde{D}_R(p)$$</div><p></p>
+<p>类比 Green 函数：</p>
+<p></p><div class="mathjax-exps">$$(-p^2+m^2)\widetilde{D}_R(p)=-i$$</div><p></p>
+<p>于是立刻有：</p>
+<p></p><div class="mathjax-exps">$$D_R(x-y)=\int\frac{d^4p}{(2\pi)^4}\frac{i}{p^2-m^2}e^{-ip·(x-y)}$$</div><p></p>
+<p>上式的积分中，对 <span class="mathjax-exps">$p^0$</span> 的部分可以由四种不同的围道导出。我们会发现，其中选择从下半平面绕过 <span class="mathjax-exps">$-E_\mathbf{p}$</span> 而从上半平面绕过 <span class="mathjax-exps">$+E_\mathbf{p}$</span> 的围道将会十分的方便。这称为<span class="mathjax-exps">$Feynman\:prescription$</span>. 我们可以将其方便地记为：</p>
+<p></p><div class="mathjax-exps">$$D_F(x-y)=\int\frac{d^4p}{(2\pi)^4}\frac{i}{p^2-m^2+i\epsilon}e^{-ip·(x-y)}$$</div><p></p>
+<p>此时该被积函数的极点变为了 <span class="mathjax-exps">$±(E_\mathbf{p}-i\epsilon)$</span>。当 <span class="mathjax-exps">$x^0&gt;y^0$</span> 时我们取下半圆平面围道，即可得到 <span class="mathjax-exps">$D(x-y)$</span>，当 <span class="mathjax-exps">$x^0&lt;y^0$</span> 时，我们取上半圆平面围道，即可得到 <span class="mathjax-exps">$x$</span> 与 <span class="mathjax-exps">$y$</span> 交换后的结果。即：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     D_F(x-y)&amp;=     \left\{         \begin{aligned}             &amp;D(x-y)\quad for\:x^0&gt;y^0             \\&amp;D(y-x)\quad for\:x^0&lt;y^0         \end{aligned}     \right.     \\&amp;=\theta(x^0-y^0)\langle0|\phi(x)\phi(y)|0\rangle+\theta(y^0-x^0)\langle0|\phi(y)\phi(x)|0\rangle     \\&amp;\equiv\langle0|T[\phi(x)\phi(y)|]0\rangle \end{aligned}$$</div><p></p>
+<p>这里的 "<span class="mathjax-exps">$T$</span>" 被定义为时序函数，效果是将 <span class="mathjax-exps">$x$</span> 与 <span class="mathjax-exps">$y$</span> 中后发生的排在先发生的左边。<br>
+同样的，通过将 Klein-Gordon 算子作用在 <span class="mathjax-exps">$D_F(x-y)$</span> 上，你能验证它也是 Klein-Gordon 算子的 Green 函数。<br>
+我们将 <span class="mathjax-exps">$D_F(x-y)$</span> 称为 Klein-Gordon 粒子的 Feynman 传播子。</p>
+<h2 class="crossnote-header" id="%E7%BB%8F%E5%85%B8%E5%9C%BA%E6%BA%90%E5%88%9B%E9%80%A0%E7%9A%84%E7%B2%92%E5%AD%90">经典场源创造的粒子</h2>
+
+<p>让我们来讨论一种现在可以处理的相互作用。考虑一个Klein-Gordon场与一个经典源的外场耦合，即考虑如下方程：</p>
+<p></p><div class="mathjax-exps">$$(\partial^2+m^2)\phi(x)=j(x)$$</div><p></p>
+<p>其中 <span class="mathjax-exps">$j(x)$</span> 是一个固定的、已知的关于时空的函数，且其仅对于有限的时间间隔不为零。<br>
+考虑场方程对应的Lagrangian：</p>
+<p></p><div class="mathjax-exps">$$\mathcal{L}=\frac{1}{2}(\partial_\mu\phi)^2-\frac{1}{2}m^2\phi^2+j(x)\phi(x)$$</div><p></p>
+<p>但在我们“仅对于有限的时间间隔不为零”的情况下，直接使用场方程是最简单的。在 <span class="mathjax-exps">$j(x)$</span> 打开之前，场函数为：</p>
+<p></p><div class="mathjax-exps">$$\phi_0(x)=\int\frac{d^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_\mathbf{p}}}\left(a_\mathbf{p}e^{-ip·x}+a^\dagger_\mathbf{p}e^{ip·x}\right)$$</div><p></p>
+<p>利用 Green 函数：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \phi(x)&amp;=\phi_0(x)+i\int d^4y\:D_R(x-y)j(y)     \\&amp;=\phi_0(x)+i\int d^4y\int\:\frac{d^3p}{(2\pi)^3}\:\frac{1}{2E_{\mathbf{p}}}\theta(x^0-y^0)\times\left(e^{-ip·(x-y)}-e^{ip·(x-y)}\right)j(y) \end{aligned}$$</div><p></p>
+<p>考虑 <span class="mathjax-exps">$x^0&gt;y^0$</span>，则结果中应仅含有 <span class="mathjax-exps">$j$</span> 的 Fourier 变换：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \phi(x)&amp;=\phi_0(x)+i\int\:\frac{d^3p}{(2\pi)^3}\:\frac{1}{2E_{\mathbf{p}}}\int d^4y\left(e^{-ip·x}e^{ip·y}-e^{ip·x}e^{-ip·y}\right)j(y)     \\&amp;=\phi_0(x)+i\int\:\frac{d^3p}{(2\pi)^3}\:\frac{1}{2E_{\mathbf{p}}}\left(\tilde{j}(p)e^{-ip·x}-\tilde{j}^*(p)e^{ip·x}\right)     \\&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_\mathbf{p}}}\left\{\left(a_\mathbf{p}+\frac{i}{\sqrt{2E_{\mathbf{p}}}}\tilde{j}(p)\right)e^{-ip·x}+\left(a^\dagger_\mathbf{p}-\frac{i}{\sqrt{2E_{\mathbf{p}}}}\tilde{j}^*(p)\right)e^{ip·x}\right\} \end{aligned}$$</div><p></p>
+<p>可以猜到，Hamiltonian 的表达式将变为：</p>
+<p></p><div class="mathjax-exps">$$H=\int\frac{d^3p}{(2\pi)^2}E_\mathbf{p}\left(a^\dagger_\mathbf{p}-\frac{i}{\sqrt{2E_{\mathbf{p}}}}\tilde{j}^*(p)\right)\left(a_\mathbf{p}+\frac{i}{\sqrt{2E_{\mathbf{p}}}}\tilde{j}(p)\right)$$</div><p></p>
+<p>于是有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \langle0|H|0\rangle&amp;=\langle0|\int\frac{d^3p}{(2\pi)^2}E_\mathbf{p}\left(a^\dagger_\mathbf{p}-\frac{i}{\sqrt{2E_{\mathbf{p}}}}\tilde{j}^*(p)\right)\left(a_\mathbf{p}+\frac{i}{\sqrt{2E_{\mathbf{p}}}}\tilde{j}(p)\right)|0\rangle     \\&amp;=\langle0|     \int\frac{d^3p}{(2\pi)^2}E_\mathbf{p}     \left(a^\dagger_\mathbf{p}a_\mathbf{p}+a^\dagger_\mathbf{p}\frac{i}{\sqrt{2E_{\mathbf{p}}}}\tilde{j}(p)     -\frac{i}{\sqrt{2E_{\mathbf{p}}}}\tilde{j}^*(p)a_\mathbf{p}+\frac{1}{2E_\mathbf{p}}|\tilde{j}|^2\right)     |0\rangle     \\&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2}|\tilde{j}(p)|^2 \end{aligned}$$</div><p></p>
+<p>这个结果说明我们可以将 <span class="mathjax-exps">$\displaystyle\frac{1}{2E_\mathbf{p}}|\tilde{j}(p)|^2$</span> 作为在p模式下产生粒子的概率密度。于是，总粒子数为：</p>
+<p></p><div class="mathjax-exps">$$\int dN=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2E_\mathbf{p}}|\tilde{j}(p)|^2$$</div><p></p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#时空中的klein-gordon场" class="md-toc-link"><p>时空中的Klein-Gordon场</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#heisenberg绘景下的klein-gordon场" class="md-toc-link">
+            <p>Heisenberg绘景下的Klein-Gordon场</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#因果律" class="md-toc-link">
+            <p>因果律</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#klein-gordon传播子" class="md-toc-link">
+            <p>Klein-Gordon传播子</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#经典场源创造的粒子" class="md-toc-link">
+            <p>经典场源创造的粒子</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

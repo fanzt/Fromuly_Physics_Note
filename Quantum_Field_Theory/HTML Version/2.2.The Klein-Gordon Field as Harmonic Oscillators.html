@@ -1,0 +1,179 @@
+<!DOCTYPE html><html><head>
+      <title>2.2.The Klein-Gordon Field as Harmonic Oscillators</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" charset="UTF-8"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em!important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em!important;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em!important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([for=preview]) .code-chunk .btn-group{display:none}.markdown-preview:not([for=preview]) .code-chunk .status{display:none}.markdown-preview:not([for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      <h1 class="crossnote-header" id="klein-gordon%E5%9C%BA%E4%BD%9C%E4%B8%BA%E8%B0%90%E6%8C%AF%E5%AD%90">Klein-Gordon场作为谐振子</h1>
+
+<p><img src="./Images/2.jpg" alt="节点"></p>
+<h2 class="crossnote-header" id="the-start-of-quantum-field-theory">The Start of Quantum Field Theory</h2>
+
+<p>我们对量子场论的讨论将从实Klein-Gordon场这个简单的场开始。我们的基本思想是从一个经典场论开始，然后通过将动力学量解释为算符并获得正则对易关系来量子化它。然后，我们将会通过找到Hamiltonian的本征值与本征态的方式来“解出”这个理论。接下来，我们将使用谐振子作为一个例子。</p>
+<h2 class="crossnote-header" id="klein-gordon-field">Klein-Gordon Field</h2>
+
+<p>量子化Klein-Gordon场的过程与量子化任何其他的动力学系统的过程是相同的。<br>
+我们将 <span class="mathjax-exps">$\phi$</span> 和 <span class="mathjax-exps">$\pi$</span> 视为算符，并采用合适的对易关系。<br>
+对于单个粒子或多个粒子的离散系统，我们有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}\left[q_i,p_j\right]=i\delta_{ij}\\\left[q_i,q_j\right]=\left[p_i,p_j\right]&amp;=0\end{aligned}$$</div><p></p>
+<p>对于一个连续的系统，我们可以将其推广为：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}\left[\phi(\mathbf{x}),\pi{(\mathbf{y})}\right]&amp;=i\delta^3(\mathbf{x}-\mathbf{y})\\\left[\phi(\boldsymbol{\rm x}),\phi(\boldsymbol{\rm y})\right]=&amp;\left[\pi(\boldsymbol{\rm x}),\pi(\boldsymbol{\rm y})\right]=0\end{aligned}$$</div><p></p>
+<p>（目前我们所有的讨论都在Schrodinger绘景之下，即 <span class="mathjax-exps">$\phi$</span> 与 <span class="mathjax-exps">$\pi$</span> 不依赖于时间。）<br>
+Hamiltonian作为 <span class="mathjax-exps">$\phi$</span> 与 <span class="mathjax-exps">$\pi$</span> 的函数，也成为了一个算符。<br>
+接下来我们将要从Hamiltonian中寻找谱。由于并没有什么显然的方法来进行这项工作，让我们考虑Fourier空间中的Klein-Gordon方程。将Klein-Gordon场在动量空间中展开：</p>
+<p></p><div class="mathjax-exps">$$\phi(\mathbf{x},t)=\int\frac{d^3p}{(2\pi)^3}\:e^{i\mathbf{p}·\mathbf{x}}\phi(\mathbf{p},t)$$</div><p></p>
+<p>（由Fourier变换的共轭性质可知，为保证 <span class="mathjax-exps">$\phi(\boldsymbol{\rm x})$</span> 为实数， <span class="mathjax-exps">$\phi^*(\boldsymbol{\rm p})$</span> = <span class="mathjax-exps">$\phi(\boldsymbol{\rm -p})$</span>.）<br>
+于是Klein-Gordon方程变为：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}&amp;\left(\frac{\partial^2}{\partial t^2}-\nabla^2+m^2\right)\phi(\boldsymbol{\rm x},t)=0\\&amp;\Rightarrow\left(\frac{\partial^2}{\partial t^2}-\nabla^2+m^2\right)\int\frac{d^3p}{(2\pi)^3}\:e^{i\mathbf{p}·\mathbf{x}}\phi(\mathbf{p},t)=0\\&amp;\Rightarrow\left(\frac{\partial^2}{\partial t^2}+\boldsymbol{\rm p}^2+m^2\right)\int\frac{d^3p}{(2\pi)^3}\:e^{i\mathbf{p}·\mathbf{x}}\phi(\mathbf{p},t)=0\\&amp;\Rightarrow\left(\frac{\partial^2}{\partial t^2}+\boldsymbol{\rm p}^2+m^2\right)\phi(\boldsymbol{\rm p},t)=0\end{aligned}$$</div><p></p>
+<p>（该方程对 <span class="mathjax-exps">$\mathbf{p}$</span> 取任意值时的 <span class="mathjax-exps">$\phi(\boldsymbol{\rm p},t)$</span> 恒成立，而积分本身是对 <span class="mathjax-exps">$\mathbf{p}$</span> 的全空间积分，这说明该方程直接对被积函数成立。）<br>
+显然，这个方程与简谐振动的方程完全一致。其角频率为：</p>
+<p></p><div class="mathjax-exps">$$\omega_p=\sqrt{\mathbf{p}^2+m^2}$$</div><p></p>
+<h2 class="crossnote-header" id="harmonic-oscillators-in-quantum-mechanics">Harmonic Oscillators in Quantum Mechanics</h2>
+
+<p>按照谐振子系统的处理方式，写出Hamiltonian量：</p>
+<p></p><div class="mathjax-exps">$$H_{SHO}=\frac{1}{2}p^2+\frac{1}{2}\omega^2\phi^2$$</div><p></p>
+<p>（注：这里为了计算简便，取m=1）<br>
+定义产生湮灭算符为：</p>
+<p></p><div class="mathjax-exps">$$a=\sqrt{\frac{\omega}{2}}\left(\phi+\frac{ip}{\omega}\right)\quad a^\dagger=\sqrt{\frac{\omega}{2}}\left(\phi-\frac{ip}{\omega}\right)$$</div><p></p>
+<p>于是有：</p>
+<p></p><div class="mathjax-exps">$$\phi=\sqrt{\frac{1}{2\omega}}(a+a^\dagger)\quad p=-i\sqrt{\frac{\omega}{2}}(a-a^\dagger)$$</div><p></p>
+<p>以及：</p>
+<p></p><div class="mathjax-exps">$$[a,a^\dagger]=1$$</div><p></p>
+<p>于是Hamiltonian量可被转写为：</p>
+<p></p><div class="mathjax-exps">$$H=\omega\left(a^\dagger a+\frac{1}{2}\right)$$</div><p></p>
+<p>显然，使 <span class="mathjax-exps">$a|0\rangle=0$</span> 的 <span class="mathjax-exps">$|0\rangle$</span> 是Hamiltonian的本征矢。此外：</p>
+<p></p><div class="mathjax-exps">$$[H_{SHO},a]=-\omega a\quad[H_{SHO},a^\dagger]=\omega a^\dagger$$</div><p></p>
+<p>我们可以知道：</p>
+<p></p><div class="mathjax-exps">$$|n\rangle\equiv(a^\dagger)^n|0\rangle$$</div><p></p>
+<p>是 <span class="mathjax-exps">$H_{SHO}$</span> 的本征态，其本征值是 <span class="mathjax-exps">$\left(n+\frac{1}{2}\right)\omega$</span> ，我们便得到了能量的谱。</p>
+<h2 class="crossnote-header" id="klein-gordon-field-as-harmonic-oscillators">Klein-Gordon Field as Harmonic Oscillators</h2>
+
+<p>对于Klein-Gordon场的Hamiltonian，我们可以用与谐振子同样的技巧来处理，但由于我们得到的谐振子方程是对傅里叶展开中的每一个系数的方程，所以我们需要将傅里叶展开中的每一项系数都视为一个谐振子，并且为每一项系数引入独立的产生湮灭算子：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}\phi(\mathbf{x})&amp;=\int\:\frac{d^3p}{(2\pi)^3}\:\frac{1}{\sqrt{2\omega_{\mathbf{p}}}}\left(a_{\mathbf{p}}e^{i\mathbf{p}·\mathbf{x}}+a_\mathbf{p}^\dagger e^{-i\mathbf{p}·\mathbf{x}}\right)\\\pi(\mathbf{x})&amp;=\int\:\frac{d^3p}{(2\pi)^3}\:(-i)\sqrt{\frac{\omega_\mathbf{p}}{2}}\left(a_{\mathbf{p}}e^{i\mathbf{p}·\mathbf{x}}-a_\mathbf{p}^\dagger e^{-i\mathbf{p}·\mathbf{x}}\right)\end{aligned}$$</div><p></p>
+<p>由于括号中的两项积分独立，我们可以将第二项中的 <span class="mathjax-exps">$\mathbf{p}$</span> 替换为 <span class="mathjax-exps">$-\mathbf{p}$</span> ，并将指数项提到后面：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}\phi(\mathbf{x})&amp;=\int\:\frac{d^3p}{(2\pi)^3}\:\frac{1}{\sqrt{2\omega_{\mathbf{p}}}}\left(a_{\mathbf{p}}+a_\mathbf{-p}^\dagger\right)e^{i\mathbf{p}·\mathbf{x}}\\\pi(\mathbf{x})&amp;=\int\:\frac{d^3p}{(2\pi)^3}\:(-i)\sqrt{\frac{\omega_\mathbf{p}}{2}}\left(a_{\mathbf{p}}-a_\mathbf{-p}^\dagger\right)e^{i\mathbf{p}·\mathbf{x}}\end{aligned}$$</div><p></p>
+<p>产生湮灭算符的对易关系可以变为：</p>
+<p></p><div class="mathjax-exps">$$[a_{\mathbf{p}},a_\mathbf{p'}^\dagger]=(2\pi)^3\delta^{(3)}(\mathbf{p}-\mathbf{p}')$$</div><p></p>
+<p>（这里 <span class="mathjax-exps">$(2\pi)^3$</span> 项的引入是为了后续计算能与分母上的 <span class="mathjax-exps">$(2\pi)^3$</span> 项消掉。）<br>
+我们通过计算 <span class="mathjax-exps">$\phi$</span> 与 <span class="mathjax-exps">$\pi$</span> 的对易子来验证一下这个对易关系的正确性：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}\left[\phi(\boldsymbol{\rm x}),\pi(\boldsymbol{\rm x}')\right]&amp;=\int\frac{d^3pd^3p'}{(2\pi)^6}\frac{-i}{2}\sqrt{\frac{\omega_\mathbf{p'}}{\omega_\mathbf{p}}}([a^\dagger_\mathbf{-p},a_\mathbf{p}]-[a_\mathbf{p},a^\dagger_\mathbf{-p}])e^{i(\mathbf{p}·\mathbf{x}+\mathbf{p'}·\mathbf{x'})}\\&amp;=\int\frac{d^3pd^3p'}{(2\pi)^3}i\delta^3(\mathbf{p}-(-\mathbf{p'}))e^{(i(\mathbf{p}·\mathbf{x}+\mathbf{p'}·\mathbf{x'}))}\\&amp;=\int\frac{d^3p}{(2\pi)^3}ie^{i\mathbf{p}·(\mathbf{x}-\mathbf{x'})}\\&amp;=i\delta^3(\mathbf{x}-\mathbf{x'})\end{aligned}$$</div><p></p>
+<p>然后我们可以构建Hamiltonian：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}H&amp;=\int d^3x\:\mathcal H\\&amp;=\int d^3x[\frac{1}{2}\pi^2+\frac{1}{2}(\nabla\phi)^2+\frac{1}{2}m^2\phi^2]\end{aligned}$$</div><p></p>
+<p>其中：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned} \phi^2&amp;=\int \frac{d^3pd^3p'}{(2\pi)^6} \frac{1}{2\sqrt{\omega_\mathbf{p}\omega_\mathbf{p'}}} (a_\mathbf{p}+a^\dagger_\mathbf{-p}) (a_\mathbf{p'}+a^\dagger_\mathbf{-p'}) e^{i(\mathbf{p}+\mathbf{p'})·\mathbf{x}} \\\pi^2&amp;=\int \frac{d^3pd^3p'}{(2\pi)^6} \frac{-\sqrt{\omega_\mathbf{p}\omega_\mathbf{p'}}}{2} (a_\mathbf{p}-a^\dagger_\mathbf{-p}) (a_\mathbf{p'}-a^\dagger_\mathbf{-p'}) e^{i(\mathbf{p}+\mathbf{p'})·\mathbf{x}} \\\nabla\phi&amp;=\int \frac{d^3p}{(2\pi)^3} \frac{i\mathbf{p}}{\sqrt{2\omega_\mathbf{p}}} (a_\mathbf{p}+a^\dagger_\mathbf{-p}) e^{i\mathbf{p}·\mathbf{x}} \\(\nabla\phi)^2&amp;=\int \frac{d^3pd^3p'}{(2\pi)^6} \frac{-\mathbf{p}·\mathbf{p'}}{2\sqrt{\omega_\mathbf{p}\omega_\mathbf{p'}}} (a_\mathbf{p}+a^\dagger_\mathbf{-p}) (a_\mathbf{p'}+a^\dagger_\mathbf{-p'}) e^{i(\mathbf{p}+\mathbf{p'})·\mathbf{x}} \end{aligned}$$</div><p></p>
+<p>于是：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}H&amp;=\int d^3x\int\frac{d^3pd^3p'}{(2\pi)^6}e^{i(\mathbf{p}+\mathbf{p'})·\mathbf{x}}\\\times&amp;\left\{\frac{-\sqrt{\omega_\mathbf{p}\omega_\mathbf{p'}}}{4}(a_\mathbf{p}-a^\dagger_\mathbf{-p})(a_\mathbf{p'}-a^\dagger_\mathbf{-p'})+\frac{-\mathbf{p}·\mathbf{p'}+m^2}{4\sqrt{\omega_\mathbf{p}\omega_\mathbf{p'}}}(a_\mathbf{p}+a^\dagger_\mathbf{-p})(a_\mathbf{p'}+a^\dagger_\mathbf{-p'})\right\}\\&amp;=\int\frac{d^3pd^3p'}{(2\pi)^3}\delta^3(\mathbf{p}-(-\mathbf{p'}))\\&amp;\times\frac{-\sqrt{\omega_\mathbf{p}\omega_\mathbf{p'}}}{4}(a_\mathbf{p}-a^\dagger_\mathbf{-p})(a_\mathbf{p'}-a^\dagger_\mathbf{-p'})+\frac{-\mathbf{p}·\mathbf{p'}+m^2}{4\sqrt{\omega_\mathbf{p}\omega_\mathbf{p'}}}(a_\mathbf{p}+a^\dagger_\mathbf{-p})(a_\mathbf{p'}+a^\dagger_\mathbf{-p'})\\&amp;=\int\frac{d^3p}{(2\pi)^3}\left(-\frac{\omega_\mathbf{p}}{4}\right)(a_\mathbf{p}-a^\dagger_{-\mathbf{p}})(a_{-\mathbf{p}}-a^\dagger_{\mathbf{p}})+\frac{\omega_\mathbf{p}}{4}(a_\mathbf{p}+a^\dagger_{-\mathbf{p}})(a_{-\mathbf{p}}+a^\dagger_{\mathbf{p}})\end{aligned}$$</div><p></p>
+<p>注意到：</p>
+<p></p><div class="mathjax-exps">$$\int^\infty_{-\infty} f(-x)\:dx=\int^{-\infty}_\infty -f(u)\:du=\int^\infty_{-\infty}f(u)\:du$$</div><p></p>
+<p>于是有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}H&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{\omega_\mathbf{p}}{4}(2[a_\mathbf{p},a^\dagger_\mathbf{p}]+4a^\dagger_\mathbf{p}a_\mathbf{p})\\&amp;=\int\frac{d^3p}{(2\pi)^2}\omega_\mathbf{p}\left(\frac{1}{2}[a_\mathbf{p},a^\dagger_\mathbf{p}]+a^\dagger_\mathbf{p}a_\mathbf{p}\right)\end{aligned}$$</div><p></p>
+<p>其中括号内的第一项是正比于 <span class="mathjax-exps">$\delta(0)$</span> 的。对它的积分是对全空间所有的零点能 <span class="mathjax-exps">$\displaystyle\frac{\omega_\mathbf{p}}{2}$</span> 的求和。这将会是发散的。幸运的是，由于实验只能测量出各能级与Hamiltonian基态能级之间的差值，所以我们的测量不会得到发散的值。因此，我们将在后续的所有计算中直接忽略这项无穷大常数。<br>
+于是我们可以写出Hamiltonian与产生湮灭算符的对易关系：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}\left[H,a_{\mathbf{p}}^\dagger\right]&amp;=\int d^3p'\:a^\dagger_\mathbf{p}\omega_\mathbf{p'}\delta(\mathbf{p}-\mathbf{p'})=\omega_\mathbf{p}a^\dagger_\mathbf{p}\\\left[H,a_\mathbf{p}\right]&amp;=\int d^3p'\:(-a_\mathbf{p})\omega_\mathbf{p'}\delta(\mathbf{p}-\mathbf{p'})=-\omega_\mathbf{p}a_\mathbf{p}\end{aligned}$$</div><p></p>
+<p>现在我们可以写下这个理论的能谱。像谐振子一样，我们将对任意 <span class="mathjax-exps">$\mathbf{p}$</span> 使 <span class="mathjax-exps">$a_\mathbf{p}|0\rangle=0$</span> 的 <span class="mathjax-exps">$|0\rangle$</span> 称为基态或者“真空”。在我们舍掉无穷大项后，其具有的能量 <span class="mathjax-exps">$E=0$</span> 。其他任意的能级可以由将生成算符作用在 <span class="mathjax-exps">$|0\rangle$</span> 上得到。普遍来说，<span class="mathjax-exps">$a^\dagger_\mathbf{p}a^\dagger_\mathbf{q}···|0\rangle$</span> 是 <span class="mathjax-exps">$H$</span> 的本征态，其本征值为 <span class="mathjax-exps">$\omega_\mathbf{p}+\omega_\mathbf{q}$</span> 。<br>
+接下来让我们来尝试解读Hamiltonian的本征态。考虑由能动张量导出的动量算符的定义：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}\boldsymbol{P}=-\int d^3x\:\pi(\mathbf{x})\nabla\phi(\mathbf{x})\end{aligned}$$</div><p></p>
+<p>带入上面计算的 <span class="mathjax-exps">$\pi(\mathbf{x})$</span> 和 <span class="mathjax-exps">$\nabla\phi(\mathbf{x})$</span> 的表达式，有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \boldsymbol{P}&amp;=-\int{d^3x\:\pi(\mathbf{x})\nabla{\phi(\mathbf{x})}}     \\&amp;=-\int{d^3x\int{\frac{d^3pd^3p'}{(2\pi)^6}(-i)\sqrt{\frac{\omega_\mathbf{p}}{2}}\frac{i\mathbf{p}}{\sqrt{2\omega_\mathbf{p}}}(a_\mathbf{p}+a^\dagger_\mathbf{-p})(a_\mathbf{p'}-a^\dagger_\mathbf{-p'})e^{i(\mathbf{p}+\mathbf{p'})·\mathbf{x}}}}     \\&amp;=-\int{\frac{d^3pd^3p'}{(2\pi)^6}(-i)\sqrt{\frac{\omega_\mathbf{p'}}{2}}\frac{i\mathbf{p}}{\sqrt{2\omega_\mathbf{p}}}(a_\mathbf{p}+a^\dagger_\mathbf{-p})(a_\mathbf{p'}-a^\dagger_\mathbf{-p'})\delta^3(\boldsymbol{\rm{p-(-p')}})}     \\&amp;=-\int{\frac{d^3p}{(2\pi)^3}}\frac{\mathbf{p}}{2}(a_\mathbf{p}+a^\dagger_\mathbf{-p})(a_\mathbf{-p}-a^\dagger_\mathbf{p})     \\&amp;=-\int\frac{d^3p}{(2\pi)^3}\frac{\mathbf{p}}{2}(a_\mathbf{p}a_\mathbf{-p}+a^\dagger_\mathbf{-p}a_\mathbf{-p}-a_\mathbf{p}a^\dagger_\mathbf{p}-a^\dagger_\mathbf{-p}a^\dagger_\mathbf{p})     \\&amp;=-\int\frac{d^3p}{(2\pi)^3}\frac{\mathbf{p}}{2}(a_\mathbf{p}a_\mathbf{-p}-a^\dagger_\mathbf{-p}a^\dagger_\mathbf{p})-\int\frac{d^3p}{(2\pi)^3}\frac{\mathbf{p}}{2}(a^\dagger_\mathbf{-p}a_\mathbf{-p}-a_\mathbf{p}a^\dagger_\mathbf{p}) \end{aligned}$$</div><p></p>
+<p>将上式中的第一项做变量代换 <span class="mathjax-exps">$\boldsymbol{\rm{p=-p}}$</span> 后有：</p>
+<p></p><div class="mathjax-exps">$$I_1=-\int\frac{d^3p}{(2\pi)^3}\frac{\mathbf{-p}}{2}(a_\mathbf{-p}a_\mathbf{p}-a^\dagger_\mathbf{p}a^\dagger_\mathbf{-p})=-I_1$$</div><p></p>
+<p>于是就有 <span class="mathjax-exps">$I_1=0$</span>，再考虑上式中的第二项，有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     I_2&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{\mathbf{p}}{2}(a_\mathbf{p}a^\dagger_\mathbf{p}+a^\dagger_\mathbf{p}a_\mathbf{p})     \\&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{\mathbf{p}}{2}([a_\mathbf{p},a^\dagger_\mathbf{p}]+2a^\dagger_\mathbf{p}a_\mathbf{p}) \end{aligned}$$</div><p></p>
+<p>类似于Hamiltonian的处理，我们将无穷大项直接舍掉，于是就有：</p>
+<p></p><div class="mathjax-exps">$$\boldsymbol{P}=\int\frac{d^3p}{(2\pi)^3}\frac{\mathbf{p}}{2}(2a^\dagger_\mathbf{p}a_\mathbf{p})=\int\frac{d^3p}{(2\pi)^3}\mathbf{p}(a^\dagger_\mathbf{p}a_\mathbf{p})$$</div><p></p>
+<p>所以我们可以看到，算符 <span class="mathjax-exps">$a^\dagger_\mathbf{p}$</span> 生成了动量 <span class="mathjax-exps">$\mathbf{p}$</span> 与能量 <span class="mathjax-exps">$\omega_\mathbf{p}=\sqrt{|\mathbf{p}|^2+m^2}$</span>. 类似的，我们可以看到，态 <span class="mathjax-exps">$a^\dagger_\mathbf{p}a^\dagger_\mathbf{q}····|0\rangle$</span> 具有动量 <span class="mathjax-exps">$\mathbf{p}+\mathbf{q}····$</span> 由于它们是一些离散的具有相对论动量-能量关系的实体，我们将会把它们称为<em>激发态粒子</em>。于是从现在开始我们将会称 <span class="mathjax-exps">$\omega_\mathbf{p}$</span> 为 <span class="mathjax-exps">$E_\mathbf{p}$</span> （或直接简称为 <span class="mathjax-exps">$E$</span>），因为现在它确实就是粒子的能量。<br>
+这些形式也允许我们决定粒子的统计规律。Klein-Gordon粒子可以得到Bose-Einstein统计。<br>
+我们很自然地选择将基态归一化为： <span class="mathjax-exps">$\langle0|0\rangle=1$</span>. 由于一个单粒子态 <span class="mathjax-exps">$|\mathbf{p}\rangle\propto a^\dagger_\mathbf{p}$</span> 也会经常出现，所以让我们考虑一下对它的归一化。<br>
+最常用的归一化方法 <span class="mathjax-exps">$\langle\mathbf{p}|\mathbf{q}\rangle=(2\pi)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$</span> 并不满足Lorentz不变性。我们可以直接使用对某一方向的动量的boost变换并利用Dirac delta函数的性质验证这一点。不过，我们会发现，<span class="mathjax-exps">$E_\mathbf{p}\delta^{(3)}(\mathbf{p}-\mathbf{q})$</span> 是一个Lorentz不变量。因此，我们可以定义：</p>
+<p></p><div class="mathjax-exps">$$|\mathbf{p}\rangle=\sqrt{2E_\mathbf{p}}a^\dagger_\mathbf{p}|0\rangle$$</div><p></p>
+<p>于是，我们就有：</p>
+<p></p><div class="mathjax-exps">$$\langle\mathbf{p}|\mathbf{q}\rangle=2E_\mathbf{p}(2\pi)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$$</div><p></p>
+<p>（系数 <span class="mathjax-exps">$2$</span> 的引入不是必要的，但是可以在计算中提供方便。）<br>
+在Hilbert空间中，Lorentz变换 <span class="mathjax-exps">$\Lambda$</span> 将会作为一个幺正算子 <span class="mathjax-exps">$U(\Lambda)$</span> 生效。我们的归一化关系将变为：</p>
+<p></p><div class="mathjax-exps">$$U(\Lambda)|\mathbf{p}\rangle=|\Lambda\mathbf{p}\rangle$$</div><p></p>
+<p>若写成对算符的变换，则有：</p>
+<p></p><div class="mathjax-exps">$$U(\Lambda)a^\dagger_\mathbf{p}U^{-1}(\Lambda)=\sqrt{\frac{E_{\Lambda\mathbf{p}}}{E_\mathbf{p}}}a^\dagger_{\Lambda\mathbf{p}}$$</div><p></p>
+<p>接着，我们引入如下完备性关系：</p>
+<p></p><div class="mathjax-exps">$$(\boldsymbol{\rm{1}})_{1-particle}=\int\frac{d^3p}{(2\pi)^3}|\mathbf{p}\rangle\frac{1}{2E_\mathbf{p}}\langle\mathbf{p}|$$</div><p></p>
+<p>这样形式的积分我们将会十分地常见。事实上，我们有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \int\frac{d^4p}{(2\pi)^4}(2\pi)\:\delta(p^\mu p_\mu-m^2)     &amp;=\int\frac{d^3p}{(2\pi)^3}dp_0\:\delta((p^0)^2-(p^1)^2-(p^2)^2-(p^3)^2-m^2)     \\&amp;=\int\frac{d^3p}{(2\pi)^3}\left.\frac{1}{2p^0}\right|_{p^0=\sqrt{|\mathbf{p}|^2+m^2}}     \\&amp;=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2E_\mathbf{p}} \end{aligned}$$</div><p></p>
+<p>由于上式左端是对4维矢量的积分，所以 <span class="mathjax-exps">$\displaystyle{\int\frac{d^3p}{(2\pi)^3}\frac{1}{2E_\mathbf{p}}}$</span> 是一个Lorentz不变的3维动量积分。这就是说，如果 <span class="mathjax-exps">$f(p)$</span> 是Lorentz不变的，那么<span class="mathjax-exps">$\displaystyle{\int\frac{d^3p}{(2\pi)^3}\frac{f(p)}{2E_\mathbf{p}}}$</span> 也将如此。我们可以将这个积分视为对四维空间中的双曲面体 <span class="mathjax-exps">$p^2=m^2$</span> 在 <span class="mathjax-exps">$p^0&gt;0$</span> 的部分的全域积分。</p>
+<p>最终，让我们考虑态 <span class="mathjax-exps">$\phi(\mathbf{x})|0\rangle$</span> 的表达式。由上文中 <span class="mathjax-exps">$\phi(\mathbf{x})$</span> 的表达式，我们可知：</p>
+<p></p><div class="mathjax-exps">$$\phi(\mathbf{x})|0\rangle=\int\frac{d^3p}{(2\pi)^3}\frac{1}{2E_\mathbf{p}}e^{-i\mathbf{p}·\mathbf{x}}|\mathbf{p}\rangle$$</div><p></p>
+<p>注意到这是对具有确定动量的单粒子态的一个线性叠加。如果去掉系数 <span class="mathjax-exps">$\displaystyle\frac{1}{2E_\mathbf{p}}$</span>，这便是非相对论量子力学中的位置本征态 <span class="mathjax-exps">$|\mathbf{x}\rangle$</span> 而在 <span class="mathjax-exps">$\mathbf{p}$</span> 很小的情况下，<span class="mathjax-exps">$\displaystyle\frac{1}{2E_\mathbf{p}}$</span> 也将趋近于一个常数项。因此我们给予该线性叠加一个与NRQM中相同的解释，并将算符 <span class="mathjax-exps">$\phi(\mathbf{x})$</span> 在基态上的作用解释为创造了一个位于 <span class="mathjax-exps">$\mathbf{x}$</span> 位置的粒子。</p>
+<p>考虑 <span class="mathjax-exps">$\langle0|\phi(\mathbf{x})|\mathbf{p}\rangle$</span>，我们有：</p>
+<p></p><div class="mathjax-exps">$$\begin{aligned}     \langle0|\phi(\mathbf{x})|\mathbf{p}\rangle&amp;=\langle0|\int\:\frac{d^3p'}{(2\pi)^3}\:\frac{1}{\sqrt{2E_{\mathbf{p'}}}}\left(a_{\mathbf{p'}}+a_\mathbf{-p'}^\dagger\right)e^{i\mathbf{p'}·\mathbf{x}}\sqrt{2E_\mathbf{p}}a^\dagger_\mathbf{p}|0\rangle     \\&amp;=\langle0|\int d^3p'\sqrt{\frac{E_\mathbf{p}}{E_\mathbf{p'}}}\delta(\mathbf{p'}-\mathbf{p})e^{i\mathbf{p'}·\mathbf{x}}|0\rangle     \\&amp;=e^{i\mathbf{p}·\mathbf{x}} \end{aligned}$$</div><p></p>
+<p>我们将其解释为在位置空间中具有动量 <span class="mathjax-exps">$\mathbf{p}$</span> 的单个粒子的波函数。这与NRQM中 <span class="mathjax-exps">$\langle\mathbf{x}|\mathbf{p}\rangle\propto e^{i\mathbf{p}·\mathbf{x}}$</span> 相对应。</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#klein-gordon场作为谐振子" class="md-toc-link"><p>Klein-Gordon场作为谐振子</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#the-start-of-quantum-field-theory" class="md-toc-link">
+            <p>The Start of Quantum Field Theory</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#klein-gordon-field" class="md-toc-link">
+            <p>Klein-Gordon Field</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#harmonic-oscillators-in-quantum-mechanics" class="md-toc-link">
+            <p>Harmonic Oscillators in Quantum Mechanics</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#klein-gordon-field-as-harmonic-oscillators" class="md-toc-link">
+            <p>Klein-Gordon Field as Harmonic Oscillators</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
