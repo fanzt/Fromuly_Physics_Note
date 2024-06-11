@@ -1,7 +1,7 @@
 # 电磁学&近代物理 物竞复习
 
 $$
-    \newcommand{dbar}{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}}
+    \newcommand{dbar}{\delta}
     \newcommand{d}{\mathrm{d}}
     \newcommand{p}{\partial}
     \newcommand{l}{\left}

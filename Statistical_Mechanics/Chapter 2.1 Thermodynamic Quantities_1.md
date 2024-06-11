@@ -5,7 +5,7 @@
 >注：本文为笔者学习朗道《统计物理学I》过程中的笔记与相关内容的补充。笔者是初学者，文章内容如有错误，欢迎指正。
 
 $$
-    \newcommand{dbar}{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}}
+    \newcommand{dbar}{\delta}
     \newcommand{d}{\mathrm{d}}
     \newcommand{p}{\partial}
     \newcommand{l}{\left}

@@ -2,12 +2,12 @@
 
 > ~~参考书目：Landau 《连续介质电动力学》~~
 > 参考书目：Jackson 《Classical Electrodynamics》
-> > 去他妈的朗道，连续介质电动力学怎么看都是个热统+凝聚态的电磁辅助书籍——2023/4/1
+> > 去**的朗道，连续介质电动力学怎么看都是个热统+凝聚态的电磁辅助书籍——2023/4/1
 
 ## 前期准备
 
 $$
-    \newcommand{dbar}{\mathrm{d}\kern{-4.3pt}\bar{\small\phantom{q}}\kern{-0.7pt}}
+    \newcommand{dbar}{\delta}
     \newcommand{d}{\mathrm{d}}
     \newcommand{p}{\partial}
     \newcommand{l}{\left}
