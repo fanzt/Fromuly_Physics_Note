@@ -128,3 +128,16 @@
 
 ## 1.2.3 路径积分方法
 
+首先，路径积分不是用来处理非相对论量子力学的首选方法，甚至大部分情况下都不是一个实用的方法。但作为练习，我们仍旧尝试利用路径积分对谐振子势问题进行求解。
+路径积分的最终需求是求出传播子 $K(x,t;x_0,t_0)=\langle{x,t}|{x_0,t_0}\rangle$，因而我们首先写出路径积分下传播子的表达式：
+    $$
+    \begin{aligned}
+        K(x,t;x_0,t_0)&=\int^{x}_{x_0}\mathscr{D}[x(t)]\exp\left[i\int^{t_N}_{t_1}d{t}\frac{L_{classical}(x,\dot{x})}{\hbar}\right]
+    \end{aligned}
+    $$
+
+定义对于某一给定路径的短时传播子：
+    $$
+        K(x_n,t_n;x_{n-1},t_{n-1})=\exp\left[\frac{im(x_n-x_{n-1})^2}{2\hbar\Delta{t}}-
+        \frac{i\Delta{t}}{\hbar}\cdot{V}\left(\frac{x_n+x_{n-1}}{2}\right)\right]
+    $$

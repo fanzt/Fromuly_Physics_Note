@@ -102,4 +102,29 @@
 
 #### $\S$ 2.1.2.3 商空间的几何意义
 
-&emsp;&emsp;考虑 $X$ 是一个我们通常意义中的“空间”。
+&emsp;&emsp;事实上，商空间所代表的几何意义便是所谓的“认同”或者“粘合”操作。上文中我们写到，商空间被定义为某一几何中所有等价类组成的新集合。这实质上是把某一等价类中的所有元素（即几何空间中的“点”）认同为一个元素（点），也就意味着所谓的“粘合”操作。
+&emsp;&emsp;例如，对于一个闭圆盘 $D^2=\{(x,y)\in\mathbb{R}^2|x^2+y^2\leq1\}$，对其商掉边缘 $S^1=\{(x,y\in\mathbb{R}^2|x^2+y^2=1\}$，就相当于将整个圆盘的边缘粘成一个点，因而我们就可以得到三维空间中的二维球面 $S^2$. 进一步的，我们总有 $D^n/S^{n-1}=S^n$. 
+
+> *练习1* 令 $\mathrm{H}$ 一上半复平面 $\{\tau\in\mathbb{C}|\mathrm{Im}{\:\tau}\geq{0}\}$. 定义群: 
+> $$
+> \mathrm{SL}(2,\mathbb{Z})\equiv\left\{
+>   \begin{pmatrix}
+>           a & b
+>           \\c & d
+>   \end{pmatrix}\right|\left.\begin{matrix}\\\\\end{matrix}a,b,c,d\in\mathbb{Z},ad-bc=1\right\}
+>$$
+> 再定义关系 $\sim$，对于 $\tau,\tau'\in\mathrm{H}$，若满足存在矩阵 $A\in{\mathrm{SL}(2,\mathbb{Z})}$，使得:
+> $$
+>   \tau'=(a\tau+b)/(c\tau+d)
+> $$
+> 则称 $\tau\sim\tau'$
+> 证明这是一个等价关系。
+> *证明*：
+
+### $\S$ 2.1.3 群、陪集、正规子群与商群
+
+#### $\S$ 2.1.3.1 群
+
+#### $\S$ 2.1.3.2 陪集、正规子群与商群
+
+## $\S$ 2.2 Vector Space and Linear Algebra
