@@ -1,4 +1,4 @@
-# Chapter 2 Maps, Equivalence relation and Linear Space
+# Chapter 2 Maps, Equivalence relation, Group and Linear Space
 
 ![节点](./Images/1.jpg)
 
@@ -15,13 +15,11 @@
 &emsp;&emsp;设 $X$ 与 $Y$ 分别为两个集合，则一个映射（map）$f$ 被定义为对每个 $x\in{X}$ 都指定了一个 $y\in{Y}$ 的规则。我们将其写为：
     $$
         f:X\:\rightarrow\:Y
-        \tag{2.1}
     $$
 
 如果 $f$ 通过某个明确的表达式定义，则我们常常将其写为：
     $$
         f:x\:\mapsto\:f(x)
-        \tag{2.2}
     $$
 
 &emsp;&emsp;显然可能会有不止一个 $X$ 中的元素被映射到同一个 $y\in{Y}$，因此我们定义由映射到 $y\in{Y}$ 的所有 $x$ 构成的 $X$ 的子集为 $y$ 在映射 $f$ 下的原像，记作 $f^{-1}(y)=\{x\in{X}|f(x)=y\}$. 集合 $X$ 称为映射 $f$ 的定义域，而集合 $Y$ 称为该映射的值域。
@@ -54,9 +52,9 @@
 #### $\S$ 2.1.1.4 同态与同构
 
 &emsp;&emsp;考虑在集合 $X$ 与 $Y$ 上分别附加某个特定的代数结构（例如某种加法或者乘法）。如果一个映射 $f:X\rightarrow{Y}$ 是保代数结构的，则我们称 $f$ 是一个同态。
-> 例如：我们在 $X$ 与 $Y$ 上定义出“乘法”，分别记为 $\mathop{\times}\limits_{X}$ 与 $\mathop{\times}\limits_{Y}$。如果对于映射 $f$，我们有 $f(a\mathop{\times}\limits_{X}b)=f(a)\mathop{\times}\limits_{Y}f(b)$，则该映射将是一个同态.
+> 例如：我们在 $X$ 与 $Y$ 上定义出“乘法”，分别记为 $\mathop{\times}\limits_{X}$ 与 $\mathop{\times}\limits_{Y}$。如果对于映射 $f$，我们有 $f(a\mathop{\times}\limits_{X}b)=f(a)\mathop{\times}\limits_{Y}f(b)$，则该映射将是一个同态。
 
-&emsp;&emsp;而如果一个映射既是同态又是双射，则我们就称该映射为一个同构，并将集合 $X$ 与 $Y$ 称为相互同构的，记为 $x\cong{y}$
+&emsp;&emsp;而如果一个映射既是同态又是双射，则我们就称该映射为一个同构，并将集合 $X$ 与 $Y$ 称为相互同构的，记为 $x\cong{y}$.
 
 ----
 
@@ -87,7 +85,6 @@
 &emsp;&emsp;对于一个给定的集合 $X$ 和一个给定的等价关系 $\sim$，我们可以将 $X$ 分割为一系列互不相交的子集，称为等价类，记为 $[a]$. 等价类 $[a]$ 被定义为所有满足 $x\in{X}$ 且 $x\sim{a}$ 的 $x$ 构成的集合，即：
     $$
         [a]=\{x\in{X}|x\sim{a}\}
-        \tag{2.3}
     $$
 
 其中 $a$ 被称作 $[a]$ 的代表元。
@@ -102,8 +99,10 @@
 
 #### $\S$ 2.1.2.3 商空间的几何意义
 
-&emsp;&emsp;事实上，商空间所代表的几何意义便是所谓的“认同”或者“粘合”操作。上文中我们写到，商空间被定义为某一几何中所有等价类组成的新集合。这实质上是把某一等价类中的所有元素（即几何空间中的“点”）认同为一个元素（点），也就意味着所谓的“粘合”操作。
+&emsp;&emsp;事实上，商空间所代表的几何意义便是所谓的“认同”或者“粘合”操作。上文中我们写到，商空间被定义为某一集合中所有等价类组成的新集合。这实质上是把某一等价类中的所有元素（即几何空间中的“点”）认同为一个元素（点），也就意味着所谓的“粘合”操作。
 &emsp;&emsp;例如，对于一个闭圆盘 $D^2=\{(x,y)\in\mathbb{R}^2|x^2+y^2\leq1\}$，对其商掉边缘 $S^1=\{(x,y\in\mathbb{R}^2|x^2+y^2=1\}$，就相当于将整个圆盘的边缘粘成一个点，因而我们就可以得到三维空间中的二维球面 $S^2$. 进一步的，我们总有 $D^n/S^{n-1}=S^n$. 
+
+----
 
 > *练习1* 令 $\mathrm{H}$ 一上半复平面 $\{\tau\in\mathbb{C}|\mathrm{Im}{\:\tau}\geq{0}\}$. 定义群: 
 > $$
@@ -113,17 +112,72 @@
 >           \\c & d
 >   \end{pmatrix}\right|\left.\begin{matrix}\\\\\end{matrix}a,b,c,d\in\mathbb{Z},ad-bc=1\right\}
 >$$
-> 再定义关系 $\sim$，对于 $\tau,\tau'\in\mathrm{H}$，若满足存在矩阵 $A\in{\mathrm{SL}(2,\mathbb{Z})}$，使得:
+> 再定义关系 $\sim$，对于 $\tau,\tau'\in\mathrm{H}$，若满足存在矩阵 $\mathbf{A}\in{\mathrm{SL}(2,\mathbb{Z})}$，使得:
 > $$
 >   \tau'=(a\tau+b)/(c\tau+d)
 > $$
 > 则称 $\tau\sim\tau'$
 > 证明这是一个等价关系。
 > *证明*：
+> 1.反身性：取 $\mathbf{A}=\mathbf{I}=diag(1,1)=\delta^i_j$ 即可.
+> 2.对称性：设 $\mathbf{A}=\begin{pmatrix}
+>           a & b
+>           \\c & d
+>   \end{pmatrix}$, $\mathbf{A'}=\begin{pmatrix}
+>           a' & b'
+>           \\c' & d'
+>   \end{pmatrix}$，应有：$\displaystyle(a'\frac{a\tau+b}{c\tau+d}+b')/(c'\frac{a\tau+b}{c\tau+d}+d')=\tau$，化简并令 $\tau$ 的相同次幂项的系数为0，并要求其属于 $\mathrm{SL}(2,\mathbb{Z})$ 即有：
+> $$
+> \begin{aligned}
+>     c'a+d'c=0
+>     \\c'b+d'd-a'a-b'c=0
+>     \\a'b+b'd=0
+>     \\a'd'-b'c'=1
+> \end{aligned}
+> $$
+> 解得 $a'=\pm{d}$，$b'=\mp{b}$，$c'=\mp{c}$，$d'=\pm{a}$
+> 因而取 $\mathbf{A'}=\mathbf{A}^{-1}$ 或 $-\mathbf{A}^{-1}$ 即可。
+> 3.传递性
+> 设 $\mathbf{A}=\begin{pmatrix}
+>           a_{11} & a_{12}
+>           \\a_{21} & a_{22}
+>   \end{pmatrix}$，$\mathbf{B}=\begin{pmatrix}
+>           b_{11} & b_{12}
+>           \\b_{21} & b_{22}
+>   \end{pmatrix}$ 满足 $a_{11}a_{22}-a_{12}a_{21}=b_{11}b_{22}-b_{12}b_{21}=1$，令 $a=\displaystyle\frac{a_{11}b+a_{12}}{a_{21}b+a_{22}}$，$b=\displaystyle\frac{b_{11}c+b_{12}}{b_{21}c+b_{22}}$，即有 $c\sim{b}$，$b\sim{a}$，代入化简，则有：
+> $$
+>   a=\frac{(a_{11}b_{11}+a_{12}b_{21})c+(a_{11}b_{12}+a_{12}b_{22})}{(a_{21}b_{11}+a_{22}b_{21})c+(a_{21}b_{12}+a_{22}b_{22})}
+> $$
+> 且有：
+> $$
+> \begin{aligned}
+>   &(a_{11}b_{11}+a_{12}b_{21})(a_{21}b_{12}+a_{22}b_{22})-(a_{11}b_{12}+a_{12}b_{22})(a_{21}b_{11}+a_{22}b_{21})
+\\&=(a_{11}b_{11}a_{22}b_{22}-a_{12}b_{22}a_{21}b_{11})+(a_{11}b_{12}a_{22}b_{21}-a_{12}b_{22}a_{21}b_{11})
+\\&+a_{11}b_{11}a_{21}b_{12}+a_{12}b_{21}a_{22}b_{22}-a_{11}b_{12}a_{21}b_{11}-a_{12}b_{22}a_{22}b_{21}
+\\&=(a_{11}a_{22}-a_{12}a_{21})(b_{11}b_{22}-b_{12}b_{21})
+\\&=1
+> \end{aligned}
+> $$
+> 因而取 $\mathbf{C}=\begin{pmatrix}
+>           a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}
+>           \\a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}
+>   \end{pmatrix}=\mathbf{AB}$，即可有 $c\sim{a}$.
+>
+
+----
 
 ### $\S$ 2.1.3 群、陪集、正规子群与商群
 
+*群主在哪里？管理在哪里？涩图又在哪里？？*
+
 #### $\S$ 2.1.3.1 群
+
+> *定义 2.3：* 给定某集合 $G$ 以及于其上定义的二元运算 $\cdot:G\times{G}\rightarrow{G}$ （称为群乘法），若其符合以下条件，则称 $G$ 与其上的二元运算结构构成一个群：
+>
+> 1. $\forall{a,b}\in{G}，a\cdot{b}\in{G}$（封闭性）;
+> 2. $\forall{a,b,c}\in{G},(a\cdot{b})\cdot{c}=a\cdot{(b\cdot{c})}$（结合律）;
+> 3. $\exists{e}\in{G},s.t.\forall{g}\in{G},e\cdot{g}=g\cdot{e}=g$（单位元）;
+> 4. $\forall{g}\in{G},\exists{g^{-1}}\in{G},s.t.{g^{-1}\cdot{g}=g\cdot{g}^{-1}=e}$（逆元）.
 
 #### $\S$ 2.1.3.2 陪集、正规子群与商群
 
