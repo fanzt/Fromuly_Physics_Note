@@ -335,8 +335,10 @@ $$
 &emsp;&emsp;考虑一个由介质和被介质包围的物体组成的闭合系统。设 $S$ 为系统的总熵，并分别记 $x$ 与 $y$ 为以下两个量：当 $\displaystyle\frac{\p{S}}{\p{y}}=0$ 时说明物体本身处于平衡态；而当 $\displaystyle\frac{\p{S}}{\p{y}}=0$ 且 $\displaystyle\frac{\p{S}}{\p{x}}=0$ 时说明物体本身以及物体与介质都处于平衡态。
 &emsp;&emsp;考虑熵极大条件与熵增，在平衡状态下我们有：
     $$
-        \frac{\p{S}}{\p{x}}=\frac{\p{S}}{\p{y}}=0
-        \\\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}>0
+    \begin{aligned}
+        \frac{\p{S}}{\p{x}}&=\frac{\p{S}}{\p{y}}=0
+        \\\frac{\p^2{S}}{\p{x}^2}\d{x}^2+&\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}<0
+    \end{aligned}
     $$
 
 &emsp;&emsp;记：
@@ -352,30 +354,29 @@ $$
 
 以及：
     $$
-        \l(\frac{\p^2{S}}{\p{x^2}}\r)_{y}<0
-        \\\l(\frac{\p^2{S}}{\p{y^2}}\r)_{x}<0
-        \\
     \begin{aligned}
-        \\&\frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}<0
+        &\l(\frac{\p^2{S}}{\p{x^2}}\r)_{y}<0
+        \\&\l(\frac{\p^2{S}}{\p{y^2}}\r)_{x}<0
+        \\\frac{\p^2{S}}{\p{x}^2}\d{x}^2+&\frac{\p^2{S}}{\p{y}^2}\d{y}^2+2\frac{\p^2{S}}{\p{x}\p{y}}\d{x}\d{y}<0
     \end{aligned}
     $$
 
 考虑到：
     $$
-        \frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2\leq2\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}\d{x}\d{y}
+        \frac{\p^2{S}}{\p{x}^2}\d{x}^2+\frac{\p^2{S}}{\p{y}^2}\d{y}^2\geq2\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}\d{x}\d{y}
     $$
 
 我们有：
     $$
     \begin{aligned}
-        \\&\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}+\frac{\p^2{S}}{\p{x}\p{y}}<0
+        \\&\sqrt{\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}}+\frac{\p^2{S}}{\p{x}\p{y}}>0
     \end{aligned}
     $$
 
 即：
     $$
     \begin{aligned}
-        \\&\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}-\l(\frac{\p^2{S}}{\p{x}\p{y}}\r)^2<0
+        \\&\frac{\p^2{S}}{\p{x}^2}\frac{\p^2{S}}{\p{y}^2}-\l(\frac{\p^2{S}}{\p{x}\p{y}}\r)^2>0
     \end{aligned}
     $$
 

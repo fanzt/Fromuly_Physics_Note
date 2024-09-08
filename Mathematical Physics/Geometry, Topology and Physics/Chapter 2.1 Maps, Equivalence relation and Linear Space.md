@@ -4,7 +4,7 @@
 
 ----
 
-## $\S$ 2.1 Maps
+## $\S$ 2.1 Maps and Equivalence relation
 
 ### $\S$ 2.1.1 映射的基本概念
 
