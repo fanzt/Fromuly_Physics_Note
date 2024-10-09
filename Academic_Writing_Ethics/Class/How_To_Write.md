@@ -27,6 +27,11 @@ Prewriting->Planning->Writing a draft->reading and reflecting（多次修稿改�
 
 ## 二、写作提纲
 
+有效的提纲模式：
+
+1. 平行式
+2. 等级式
+
 ## 三、科学环与研究流程
 
 ## 四、主张、理由和证据
